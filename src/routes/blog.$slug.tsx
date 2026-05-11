@@ -66,14 +66,14 @@ function PostPage() {
         prose-headings:font-display prose-headings:font-bold
         prose-h2:text-2xl prose-h2:mt-10
         prose-a:text-primary prose-strong:text-foreground">
-        {post.content.split("\n\n").map((block, i) => {
+        {post.content.split("\n\n").map((block: string, i: number) => {
           if (block.startsWith("## ")) return <h2 key={i}>{block.slice(3)}</h2>;
           if (block.startsWith("- ") || /^\d+\./.test(block)) {
             const items = block.split("\n");
             const ordered = /^\d+\./.test(items[0]);
             return ordered
-              ? <ol key={i}>{items.map((li, j) => <li key={j}>{li.replace(/^\d+\.\s*/, "")}</li>)}</ol>
-              : <ul key={i}>{items.map((li, j) => <li key={j}>{li.replace(/^- /, "")}</li>)}</ul>;
+              ? <ol key={i}>{items.map((li: string, j: number) => <li key={j}>{li.replace(/^\d+\.\s*/, "")}</li>)}</ol>
+              : <ul key={i}>{items.map((li: string, j: number) => <li key={j}>{li.replace(/^- /, "")}</li>)}</ul>;
           }
           return <p key={i}>{block}</p>;
         })}
