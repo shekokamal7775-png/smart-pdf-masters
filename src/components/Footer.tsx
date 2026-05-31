@@ -36,9 +36,9 @@ export function Footer() {
     {
       title: t("footer.legal"),
       links: [
-        { label: "Privacy", to: "/about" },
+        { label: "Privacy", to: "/privacy" },
         { label: "Terms", to: "/about" },
-        { label: "Security", to: "/about" },
+        { label: "Contact Us", to: "/contact" },
       ],
     },
   ];
