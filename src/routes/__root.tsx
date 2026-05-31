@@ -66,6 +66,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@SmartPDFTools" },
       { name: "theme-color", content: "#dc2626" },
+      { name: "google-site-verification", content: "bPdyWSIDRVm1WxiTdQBi6z90aQZv2tQQRKwhMI5djCk" },
       { name: "twitter:title", content: "SmartPDFTools — Every PDF tool you need, in one smart workspace" },
       { name: "twitter:description", content: "Free online PDF tools to merge, split, compress, convert, edit, sign, OCR and unlock PDFs. Plus AI-powered document tools. Fast, secure, no install." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/080b78fc-1c45-4405-ae43-c91c494bad11/id-preview-9d17de04--c32813af-7de2-491b-b3ba-577d01487480.lovable.app-1778468325197.png" },
