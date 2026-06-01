@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ShieldCheck, Zap, Cloud } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { FileDropzone } from "@/components/FileDropzone";
+import { ToolProcessor } from "@/components/ToolProcessor";
 import { ToolCard } from "@/components/ToolCard";
 import { getTool, tools } from "@/lib/tools";
 import { useI18n } from "@/lib/i18n";
@@ -67,7 +67,7 @@ function ToolPage() {
           </div>
 
           <div className="mt-10">
-            <FileDropzone accept={tool.category === "convert" && tool.slug.endsWith("-pdf") ? undefined : ".pdf"} multiple={tool.slug === "merge-pdf" || tool.slug === "jpg-to-pdf"} />
+            <ToolProcessor slug={tool.slug} />
           </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
