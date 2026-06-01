@@ -28,7 +28,7 @@ const CONFIGS: Record<string, ToolConfig> = {
   "compress-pdf": { accept: PDF_ACCEPT, multiple: false },
   "pdf-to-word": { accept: PDF_ACCEPT, multiple: false },
   "word-to-pdf": { accept: DOC_ACCEPT, multiple: false },
-  "jpg-to-pdf": { accept: IMG_ACCEPT, multiple: true },
+  "jpg-to-pdf": { accept: "image/png,image/jpeg,.png,.jpg,.jpeg", multiple: true },
   "pdf-to-jpg": { accept: PDF_ACCEPT, multiple: false },
   "watermark-pdf": { accept: PDF_ACCEPT, multiple: false },
   "protect-pdf": { accept: PDF_ACCEPT, multiple: false, requiresPassword: true },
