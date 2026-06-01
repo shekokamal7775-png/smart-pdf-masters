@@ -187,24 +187,15 @@ async function watermarkPdf(file: File, text: string): Promise<ProcessResult> {
 
 async function protectPdf(file: File, password: string): Promise<ProcessResult> {
   if (!password) throw new Error("Password required");
-  // pdf-lib doesn't natively encrypt; we embed password metadata + add a cover page warning
-  // For real encryption, use qpdf via WASM — not available client-side reliably.
-  // We use a workaround: re-save and prepend an instruction page. To provide REAL encryption,
-  // we'll use the user's password to AES-encrypt the PDF bytes inside a wrapper PDF is not viable.
-  // Best client-side option: provide owner-password style protection by attaching as an encrypted ZIP-like
-  // is also out of scope. We'll throw a clear message and instead set document-level metadata flag.
-  // To be honest and useful: implement actual PDF encryption via pdf-lib's setProducer + a JS encryption layer.
-  // Use 'qpdf-wasm'? Not bundled. We'll implement using 'pdf-lib' fork? Not viable here.
-  // Pragmatic approach: use the browser's built-in via creating an encrypted wrapper using `pdfjs`'s
-  // encryption isn't supported either.
-  // Fall back to muPDF-wasm style is too heavy. We'll mark the limitation here:
+  const { PDFDocument: EncDoc } = await import("@cantoo/pdf-lib");
   const bytes = new Uint8Array(await file.arrayBuffer());
-  const src = await PDFDocument.load(bytes, { ignoreEncryption: true });
-  src.setTitle(src.getTitle() || file.name);
-  src.setProducer("SmartPDFTools (password-protected)");
-  // We use a simple approach: wrap PDF bytes inside an encrypted container is non-standard.
-  // Instead, throw a graceful informative error if we can't really encrypt.
-  throw new Error("Browser-only PDF encryption requires a desktop processor. Coming soon — use Protect via the secure cloud option.");
+  const src = await EncDoc.load(bytes, { ignoreEncryption: true });
+  const data = await src.save({
+    userPassword: password,
+    ownerPassword: password,
+    permissions: { printing: "highResolution", modifying: false, copying: false, annotating: false },
+  } as never);
+  return { blob: new Blob([data as BlobPart], { type: "application/pdf" }), name: `protected-${file.name}` };
 }
 
 async function unlockPdf(file: File): Promise<ProcessResult> {
