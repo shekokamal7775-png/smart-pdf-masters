@@ -1,10 +1,8 @@
 import {
-  Combine, Scissors, Minimize2, FileText, FileType, Image as ImageIcon,
-  FileImage, Sheet, Presentation, Edit3, RotateCw, Unlock, Lock,
-  Droplet, ScanText, Sparkles, type LucideIcon,
+  Combine, Minimize2, FileText, Image as ImageIcon, type LucideIcon,
 } from "lucide-react";
 
-export type ToolCategory = "organize" | "convert" | "edit" | "security" | "ai";
+export type ToolCategory = "organize" | "convert";
 
 export interface Tool {
   slug: string;
@@ -40,9 +38,6 @@ export const tools: Tool[] = [
 export const categories: { id: ToolCategory; en: string; ar: string }[] = [
   { id: "organize", en: "Organize PDF", ar: "تنظيم PDF" },
   { id: "convert", en: "Convert", ar: "تحويل" },
-  { id: "edit", en: "Edit", ar: "تعديل" },
-  { id: "security", en: "Security", ar: "أمان" },
-  { id: "ai", en: "AI Tools", ar: "ذكاء اصطناعي" },
 ];
 
 export const getTool = (slug: string) => tools.find((t) => t.slug === slug);
