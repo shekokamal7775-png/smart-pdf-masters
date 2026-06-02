@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, ShieldCheck, Zap, Cloud } from "lucide-react";
+import { ArrowLeft, ShieldCheck, Zap, Cloud, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ToolProcessor } from "@/components/ToolProcessor";
 import { ToolCard } from "@/components/ToolCard";
