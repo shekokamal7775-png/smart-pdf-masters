@@ -9,10 +9,10 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/tools")({
   head: () => ({
     meta: [
-      { title: "All PDF Tools — Merge, Convert, Edit, Compress | SmartPDFTools" },
-      { name: "description", content: "Browse all 16+ free PDF tools: merge, split, compress, convert PDF to Word, JPG to PDF, OCR, AI tools and more. No install needed." },
-      { property: "og:title", content: "All PDF Tools | SmartPDFTools" },
-      { property: "og:description", content: "Every PDF tool you need: convert, edit, sign, OCR, AI — free and online." },
+      { title: "PDF Tools — Merge, Compress, PDF to Word, PNG to PDF" },
+      { name: "description", content: "Use four focused PDF tools for free: merge PDF, compress PDF, convert PDF to Word, and convert PNG or JPG images to PDF." },
+      { property: "og:title", content: "Four Free PDF Tools | SmartPDFTools" },
+      { property: "og:description", content: "Merge, compress, PDF to Word, and PNG to PDF — fast browser-based tools." },
     ],
   }),
   component: ToolsPage,
