@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Outlet, useRouterState } from "@tanstack/react-router";
 import { useState } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -22,8 +22,13 @@ export const Route = createFileRoute("/tools")({
       },
     ],
   }),
-  component: ToolsPage,
+  component: ToolsLayout,
 });
+
+function ToolsLayout() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  return pathname === "/tools" ? <ToolsPage /> : <Outlet />;
+}
 
 function ToolsPage() {
   const { t, lang } = useI18n();
