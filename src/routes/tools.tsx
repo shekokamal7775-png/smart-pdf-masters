@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Outlet, useRouterState } from "@tanstack/react-router";
 import { useState } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -9,23 +9,38 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/tools")({
   head: () => ({
     meta: [
-      { title: "All PDF Tools — Merge, Convert, Edit, Compress | SmartPDFTools" },
-      { name: "description", content: "Browse all 16+ free PDF tools: merge, split, compress, convert PDF to Word, JPG to PDF, OCR, AI tools and more. No install needed." },
-      { property: "og:title", content: "All PDF Tools | SmartPDFTools" },
-      { property: "og:description", content: "Every PDF tool you need: convert, edit, sign, OCR, AI — free and online." },
+      { title: "PDF Tools — Merge, Compress, PDF to Word, PNG to PDF" },
+      {
+        name: "description",
+        content:
+          "Use four focused PDF tools for free: merge PDF, compress PDF, convert PDF to Word, and convert PNG or JPG images to PDF.",
+      },
+      { property: "og:title", content: "Four Free PDF Tools | SmartPDFTools" },
+      {
+        property: "og:description",
+        content: "Merge, compress, PDF to Word, and PNG to PDF — fast browser-based tools.",
+      },
     ],
   }),
-  component: ToolsPage,
+  component: ToolsLayout,
 });
+
+function ToolsLayout() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  return pathname === "/tools" ? <ToolsPage /> : <Outlet />;
+}
 
 function ToolsPage() {
   const { t, lang } = useI18n();
   const [q, setQ] = useState("");
   const [cat, setCat] = useState<ToolCategory | "all">("all");
 
-  const filtered = tools.filter((tt) =>
-    (cat === "all" || tt.category === cat) &&
-    (q === "" || tt.title[lang].toLowerCase().includes(q.toLowerCase()) || tt.desc[lang].toLowerCase().includes(q.toLowerCase()))
+  const filtered = tools.filter(
+    (tt) =>
+      (cat === "all" || tt.category === cat) &&
+      (q === "" ||
+        tt.title[lang].toLowerCase().includes(q.toLowerCase()) ||
+        tt.desc[lang].toLowerCase().includes(q.toLowerCase())),
   );
 
   return (
@@ -51,7 +66,9 @@ function ToolsPage() {
         <button
           onClick={() => setCat("all")}
           className={`rounded-full px-4 py-1.5 text-sm font-medium transition-smooth ${
-            cat === "all" ? "bg-gradient-primary text-primary-foreground shadow-elegant" : "bg-secondary hover:bg-accent"
+            cat === "all"
+              ? "bg-gradient-primary text-primary-foreground shadow-elegant"
+              : "bg-secondary hover:bg-accent"
           }`}
         >
           {lang === "ar" ? "الكل" : "All"}
@@ -61,7 +78,9 @@ function ToolsPage() {
             key={c.id}
             onClick={() => setCat(c.id)}
             className={`rounded-full px-4 py-1.5 text-sm font-medium transition-smooth ${
-              cat === c.id ? "bg-gradient-primary text-primary-foreground shadow-elegant" : "bg-secondary hover:bg-accent"
+              cat === c.id
+                ? "bg-gradient-primary text-primary-foreground shadow-elegant"
+                : "bg-secondary hover:bg-accent"
             }`}
           >
             {c[lang]}
@@ -70,7 +89,9 @@ function ToolsPage() {
       </div>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {filtered.map((tt, i) => <ToolCard key={tt.slug} tool={tt} index={i} />)}
+        {filtered.map((tt, i) => (
+          <ToolCard key={tt.slug} tool={tt} index={i} />
+        ))}
       </div>
 
       {filtered.length === 0 && (
