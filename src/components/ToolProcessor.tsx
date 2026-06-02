@@ -1,15 +1,26 @@
 import { useCallback, useState, type DragEvent } from "react";
 import { UploadCloud, FileCheck2, X, Loader2, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { useI18n } from "@/lib/i18n";
 import { toast } from "sonner";
-import { saveAs } from "file-saver";
-import { processFiles, getToolConfig, type ToolSlug } from "@/lib/pdf-tools";
+import { processFiles, getToolConfig, type ToolSlug, type ProcessResult } from "@/lib/pdf-tools";
 
 interface Props {
   slug: string;
+}
+
+function downloadBlob(result: ProcessResult) {
+  const url = URL.createObjectURL(result.blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = result.name;
+  a.rel = "noopener";
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => {
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }, 1500);
 }
 
 export function ToolProcessor({ slug }: Props) {
@@ -18,10 +29,6 @@ export function ToolProcessor({ slug }: Props) {
   const [files, setFiles] = useState<File[]>([]);
   const [hover, setHover] = useState(false);
   const [busy, setBusy] = useState(false);
-  const [password, setPassword] = useState("");
-  const [watermark, setWatermark] = useState("CONFIDENTIAL");
-  const [rotation, setRotation] = useState<90 | 180 | 270>(90);
-  const [splitRanges, setSplitRanges] = useState("");
 
   const onDrop = useCallback((e: DragEvent<HTMLDivElement>) => {
     e.preventDefault();
@@ -34,28 +41,21 @@ export function ToolProcessor({ slug }: Props) {
     if (!e.target.files) return;
     const picked = Array.from(e.target.files);
     setFiles(cfg.multiple ? [...files, ...picked] : picked.slice(0, 1));
+    e.target.value = "";
   };
 
   const handleProcess = async () => {
-    if (files.length === 0) return;
-    if (cfg.requiresPassword && !password) {
-      toast.error(lang === "ar" ? "أدخل كلمة المرور" : "Please enter a password");
+    if (files.length === 0) {
+      toast.error(lang === "ar" ? "اختر ملفًا أولاً" : "Please pick a file first.");
       return;
     }
     setBusy(true);
     try {
-      const results = await processFiles(slug as ToolSlug, files, {
-        password,
-        watermark,
-        rotation,
-        ranges: splitRanges,
-      });
-      for (const r of results) {
-        saveAs(r.blob, r.name);
-      }
+      const results = await processFiles(slug as ToolSlug, files, {});
+      for (const r of results) downloadBlob(r);
       toast.success(lang === "ar" ? "تم بنجاح! بدأ التنزيل." : "Done! Your download has started.");
     } catch (err) {
-      console.error(err);
+      console.error("[ToolProcessor]", err);
       toast.error(
         (lang === "ar" ? "فشلت العملية: " : "Processing failed: ") +
           (err instanceof Error ? err.message : "Unknown error")
@@ -109,45 +109,6 @@ export function ToolProcessor({ slug }: Props) {
               </button>
             </div>
           ))}
-
-          {cfg.requiresPassword && (
-            <div className="space-y-1.5">
-              <Label htmlFor="pw">{lang === "ar" ? "كلمة المرور" : "Password"}</Label>
-              <Input id="pw" type="password" value={password} onChange={(e) => setPassword(e.target.value)}
-                placeholder={lang === "ar" ? "أدخل كلمة المرور" : "Enter a strong password"} />
-            </div>
-          )}
-
-          {slug === "watermark-pdf" && (
-            <div className="space-y-1.5">
-              <Label htmlFor="wm">{lang === "ar" ? "نص العلامة المائية" : "Watermark text"}</Label>
-              <Input id="wm" value={watermark} onChange={(e) => setWatermark(e.target.value)} />
-            </div>
-          )}
-
-          {slug === "rotate-pdf" && (
-            <div className="space-y-1.5">
-              <Label>{lang === "ar" ? "زاوية التدوير" : "Rotation"}</Label>
-              <div className="flex gap-2">
-                {[90, 180, 270].map((d) => (
-                  <button key={d} type="button" onClick={() => setRotation(d as 90 | 180 | 270)}
-                    className={`flex-1 rounded-lg border px-3 py-2 text-sm font-medium transition-smooth ${
-                      rotation === d ? "border-primary bg-primary/10 text-primary" : "border-border hover:border-primary/50"
-                    }`}>
-                    {d}°
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {slug === "split-pdf" && (
-            <div className="space-y-1.5">
-              <Label htmlFor="rg">{lang === "ar" ? "النطاقات (اختياري)" : "Page ranges (optional)"}</Label>
-              <Input id="rg" value={splitRanges} onChange={(e) => setSplitRanges(e.target.value)}
-                placeholder={lang === "ar" ? "مثال: 1-3,5,7-9 (افتراضي: كل صفحة)" : "e.g. 1-3,5,7-9 (default: every page)"} />
-            </div>
-          )}
 
           <Button variant="hero" size="lg" className="w-full" onClick={handleProcess} disabled={busy}>
             {busy ? (
