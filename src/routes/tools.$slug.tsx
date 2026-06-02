@@ -30,25 +30,29 @@ export const Route = createFileRoute("/tools/$slug")({
         { property: "og:title", content: `${tool.title.en} — SmartPDFTools` },
         { property: "og:description", content: tool.seoDesc.en },
       ],
-      scripts: [{
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          name: tool.title.en,
-          description: tool.seoDesc.en,
-          applicationCategory: "BusinessApplication",
-          operatingSystem: "Web",
-          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-        }),
-      }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: tool.title.en,
+            description: tool.seoDesc.en,
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          }),
+        },
+      ],
     };
   },
   component: ToolPage,
   notFoundComponent: () => (
     <div className="mx-auto max-w-2xl px-6 py-24 text-center">
       <h1 className="font-display text-3xl font-bold">Tool not found</h1>
-      <Link to="/tools" className="mt-6 inline-block text-primary hover:underline">← Back to all tools</Link>
+      <Link to="/tools" className="mt-6 inline-block text-primary hover:underline">
+        ← Back to all tools
+      </Link>
     </div>
   ),
 });
@@ -58,20 +62,30 @@ function ToolPage() {
   const tool = getTool(loaderTool.slug) ?? loaderTool;
   const { t, lang } = useI18n();
   const Icon = "icon" in tool ? tool.icon : FileText;
-  const related = tools.filter((x) => x.category === tool.category && x.slug !== tool.slug).slice(0, 4);
+  const related = tools
+    .filter((x) => x.category === tool.category && x.slug !== tool.slug)
+    .slice(0, 4);
 
   return (
     <div>
       <section className="bg-hero">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-          <Link to="/tools" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary mb-6">
-            <ArrowLeft className="h-4 w-4 rtl:rotate-180" /> {lang === "ar" ? "كل الأدوات" : "All tools"}
+          <Link
+            to="/tools"
+            className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary mb-6"
+          >
+            <ArrowLeft className="h-4 w-4 rtl:rotate-180" />{" "}
+            {lang === "ar" ? "كل الأدوات" : "All tools"}
           </Link>
           <div className="text-center">
-            <div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-2xl ${tool.bg} ${tool.color} shadow-soft`}>
+            <div
+              className={`mx-auto flex h-16 w-16 items-center justify-center rounded-2xl ${tool.bg} ${tool.color} shadow-soft`}
+            >
               <Icon className="h-8 w-8" />
             </div>
-            <h1 className="mt-5 font-display text-4xl sm:text-5xl font-bold tracking-tight">{tool.title[lang]}</h1>
+            <h1 className="mt-5 font-display text-4xl sm:text-5xl font-bold tracking-tight">
+              {tool.title[lang]}
+            </h1>
             <p className="mt-3 text-muted-foreground max-w-xl mx-auto">{tool.desc[lang]}</p>
           </div>
 
@@ -85,7 +99,10 @@ function ToolPage() {
               { icon: ShieldCheck, label: lang === "ar" ? "تشفير 256 بت" : "256-bit encryption" },
               { icon: Cloud, label: lang === "ar" ? "حذف تلقائي" : "Auto-delete in 1h" },
             ].map((f, i) => (
-              <div key={i} className="flex items-center gap-3 rounded-xl border border-border bg-card/60 p-3">
+              <div
+                key={i}
+                className="flex items-center gap-3 rounded-xl border border-border bg-card/60 p-3"
+              >
                 <f.icon className="h-5 w-5 text-primary" />
                 <span className="text-sm font-medium">{f.label}</span>
               </div>
@@ -104,9 +121,13 @@ function ToolPage() {
 
         {related.length > 0 && (
           <div className="mt-12">
-            <h3 className="font-display text-xl font-bold mb-4">{lang === "ar" ? "أدوات ذات صلة" : "Related tools"}</h3>
+            <h3 className="font-display text-xl font-bold mb-4">
+              {lang === "ar" ? "أدوات ذات صلة" : "Related tools"}
+            </h3>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {related.map((r, i) => <ToolCard key={r.slug} tool={r} index={i} />)}
+              {related.map((r, i) => (
+                <ToolCard key={r.slug} tool={r} index={i} />
+              ))}
             </div>
           </div>
         )}
