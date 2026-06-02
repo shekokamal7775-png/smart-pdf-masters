@@ -28,12 +28,21 @@ function fallbackResult(slug: string, files: File[]): ProcessResult {
   const stamp = new Date().toISOString();
   if (slug === "pdf-to-word") {
     return {
-      blob: new Blob([`{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0 Arial;}}\\f0\\fs24 Converted from ${first.name}.\\par Generated in your browser at ${stamp}.}`], { type: "application/msword" }),
+      blob: new Blob(
+        [
+          `{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0 Arial;}}\\f0\\fs24 Converted from ${first.name}.\\par Generated in your browser at ${stamp}.}`,
+        ],
+        { type: "application/msword" },
+      ),
       name: first.name.replace(/\.[^/.]+$/, "") + ".doc",
     };
   }
   return {
-    blob: first.slice(0, first.size, slug === "jpg-to-pdf" ? "application/pdf" : first.type || "application/pdf"),
+    blob: first.slice(
+      0,
+      first.size,
+      slug === "jpg-to-pdf" ? "application/pdf" : first.type || "application/pdf",
+    ),
     name: slug === "jpg-to-pdf" ? "images.pdf" : `processed-${first.name}`,
   };
 }
@@ -45,12 +54,15 @@ export function ToolProcessor({ slug }: Props) {
   const [hover, setHover] = useState(false);
   const [busy, setBusy] = useState(false);
 
-  const onDrop = useCallback((e: DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setHover(false);
-    const dropped = Array.from(e.dataTransfer.files);
-    setFiles(cfg.multiple ? [...files, ...dropped] : dropped.slice(0, 1));
-  }, [files, cfg.multiple]);
+  const onDrop = useCallback(
+    (e: DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      setHover(false);
+      const dropped = Array.from(e.dataTransfer.files);
+      setFiles(cfg.multiple ? [...files, ...dropped] : dropped.slice(0, 1));
+    },
+    [files, cfg.multiple],
+  );
 
   const onPick = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files) return;
@@ -72,7 +84,9 @@ export function ToolProcessor({ slug }: Props) {
     } catch (err) {
       console.error("[ToolProcessor]", err);
       downloadBlob(fallbackResult(slug, files));
-      toast.success(lang === "ar" ? "بدأ التنزيل بنسخة متوافقة." : "Download started with a compatible output.");
+      toast.success(
+        lang === "ar" ? "بدأ التنزيل بنسخة متوافقة." : "Download started with a compatible output.",
+      );
     } finally {
       setBusy(false);
     }
@@ -81,7 +95,10 @@ export function ToolProcessor({ slug }: Props) {
   return (
     <div className="space-y-4">
       <div
-        onDragOver={(e) => { e.preventDefault(); setHover(true); }}
+        onDragOver={(e) => {
+          e.preventDefault();
+          setHover(true);
+        }}
         onDragLeave={() => setHover(false)}
         onDrop={onDrop}
         className={`relative rounded-3xl border-2 border-dashed p-10 sm:p-16 text-center transition-smooth ${
@@ -102,14 +119,19 @@ export function ToolProcessor({ slug }: Props) {
         <h3 className="mt-6 font-display text-2xl font-bold">{t("tool.upload")}</h3>
         <p className="mt-1 text-muted-foreground">{t("tool.upload.or")}</p>
         <p className="mt-2 text-xs text-muted-foreground">
-          {lang === "ar" ? "المعالجة تتم بالكامل داخل متصفحك — لا يتم رفع أي ملف." : "Processed entirely in your browser — no upload."}
+          {lang === "ar"
+            ? "المعالجة تتم بالكامل داخل متصفحك — لا يتم رفع أي ملف."
+            : "Processed entirely in your browser — no upload."}
         </p>
       </div>
 
       {files.length > 0 && (
         <div className="rounded-2xl border border-border bg-card p-4 space-y-3">
           {files.map((f, i) => (
-            <div key={i} className="flex items-center justify-between gap-3 rounded-xl bg-secondary/50 p-3">
+            <div
+              key={i}
+              className="flex items-center justify-between gap-3 rounded-xl bg-secondary/50 p-3"
+            >
               <div className="flex items-center gap-3 min-w-0">
                 <FileCheck2 className="h-5 w-5 text-primary flex-shrink-0" />
                 <div className="min-w-0">
@@ -117,17 +139,32 @@ export function ToolProcessor({ slug }: Props) {
                   <p className="text-xs text-muted-foreground">{(f.size / 1024).toFixed(0)} KB</p>
                 </div>
               </div>
-              <button onClick={() => setFiles(files.filter((_, idx) => idx !== i))} className="text-muted-foreground hover:text-destructive">
+              <button
+                onClick={() => setFiles(files.filter((_, idx) => idx !== i))}
+                className="text-muted-foreground hover:text-destructive"
+              >
                 <X className="h-4 w-4" />
               </button>
             </div>
           ))}
 
-          <Button variant="hero" size="lg" className="w-full" onClick={handleProcess} disabled={busy}>
+          <Button
+            variant="hero"
+            size="lg"
+            className="w-full"
+            onClick={handleProcess}
+            disabled={busy}
+          >
             {busy ? (
-              <><Loader2 className="h-4 w-4 animate-spin" /> {lang === "ar" ? "جاري المعالجة..." : "Processing..."}</>
+              <>
+                <Loader2 className="h-4 w-4 animate-spin" />{" "}
+                {lang === "ar" ? "جاري المعالجة..." : "Processing..."}
+              </>
             ) : (
-              <><Download className="h-4 w-4" /> {lang === "ar" ? "معالجة وتحميل" : "Process & Download"}</>
+              <>
+                <Download className="h-4 w-4" />{" "}
+                {lang === "ar" ? "معالجة وتحميل" : "Process & Download"}
+              </>
             )}
           </Button>
         </div>

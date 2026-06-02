@@ -37,16 +37,20 @@ function baseName(name: string): string {
 export async function processFiles(
   slug: ToolSlug,
   files: File[],
-  _opts: ProcessOptions
+  _opts: ProcessOptions,
 ): Promise<ProcessResult[]> {
   if (!files || files.length === 0) throw new Error("Please select a file first.");
   if (typeof window === "undefined") throw new Error("PDF processing runs in the browser.");
 
   switch (slug) {
-    case "merge-pdf": return [await mergePdfs(files)];
-    case "compress-pdf": return [await compressPdf(files[0])];
-    case "pdf-to-word": return [await pdfToWord(files[0])];
-    case "jpg-to-pdf": return [await imagesToPdf(files)];
+    case "merge-pdf":
+      return [await mergePdfs(files)];
+    case "compress-pdf":
+      return [await compressPdf(files[0])];
+    case "pdf-to-word":
+      return [await pdfToWord(files[0])];
+    case "jpg-to-pdf":
+      return [await imagesToPdf(files)];
     default:
       throw new Error("This tool isn't available.");
   }
@@ -54,7 +58,10 @@ export async function processFiles(
 
 async function mergePdfs(files: File[]): Promise<ProcessResult> {
   if (files.length === 1) {
-    return { blob: files[0].slice(0, files[0].size, "application/pdf"), name: `merged-${files[0].name}` };
+    return {
+      blob: files[0].slice(0, files[0].size, "application/pdf"),
+      name: `merged-${files[0].name}`,
+    };
   }
 
   try {
@@ -80,7 +87,10 @@ async function compressPdf(file: File): Promise<ProcessResult> {
     const bytes = new Uint8Array(await file.arrayBuffer());
     const src = await PDFDocument.load(bytes, { ignoreEncryption: true });
     const data = await src.save({ useObjectStreams: true, addDefaultPage: false });
-    return { blob: new Blob([data as BlobPart], { type: "application/pdf" }), name: `compressed-${file.name}` };
+    return {
+      blob: new Blob([data as BlobPart], { type: "application/pdf" }),
+      name: `compressed-${file.name}`,
+    };
   } catch (error) {
     console.warn("PDF compression fallback used", error);
     return { blob: file.slice(0, file.size, "application/pdf"), name: `compressed-${file.name}` };
@@ -104,7 +114,8 @@ async function imagesToPdf(files: File[]): Promise<ProcessResult> {
 async function pdfToWord(file: File): Promise<ProcessResult> {
   const bytes = new Uint8Array(await file.arrayBuffer());
   const raw = new TextDecoder("latin1").decode(bytes);
-  const text = extractPdfTextFallback(raw) ||
+  const text =
+    extractPdfTextFallback(raw) ||
     `Converted from ${file.name}.\n\nThis Word-compatible file was generated in your browser.`;
   const pageCount = Math.max(1, (raw.match(/\/Type\s*\/Page\b/g) ?? []).length);
   const rtf = toRtf(`${baseName(file.name)}\n\nPages: ${pageCount}\n\n${text}`);
