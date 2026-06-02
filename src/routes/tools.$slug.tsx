@@ -10,7 +10,15 @@ export const Route = createFileRoute("/tools/$slug")({
   loader: ({ params }) => {
     const tool = getTool(params.slug);
     if (!tool) throw notFound();
-    return { tool };
+    return {
+      tool: {
+        slug: tool.slug,
+        category: tool.category,
+        title: tool.title,
+        desc: tool.desc,
+        seoDesc: tool.seoDesc,
+      },
+    };
   },
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [{ title: "Tool not found" }] };
@@ -46,9 +54,10 @@ export const Route = createFileRoute("/tools/$slug")({
 });
 
 function ToolPage() {
-  const { tool } = Route.useLoaderData();
+  const { tool: loaderTool } = Route.useLoaderData();
+  const tool = getTool(loaderTool.slug) ?? loaderTool;
   const { t, lang } = useI18n();
-  const Icon = tool.icon;
+  const Icon = "icon" in tool ? tool.icon : FileText;
   const related = tools.filter((x) => x.category === tool.category && x.slug !== tool.slug).slice(0, 4);
 
   return (
