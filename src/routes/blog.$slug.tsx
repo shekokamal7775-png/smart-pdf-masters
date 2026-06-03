@@ -1,6 +1,40 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
+import { Fragment } from "react";
 import { getPost, blogPosts } from "@/lib/blog";
+
+// Parses inline markdown links [text](url). Internal URLs starting with "/" use TanStack Link.
+function renderInline(text: string) {
+  const parts: React.ReactNode[] = [];
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+    const [, label, url] = match;
+    if (url.startsWith("/")) {
+      parts.push(
+        <Link
+          key={key++}
+          to={url}
+          className="font-semibold text-primary underline decoration-primary/30 underline-offset-4 hover:decoration-primary"
+        >
+          {label}
+        </Link>,
+      );
+    } else {
+      parts.push(
+        <a key={key++} href={url} target="_blank" rel="noopener noreferrer" className="text-primary underline">
+          {label}
+        </a>,
+      );
+    }
+    lastIndex = regex.lastIndex;
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+  return <Fragment>{parts}</Fragment>;
+}
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
