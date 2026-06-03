@@ -104,16 +104,27 @@ function PostPage() {
           const ctaMatch = block.match(/^\[\[cta:([a-z0-9-]+)\|([^\]]+)\]\]$/);
           if (ctaMatch) {
             const [, slug, label] = ctaMatch;
+            const isAllTools = slug === "tools";
             return (
               <div key={i} className="not-prose my-8 flex justify-center">
-                <Link
-                  to="/tools/$slug"
-                  params={{ slug }}
-                  className="inline-flex items-center gap-2 rounded-xl bg-gradient-primary px-7 py-3.5 font-semibold text-primary-foreground shadow-elegant hover:shadow-glow hover:-translate-y-0.5 transition-smooth"
-                >
-                  {label}
-                  <ArrowLeft className="h-4 w-4 rotate-180 rtl:rotate-0" />
-                </Link>
+                {isAllTools ? (
+                  <Link
+                    to="/tools"
+                    className="inline-flex items-center gap-2 rounded-xl bg-gradient-primary px-7 py-3.5 font-semibold text-primary-foreground shadow-elegant hover:shadow-glow hover:-translate-y-0.5 transition-smooth"
+                  >
+                    {label}
+                    <ArrowLeft className="h-4 w-4 rotate-180 rtl:rotate-0" />
+                  </Link>
+                ) : (
+                  <Link
+                    to="/tools/$slug"
+                    params={{ slug }}
+                    className="inline-flex items-center gap-2 rounded-xl bg-gradient-primary px-7 py-3.5 font-semibold text-primary-foreground shadow-elegant hover:shadow-glow hover:-translate-y-0.5 transition-smooth"
+                  >
+                    {label}
+                    <ArrowLeft className="h-4 w-4 rotate-180 rtl:rotate-0" />
+                  </Link>
+                )}
               </div>
             );
           }
