@@ -231,29 +231,43 @@ A great editor isn't enough on its own. Most workflows also need conversion, mer
     date: "Apr 9, 2026",
     readTime: "9 min read",
     cover: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80",
-    content: `PDFs often contain contracts, IDs and financial information. A few minutes of security hygiene prevents costly leaks.
+    content: `PDFs often contain contracts, IDs, medical records and financial information — the exact data attackers love. A few minutes of security hygiene per document prevents most leaks, lawsuits and embarrassing front-page incidents. Here's the practical checklist we use internally at SmartPDFTools.
 
 ## 1. Always encrypt sensitive files
 
-Use AES-256 encryption with a strong password. Avoid the legacy 40-bit RC4 cipher.
+Use AES-256 encryption with a strong, unique password. Avoid the legacy 40-bit RC4 cipher — it's been breakable on a laptop for over a decade. Never send the password in the same email as the encrypted file. Use a separate channel like Signal, a phone call or a password manager share link.
 
 ## 2. Redact, don't just black out
 
-Drawing a black rectangle in a PDF editor doesn't remove the underlying text. Use a redaction tool that removes the data permanently.
+Drawing a black rectangle in a PDF editor doesn't remove the underlying text — anyone can copy-paste the "hidden" content out. Use a real redaction tool that removes both the visible text and the underlying character stream. Verify by opening the redacted file in a text-only viewer and searching for what you redacted.
 
-## 3. Use digital signatures
+## 3. Use digital signatures, not signature images
 
-Cryptographic signatures (PAdES) prove who signed a document and that it hasn't changed since. Image-based "wet signatures" do neither.
+Cryptographic signatures (PAdES) prove who signed a document and that it hasn't changed since. Image-based "wet signatures" do neither — they're trivial to forge. Most modern PDF readers can verify PAdES signatures with a green checkmark; if you don't see one, the signature is decorative.
 
-## 4. Strip metadata
+## 4. Strip metadata before sharing
 
-Author names, software versions, edit history — all leak. Strip metadata before sending sensitive files externally.
+Author names, software versions, edit history, GPS coordinates, original filenames — all of it can leak through PDF metadata. Strip metadata before sending sensitive files externally. Most editors expose this under File → Properties → Metadata.
 
-## 5. Choose a privacy-first PDF service
+## 5. Watch out for embedded JavaScript and attachments
 
-Look for automatic file deletion, TLS 1.3, GDPR compliance and a clear no-tracking policy. SmartPDFTools deletes uploads within one hour and never reads your file content. Start with our secure [Compress PDF](/tools/compress-pdf) or [PNG to PDF](/tools/jpg-to-pdf) tool — all processing happens privately in your browser.
+PDFs can carry executable JavaScript and embedded file attachments. Both are common malware delivery vectors. Disable JavaScript in your PDF reader by default, and scan attachments before opening.
 
-[[cta:compress-pdf|Compress PDF securely]]`
+## 6. Use short-lived sharing links
+
+If you have to upload a PDF to share it, use a service that supports expiring links (24-72 hours) and download caps. A document that lives forever on a public URL will eventually be indexed by a search engine.
+
+## 7. Choose a privacy-first PDF service
+
+Look for automatic file deletion within one hour, TLS 1.3 in transit, GDPR/CCPA compliance, no training on user data, and ideally fully in-browser processing so files never reach the vendor's servers at all. SmartPDFTools processes documents directly in your browser whenever possible, deletes any temporary uploads within one hour, and never reads your file content.
+
+## Your secure starter workflow
+
+- Compress before sharing: [Compress PDF](/tools/compress-pdf) cuts file size so you can send via Signal/email instead of public cloud links.
+- Combine ID scans privately: [PNG to PDF](/tools/jpg-to-pdf) bundles photos of IDs and receipts into a single PDF locally.
+- Convert privately: [PDF to Word](/tools/pdf-to-word) and [Merge PDF](/tools/merge-pdf) both run in-browser — your file never leaves the device.
+
+[[cta:tools|Secure your PDFs with SmartPDFTools]]`
   },
 ];
 
