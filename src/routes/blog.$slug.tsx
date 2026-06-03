@@ -65,17 +65,33 @@ function PostPage() {
       <div className="prose prose-neutral dark:prose-invert prose-lg max-w-none mt-10
         prose-headings:font-display prose-headings:font-bold
         prose-h2:text-2xl prose-h2:mt-10
-        prose-a:text-primary prose-strong:text-foreground">
+        prose-a:text-primary prose-a:font-semibold prose-strong:text-foreground">
         {post.content.split("\n\n").map((block: string, i: number) => {
-          if (block.startsWith("## ")) return <h2 key={i}>{block.slice(3)}</h2>;
+          const ctaMatch = block.match(/^\[\[cta:([a-z0-9-]+)\|([^\]]+)\]\]$/);
+          if (ctaMatch) {
+            const [, slug, label] = ctaMatch;
+            return (
+              <div key={i} className="not-prose my-8 flex justify-center">
+                <Link
+                  to="/tools/$slug"
+                  params={{ slug }}
+                  className="inline-flex items-center gap-2 rounded-xl bg-gradient-primary px-7 py-3.5 font-semibold text-primary-foreground shadow-elegant hover:shadow-glow hover:-translate-y-0.5 transition-smooth"
+                >
+                  {label}
+                  <ArrowLeft className="h-4 w-4 rotate-180 rtl:rotate-0" />
+                </Link>
+              </div>
+            );
+          }
+          if (block.startsWith("## ")) return <h2 key={i}>{renderInline(block.slice(3))}</h2>;
           if (block.startsWith("- ") || /^\d+\./.test(block)) {
             const items = block.split("\n");
             const ordered = /^\d+\./.test(items[0]);
             return ordered
-              ? <ol key={i}>{items.map((li: string, j: number) => <li key={j}>{li.replace(/^\d+\.\s*/, "")}</li>)}</ol>
-              : <ul key={i}>{items.map((li: string, j: number) => <li key={j}>{li.replace(/^- /, "")}</li>)}</ul>;
+              ? <ol key={i}>{items.map((li: string, j: number) => <li key={j}>{renderInline(li.replace(/^\d+\.\s*/, ""))}</li>)}</ol>
+              : <ul key={i}>{items.map((li: string, j: number) => <li key={j}>{renderInline(li.replace(/^- /, ""))}</li>)}</ul>;
           }
-          return <p key={i}>{block}</p>;
+          return <p key={i}>{renderInline(block)}</p>;
         })}
       </div>
 
