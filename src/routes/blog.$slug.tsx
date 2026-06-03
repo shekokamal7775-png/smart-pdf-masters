@@ -17,7 +17,7 @@ function renderInline(text: string) {
       parts.push(
         <Link
           key={key++}
-          to={url}
+          to={url as string}
           className="font-semibold text-primary underline decoration-primary/30 underline-offset-4 hover:decoration-primary"
         >
           {label}
