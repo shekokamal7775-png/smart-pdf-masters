@@ -128,7 +128,9 @@ Sending lots of screenshots? Bundle them first with [PNG to PDF](/tools/jpg-to-p
 - "AI auto-design" rarely matches a human designer.
 - Generated executive summaries should always be reviewed.
 
-SmartPDFTools' AI suite is built on a fine-tuned model trained specifically on document understanding tasks.`
+SmartPDFTools' AI suite is built on a fine-tuned model trained specifically on document understanding tasks. Try the basics today with [PDF to Word](/tools/pdf-to-word) and [Compress PDF](/tools/compress-pdf).
+
+[[cta:pdf-to-word|Open PDF to Word]]`
   },
   {
     slug: "best-free-pdf-editors",
