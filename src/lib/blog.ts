@@ -155,7 +155,9 @@ SmartPDFTools' AI suite is built on a fine-tuned model trained specifically on d
 
 ## What to look for
 
-Editing scanned text needs OCR. Form filling needs proper field detection. Signing needs cryptographic signatures, not just images.`
+Editing scanned text needs OCR. Form filling needs proper field detection. Signing needs cryptographic signatures, not just images. While you're here, try our free [Merge PDF](/tools/merge-pdf) and [Compress PDF](/tools/compress-pdf) tools — they pair perfectly with any editor.
+
+[[cta:merge-pdf|Merge your PDFs free]]`
   },
   {
     slug: "secure-pdf-management-tips",
