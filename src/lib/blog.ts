@@ -55,7 +55,9 @@ For occasional use, free tiers are fine. If you're processing 50+ files a month,
 
 ## Method 1 — Use a dedicated converter
 
-Open SmartPDFTools' PDF to Word tool, drop your file, and click Convert. We use OCR for scanned PDFs and preserve the original layout.
+Open our [PDF to Word](/tools/pdf-to-word) tool, drop your file, and click Convert. We preserve the original layout and deliver an editable DOCX instantly.
+
+[[cta:pdf-to-word|Convert PDF to Word now]]
 
 ## Method 2 — Microsoft Word
 
@@ -69,7 +71,9 @@ Upload to Drive → right-click → Open with Google Docs. Free, but reformats h
 
 - For scanned PDFs, run OCR first.
 - Keep PDFs under 50MB for fastest conversion.
-- Check footer page numbers — they sometimes shift.`
+- Check footer page numbers — they sometimes shift.
+
+Need to combine pages before converting? Use [Merge PDF](/tools/merge-pdf) first, then send the single file through the converter.`
   },
   {
     slug: "how-to-compress-pdf-files",
