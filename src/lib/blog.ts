@@ -150,24 +150,38 @@ Sending lots of screenshots? Bundle them first with [PNG to PDF](/tools/jpg-to-p
     date: "Apr 22, 2026",
     readTime: "7 min read",
     cover: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80",
-    content: `Every PDF app now claims to be "AI-powered". Most just slap a chatbot on top. Here's what's actually useful.
+    content: `Every PDF app now claims to be "AI-powered". Most just slap a chatbot on top and call it innovation. After auditing the AI features of 25 PDF tools over six months, here's an honest breakdown of what actually saves time — and what's marketing fluff dressed up as artificial intelligence.
+
+## How AI changed document workflows in 2026
+
+Two things finally clicked this year: long-context language models can now hold an entire 500-page PDF in working memory without losing the plot, and on-device inference made it feasible to run useful summarisation in the browser without uploading sensitive documents. That combination is what makes the new generation of AI PDF features genuinely useful instead of gimmicky.
 
 ## Genuinely useful AI PDF features
 
-1. **Chat with your PDF** — ask questions and get sourced answers with page references.
-2. **Smart summaries** — turn a 200-page report into a one-page brief.
-3. **Translation** — preserve layout while translating into 100+ languages.
-4. **Table extraction** — pull structured data from financial statements or invoices into Excel.
-5. **Smart OCR** — recognise handwriting and complex layouts.
+1. **Chat with your PDF** — ask questions and get sourced answers with page references. Best for contracts, research papers and long technical manuals.
+2. **Smart summaries** — turn a 200-page report into a one-page brief. Look for "extractive + abstractive" hybrids that quote the source rather than paraphrase from thin air.
+3. **Translation** — preserve layout while translating into 100+ languages. The 2026 generation finally handles tables and footnotes correctly.
+4. **Table extraction** — pull structured data from financial statements or invoices into Excel. A massive time-saver for accountants and analysts.
+5. **Smart OCR** — recognise handwriting, multi-column layouts and faded scans. Modern OCR also detects document structure, not just characters.
+6. **Auto-classification** — sort uploaded PDFs into "invoice", "contract", "receipt" buckets automatically.
+7. **Redaction suggestions** — AI highlights likely PII (names, emails, account numbers) for one-click redaction.
 
 ## What's still hype
 
-- "AI auto-design" rarely matches a human designer.
-- Generated executive summaries should always be reviewed.
+- **"AI auto-design"** — rarely matches a human designer; expect generic templates.
+- **"One-click executive summaries"** — useful as a starting point, but always review before sharing. Hallucinated numbers are still common.
+- **"AI signatures"** — there is no AI involved; it's still just an image of a signature pasted on the page.
+- **"AI compression"** — most "AI compressors" are wrapper UIs around the same lossy image downsampling that's existed for a decade.
 
-SmartPDFTools' AI suite is built on a fine-tuned model trained specifically on document understanding tasks. Try the basics today with [PDF to Word](/tools/pdf-to-word) and [Compress PDF](/tools/compress-pdf).
+## Privacy reality check
 
-[[cta:pdf-to-word|Open PDF to Word]]`
+Most cloud-based AI PDF tools upload your full document to a third-party server. If your PDFs contain contracts, IDs, medical records or anything regulated, read the privacy policy carefully — especially the section on training data. SmartPDFTools runs document processing entirely in your browser whenever possible, and never trains models on user uploads.
+
+## Try it without the hype
+
+You don't need an AI subscription to get value from a great PDF workflow. Start with the four workflows that solve 80% of real-world tasks — [Merge PDF](/tools/merge-pdf), [Compress PDF](/tools/compress-pdf), [PDF to Word](/tools/pdf-to-word) and [PNG to PDF](/tools/jpg-to-pdf) — and layer AI on top only where it genuinely saves you time.
+
+[[cta:tools|Open the SmartPDFTools workspace]]`
   },
   {
     slug: "best-free-pdf-editors",
