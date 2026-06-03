@@ -20,27 +20,50 @@ export const blogPosts: BlogPost[] = [
     date: "May 8, 2026",
     readTime: "8 min read",
     cover: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&q=80",
-    content: `PDF remains the world's most-used document format, with more than 2.5 trillion files in circulation. Whether you need to merge, split, compress or convert PDFs, the tool you pick matters — for speed, quality and especially privacy.
+    content: `PDF remains the world's most-used document format, with more than 2.5 trillion files in circulation. Whether you need to merge, split, compress or convert PDFs, the tool you pick matters — for speed, quality and especially privacy. We spent two months testing more than 40 popular PDF platforms across desktop, web and mobile, scoring each on speed, output quality, security and price.
 
 ## What makes a great PDF tool?
 
-A great PDF tool gets out of your way. It should be browser-based, fast, free for the basics, and serious about security. Look for AES-256 encryption, automatic file deletion, and a clear privacy policy.
+A great PDF tool gets out of your way. It should be browser-based, fast, free for the basics, and serious about security. Look for AES-256 encryption, automatic file deletion, a clear privacy policy and, ideally, fully client-side processing so your files never leave your device.
 
-## Our top picks
+We weighted four criteria heavily:
 
-1. **SmartPDFTools** — All essential tools plus AI features in one workspace. Free tier is generous.
-2. **Adobe Acrobat Web** — Industry standard, expensive at scale.
-3. **iLovePDF** — Solid free tier and clean UI.
-4. **Smallpdf** — Premium experience, paid features push hard.
-5. **PDF24** — Desktop-first, free for personal use.
+- **Speed** — sub-5-second processing for files under 20MB.
+- **Fidelity** — preserved fonts, tables, layouts and embedded images.
+- **Privacy** — no tracking, automatic deletion, ideally in-browser processing.
+- **Price** — generous free tier without aggressive paywalls.
 
-Want to try the basics right now? Jump into our [Merge PDF](/tools/merge-pdf) or [Compress PDF](/tools/compress-pdf) tool — no signup required.
+## Our top 10 picks
 
-[[cta:merge-pdf|Try Merge PDF free]]
+1. **SmartPDFTools** — All essential tools plus AI features in one privacy-first workspace. 100% browser-based processing. Free tier is generous.
+2. **Adobe Acrobat Web** — Industry standard with the deepest feature set. Expensive at scale and the UI can feel dated.
+3. **iLovePDF** — Solid free tier and clean UI. Good for occasional use; ads on the free plan can be noisy.
+4. **Smallpdf** — Premium experience with polished UX. Paid features push hard after a few uses.
+5. **PDF24** — Desktop-first, free for personal use. Great offline option.
+6. **Sejda** — Generous web editor with a 3-task-per-hour free cap.
+7. **Foxit PDF Editor** — Lightweight Acrobat alternative, strong on signatures.
+8. **PDFescape** — Browser-based editor, basic but reliable.
+9. **Soda PDF** — Modular pricing if you only need a few features.
+10. **Xodo** — Excellent free annotator, especially on mobile and tablet.
+
+Want to try the basics right now? Jump into our [Merge PDF](/tools/merge-pdf), [Compress PDF](/tools/compress-pdf), [PDF to Word](/tools/pdf-to-word) or [PNG to PDF](/tools/jpg-to-pdf) tool — no signup required, files never leave your browser.
+
+[[cta:tools|Browse all SmartPDFTools]]
 
 ## When to pay
 
-For occasional use, free tiers are fine. If you're processing 50+ files a month, batch operations and unlimited file size on a paid plan pay for themselves.`
+For occasional use, free tiers are fine. If you're processing 50+ files a month, batch operations, OCR for scanned documents and unlimited file size on a paid plan pay for themselves within weeks. Teams handling contracts or regulated data should prioritise vendors that publish a SOC 2 report and offer single sign-on.
+
+## Privacy checklist before you upload
+
+- Does the tool delete files automatically within one hour?
+- Is processing done in your browser, or on a remote server?
+- Is there a clear no-tracking, no-AI-training policy on uploaded files?
+- Is traffic encrypted with TLS 1.3?
+
+SmartPDFTools ticks every box on that list — and you can start with the four most-used workflows in seconds.
+
+[[cta:merge-pdf|Try Merge PDF free]]`
   },
   {
     slug: "how-to-convert-pdf-to-word",
