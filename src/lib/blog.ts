@@ -92,13 +92,17 @@ Need to combine pages before converting? Use [Merge PDF](/tools/merge-pdf) first
 - **Recommended** — balanced, ideal for sharing online.
 - **Maximum compression** — smallest file, screen-only.
 
-Open SmartPDFTools' Compress PDF, pick a level, and download. Most users see 60-80% reduction.
+Open our [Compress PDF](/tools/compress-pdf) tool, pick a level, and download. Most users see 60-80% reduction in seconds.
+
+[[cta:compress-pdf|Compress a PDF now]]
 
 ## Pro tips
 
 - Convert to grayscale if colour isn't essential.
 - Flatten form fields and annotations.
-- Remove unused fonts and metadata.`
+- Remove unused fonts and metadata.
+
+Sending lots of screenshots? Bundle them first with [PNG to PDF](/tools/jpg-to-pdf), then compress the result for a much smaller attachment.`
   },
   {
     slug: "ai-pdf-tools-explained",
