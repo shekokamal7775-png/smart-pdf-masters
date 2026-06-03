@@ -28,11 +28,15 @@ A great PDF tool gets out of your way. It should be browser-based, fast, free fo
 
 ## Our top picks
 
-1. **SmartPDFTools** — All 16 essential tools plus AI features in one workspace. Free tier is generous.
+1. **SmartPDFTools** — All essential tools plus AI features in one workspace. Free tier is generous.
 2. **Adobe Acrobat Web** — Industry standard, expensive at scale.
 3. **iLovePDF** — Solid free tier and clean UI.
 4. **Smallpdf** — Premium experience, paid features push hard.
 5. **PDF24** — Desktop-first, free for personal use.
+
+Want to try the basics right now? Jump into our [Merge PDF](/tools/merge-pdf) or [Compress PDF](/tools/compress-pdf) tool — no signup required.
+
+[[cta:merge-pdf|Try Merge PDF free]]
 
 ## When to pay
 
