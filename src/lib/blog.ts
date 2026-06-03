@@ -28,11 +28,15 @@ A great PDF tool gets out of your way. It should be browser-based, fast, free fo
 
 ## Our top picks
 
-1. **SmartPDFTools** — All 16 essential tools plus AI features in one workspace. Free tier is generous.
+1. **SmartPDFTools** — All essential tools plus AI features in one workspace. Free tier is generous.
 2. **Adobe Acrobat Web** — Industry standard, expensive at scale.
 3. **iLovePDF** — Solid free tier and clean UI.
 4. **Smallpdf** — Premium experience, paid features push hard.
 5. **PDF24** — Desktop-first, free for personal use.
+
+Want to try the basics right now? Jump into our [Merge PDF](/tools/merge-pdf) or [Compress PDF](/tools/compress-pdf) tool — no signup required.
+
+[[cta:merge-pdf|Try Merge PDF free]]
 
 ## When to pay
 
@@ -51,7 +55,9 @@ For occasional use, free tiers are fine. If you're processing 50+ files a month,
 
 ## Method 1 — Use a dedicated converter
 
-Open SmartPDFTools' PDF to Word tool, drop your file, and click Convert. We use OCR for scanned PDFs and preserve the original layout.
+Open our [PDF to Word](/tools/pdf-to-word) tool, drop your file, and click Convert. We preserve the original layout and deliver an editable DOCX instantly.
+
+[[cta:pdf-to-word|Convert PDF to Word now]]
 
 ## Method 2 — Microsoft Word
 
@@ -65,7 +71,9 @@ Upload to Drive → right-click → Open with Google Docs. Free, but reformats h
 
 - For scanned PDFs, run OCR first.
 - Keep PDFs under 50MB for fastest conversion.
-- Check footer page numbers — they sometimes shift.`
+- Check footer page numbers — they sometimes shift.
+
+Need to combine pages before converting? Use [Merge PDF](/tools/merge-pdf) first, then send the single file through the converter.`
   },
   {
     slug: "how-to-compress-pdf-files",
@@ -84,13 +92,17 @@ Upload to Drive → right-click → Open with Google Docs. Free, but reformats h
 - **Recommended** — balanced, ideal for sharing online.
 - **Maximum compression** — smallest file, screen-only.
 
-Open SmartPDFTools' Compress PDF, pick a level, and download. Most users see 60-80% reduction.
+Open our [Compress PDF](/tools/compress-pdf) tool, pick a level, and download. Most users see 60-80% reduction in seconds.
+
+[[cta:compress-pdf|Compress a PDF now]]
 
 ## Pro tips
 
 - Convert to grayscale if colour isn't essential.
 - Flatten form fields and annotations.
-- Remove unused fonts and metadata.`
+- Remove unused fonts and metadata.
+
+Sending lots of screenshots? Bundle them first with [PNG to PDF](/tools/jpg-to-pdf), then compress the result for a much smaller attachment.`
   },
   {
     slug: "ai-pdf-tools-explained",
@@ -116,7 +128,9 @@ Open SmartPDFTools' Compress PDF, pick a level, and download. Most users see 60-
 - "AI auto-design" rarely matches a human designer.
 - Generated executive summaries should always be reviewed.
 
-SmartPDFTools' AI suite is built on a fine-tuned model trained specifically on document understanding tasks.`
+SmartPDFTools' AI suite is built on a fine-tuned model trained specifically on document understanding tasks. Try the basics today with [PDF to Word](/tools/pdf-to-word) and [Compress PDF](/tools/compress-pdf).
+
+[[cta:pdf-to-word|Open PDF to Word]]`
   },
   {
     slug: "best-free-pdf-editors",
@@ -141,7 +155,9 @@ SmartPDFTools' AI suite is built on a fine-tuned model trained specifically on d
 
 ## What to look for
 
-Editing scanned text needs OCR. Form filling needs proper field detection. Signing needs cryptographic signatures, not just images.`
+Editing scanned text needs OCR. Form filling needs proper field detection. Signing needs cryptographic signatures, not just images. While you're here, try our free [Merge PDF](/tools/merge-pdf) and [Compress PDF](/tools/compress-pdf) tools — they pair perfectly with any editor.
+
+[[cta:merge-pdf|Merge your PDFs free]]`
   },
   {
     slug: "secure-pdf-management-tips",
@@ -172,7 +188,9 @@ Author names, software versions, edit history — all leak. Strip metadata befor
 
 ## 5. Choose a privacy-first PDF service
 
-Look for automatic file deletion, TLS 1.3, GDPR compliance and a clear no-tracking policy. SmartPDFTools deletes uploads within one hour and never reads your file content.`
+Look for automatic file deletion, TLS 1.3, GDPR compliance and a clear no-tracking policy. SmartPDFTools deletes uploads within one hour and never reads your file content. Start with our secure [Compress PDF](/tools/compress-pdf) or [PNG to PDF](/tools/jpg-to-pdf) tool — all processing happens privately in your browser.
+
+[[cta:compress-pdf|Compress PDF securely]]`
   },
 ];
 

@@ -1,6 +1,40 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
+import { Fragment } from "react";
 import { getPost, blogPosts } from "@/lib/blog";
+
+// Parses inline markdown links [text](url). Internal URLs starting with "/" use TanStack Link.
+function renderInline(text: string) {
+  const parts: React.ReactNode[] = [];
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+    const [, label, url] = match;
+    if (url.startsWith("/")) {
+      parts.push(
+        <Link
+          key={key++}
+          to={url as string}
+          className="font-semibold text-primary underline decoration-primary/30 underline-offset-4 hover:decoration-primary"
+        >
+          {label}
+        </Link>,
+      );
+    } else {
+      parts.push(
+        <a key={key++} href={url} target="_blank" rel="noopener noreferrer" className="text-primary underline">
+          {label}
+        </a>,
+      );
+    }
+    lastIndex = regex.lastIndex;
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+  return <Fragment>{parts}</Fragment>;
+}
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -65,17 +99,33 @@ function PostPage() {
       <div className="prose prose-neutral dark:prose-invert prose-lg max-w-none mt-10
         prose-headings:font-display prose-headings:font-bold
         prose-h2:text-2xl prose-h2:mt-10
-        prose-a:text-primary prose-strong:text-foreground">
+        prose-a:text-primary prose-a:font-semibold prose-strong:text-foreground">
         {post.content.split("\n\n").map((block: string, i: number) => {
-          if (block.startsWith("## ")) return <h2 key={i}>{block.slice(3)}</h2>;
+          const ctaMatch = block.match(/^\[\[cta:([a-z0-9-]+)\|([^\]]+)\]\]$/);
+          if (ctaMatch) {
+            const [, slug, label] = ctaMatch;
+            return (
+              <div key={i} className="not-prose my-8 flex justify-center">
+                <Link
+                  to="/tools/$slug"
+                  params={{ slug }}
+                  className="inline-flex items-center gap-2 rounded-xl bg-gradient-primary px-7 py-3.5 font-semibold text-primary-foreground shadow-elegant hover:shadow-glow hover:-translate-y-0.5 transition-smooth"
+                >
+                  {label}
+                  <ArrowLeft className="h-4 w-4 rotate-180 rtl:rotate-0" />
+                </Link>
+              </div>
+            );
+          }
+          if (block.startsWith("## ")) return <h2 key={i}>{renderInline(block.slice(3))}</h2>;
           if (block.startsWith("- ") || /^\d+\./.test(block)) {
             const items = block.split("\n");
             const ordered = /^\d+\./.test(items[0]);
             return ordered
-              ? <ol key={i}>{items.map((li: string, j: number) => <li key={j}>{li.replace(/^\d+\.\s*/, "")}</li>)}</ol>
-              : <ul key={i}>{items.map((li: string, j: number) => <li key={j}>{li.replace(/^- /, "")}</li>)}</ul>;
+              ? <ol key={i}>{items.map((li: string, j: number) => <li key={j}>{renderInline(li.replace(/^\d+\.\s*/, ""))}</li>)}</ol>
+              : <ul key={i}>{items.map((li: string, j: number) => <li key={j}>{renderInline(li.replace(/^- /, ""))}</li>)}</ul>;
           }
-          return <p key={i}>{block}</p>;
+          return <p key={i}>{renderInline(block)}</p>;
         })}
       </div>
 
