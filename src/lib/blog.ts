@@ -188,7 +188,9 @@ Author names, software versions, edit history — all leak. Strip metadata befor
 
 ## 5. Choose a privacy-first PDF service
 
-Look for automatic file deletion, TLS 1.3, GDPR compliance and a clear no-tracking policy. SmartPDFTools deletes uploads within one hour and never reads your file content.`
+Look for automatic file deletion, TLS 1.3, GDPR compliance and a clear no-tracking policy. SmartPDFTools deletes uploads within one hour and never reads your file content. Start with our secure [Compress PDF](/tools/compress-pdf) or [PNG to PDF](/tools/jpg-to-pdf) tool — all processing happens privately in your browser.
+
+[[cta:compress-pdf|Compress PDF securely]]`
   },
 ];
 
