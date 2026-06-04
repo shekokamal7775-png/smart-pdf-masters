@@ -5,6 +5,9 @@ import { useI18n } from "@/lib/i18n";
 import { toast } from "sonner";
 import { getToolConfig, type ToolSlug } from "@/lib/pdf-tools";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type _UsedSlug = ToolSlug;
+
 interface Props {
   slug: string;
 }
