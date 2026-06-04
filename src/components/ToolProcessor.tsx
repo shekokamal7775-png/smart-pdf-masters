@@ -61,14 +61,25 @@ export function ToolProcessor({ slug }: Props) {
     }
     setBusy(true);
     try {
-      const results = await processFiles(slug as ToolSlug, files, {});
-      for (const r of results) downloadBlob(r);
+      const fd = new FormData();
+      fd.append("slug", slug);
+      for (const f of files) fd.append("files", f, f.name);
+      const res = await fetch("/api/pdf-process", { method: "POST", body: fd });
+      if (!res.ok) {
+        const msg = await res.text();
+        throw new Error(msg || `Request failed (${res.status})`);
+      }
+      const name =
+        res.headers.get("X-Output-Filename") || DEFAULT_NAMES[slug] || "output";
+      const blob = await res.blob();
+      triggerDownload(blob, name);
       toast.success(lang === "ar" ? "تم بنجاح! بدأ التنزيل." : "Done! Your download has started.");
     } catch (err) {
       console.error("[ToolProcessor]", err);
-      downloadBlob(fallbackResult(slug, files));
-      toast.success(
-        lang === "ar" ? "بدأ التنزيل بنسخة متوافقة." : "Download started with a compatible output.",
+      toast.error(
+        lang === "ar"
+          ? "حدث خطأ أثناء المعالجة. حاول مرة أخرى."
+          : "Processing failed. Please try again.",
       );
     } finally {
       setBusy(false);
