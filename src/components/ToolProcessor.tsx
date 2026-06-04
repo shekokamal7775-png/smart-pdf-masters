@@ -3,7 +3,7 @@ import { UploadCloud, FileCheck2, X, Loader2, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { toast } from "sonner";
-import { getToolConfig } from "@/lib/pdf-tools";
+import { getToolConfig, type ToolSlug } from "@/lib/pdf-tools";
 
 interface Props {
   slug: string;
