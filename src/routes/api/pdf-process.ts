@@ -31,12 +31,21 @@ function baseName(name: string) {
 }
 
 function toRtf(text: string) {
-  const escaped = text
-    .replace(/\\/g, "\\\\")
-    .replace(/{/g, "\\{")
-    .replace(/}/g, "\\}")
-    .replace(/\n/g, "\\par\n");
-  return `{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0 Arial;}}\\f0\\fs24 ${escaped}}`;
+  let out = "";
+  for (const ch of text) {
+    const code = ch.codePointAt(0)!;
+    if (ch === "\\") out += "\\\\";
+    else if (ch === "{") out += "\\{";
+    else if (ch === "}") out += "\\}";
+    else if (ch === "\n") out += "\\par\n";
+    else if (code < 128) out += ch;
+    else {
+      // RTF \uN? expects signed 16-bit
+      const signed = code > 32767 ? code - 65536 : code;
+      out += `\\u${signed}?`;
+    }
+  }
+  return `{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0 Arial;}}\\f0\\fs24 ${out}}`;
 }
 
 function extractPdfText(raw: string): string {
@@ -57,8 +66,9 @@ async function pdfToWordLocal(file: File): Promise<Response> {
   const text = extractPdfText(raw) || `Converted from ${file.name}.`;
   const pages = Math.max(1, (raw.match(/\/Type\s*\/Page\b/g) ?? []).length);
   const rtf = toRtf(`${baseName(file.name)}\n\nPages: ${pages}\n\n${text}`);
+  const bytes = new TextEncoder().encode(rtf);
   const name = `${baseName(file.name)}.doc`;
-  return new Response(rtf, {
+  return new Response(bytes, {
     status: 200,
     headers: {
       "Content-Type": "application/msword",
