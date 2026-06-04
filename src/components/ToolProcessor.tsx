@@ -3,17 +3,17 @@ import { UploadCloud, FileCheck2, X, Loader2, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { toast } from "sonner";
-import { processFiles, getToolConfig, type ToolSlug, type ProcessResult } from "@/lib/pdf-tools";
+import { getToolConfig, type ToolSlug } from "@/lib/pdf-tools";
 
 interface Props {
   slug: string;
 }
 
-function downloadBlob(result: ProcessResult) {
-  const url = URL.createObjectURL(result.blob);
+function triggerDownload(blob: Blob, name: string) {
+  const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = result.name;
+  a.download = name;
   a.rel = "noopener";
   document.body.appendChild(a);
   a.click();
@@ -23,29 +23,12 @@ function downloadBlob(result: ProcessResult) {
   }, 1500);
 }
 
-function fallbackResult(slug: string, files: File[]): ProcessResult {
-  const first = files[0];
-  const stamp = new Date().toISOString();
-  if (slug === "pdf-to-word") {
-    return {
-      blob: new Blob(
-        [
-          `{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0 Arial;}}\\f0\\fs24 Converted from ${first.name}.\\par Generated in your browser at ${stamp}.}`,
-        ],
-        { type: "application/msword" },
-      ),
-      name: first.name.replace(/\.[^/.]+$/, "") + ".doc",
-    };
-  }
-  return {
-    blob: first.slice(
-      0,
-      first.size,
-      slug === "jpg-to-pdf" ? "application/pdf" : first.type || "application/pdf",
-    ),
-    name: slug === "jpg-to-pdf" ? "images.pdf" : `processed-${first.name}`,
-  };
-}
+const DEFAULT_NAMES: Record<string, string> = {
+  "merge-pdf": "merged.pdf",
+  "compress-pdf": "compressed.pdf",
+  "pdf-to-word": "converted.docx",
+  "jpg-to-pdf": "images.pdf",
+};
 
 export function ToolProcessor({ slug }: Props) {
   const { t, lang } = useI18n();
@@ -78,14 +61,25 @@ export function ToolProcessor({ slug }: Props) {
     }
     setBusy(true);
     try {
-      const results = await processFiles(slug as ToolSlug, files, {});
-      for (const r of results) downloadBlob(r);
+      const fd = new FormData();
+      fd.append("slug", slug);
+      for (const f of files) fd.append("files", f, f.name);
+      const res = await fetch("/api/pdf-process", { method: "POST", body: fd });
+      if (!res.ok) {
+        const msg = await res.text();
+        throw new Error(msg || `Request failed (${res.status})`);
+      }
+      const name =
+        res.headers.get("X-Output-Filename") || DEFAULT_NAMES[slug] || "output";
+      const blob = await res.blob();
+      triggerDownload(blob, name);
       toast.success(lang === "ar" ? "تم بنجاح! بدأ التنزيل." : "Done! Your download has started.");
     } catch (err) {
       console.error("[ToolProcessor]", err);
-      downloadBlob(fallbackResult(slug, files));
-      toast.success(
-        lang === "ar" ? "بدأ التنزيل بنسخة متوافقة." : "Download started with a compatible output.",
+      toast.error(
+        lang === "ar"
+          ? "حدث خطأ أثناء المعالجة. حاول مرة أخرى."
+          : "Processing failed. Please try again.",
       );
     } finally {
       setBusy(false);

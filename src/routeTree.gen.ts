@@ -22,6 +22,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as ToolsSlugRouteImport } from './routes/tools.$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ApiPdfProcessRouteImport } from './routes/api/pdf-process'
 
 const ToolsRoute = ToolsRouteImport.update({
   id: '/tools',
@@ -88,6 +89,11 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => BlogRoute,
 } as any)
+const ApiPdfProcessRoute = ApiPdfProcessRouteImport.update({
+  id: '/api/pdf-process',
+  path: '/api/pdf-process',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -100,6 +106,7 @@ export interface FileRoutesByFullPath {
   '/privacy': typeof PrivacyRoute
   '/signup': typeof SignupRoute
   '/tools': typeof ToolsRouteWithChildren
+  '/api/pdf-process': typeof ApiPdfProcessRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/$slug': typeof ToolsSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -114,6 +121,7 @@ export interface FileRoutesByTo {
   '/privacy': typeof PrivacyRoute
   '/signup': typeof SignupRoute
   '/tools': typeof ToolsRouteWithChildren
+  '/api/pdf-process': typeof ApiPdfProcessRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/$slug': typeof ToolsSlugRoute
   '/blog': typeof BlogIndexRoute
@@ -130,6 +138,7 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/signup': typeof SignupRoute
   '/tools': typeof ToolsRouteWithChildren
+  '/api/pdf-process': typeof ApiPdfProcessRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/$slug': typeof ToolsSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -147,6 +156,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/signup'
     | '/tools'
+    | '/api/pdf-process'
     | '/blog/$slug'
     | '/tools/$slug'
     | '/blog/'
@@ -161,6 +171,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/signup'
     | '/tools'
+    | '/api/pdf-process'
     | '/blog/$slug'
     | '/tools/$slug'
     | '/blog'
@@ -176,6 +187,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/signup'
     | '/tools'
+    | '/api/pdf-process'
     | '/blog/$slug'
     | '/tools/$slug'
     | '/blog/'
@@ -192,6 +204,7 @@ export interface RootRouteChildren {
   PrivacyRoute: typeof PrivacyRoute
   SignupRoute: typeof SignupRoute
   ToolsRoute: typeof ToolsRouteWithChildren
+  ApiPdfProcessRoute: typeof ApiPdfProcessRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -287,6 +300,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/api/pdf-process': {
+      id: '/api/pdf-process'
+      path: '/api/pdf-process'
+      fullPath: '/api/pdf-process'
+      preLoaderRoute: typeof ApiPdfProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -323,17 +343,8 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyRoute: PrivacyRoute,
   SignupRoute: SignupRoute,
   ToolsRoute: ToolsRouteWithChildren,
+  ApiPdfProcessRoute: ApiPdfProcessRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
