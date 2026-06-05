@@ -4,12 +4,13 @@ const TOOL_MAP: Record<string, string> = {
   "merge-pdf": "merge",
   "compress-pdf": "compress",
   "jpg-to-pdf": "imagepdf",
+  "pdf-to-word": "pdfoffice",
 };
 
 const OUTPUT_NAME: Record<string, string> = {
   "merge-pdf": "merged.pdf",
   "compress-pdf": "compressed.pdf",
-  "pdf-to-word": "converted.doc",
+  "pdf-to-word": "converted.docx",
   "jpg-to-pdf": "images.pdf",
 };
 
@@ -26,56 +27,23 @@ async function getToken(): Promise<string> {
   return token;
 }
 
-function baseName(name: string) {
-  return name.replace(/\.[^/.]+$/, "");
-}
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-function toRtf(text: string) {
-  let out = "";
-  for (const ch of text) {
-    const code = ch.codePointAt(0)!;
-    if (ch === "\\") out += "\\\\";
-    else if (ch === "{") out += "\\{";
-    else if (ch === "}") out += "\\}";
-    else if (ch === "\n") out += "\\par\n";
-    else if (code < 128) out += ch;
-    else {
-      // RTF \uN? expects signed 16-bit
-      const signed = code > 32767 ? code - 65536 : code;
-      out += `\\u${signed}?`;
+async function waitForTask(base: string, task: string, authH: Record<string, string>) {
+  // Poll task status until TaskSuccess or failure. Max ~30s.
+  for (let i = 0; i < 30; i++) {
+    const r = await fetch(`${base}/task/${task}`, { headers: authH });
+    if (r.ok) {
+      const j = (await r.json()) as { status?: string };
+      const s = j.status;
+      if (s === "TaskSuccess" || s === "TaskSuccessOK") return;
+      if (s && /Fail|Error|Delete/i.test(s)) {
+        throw new Error(`task ${s}: ${JSON.stringify(j)}`);
+      }
     }
+    await sleep(1000);
   }
-  return `{\\rtf1\\ansi\\ansicpg1252\\deff0{\\fonttbl{\\f0 Arial;}}\\f0\\fs24 ${out}}`;
-}
-
-function extractPdfText(raw: string): string {
-  const parts = [...raw.matchAll(/\(([^()]{2,})\)\s*Tj/g), ...raw.matchAll(/\(([^()]{2,})\)/g)]
-    .map((m) => m[1])
-    .filter((v) => /[A-Za-z\u0600-\u06FF0-9]/.test(v));
-  return [...new Set(parts)]
-    .slice(0, 800)
-    .join(" ")
-    .replace(/\\([()\\])/g, "$1")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-async function pdfToWordLocal(file: File): Promise<Response> {
-  const buf = new Uint8Array(await file.arrayBuffer());
-  const raw = new TextDecoder("latin1").decode(buf);
-  const text = extractPdfText(raw) || `Converted from ${file.name}.`;
-  const pages = Math.max(1, (raw.match(/\/Type\s*\/Page\b/g) ?? []).length);
-  const rtf = toRtf(`${baseName(file.name)}\n\nPages: ${pages}\n\n${text}`);
-  const bytes = new TextEncoder().encode(rtf);
-  const name = `${baseName(file.name)}.doc`;
-  return new Response(bytes, {
-    status: 200,
-    headers: {
-      "Content-Type": "application/msword",
-      "Content-Disposition": `attachment; filename="${name}"`,
-      "X-Output-Filename": name,
-    },
-  });
+  throw new Error("task polling timed out");
 }
 
 async function processWithILovePdf(slug: string, files: File[]): Promise<Response> {
@@ -86,6 +54,7 @@ async function processWithILovePdf(slug: string, files: File[]): Promise<Respons
   const startRes = await fetch(`https://api.ilovepdf.com/v1/start/${tool}`, { headers: authH });
   if (!startRes.ok) throw new Error(`start ${startRes.status}: ${await startRes.text()}`);
   const { server, task } = (await startRes.json()) as { server: string; task: string };
+  if (!server || !task) throw new Error("start: missing server/task");
   const base = `https://${server}/v1`;
 
   const uploaded: { server_filename: string; filename: string }[] = [];
@@ -108,24 +77,38 @@ async function processWithILovePdf(slug: string, files: File[]): Promise<Respons
     body: JSON.stringify(procBody),
   });
   if (!proc.ok) throw new Error(`process ${proc.status}: ${await proc.text()}`);
+  const procJson = (await proc.json().catch(() => ({}))) as { status?: string };
+
+  // Wait until task is finished before downloading.
+  if (procJson.status !== "TaskSuccess" && procJson.status !== "TaskSuccessOK") {
+    await waitForTask(base, task, authH);
+  }
 
   const dl = await fetch(`${base}/download/${task}`, { headers: authH });
   if (!dl.ok) throw new Error(`download ${dl.status}: ${await dl.text()}`);
 
   const buf = await dl.arrayBuffer();
+  if (buf.byteLength === 0) throw new Error("download returned empty body");
+
   const cd = dl.headers.get("content-disposition") || "";
   const m = cd.match(/filename\*?=(?:UTF-8'')?"?([^";]+)"?/i);
   const filename = (m && decodeURIComponent(m[1])) || OUTPUT_NAME[slug] || "output";
   const ct =
     dl.headers.get("content-type") ||
-    (filename.endsWith(".zip") ? "application/zip" : "application/pdf");
+    (filename.endsWith(".zip")
+      ? "application/zip"
+      : filename.endsWith(".docx")
+        ? "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        : "application/pdf");
 
   return new Response(buf, {
     status: 200,
     headers: {
       "Content-Type": ct,
+      "Content-Length": String(buf.byteLength),
       "Content-Disposition": `attachment; filename="${filename}"`,
       "X-Output-Filename": filename,
+      "Cache-Control": "no-store",
     },
   });
 }
@@ -139,14 +122,8 @@ export const Route = createFileRoute("/api/pdf-process")({
           const slug = String(form.get("slug") || "");
           const files = form.getAll("files").filter((f): f is File => f instanceof File);
           if (files.length === 0) return new Response("No files", { status: 400 });
-
-          if (slug === "pdf-to-word") {
-            return await pdfToWordLocal(files[0]);
-          }
-          if (TOOL_MAP[slug]) {
-            return await processWithILovePdf(slug, files);
-          }
-          return new Response("Unknown tool", { status: 400 });
+          if (!TOOL_MAP[slug]) return new Response("Unknown tool", { status: 400 });
+          return await processWithILovePdf(slug, files);
         } catch (e) {
           console.error("[pdf-process]", e);
           return new Response(`error: ${(e as Error).message}`, { status: 500 });
