@@ -14,6 +14,14 @@ const OUTPUT_NAME: Record<string, string> = {
   "jpg-to-pdf": "images.pdf",
 };
 
+const CONTENT_TYPE: Record<string, string> = {
+  "merge-pdf": "application/pdf",
+  "compress-pdf": "application/pdf",
+  "jpg-to-pdf": "application/pdf",
+  "pdf-to-word":
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+};
+
 async function getToken(): Promise<string> {
   const publicKey = process.env.ILOVEPDF_PUBLIC_KEY;
   if (!publicKey) throw new Error("ILOVEPDF_PUBLIC_KEY not configured");
@@ -29,18 +37,24 @@ async function getToken(): Promise<string> {
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-async function waitForTask(base: string, task: string, authH: Record<string, string>) {
-  // Poll task status until TaskSuccess or failure. Max ~30s.
-  for (let i = 0; i < 30; i++) {
+async function waitForTaskSuccess(
+  base: string,
+  task: string,
+  authH: Record<string, string>,
+) {
+  let attempts = 0;
+  const maxAttempts = 60; // ~60s
+  while (attempts < maxAttempts) {
     const r = await fetch(`${base}/task/${task}`, { headers: authH });
     if (r.ok) {
       const j = (await r.json()) as { status?: string };
-      const s = j.status;
-      if (s === "TaskSuccess" || s === "TaskSuccessOK") return;
-      if (s && /Fail|Error|Delete/i.test(s)) {
-        throw new Error(`task ${s}: ${JSON.stringify(j)}`);
+      const status = j.status;
+      if (status === "TaskSuccess") return;
+      if (status && /Fail|Error|Delete/i.test(status)) {
+        throw new Error(`task failed: ${status}`);
       }
     }
+    attempts++;
     await sleep(1000);
   }
   throw new Error("task polling timed out");
@@ -51,12 +65,16 @@ async function processWithILovePdf(slug: string, files: File[]): Promise<Respons
   const token = await getToken();
   const authH = { Authorization: `Bearer ${token}` };
 
-  const startRes = await fetch(`https://api.ilovepdf.com/v1/start/${tool}`, { headers: authH });
+  // Start
+  const startRes = await fetch(`https://api.ilovepdf.com/v1/start/${tool}`, {
+    headers: authH,
+  });
   if (!startRes.ok) throw new Error(`start ${startRes.status}: ${await startRes.text()}`);
   const { server, task } = (await startRes.json()) as { server: string; task: string };
   if (!server || !task) throw new Error("start: missing server/task");
   const base = `https://${server}/v1`;
 
+  // Upload
   const uploaded: { server_filename: string; filename: string }[] = [];
   for (const f of files) {
     const fd = new FormData();
@@ -68,6 +86,7 @@ async function processWithILovePdf(slug: string, files: File[]): Promise<Respons
     uploaded.push({ server_filename: j.server_filename, filename: f.name });
   }
 
+  // Process
   const procBody: Record<string, unknown> = { task, tool, files: uploaded };
   if (slug === "compress-pdf") procBody.compression_level = "recommended";
 
@@ -77,29 +96,18 @@ async function processWithILovePdf(slug: string, files: File[]): Promise<Respons
     body: JSON.stringify(procBody),
   });
   if (!proc.ok) throw new Error(`process ${proc.status}: ${await proc.text()}`);
-  const procJson = (await proc.json().catch(() => ({}))) as { status?: string };
 
-  // Wait until task is finished before downloading.
-  if (procJson.status !== "TaskSuccess" && procJson.status !== "TaskSuccessOK") {
-    await waitForTask(base, task, authH);
-  }
+  // Poll until TaskSuccess
+  await waitForTaskSuccess(base, task, authH);
 
+  // Download as arrayBuffer
   const dl = await fetch(`${base}/download/${task}`, { headers: authH });
   if (!dl.ok) throw new Error(`download ${dl.status}: ${await dl.text()}`);
-
   const buf = await dl.arrayBuffer();
   if (buf.byteLength === 0) throw new Error("download returned empty body");
 
-  const cd = dl.headers.get("content-disposition") || "";
-  const m = cd.match(/filename\*?=(?:UTF-8'')?"?([^";]+)"?/i);
-  const filename = (m && decodeURIComponent(m[1])) || OUTPUT_NAME[slug] || "output";
-  const ct =
-    dl.headers.get("content-type") ||
-    (filename.endsWith(".zip")
-      ? "application/zip"
-      : filename.endsWith(".docx")
-        ? "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-        : "application/pdf");
+  const filename = OUTPUT_NAME[slug] || "output";
+  const ct = CONTENT_TYPE[slug] || "application/octet-stream";
 
   return new Response(buf, {
     status: 200,
