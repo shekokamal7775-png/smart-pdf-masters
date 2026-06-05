@@ -1,16 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+// Only tools actually supported by the iLovePDF REST API.
+// See: https://developer.ilovepdf.com/docs/api-reference (Process > tool)
+// NOTE: iLovePDF does NOT expose a PDF → Word tool via its API.
+// `officepdf` converts Office documents TO PDF, not the reverse.
 const TOOL_MAP: Record<string, string> = {
   "merge-pdf": "merge",
   "compress-pdf": "compress",
   "jpg-to-pdf": "imagepdf",
-  "pdf-to-word": "pdfoffice",
 };
 
 const OUTPUT_NAME: Record<string, string> = {
   "merge-pdf": "merged.pdf",
   "compress-pdf": "compressed.pdf",
-  "pdf-to-word": "converted.docx",
   "jpg-to-pdf": "images.pdf",
 };
 
@@ -18,8 +20,6 @@ const CONTENT_TYPE: Record<string, string> = {
   "merge-pdf": "application/pdf",
   "compress-pdf": "application/pdf",
   "jpg-to-pdf": "application/pdf",
-  "pdf-to-word":
-    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 };
 
 async function getToken(): Promise<string> {
@@ -42,19 +42,15 @@ async function waitForTaskSuccess(
   task: string,
   authH: Record<string, string>,
 ) {
-  let attempts = 0;
-  const maxAttempts = 60; // ~60s
-  while (attempts < maxAttempts) {
+  for (let i = 0; i < 60; i++) {
     const r = await fetch(`${base}/task/${task}`, { headers: authH });
     if (r.ok) {
       const j = (await r.json()) as { status?: string };
-      const status = j.status;
-      if (status === "TaskSuccess") return;
-      if (status && /Fail|Error|Delete/i.test(status)) {
-        throw new Error(`task failed: ${status}`);
+      if (j.status === "TaskSuccess") return;
+      if (j.status && /Fail|Error|Delete/i.test(j.status)) {
+        throw new Error(`task failed: ${j.status}`);
       }
     }
-    attempts++;
     await sleep(1000);
   }
   throw new Error("task polling timed out");
@@ -65,7 +61,7 @@ async function processWithILovePdf(slug: string, files: File[]): Promise<Respons
   const token = await getToken();
   const authH = { Authorization: `Bearer ${token}` };
 
-  // Start
+  // 1. Start
   const startRes = await fetch(`https://api.ilovepdf.com/v1/start/${tool}`, {
     headers: authH,
   });
@@ -74,7 +70,7 @@ async function processWithILovePdf(slug: string, files: File[]): Promise<Respons
   if (!server || !task) throw new Error("start: missing server/task");
   const base = `https://${server}/v1`;
 
-  // Upload
+  // 2. Upload
   const uploaded: { server_filename: string; filename: string }[] = [];
   for (const f of files) {
     const fd = new FormData();
@@ -86,7 +82,7 @@ async function processWithILovePdf(slug: string, files: File[]): Promise<Respons
     uploaded.push({ server_filename: j.server_filename, filename: f.name });
   }
 
-  // Process
+  // 3. Process
   const procBody: Record<string, unknown> = { task, tool, files: uploaded };
   if (slug === "compress-pdf") procBody.compression_level = "recommended";
 
@@ -97,10 +93,10 @@ async function processWithILovePdf(slug: string, files: File[]): Promise<Respons
   });
   if (!proc.ok) throw new Error(`process ${proc.status}: ${await proc.text()}`);
 
-  // Poll until TaskSuccess
+  // 4. Poll until TaskSuccess
   await waitForTaskSuccess(base, task, authH);
 
-  // Download as arrayBuffer
+  // 5. Download as arrayBuffer
   const dl = await fetch(`${base}/download/${task}`, { headers: authH });
   if (!dl.ok) throw new Error(`download ${dl.status}: ${await dl.text()}`);
   const buf = await dl.arrayBuffer();
@@ -130,7 +126,12 @@ export const Route = createFileRoute("/api/pdf-process")({
           const slug = String(form.get("slug") || "");
           const files = form.getAll("files").filter((f): f is File => f instanceof File);
           if (files.length === 0) return new Response("No files", { status: 400 });
-          if (!TOOL_MAP[slug]) return new Response("Unknown tool", { status: 400 });
+          if (!TOOL_MAP[slug]) {
+            return new Response(
+              `Tool "${slug}" is not supported by the iLovePDF API.`,
+              { status: 400 },
+            );
+          }
           return await processWithILovePdf(slug, files);
         } catch (e) {
           console.error("[pdf-process]", e);
