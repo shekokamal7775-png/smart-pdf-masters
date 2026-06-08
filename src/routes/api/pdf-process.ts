@@ -183,6 +183,9 @@ export const Route = createFileRoute("/api/pdf-process")({
               { status: 400 },
             );
           }
+          if (slug === "pdf-to-word") {
+            return await processWithConvertApi(files[0]);
+          }
           return await processWithILovePdf(slug, files);
         } catch (e) {
           console.error("[pdf-process]", e);
