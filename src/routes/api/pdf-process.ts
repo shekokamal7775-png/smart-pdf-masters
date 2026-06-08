@@ -8,6 +8,7 @@ const TOOL_MAP: Record<string, string> = {
   "merge-pdf": "merge",
   "compress-pdf": "compress",
   "jpg-to-pdf": "imagepdf",
+  "pdf-to-word": "convertapi",
 };
 
 const OUTPUT_NAME: Record<string, string> = {
