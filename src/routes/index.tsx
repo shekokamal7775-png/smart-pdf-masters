@@ -12,10 +12,14 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SmartPDFTools — Free Online PDF Tools, Editor, Converter & AI" },
-      { name: "description", content: "All-in-one PDF workspace: merge, split, compress, convert, edit, sign, OCR and unlock PDFs free online. Plus AI tools. Secure and fast." },
-      { property: "og:title", content: "SmartPDFTools — Free Online PDF Tools" },
-      { property: "og:description", content: "Every PDF tool you need in one fast, secure workspace. 16+ tools including AI." },
+      { title: "SmartPDF - Free Online PDF Tools" },
+      { name: "description", content: "Free online PDF tools to merge, split, compress, convert, and edit PDF files. Fast, secure, and easy to use with no installation required." },
+      { property: "og:title", content: "SmartPDF - Free Online PDF Tools" },
+      { property: "og:description", content: "Free online PDF tools to merge, split, compress, convert, and edit PDF files. Fast, secure, and easy to use with no installation required." },
+      { property: "og:url", content: "https://smart-pdf-masters.lovable.app/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://smart-pdf-masters.lovable.app/" },
     ],
   }),
   component: HomePage,
