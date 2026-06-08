@@ -47,9 +47,9 @@ function ContactPage() {
 
       <div className="mt-14 grid lg:grid-cols-3 gap-6">
         {[
-          { icon: MessageSquare, title: "Support", body: "Help with a tool or your account.", email: "support@smartpdftools.com" },
-          { icon: Building2, title: "Sales", body: "Business plans, SSO, custom contracts.", email: "sales@smartpdftools.com" },
-          { icon: Mail, title: "Partnerships", body: "Integrations, affiliates, press.", email: "partners@smartpdftools.com" },
+          { icon: MessageSquare, title: "Support", body: "Help with a tool or your account.", email: "shekokamal7775@gmail.com" },
+          { icon: Building2, title: "Sales", body: "Business plans, SSO, custom contracts.", email: "shekokamal7775@gmail.com" },
+          { icon: Mail, title: "Partnerships", body: "Integrations, affiliates, press.", email: "shekokamal7775@gmail.com" },
         ].map((c) => (
           <div key={c.title} className="rounded-2xl border border-border bg-card p-6 shadow-soft">
             <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-elegant">
