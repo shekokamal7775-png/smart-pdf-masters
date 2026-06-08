@@ -136,7 +136,7 @@ function PrivacyPage() {
           <p>
             If you have any questions about this Privacy Policy, please{" "}
             <Link to="/contact" className="text-primary hover:underline">contact us</Link>{" "}
-            or email <a href="mailto:support@smartpdftools.com" className="text-primary hover:underline">support@smartpdftools.com</a>.
+            or email <a href="mailto:shekokamal7775@gmail.com" className="text-primary hover:underline">shekokamal7775@gmail.com</a>.
           </p>
         </Section>
       </div>
