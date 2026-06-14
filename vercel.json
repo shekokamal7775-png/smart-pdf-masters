@@ -1,8 +1,15 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
+    }
+  ],
   "rewrites": [
     {
-      "source": "/((?!api/|_next/|[\\w-]+\\.\\w+).*)",
-      "destination": "/index.html"
+      "source": "/(.*)",
+      "destination": "/api/index.js"
     }
   ]
 }
