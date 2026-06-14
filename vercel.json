@@ -2,16 +2,5 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "functions": {
-    "dist/server/index.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "dist/server/index.js"
-    }
-  ]
+  "installCommand": "npm install"
 }
