@@ -1,26 +1,17 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/client",
+  "outputDirectory": "dist",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": null,
+  "functions": {
+    "dist/server/index.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
   "routes": [
     {
-      "src": "/_build/assets/(.*)",
-      "headers": { "Cache-Control": "public, max-age=31536000, immutable" },
-      "dest": "/_build/assets/$1"
-    },
-    {
-      "src": "/_build/(.*)",
-      "dest": "/_build/$1"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "/favicon.ico"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "dist/server/index.js"
     }
   ]
 }
