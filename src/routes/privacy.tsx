@@ -8,8 +8,7 @@ export const Route = createFileRoute("/privacy")({
       { name: "description", content: "Learn how SmartPDFTools collects, uses, and protects your personal information, including cookies, analytics, and AdSense disclosures." },
       { property: "og:title", content: "Privacy Policy — SmartPDFTools" },
       { property: "og:description", content: "How SmartPDFTools handles your data, cookies, analytics, and third-party advertising." },
-      { property: "og:url", content: "https://smart-pdf-masters.lovable.app/privacy" },
-    ],
+      { property: "og:url", content: "https://www.smartpdfmasters.com/privacy" },
     links: [
       { rel: "canonical", href: "https://smart-pdf-masters.lovable.app/privacy" },
     ],
