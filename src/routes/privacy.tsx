@@ -9,8 +9,9 @@ export const Route = createFileRoute("/privacy")({
       { property: "og:title", content: "Privacy Policy — SmartPDFTools" },
       { property: "og:description", content: "How SmartPDFTools handles your data, cookies, analytics, and third-party advertising." },
       { property: "og:url", content: "https://www.smartpdfmasters.com/privacy" },
+    ],
     links: [
-      { rel: "canonical", href: "https://smart-pdf-masters.lovable.app/privacy" },
+      { rel: "canonical", href: "https://www.smartpdfmasters.com/privacy" },
     ],
   }),
   component: PrivacyPage,
@@ -34,8 +35,8 @@ function PrivacyPage() {
             Welcome to <strong>SmartPDFTools</strong> (“we”, “us”, “our”). We respect your privacy and are
             committed to protecting your personal data. This Privacy Policy explains how we collect, use,
             and safeguard information when you visit{" "}
-            <a href="https://smart-pdf-masters.lovable.app" className="text-primary hover:underline">
-              smart-pdf-masters.lovable.app
+            <a href="https://www.smartpdfmasters.com" className="text-primary hover:underline">
+              www.smartpdfmasters.com
             </a>{" "}
             and use our online PDF tools.
           </p>
@@ -155,4 +156,4 @@ function Section({ icon: Icon, title, children }: { icon: any; title: string; ch
       <div className="space-y-3">{children}</div>
     </section>
   );
-}
+            }
