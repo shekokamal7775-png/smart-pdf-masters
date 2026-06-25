@@ -277,7 +277,7 @@ Look for automatic file deletion within one hour, TLS 1.3 in transit, GDPR/CCPA 
     author: "Sara Khalil",
     date: "June 25, 2026",
     readTime: "5 min read",
-    cover: "/pdf-productivity-guide.png",
+    cover: "/pdf-productivity-guide.png.png ",
     content: `
       <p>We all know PDFs are everywhere. But have you ever stopped to think about how much time you waste fighting with them? The right PDF tool isn't just about converting files—it's about reclaiming your time and focus.</p>
 
