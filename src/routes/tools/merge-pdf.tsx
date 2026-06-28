@@ -50,7 +50,7 @@ export const Route = createFileRoute("/tools/merge-pdf")({
     <div className="mx-auto max-w-2xl px-6 py-24 text-center">
       <h1 className="font-display text-3xl font-bold">Tool not found</h1>
       <Link to="/tools" className="mt-6 inline-block text-primary hover:underline">
-        ← Back to all tools
+        Back to all tools
       </Link>
     </div>
   ),
@@ -74,7 +74,7 @@ function ToolPage() {
             className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary mb-6"
           >
             <ArrowLeft className="h-4 w-4 rtl:rotate-180" />
-            {lang === "ar" ? "All tools" : "All tools"}
+            All tools
           </Link>
           <div className="text-center">
             <div
@@ -93,19 +93,18 @@ function ToolPage() {
           </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            {[
-              { icon: Zap, label: lang === "ar" ? "Instant results" : "Instant results" },
-              { icon: ShieldCheck, label: lang === "ar" ? "256-bit encryption" : "256-bit encryption" },
-              { icon: Cloud, label: lang === "ar" ? "Auto-delete in 1h" : "Auto-delete in 1h" },
-            ].map((f, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 rounded-xl border border-border bg-card/60 p-3"
-              >
-                <f.icon className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">{f.label}</span>
-              </div>
-            ))}
+            <div className="flex items-center gap-3 rounded-xl border border-border bg-card/60 p-3">
+              <Zap className="h-5 w-5 text-primary" />
+              <span className="text-sm font-medium">Instant results</span>
+            </div>
+            <div className="flex items-center gap-3 rounded-xl border border-border bg-card/60 p-3">
+              <ShieldCheck className="h-5 w-5 text-primary" />
+              <span className="text-sm font-medium">256-bit encryption</span>
+            </div>
+            <div className="flex items-center gap-3 rounded-xl border border-border bg-card/60 p-3">
+              <Cloud className="h-5 w-5 text-primary" />
+              <span className="text-sm font-medium">Auto-delete in 1h</span>
+            </div>
           </div>
         </div>
       </section>
@@ -113,7 +112,7 @@ function ToolPage() {
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="prose prose-neutral dark:prose-invert max-w-none">
           <h2 className="font-display text-2xl font-bold">
-            {lang === "ar" ? `About the ${tool.title.en} tool` : `About the ${tool.title.en} tool`}
+            About the {tool.title.en} tool
           </h2>
           <p className="text-muted-foreground leading-relaxed">{tool.seoDesc[lang]}</p>
         </div>
@@ -141,9 +140,7 @@ function ToolPage() {
 
         {related.length > 0 && (
           <div className="mt-12">
-            <h3 className="font-display text-xl font-bold mb-4">
-              {lang === "ar" ? "Related tools" : "Related tools"}
-            </h3>
+            <h3 className="font-display text-xl font-bold mb-4">Related tools</h3>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {related.map((r, i) => (
                 <ToolCard key={r.slug} tool={r} index={i} />
@@ -154,4 +151,4 @@ function ToolPage() {
       </section>
     </div>
   );
-            }
+      }
