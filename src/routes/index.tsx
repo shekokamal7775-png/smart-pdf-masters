@@ -159,6 +159,22 @@ function HomePage() {
         </div>
       </section>
 
+      {/* WHY SMARTPDFTOOLS */}
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center max-w-3xl mx-auto">
+          <h2 className="font-display text-4xl font-bold mb-6">Why SmartPDFTools is the Best Free PDF Solution</h2>
+          <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+            SmartPDFTools is a completely free online platform designed to help you manage, edit, and convert PDF files with ease. Whether you need to merge multiple documents, compress large files for email, convert PDFs to editable Word formats, or turn images into professional PDFs, our tools handle everything in your browser – securely and instantly.
+          </p>
+          <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+            Unlike other free PDF tools that limit your usage or add watermarks, SmartPDFTools offers unlimited access with no sign-up required. Your privacy is our priority: all uploaded files are automatically deleted from our servers within one hour, and we never share your data with third parties.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Join millions of users worldwide who trust SmartPDFTools for fast, reliable, and secure document processing – all completely free.
+          </p>
+        </div>
+      </section>
+
       {/* TESTIMONIALS */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center max-w-2xl mx-auto mb-14">
@@ -192,6 +208,45 @@ function HomePage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
+        <h2 className="font-display text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          <div className="p-5 border rounded-xl bg-card">
+            <h3 className="font-semibold text-lg">Is SmartPDFTools really free to use?</h3>
+            <p className="text-muted-foreground mt-1">Yes! All our tools are completely free with no hidden charges, no daily limits, and no watermarks.</p>
+          </div>
+          <div className="p-5 border rounded-xl bg-card">
+            <h3 className="font-semibold text-lg">Do I need to create an account?</h3>
+            <p className="text-muted-foreground mt-1">No. You can use all tools without signing up or providing any personal information.</p>
+          </div>
+          <div className="p-5 border rounded-xl bg-card">
+            <h3 className="font-semibold text-lg">Are my files safe and secure?</h3>
+            <p className="text-muted-foreground mt-1">Absolutely. We use 256-bit TLS encryption and automatically delete all uploaded files within 1 hour of processing.</p>
+          </div>
+          <div className="p-5 border rounded-xl bg-card">
+            <h3 className="font-semibold text-lg">What file formats do you support?</h3>
+            <p className="text-muted-foreground mt-1">We support PDF, Word (DOCX), PNG, and JPG formats for conversion and processing.</p>
+          </div>
+          <div className="p-5 border rounded-xl bg-card">
+            <h3 className="font-semibold text-lg">Can I use SmartPDFTools on my phone?</h3>
+            <p className="text-muted-foreground mt-1">Yes! Our tools work on all devices – desktop, tablet, and mobile.</p>
+          </div>
+          <div className="p-5 border rounded-xl bg-card">
+            <h3 className="font-semibold text-lg">Is there a file size limit?</h3>
+            <p className="text-muted-foreground mt-1">We support files up to 50MB for all our free tools.</p>
+          </div>
+          <div className="p-5 border rounded-xl bg-card">
+            <h3 className="font-semibold text-lg">How do I contact support?</h3>
+            <p className="text-muted-foreground mt-1">You can email us at shekokamal7775@gmail.com or use our Contact page.</p>
+          </div>
+          <div className="p-5 border rounded-xl bg-card">
+            <h3 className="font-semibold text-lg">Do you offer API access for developers?</h3>
+            <p className="text-muted-foreground mt-1">API access is currently in development. Stay tuned for updates!</p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="rounded-3xl bg-gradient-primary p-12 sm:p-16 text-center shadow-elegant relative overflow-hidden">
@@ -214,4 +269,4 @@ function HomePage() {
       </section>
     </div>
   );
-}
+      }
