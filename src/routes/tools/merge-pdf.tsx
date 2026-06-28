@@ -1,6 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ShieldCheck, Zap, Cloud, FileText } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { ToolProcessor } from "@/components/ToolProcessor";
 import { ToolCard } from "@/components/ToolCard";
 import { getTool, tools } from "@/lib/tools";
@@ -29,20 +28,6 @@ export const Route = createFileRoute("/tools/merge-pdf")({
         { name: "description", content: tool.seoDesc.en },
         { property: "og:title", content: `${tool.title.en} — SmartPDFTools` },
         { property: "og:description", content: tool.seoDesc.en },
-      ],
-      scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: tool.title.en,
-            description: tool.seoDesc.en,
-            applicationCategory: "BusinessApplication",
-            operatingSystem: "Web",
-            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-          }),
-        },
       ],
     };
   },
