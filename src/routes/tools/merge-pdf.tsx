@@ -74,7 +74,7 @@ function ToolPage() {
             className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary mb-6"
           >
             <ArrowLeft className="h-4 w-4 rtl:rotate-180" />
-            {lang === "ar" ? "كل الأدوات" : "All tools"}
+            {lang === "ar" ? "All tools" : "All tools"}
           </Link>
           <div className="text-center">
             <div
@@ -94,9 +94,9 @@ function ToolPage() {
 
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[
-              { icon: Zap, label: lang === "ar" ? "نتائج فورية" : "Instant results" },
-              { icon: ShieldCheck, label: lang === "ar" ? "تشفير 256 بت" : "256-bit encryption" },
-              { icon: Cloud, label: lang === "ar" ? "حذف تلقائي" : "Auto-delete in 1h" },
+              { icon: Zap, label: lang === "ar" ? "Instant results" : "Instant results" },
+              { icon: ShieldCheck, label: lang === "ar" ? "256-bit encryption" : "256-bit encryption" },
+              { icon: Cloud, label: lang === "ar" ? "Auto-delete in 1h" : "Auto-delete in 1h" },
             ].map((f, i) => (
               <div
                 key={i}
@@ -113,13 +113,13 @@ function ToolPage() {
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="prose prose-neutral dark:prose-invert max-w-none">
           <h2 className="font-display text-2xl font-bold">
-            {lang === "ar" ? `حول أداة ${tool.title.ar}` : `About the ${tool.title.en} tool`}
+            {lang === "ar" ? `About the ${tool.title.en} tool` : `About the ${tool.title.en} tool`}
           </h2>
           <p className="text-muted-foreground leading-relaxed">{tool.seoDesc[lang]}</p>
         </div>
 
         <div className="mt-8 p-6 bg-muted rounded-2xl">
-          <h3 className="text-xl font-bold mb-4">📚 Learn More About PDF Tools</h3>
+          <h3 className="text-xl font-bold mb-4">Learn More About PDF Tools</h3>
           <ul className="space-y-2">
             <li>
               <a href="/blog/best-pdf-tools-online-2026" className="text-blue-600 hover:underline">
@@ -142,7 +142,7 @@ function ToolPage() {
         {related.length > 0 && (
           <div className="mt-12">
             <h3 className="font-display text-xl font-bold mb-4">
-              {lang === "ar" ? "أدوات ذات صلة" : "Related tools"}
+              {lang === "ar" ? "Related tools" : "Related tools"}
             </h3>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {related.map((r, i) => (
@@ -154,4 +154,4 @@ function ToolPage() {
       </section>
     </div>
   );
-}
+            }
