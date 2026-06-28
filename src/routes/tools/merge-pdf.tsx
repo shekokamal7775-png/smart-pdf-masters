@@ -29,6 +29,20 @@ export const Route = createFileRoute("/tools/merge-pdf")({
         { property: "og:title", content: `${tool.title.en} — SmartPDFTools` },
         { property: "og:description", content: tool.seoDesc.en },
       ],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: tool.title.en,
+            description: tool.seoDesc.en,
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          }),
+        },
+      ],
     };
   },
   component: ToolPage,
@@ -59,7 +73,7 @@ function ToolPage() {
             to="/tools"
             className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary mb-6"
           >
-            <ArrowLeft className="h-4 w-4 rtl:rotate-180" />{" "}
+            <ArrowLeft className="h-4 w-4 rtl:rotate-180" />
             {lang === "ar" ? "كل الأدوات" : "All tools"}
           </Link>
           <div className="text-center">
@@ -104,7 +118,6 @@ function ToolPage() {
           <p className="text-muted-foreground leading-relaxed">{tool.seoDesc[lang]}</p>
         </div>
 
-        {/* روابط المقالات */}
         <div className="mt-8 p-6 bg-muted rounded-2xl">
           <h3 className="text-xl font-bold mb-4">📚 Learn More About PDF Tools</h3>
           <ul className="space-y-2">
@@ -141,4 +154,4 @@ function ToolPage() {
       </section>
     </div>
   );
-          }
+}
