@@ -37,7 +37,11 @@ export function Footer() {
       title: t("footer.legal"),
       links: [
         { label: "Privacy", to: "/privacy" },
-        { label: "Terms", to: "/about" },
+        { label: "Terms", to: "/terms" },
+        { label: "Disclaimer", to: "/disclaimer" },
+        { label: "Cookie Policy", to: "/cookie-policy" },
+        { label: "Editorial Policy", to: "/editorial-policy" },
+        { label: "Authors", to: "/authors" },
         { label: "Contact Us", to: "/contact" },
       ],
     },
@@ -92,4 +96,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+      }
