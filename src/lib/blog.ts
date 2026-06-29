@@ -302,4 +302,4 @@ Look for automatic file deletion within one hour, TLS 1.3 in transit, GDPR/CCPA 
     title: "How to Edit a PDF for Free: The Complete Step-by-Step Guide",
     excerpt: "Learn how to edit a PDF for free online without losing formatting. Step-by-step guide with the best free PDF editors for 2026.",
     category: "PDF Tutorials",
-    author
+    aauthor: "Sara Khalil",
