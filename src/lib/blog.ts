@@ -76,19 +76,16 @@ export const blogPosts: BlogPost[] = [
     readTime: "9 min read",
     cover: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80",
     content: "PDFs often contain contracts, IDs, medical records and financial information — the exact data attackers love. A few minutes of security hygiene per document prevents most leaks, lawsuits and embarrassing front-page incidents. Here's the practical checklist we use internally at SmartPDFTools.\n\n## 1. Always encrypt sensitive files\n\nUse AES-256 encryption with a strong, unique password. Avoid the legacy 40-bit RC4 cipher — it's been breakable on a laptop for over a decade. Never send the password in the same email as the encrypted file. Use a separate channel like Signal, a phone call or a password manager share link.\n\n## 2. Redact, don't just black out\n\nDrawing a black rectangle in a PDF editor doesn't remove the underlying text — anyone can copy-paste the 'hidden' content out. Use a real redaction tool that removes both the visible text and the underlying character stream. Verify by opening the redacted file in a text-only viewer and searching for what you redacted.\n\n## 3. Use digital signatures, not signature images\n\nCryptographic signatures (PAdES) prove who signed a document and that it hasn't changed since. Image-based 'wet signatures' do neither — they're trivial to forge. Most modern PDF readers can verify PAdES signatures with a green checkmark; if you don't see one, the signature is decorative.\n\n## 4. Strip metadata before sharing\n\nAuthor names, software versions, edit history, GPS coordinates, original filenames — all of it can leak through PDF metadata. Strip metadata before sending sensitive files externally. Most editors expose this under File → Properties → Metadata.\n\n## 5. Watch out for embedded JavaScript and attachments\n\nPDFs can carry executable JavaScript and embedded file attachments. Both are common malware delivery vectors. Disable JavaScript in your PDF reader by default, and scan attachments before opening.\n\n## 6. Use short-lived sharing links\n\nIf you have to upload a PDF to share it, use a service that supports expiring links (24-72 hours) and download caps. A document that lives forever on a public URL will eventually be indexed by a search engine.\n\n## 7. Choose a privacy-first PDF service\n\nLook for automatic file deletion within one hour, TLS 1.3 in transit, GDPR/CCPA compliance, no training on user data, and ideally fully in-browser processing so files never reach the vendor's servers at all. SmartPDFTools processes documents directly in your browser whenever possible, deletes any temporary uploads within one hour, and never reads your file content.\n\n## Your secure starter workflow\n\n- Compress before sharing: [Compress PDF](/tools/compress-pdf) cuts file size so you can send via Signal/email instead of public cloud links.\n- Combine ID scans privately: [PNG to PDF](/tools/jpg-to-pdf) bundles photos of IDs and receipts into a single PDF locally.\n- Convert privately: [PDF to Word](/tools/pdf-to-word) and [Merge PDF](/tools/merge-pdf) both run in-browser — your file never leaves the device.\n\n[[cta:tools|Secure your PDFs with SmartPDFTools]]"
-  },
-  {
-    slug: "pdf-productivity-guide",
-    title: "Boost Your Daily Productivity: 4 Unexpected Ways PDF Tools Save You Time",
-    excerpt: "Discover how the right PDF tools can transform your daily workflow, save hours, and reduce stress—even if you're not a power user.",
-    category: "Productivity Tips",
-    author: "Sara Khalil",
-    date: "June 25, 2026",
-    readTime: "5 min read",
-    cover: "/pdf-productivity-guide.png.png",
-    content: "<p>We all know PDFs are everywhere. But have you ever stopped to think about how much time you waste fighting with them? The right PDF tool isn't just about converting files—it's about reclaiming your time and focus.</p><h2>1. Stop Searching, Start Doing</h2><p>How many times have you Googled 'free PDF merger' or 'compress PDF'? Each search, each trial, each 'sign up to download' is a small productivity killer. A single, reliable tool like <a href='https://www.smartpdfmasters.com'>SmartPDFTools</a> eliminates that friction. It's one bookmark for all your needs.</p><h2>2. The 'Three-Second' Rule</h2><p>Speed is a form of respect for your own time. The best PDF tools process files in seconds, not minutes. This keeps you in a state of flow, preventing the frustration that kills productivity. The browser-based tools process locally, meaning no upload wait times.</p><h2>3. Clear the Clutter</h2><p>Your desktop is full of 'final_v2.pdf,' 'final_v3.pdf,' and 'final_actual.pdf.' Using a tool that lets you merge, compress, and convert files instantly helps you keep your digital workspace clean, which is essential for clear thinking.</p><h2>4. Security as a Productivity Booster</h2><p>Worrying about document security is a mental drain. When you use a tool that auto-deletes files after processing, you get peace of mind. That peace of mind is a productivity boost in itself.</p><p><strong>Ready to stop wrestling with PDFs?</strong><br />Try <a href='https://www.smartpdfmasters.com'>SmartPDFTools</a> for free and feel the difference in your daily workflow.</p>"
-  },
-  {
-    slug: "edit-pdf-free-guide-2026",
-    title: "How to Edit a PDF for Free: The Complete Step-by-Step Guide",
-    excerpt: "Learn how to edit a PDF for free online without losing formatti
+  }
+];
+
+export const blogCategories = [
+  "PDF Tutorials",
+  "File Conversion",
+  "Productivity Tips",
+  "AI Tools",
+  "Document Management",
+  "Online Security",
+] as const;
+
+export const getPost = (slug: string) => blogPosts.find((p) => p.slug === slug);
