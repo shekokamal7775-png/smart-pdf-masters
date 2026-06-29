@@ -76,44 +76,16 @@ export const blogPosts: BlogPost[] = [
     readTime: "9 min read",
     cover: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80",
     content: "PDFs often contain contracts, IDs, medical records and financial information — the exact data attackers love. A few minutes of security hygiene per document prevents most leaks, lawsuits and embarrassing front-page incidents. Here's the practical checklist we use internally at SmartPDFTools.\n\n## 1. Always encrypt sensitive files\n\nUse AES-256 encryption with a strong, unique password. Avoid the legacy 40-bit RC4 cipher — it's been breakable on a laptop for over a decade. Never send the password in the same email as the encrypted file. Use a separate channel like Signal, a phone call or a password manager share link.\n\n## 2. Redact, don't just black out\n\nDrawing a black rectangle in a PDF editor doesn't remove the underlying text — anyone can copy-paste the 'hidden' content out. Use a real redaction tool that removes both the visible text and the underlying character stream. Verify by opening the redacted file in a text-only viewer and searching for what you redacted.\n\n## 3. Use digital signatures, not signature images\n\nCryptographic signatures (PAdES) prove who signed a document and that it hasn't changed since. Image-based 'wet signatures' do neither — they're trivial to forge. Most modern PDF readers can verify PAdES signatures with a green checkmark; if you don't see one, the signature is decorative.\n\n## 4. Strip metadata before sharing\n\nAuthor names, software versions, edit history, GPS coordinates, original filenames — all of it can leak through PDF metadata. Strip metadata before sending sensitive files externally. Most editors expose this under File → Properties → Metadata.\n\n## 5. Watch out for embedded JavaScript and attachments\n\nPDFs can carry executable JavaScript and embedded file attachments. Both are common malware delivery vectors. Disable JavaScript in your PDF reader by default, and scan attachments before opening.\n\n## 6. Use short-lived sharing links\n\nIf you have to upload a PDF to share it, use a service that supports expiring links (24-72 hours) and download caps. A document that lives forever on a public URL will eventually be indexed by a search engine.\n\n## 7. Choose a privacy-first PDF service\n\nLook for automatic file deletion within one hour, TLS 1.3 in transit, GDPR/CCPA compliance, no training on user data, and ideally fully in-browser processing so files never reach the vendor's servers at all. SmartPDFTools processes documents directly in your browser whenever possible, deletes any temporary uploads within one hour, and never reads your file content.\n\n## Your secure starter workflow\n\n- Compress before sharing: [Compress PDF](/tools/compress-pdf) cuts file size so you can send via Signal/email instead of public cloud links.\n- Combine ID scans privately: [PNG to PDF](/tools/jpg-to-pdf) bundles photos of IDs and receipts into a single PDF locally.\n- Convert privately: [PDF to Word](/tools/pdf-to-word) and [Merge PDF](/tools/merge-pdf) both run in-browser — your file never leaves the device.\n\n[[cta:tools|Secure your PDFs with SmartPDFTools]]"
-  },
-  {
-    slug: "edit-pdf-free-guide-2026",
-    title: "How to Edit a PDF for Free: The Complete Step-by-Step Guide",
-    excerpt: "Learn how to edit a PDF for free online without losing formatting. Step-by-step guide with the best free PDF editors for 2026.",
-    category: "PDF Tutorials",
-    author: "Sara Khalil",
-    date: "June 29, 2026",
-    readTime: "8 min read",
-    cover: "/edit-pdf-guide-2026.png.png",
-    content: `
-      <p>Editing a PDF file is one of the most common tasks for students, professionals, and business owners. But many people think you need expensive software like Adobe Acrobat to do it. That's simply not true.</p>
+  }
+];
 
-      <p>In this guide, I'll show you <strong>how to edit a PDF for free</strong> using simple online tools that work right in your browser. No downloads, no installations, and no hidden costs.</p>
+export const blogCategories = [
+  "PDF Tutorials",
+  "File Conversion",
+  "Productivity Tips",
+  "AI Tools",
+  "Document Management",
+  "Online Security",
+] as const;
 
-      <h2>Why Edit a PDF?</h2>
-      <p>PDFs are great for sharing documents because they keep their formatting across all devices. But they're not easy to modify. Here are the most common reasons people need to edit PDFs:</p>
-      <ul>
-        <li>Fixing typos or outdated information</li>
-        <li>Adding comments or annotations</li>
-        <li>Filling out forms</li>
-        <li>Removing or replacing pages</li>
-        <li>Adding images or logos</li>
-      </ul>
-
-      <h2>What You Need to Edit a PDF</h2>
-      <p>To edit a PDF without Adobe Acrobat, you need an online PDF editor. The best tools are:</p>
-      <ol>
-        <li><strong>Browser-based</strong> – No software to install</li>
-        <li><strong>Secure</strong> – Your files are encrypted and deleted after processing</li>
-        <li><strong>Free</strong> – No hidden fees or subscriptions</li>
-        <li><strong>Easy to use</strong> – No learning curve</li>
-      </ol>
-
-      <h2>How to Edit a PDF in 3 Simple Steps</h2>
-
-      <h3>Step 1: Open Your PDF Tool</h3>
-      <p>Go to <a href="https://www.smartpdfmasters.com">SmartPDFTools</a> and select the tool you need. For general editing, you can use our <strong>Merge PDF</strong> or <strong>Compress PDF</strong> tools to reorganize or reduce file size.</p>
-
-      <h3>Step 2: Upload Your File</h3>
-      <p>Click the upload button and select 
+export const getPost = (slug: string) => blogPosts.find((p) => p.slug === slug);
