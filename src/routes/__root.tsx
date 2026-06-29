@@ -63,6 +63,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Free online PDF tools to merge, split, compress, convert, and edit PDF files. Fast, secure, and easy to use with no installation required." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "SmartPDF" },
+      { property: "og:url", content: "https://www.smartpdfmasters.com/" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@SmartPDFTools" },
       { name: "theme-color", content: "#dc2626" },
@@ -78,6 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700;800&display=swap" },
+      { rel: "canonical", href: "https://www.smartpdfmasters.com/" },
     ],
     scripts: [
       {
@@ -86,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "WebApplication",
           name: "SmartPDFTools",
-          url: "https://smartpdftools.com",
+          url: "https://www.smartpdfmasters.com/",
           applicationCategory: "BusinessApplication",
           operatingSystem: "Web",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
@@ -146,4 +148,4 @@ function RootComponent() {
       </ThemeProvider>
     </QueryClientProvider>
   );
-}
+        }
