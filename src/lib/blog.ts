@@ -409,6 +409,83 @@ How do you edit a PDF on a phone? Open [SmartPDFTools](/tools) in your mobile br
 
 [[cta:tools|Start editing now — free]]`,
   },
+  {
+    slug: "job-application-pdf-checklist",
+    title: "Job Application PDF Checklist: How to Format Your Resume and Cover Letter the Right Way",
+    excerpt: "The exact PDF formatting rules recruiters and applicant tracking systems expect in 2026 — plus how to combine your resume and cover letter into one clean file.",
+    category: "Productivity Tips",
+    author: "Daniel Park",
+    date: "June 29, 2026",
+    readTime: "9 min read",
+    cover: "/job-application-pdf-checklist.png.png",
+    content: `Every year, millions of job applications are rejected before a human ever reads them — not because the candidate was unqualified, but because the PDF itself broke something. A resume that looked perfect on the candidate's laptop arrived as a garbled mess in the recruiter's inbox, or got silently dropped by an applicant tracking system that could not parse the file correctly.
+
+This guide covers exactly how to format, prepare and submit your resume and cover letter as a PDF so that both human recruiters and automated systems read it correctly the first time.
+
+## Why PDF is still the safest format for job applications
+
+Word documents can shift formatting depending on which version of Microsoft Word the recipient has installed, what fonts are available on their system, and what operating system they are using. A resume that looks perfectly aligned on your machine can have collapsed columns, missing bullet points, or a completely different font on someone else's computer.
+
+PDF locks the layout exactly as you designed it. The recruiter sees precisely what you intended, regardless of their device, operating system or software. This is why most job postings either explicitly request PDF or strongly imply it by listing PDF first among accepted formats.
+
+## How applicant tracking systems actually read your PDF
+
+Before a human ever opens your resume, it almost certainly passes through an applicant tracking system, commonly called an ATS. These systems extract the text from your PDF, search for keywords related to the job posting, and rank candidates accordingly. A PDF that confuses the ATS parser can result in your application being filtered out entirely, even if you are perfectly qualified.
+
+ATS software reads PDFs in a linear way, extracting text in the order it is stored in the file rather than the order it visually appears on the page. This is the single biggest cause of resume formatting failures. A PDF built using complex multi-column layouts, text boxes, or tables can be read by the ATS in a scrambled, illogical order — sometimes interleaving your work experience with your education section in a way that makes the document unreadable to the parser, even though it looks fine visually.
+
+## The formatting rules that actually matter
+
+Use a single-column layout wherever possible. Two-column resumes look modern and are popular in design templates, but they are the most common cause of ATS parsing failures. If you must use a two-column design for visual appeal, keep your core experience and skills in the primary, widest column, and use the secondary column only for supplementary information like contact details or a skills list that is not critical to keyword matching.
+
+Avoid embedding your contact information inside a text box or header element. Some ATS parsers skip header and footer regions entirely, which means your name, phone number and email address may never be extracted if they are placed there. Put this information in the main body of the document instead.
+
+Use standard section headings. Words like Experience, Education, Skills and Summary are recognised reliably by ATS software. Creative alternatives like My Journey or What I Bring are far less likely to be correctly categorised, even if they read better to a human.
+
+Stick to standard, widely available fonts such as Arial, Calibri, Georgia or Times New Roman. Unusual or decorative fonts can render incorrectly when the PDF is generated, and some fonts do not embed properly, causing characters to display as boxes or missing symbols.
+
+Avoid using images for any text-based content, including your name as a styled graphic or skills displayed as icon-based progress bars. Text inside an image cannot be extracted by an ATS at all — it is invisible to the system, no matter how visually appealing it looks to a human reader.
+
+## How to combine your resume and cover letter
+
+Many job applications, particularly those submitted through a company's website rather than a job board, request a single combined file rather than two separate uploads. Submitting your resume and cover letter as one document signals organisation and attention to detail, and avoids the risk of the recruiter only opening one of the two files.
+
+The simplest way to do this is to create both documents separately — your cover letter first, then your resume — and combine them into a single PDF using our [Merge PDF](/tools/merge-pdf) tool. Upload both files, arrange them in the correct order with the cover letter first, and download the combined PDF. The whole process takes under a minute and keeps both documents perfectly intact.
+
+[[cta:merge-pdf|Combine your resume and cover letter now]]
+
+## Keeping your file size reasonable
+
+Some application portals impose strict file size limits, often as low as 2MB or even 1MB for resume uploads. If your resume includes a headshot photo, a detailed graphic design, or was exported at unnecessarily high resolution, it can exceed these limits and be silently rejected by the upload form.
+
+Use our [Compress PDF](/tools/compress-pdf) tool to reduce the file size of your application before submitting it. Choose the recommended compression level, which keeps text perfectly sharp while reducing the overall file size significantly — ideal for resumes that need to stay under a strict size cap.
+
+[[cta:compress-pdf|Compress your resume PDF]]
+
+## If you only have a Word version, convert it correctly
+
+If your resume currently exists only as a Word document, do not simply save it as PDF using your word processor's basic export function without checking the result first. Embedded fonts, special characters and tables can sometimes render incorrectly during a basic save-as-PDF operation, particularly on older versions of Word.
+
+If you need to go the other direction — converting an existing PDF resume into an editable Word document to update your work history or contact details — use our [PDF to Word](/tools/pdf-to-word) tool. It preserves your original formatting, fonts and layout, so you can make quick edits without rebuilding your entire resume from scratch.
+
+[[cta:pdf-to-word|Convert your resume to Word and back]]
+
+## Scanning physical signed documents
+
+Some applications, particularly for government positions, internships, or roles requiring background checks, ask for scanned copies of signed forms, certificates or identification documents alongside your resume. If you are photographing these documents with your phone rather than using a dedicated scanner, the resulting images need to be combined into a single clean PDF rather than submitted as separate image files.
+
+Use our [PNG to PDF](/tools/png-to-pdf) tool to convert photographed documents into a single PDF file. This keeps your entire application package organised and professional, rather than forcing the recruiter to open multiple separate image attachments.
+
+[[cta:tools|Browse all SmartPDFTools]]
+
+## A final pre-submission checklist
+
+Before you submit any job application PDF, open the finished file on a different device than the one you created it on, ideally a phone, to confirm the layout holds up across screen sizes. Check that your name and contact details appear correctly in the body of the document, not just in a header. Confirm the file size is under any limit specified in the job posting. Rename the file clearly using your name and the word resume or cover letter, since recruiters managing hundreds of applications often rely on filenames rather than opening every file immediately.
+
+A few extra minutes spent on PDF formatting can be the difference between your application being read by a human and being filtered out by a system before anyone sees it.
+
+[[cta:tools|Prepare your job application files with SmartPDFTools]]`,
+  },
 ];
 
 export const blogCategories = [
