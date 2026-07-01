@@ -152,8 +152,6 @@ Open the [Compress PDF](/tools/compress-pdf) tool and drag your file onto the up
 
 If colour is not important for your document, converting to grayscale before compressing can significantly reduce file size. Flatten form fields and annotations before compressing — interactive elements add file weight and are rarely needed in a final document. Remove embedded thumbnails, which are preview images stored inside the PDF that serve no purpose when the file is opened in a modern viewer.
 
-For documents that contain many screenshots or photographs, consider whether the images actually need to be in the PDF at all, or whether they could be replaced with lower-resolution versions that still communicate the same information clearly.
-
 If you are sending multiple separate PDFs, consider using [Merge PDF](/tools/merge-pdf) to combine them first, then compressing the result into a single smaller file. This is often more efficient than sending multiple compressed files separately.
 
 [[cta:compress-pdf|Try Compress PDF free]]`,
@@ -269,27 +267,25 @@ Real redaction removes both the visible content and the underlying data from the
 
 ## 3. Use cryptographic digital signatures, not signature images
 
-There is an important difference between a real digital signature and an image of a signature placed on a page. An image of a signature — whether you draw it with your finger, upload a photo of your handwriting, or use a stylized font — proves nothing. Anyone can copy that image and paste it onto any document.
+There is an important difference between a real digital signature and an image of a signature placed on a page. An image of a signature proves nothing. Anyone can copy that image and paste it onto any document.
 
-A cryptographic signature based on the PAdES standard uses your unique private key to create a mathematical proof that you signed the document and that it has not been modified since you signed it. Most modern PDF readers display a green checkmark when they verify a valid cryptographic signature. If you do not see that checkmark, the signature is decorative and legally meaningless in most jurisdictions.
+A cryptographic signature based on the PAdES standard uses your unique private key to create a mathematical proof that you signed the document and that it has not been modified since you signed it. Most modern PDF readers display a green checkmark when they verify a valid cryptographic signature.
 
 ## 4. Strip metadata before sharing any external document
 
-PDF files store metadata that most people never think about — the author name from your operating system, the software version used to create the document, a complete edit history showing every change made and when, GPS coordinates if the document was created on a mobile device, and the original filename. All of this information leaks automatically when you share the file.
+PDF files store metadata that most people never think about — the author name, software version, edit history, GPS coordinates, and the original filename. All of this information leaks automatically when you share the file.
 
-Before sending any sensitive document to an external party, strip the metadata. In most PDF editors this is under File, then Properties, then a Metadata or Document Properties tab. Some tools offer a one-click option to remove all personal information.
+Before sending any sensitive document to an external party, strip the metadata. In most PDF editors this is under File, then Properties, then a Metadata tab.
 
 ## 5. Be aware of embedded JavaScript and file attachments
 
-PDF is a surprisingly powerful file format that supports embedded JavaScript and file attachments. Both features are legitimate in the right context, but both are also common vectors for malware delivery. Disable JavaScript execution in your PDF reader settings unless you specifically need it. Treat embedded attachments in PDFs from unknown senders the same way you would treat email attachments — scan them before opening.
+PDF supports embedded JavaScript and file attachments. Both are common vectors for malware delivery. Disable JavaScript execution in your PDF reader settings unless you specifically need it.
 
 ## 6. Use expiring links when sharing PDFs online
 
-If you need to share a large PDF that cannot be sent as an email attachment, use a file sharing service that supports expiring links and download caps. A link that expires after 48 hours and allows only three downloads is far safer than a permanent public URL that could be indexed by search engines, bookmarked by anyone who receives it, or shared indefinitely without your knowledge.
+A link that expires after 48 hours and allows only three downloads is far safer than a permanent public URL that could be indexed by search engines or shared indefinitely without your knowledge.
 
 ## 7. Choose a privacy-first PDF service
-
-When you process PDFs using an online tool, your document is typically uploaded to the tool provider's servers. Choose a provider that is transparent about what happens to your files. Look for automatic deletion within one hour, TLS 1.3 encryption in transit, clear statements about GDPR and CCPA compliance, and an explicit policy that user files are never used to train AI models.
 
 [SmartPDFTools](/tools) processes documents directly in your browser for all core tasks, which means your files never leave your device at all. For any processing that requires a server, files are deleted automatically within one hour.
 
@@ -306,39 +302,29 @@ When you process PDFs using an online tool, your document is typically uploaded 
     cover: "/pdf-productivity-guide.png.png",
     content: `Most people think of PDF tools as a last resort — something you reach for when you absolutely have to convert or compress a file before sending it. But the right PDF workflow can do much more than that. It can eliminate entire categories of friction from your workday, reduce the mental load of managing documents, and free up significant time every week.
 
-Here are four ways that a reliable PDF tool genuinely improves daily productivity, with concrete examples of how each one saves time in practice.
-
 ## 1. Eliminate the search tax every time you need a PDF tool
 
-Think about the last time you needed to compress a PDF or merge two documents. You probably opened a browser, typed something like free PDF merger into the search bar, scrolled past the ads, clicked a result, waited for the page to load, discovered it had a file size limit or required sign-up, closed it, tried a different one, and eventually got the task done — five or ten minutes later than necessary.
-
-Multiply that search process by every PDF task you do in a week and you start to see the problem. It is not that any individual search takes very long. It is that the cumulative interruption — stopping your work, switching context, evaluating unfamiliar tools, dealing with unexpected limitations — adds up to a significant drain on your focus and time.
+Think about the last time you needed to compress a PDF or merge two documents. You probably opened a browser, searched, clicked a result, discovered it had a file size limit or required sign-up, closed it, tried a different one, and eventually got the task done — five or ten minutes later than necessary.
 
 A single reliable tool that you bookmark and return to removes this entirely. [SmartPDFTools](/tools) covers [merging](/tools/merge-pdf), [compression](/tools/compress-pdf), [conversion to Word](/tools/pdf-to-word) and [image-to-PDF](/tools/png-to-pdf) in one place. One bookmark, no searching, no surprises.
 
 ## 2. The three-second rule for staying in flow
 
-Productivity research consistently shows that interruptions are more costly than they appear. It is not just the time the interruption takes — it is the time required to regain focus and return to deep work afterward. A tool that takes two minutes to process a file is not just two minutes slower than one that takes three seconds. It is two minutes plus the re-entry cost of returning to whatever you were doing before.
+Productivity research consistently shows that interruptions are more costly than they appear. It is not just the time the interruption takes — it is the time required to regain focus afterward.
 
-Browser-based PDF tools that process files locally are dramatically faster than tools that upload your file to a remote server, process it, and send it back. With local processing there is no upload time, no queue, no server latency. You drag the file in, click a button, and have your result before you have had time to switch to another tab.
-
-This speed difference compounds over time. If you process ten PDF files a day and each one saves you 90 seconds compared to a slower tool, that is 15 minutes recovered every single day — more than an hour per week.
+Browser-based PDF tools that process files locally are dramatically faster than tools that upload your file to a remote server. With local processing there is no upload time, no queue, no server latency. You drag the file in, click a button, and have your result before you have had time to switch to another tab.
 
 ## 3. A clean file system reduces cognitive load
 
-Open your downloads folder right now. There is a reasonable chance you will find multiple versions of the same document — report-final.pdf, report-final-v2.pdf, report-final-actual.pdf, report-SEND-THIS-ONE.pdf. This version chaos is a productivity problem that goes beyond the obvious risk of sending the wrong file.
+Open your downloads folder right now. There is a reasonable chance you will find multiple versions of the same document — report-final.pdf, report-final-v2.pdf, report-SEND-THIS-ONE.pdf. This version chaos is a productivity problem that goes beyond the obvious risk of sending the wrong file.
 
-Every time you encounter a cluttered folder full of near-duplicate files, your brain has to do work — identifying which version is current, deciding whether old versions can be deleted, remembering why you created each one in the first place. This cognitive overhead is small in any individual moment but significant across an entire workday.
-
-A fast, reliable PDF tool reduces version proliferation because you complete tasks correctly the first time and do not need to create multiple attempts. [Merge PDF](/tools/merge-pdf) combines documents cleanly in one pass. [Compress PDF](/tools/compress-pdf) gives you a compressed version without quality surprises. [PDF to Word](/tools/pdf-to-word) converts accurately enough that you do not need to rerun the conversion three times.
+A fast, reliable PDF tool reduces version proliferation because you complete tasks correctly the first time. [Merge PDF](/tools/merge-pdf) combines documents cleanly in one pass. [Compress PDF](/tools/compress-pdf) gives you a compressed version without quality surprises. [PDF to Word](/tools/pdf-to-word) converts accurately enough that you do not need to rerun the conversion three times.
 
 ## 4. Security that does not slow you down
 
-One of the hidden productivity costs of insecure workflows is the anxiety they create. If you are not sure whether the tool you just used stored a copy of the contract you uploaded, that uncertainty occupies mental space. If you are not confident that the file you sent cannot be intercepted, you spend time worrying about it.
+One of the hidden productivity costs of insecure workflows is the anxiety they create. If you are not sure whether the tool you just used stored a copy of the contract you uploaded, that uncertainty occupies mental space.
 
-Tools that process files locally and delete any temporary server copies within an hour eliminate this anxiety entirely. You complete the task, you have your result, and you do not have to think about it again.
-
-[SmartPDFTools](/tools) is built on this principle. All core processing happens in your browser. Nothing is stored on a server. Nothing is shared with third parties. The peace of mind this provides is not just a nice feature — it is a genuine productivity benefit.
+[SmartPDFTools](/tools) is built on this principle. All core processing happens in your browser. Nothing is stored on a server. Nothing is shared with third parties.
 
 [[cta:tools|Try SmartPDFTools free]]`,
   },
@@ -351,61 +337,37 @@ Tools that process files locally and delete any temporary server copies within a
     date: "June 27, 2026",
     readTime: "8 min read",
     cover: "/edit-pdf-guide-2026.png.png",
-    content: `Editing a PDF file used to require expensive software. Adobe Acrobat Pro, the tool that defined the category, costs nearly $240 per year. For a student who needs to fix a typo in a submitted assignment, a freelancer who needs to update an invoice, or a small business owner who needs to add a logo to a contract template, that price is simply not justifiable.
+    content: `Editing a PDF file used to require expensive software. Adobe Acrobat Pro costs nearly $240 per year. For a student who needs to fix a typo, a freelancer who needs to update an invoice, or a small business owner who needs to add a logo to a contract template, that price is simply not justifiable.
 
-The good news is that in 2026, you can edit PDFs for free using browser-based tools that require no installation, no subscription, and no technical knowledge. This guide walks you through every method available, from simple text edits to form filling and format conversion, so you can choose the right approach for your specific task.
+The good news is that in 2026, you can edit PDFs for free using browser-based tools that require no installation, no subscription, and no technical knowledge.
 
 ## Understanding what PDF editing actually means
 
-PDF editing covers a wide range of tasks that require different tools. Adding or changing text in an existing document is one type of editing. Filling in form fields is another. Adding your signature to a contract is different again. Combining multiple PDFs into one, removing pages, or converting the PDF to a Word document for more extensive editing are all additional categories.
-
-Understanding which type of editing you need helps you choose the right tool and avoid frustration. A tool that is excellent for filling forms may not be the right choice for converting a PDF to an editable Word document.
+PDF editing covers a wide range of tasks. Adding or changing text is one type. Filling in form fields is another. Combining multiple PDFs into one, removing pages, or converting the PDF to a Word document are all additional categories.
 
 ## Method 1 — Convert to Word for full editing
 
-If you need to make extensive changes to a PDF — rewriting paragraphs, changing the layout, updating tables — the most effective approach is to convert it to a Word document first, make your edits in Word or Google Docs, and then export back to PDF when you are done.
-
-Use our [PDF to Word](/tools/pdf-to-word) tool to convert your file. The conversion preserves fonts, tables, images and layout. Once you have the DOCX file, open it in Microsoft Word, Google Docs, or LibreOffice Writer, make whatever changes you need, and export back to PDF using the built-in export function.
+If you need to make extensive changes, convert to a Word document first using our [PDF to Word](/tools/pdf-to-word) tool. The conversion preserves fonts, tables, images and layout. Make your edits in Word or Google Docs, then export back to PDF.
 
 ## Method 2 — Edit directly using an online PDF editor
 
-For smaller changes — fixing a typo, adding a text box, inserting an image, or highlighting text — a direct PDF editor is faster than converting to Word and back.
-
-[SmartPDFTools](/tools) handles the most common editing tasks directly in your browser. There is no signup required, no file size watermark, and no daily limit on the free tier.
+For smaller changes, [SmartPDFTools](/tools) handles the most common editing tasks directly in your browser. No signup required, no watermarks, no daily limits.
 
 ## Method 3 — Fill and sign forms
 
-If your PDF is a form that needs to be filled in and signed, you do not need to convert it or edit the underlying document. Use a tool that detects existing form fields and lets you type directly into them. After filling in the fields, add your signature — either by drawing it, typing your name in a signature font, or uploading an image of your handwritten signature.
-
-## Step-by-step guide to editing a PDF for free
-
-Step one: identify exactly what type of edit you need. If you need to rewrite significant content, convert to Word first. If you need to make small changes or fill a form, use a direct editor.
-
-Step two: open [SmartPDFTools](/tools) and select the tool that matches your task. For conversion, choose [PDF to Word](/tools/pdf-to-word). For compression before sharing, choose [Compress PDF](/tools/compress-pdf). For combining multiple documents, choose [Merge PDF](/tools/merge-pdf).
-
-Step three: upload your file by dragging it onto the upload area or clicking to browse. The tool will process it automatically.
-
-Step four: download your edited file. If you converted to Word, open the DOCX in your preferred word processor to make further changes.
+Use a tool that detects existing form fields and lets you type directly into them. After filling in the fields, add your signature by drawing it or uploading an image.
 
 ## What you can edit completely free
 
-With free online tools in 2026, you can merge multiple PDFs into one document using [Merge PDF](/tools/merge-pdf). You can reduce file size dramatically using [Compress PDF](/tools/compress-pdf). You can convert to an editable Word document using [PDF to Word](/tools/pdf-to-word). You can convert images and screenshots into PDF format using [PNG to PDF](/tools/png-to-pdf). You can fill in form fields, add text boxes, and insert images using direct editing tools.
+With free online tools in 2026, you can merge multiple PDFs using [Merge PDF](/tools/merge-pdf), reduce file size using [Compress PDF](/tools/compress-pdf), convert to Word using [PDF to Word](/tools/pdf-to-word), and convert images to PDF using [PNG to PDF](/tools/png-to-pdf).
 
 ## Is it safe to edit PDFs using online tools?
-
-The safety of online PDF editing depends entirely on the tool you use. The key questions to ask are whether the tool processes files in your browser or uploads them to a server, how long the tool retains your files, whether the tool is encrypted with TLS, and whether the tool has a clear privacy policy that prohibits using your files for any purpose beyond completing your task.
 
 [SmartPDFTools](/tools) processes all files in your browser. No file content is ever transmitted to a server. There is no retention period to worry about because your files never leave your device.
 
 ## Frequently asked questions
 
-Can you edit a PDF without Adobe Acrobat? Yes. Browser-based tools like [SmartPDFTools](/tools) handle the most common editing tasks without any software installation.
-
-Is free PDF editing actually free? Yes, with no hidden limits or paywalls for the core tools. No credit card is required.
-
-Can you edit a scanned PDF? Yes, using OCR. Our [PDF to Word](/tools/pdf-to-word) tool includes OCR support that converts scanned images of text into editable characters.
-
-How do you edit a PDF on a phone? Open [SmartPDFTools](/tools) in your mobile browser. All tools work on mobile without requiring an app download.
+Can you edit a PDF without Adobe Acrobat? Yes. Browser-based tools like [SmartPDFTools](/tools) handle the most common editing tasks without any software installation. Is free PDF editing actually free? Yes, no credit card required. Can you edit a scanned PDF? Yes, using our [PDF to Word](/tools/pdf-to-word) tool which includes OCR support. How do you edit a PDF on a phone? Open [SmartPDFTools](/tools) in your mobile browser — all tools work on mobile.
 
 [[cta:tools|Start editing now — free]]`,
   },
@@ -424,67 +386,114 @@ This guide covers exactly how to format, prepare and submit your resume and cove
 
 ## Why PDF is still the safest format for job applications
 
-Word documents can shift formatting depending on which version of Microsoft Word the recipient has installed, what fonts are available on their system, and what operating system they are using. A resume that looks perfectly aligned on your machine can have collapsed columns, missing bullet points, or a completely different font on someone else's computer.
+Word documents can shift formatting depending on which version of Microsoft Word the recipient has installed. A resume that looks perfectly aligned on your machine can have collapsed columns or a completely different font on someone else's computer.
 
-PDF locks the layout exactly as you designed it. The recruiter sees precisely what you intended, regardless of their device, operating system or software. This is why most job postings either explicitly request PDF or strongly imply it by listing PDF first among accepted formats.
+PDF locks the layout exactly as you designed it. The recruiter sees precisely what you intended, regardless of their device or software. This is why most job postings either explicitly request PDF or strongly imply it.
 
 ## How applicant tracking systems actually read your PDF
 
-Before a human ever opens your resume, it almost certainly passes through an applicant tracking system, commonly called an ATS. These systems extract the text from your PDF, search for keywords related to the job posting, and rank candidates accordingly. A PDF that confuses the ATS parser can result in your application being filtered out entirely, even if you are perfectly qualified.
+Before a human ever opens your resume, it almost certainly passes through an applicant tracking system — commonly called an ATS. These systems extract the text from your PDF, search for keywords related to the job posting, and rank candidates accordingly. A PDF that confuses the ATS parser can result in your application being filtered out entirely, even if you are perfectly qualified.
 
-ATS software reads PDFs in a linear way, extracting text in the order it is stored in the file rather than the order it visually appears on the page. This is the single biggest cause of resume formatting failures. A PDF built using complex multi-column layouts, text boxes, or tables can be read by the ATS in a scrambled, illogical order — sometimes interleaving your work experience with your education section in a way that makes the document unreadable to the parser, even though it looks fine visually.
+ATS software reads PDFs in a linear way, extracting text in the order it is stored in the file rather than the order it visually appears on the page. A PDF built using complex multi-column layouts or text boxes can be read by the ATS in a scrambled, illogical order.
 
 ## The formatting rules that actually matter
 
-Use a single-column layout wherever possible. Two-column resumes look modern and are popular in design templates, but they are the most common cause of ATS parsing failures. If you must use a two-column design for visual appeal, keep your core experience and skills in the primary, widest column, and use the secondary column only for supplementary information like contact details or a skills list that is not critical to keyword matching.
-
-Avoid embedding your contact information inside a text box or header element. Some ATS parsers skip header and footer regions entirely, which means your name, phone number and email address may never be extracted if they are placed there. Put this information in the main body of the document instead.
-
-Use standard section headings. Words like Experience, Education, Skills and Summary are recognised reliably by ATS software. Creative alternatives like My Journey or What I Bring are far less likely to be correctly categorised, even if they read better to a human.
-
-Stick to standard, widely available fonts such as Arial, Calibri, Georgia or Times New Roman. Unusual or decorative fonts can render incorrectly when the PDF is generated, and some fonts do not embed properly, causing characters to display as boxes or missing symbols.
-
-Avoid using images for any text-based content, including your name as a styled graphic or skills displayed as icon-based progress bars. Text inside an image cannot be extracted by an ATS at all — it is invisible to the system, no matter how visually appealing it looks to a human reader.
+Use a single-column layout wherever possible. Two-column resumes are the most common cause of ATS parsing failures. Avoid embedding your contact information inside a text box or header element — some ATS parsers skip header and footer regions entirely. Use standard section headings like Experience, Education, Skills and Summary. Stick to standard fonts such as Arial, Calibri, Georgia or Times New Roman. Avoid using images for any text-based content.
 
 ## How to combine your resume and cover letter
 
-Many job applications, particularly those submitted through a company's website rather than a job board, request a single combined file rather than two separate uploads. Submitting your resume and cover letter as one document signals organisation and attention to detail, and avoids the risk of the recruiter only opening one of the two files.
-
-The simplest way to do this is to create both documents separately — your cover letter first, then your resume — and combine them into a single PDF using our [Merge PDF](/tools/merge-pdf) tool. Upload both files, arrange them in the correct order with the cover letter first, and download the combined PDF. The whole process takes under a minute and keeps both documents perfectly intact.
+Many job applications request a single combined file. Use our [Merge PDF](/tools/merge-pdf) tool to combine your cover letter and resume into one document. Upload both files, arrange them with the cover letter first, and download the combined PDF in under a minute.
 
 [[cta:merge-pdf|Combine your resume and cover letter now]]
 
 ## Keeping your file size reasonable
 
-Some application portals impose strict file size limits, often as low as 2MB or even 1MB for resume uploads. If your resume includes a headshot photo, a detailed graphic design, or was exported at unnecessarily high resolution, it can exceed these limits and be silently rejected by the upload form.
-
-Use our [Compress PDF](/tools/compress-pdf) tool to reduce the file size of your application before submitting it. Choose the recommended compression level, which keeps text perfectly sharp while reducing the overall file size significantly — ideal for resumes that need to stay under a strict size cap.
+Some application portals impose file size limits as low as 1MB. Use our [Compress PDF](/tools/compress-pdf) tool to reduce the file size while keeping text perfectly sharp.
 
 [[cta:compress-pdf|Compress your resume PDF]]
 
-## If you only have a Word version, convert it correctly
+## If you only have a Word version
 
-If your resume currently exists only as a Word document, do not simply save it as PDF using your word processor's basic export function without checking the result first. Embedded fonts, special characters and tables can sometimes render incorrectly during a basic save-as-PDF operation, particularly on older versions of Word.
-
-If you need to go the other direction — converting an existing PDF resume into an editable Word document to update your work history or contact details — use our [PDF to Word](/tools/pdf-to-word) tool. It preserves your original formatting, fonts and layout, so you can make quick edits without rebuilding your entire resume from scratch.
+Use our [PDF to Word](/tools/pdf-to-word) tool to convert an existing PDF resume into an editable Word document. It preserves your original formatting, fonts and layout so you can make quick edits without rebuilding your resume from scratch.
 
 [[cta:pdf-to-word|Convert your resume to Word and back]]
 
 ## Scanning physical signed documents
 
-Some applications, particularly for government positions, internships, or roles requiring background checks, ask for scanned copies of signed forms, certificates or identification documents alongside your resume. If you are photographing these documents with your phone rather than using a dedicated scanner, the resulting images need to be combined into a single clean PDF rather than submitted as separate image files.
-
-Use our [PNG to PDF](/tools/png-to-pdf) tool to convert photographed documents into a single PDF file. This keeps your entire application package organised and professional, rather than forcing the recruiter to open multiple separate image attachments.
-
-[[cta:tools|Browse all SmartPDFTools]]
+Use our [PNG to PDF](/tools/png-to-pdf) tool to convert photographed documents into a single PDF file, keeping your entire application package organised and professional.
 
 ## A final pre-submission checklist
 
-Before you submit any job application PDF, open the finished file on a different device than the one you created it on, ideally a phone, to confirm the layout holds up across screen sizes. Check that your name and contact details appear correctly in the body of the document, not just in a header. Confirm the file size is under any limit specified in the job posting. Rename the file clearly using your name and the word resume or cover letter, since recruiters managing hundreds of applications often rely on filenames rather than opening every file immediately.
-
-A few extra minutes spent on PDF formatting can be the difference between your application being read by a human and being filtered out by a system before anyone sees it.
+Open the finished file on a different device to confirm the layout holds up. Check that your name and contact details appear in the body of the document, not just in a header. Confirm the file size is under any limit specified in the job posting. Rename the file clearly using your name and the word resume or cover letter.
 
 [[cta:tools|Prepare your job application files with SmartPDFTools]]`,
+  },
+  {
+    slug: "how-to-scan-documents-with-phone-to-pdf",
+    title: "How to Scan Documents with Your Phone and Save as PDF (Free & Fast)",
+    excerpt: "Turn any paper document into a clean, shareable PDF using just your smartphone — no scanner needed. Works on iPhone and Android in seconds.",
+    category: "PDF Tutorials",
+    author: "Layla Hassan",
+    date: "July 1, 2026",
+    readTime: "7 min read",
+    cover: "/scan-documents-phone-to-pdf.png.png",
+    content: `Scanners used to be expensive, bulky pieces of office equipment that most people did not own. Today, the smartphone in your pocket is a more capable document scanner than anything available in an office supply store ten years ago. Modern phone cameras combined with the right technique can produce clean, readable PDF scans of contracts, receipts, ID documents, handwritten notes, tax forms, and anything else printed on paper.
+
+This guide covers every method available in 2026 — from built-in phone features that most people do not know exist, to browser-based tools that work on any device without installing anything.
+
+## Why scanning to PDF matters
+
+A photograph of a document and a proper PDF scan are not the same thing. A photo taken quickly with your phone camera often has perspective distortion, uneven lighting that makes text hard to read, a large file size, and no searchable text. A proper PDF scan corrects the perspective automatically, normalises the lighting, produces a much smaller file, and can include searchable text through OCR.
+
+## Method 1 — Use PNG to PDF for photos you already have
+
+If you have already photographed your documents using your phone camera and the images are saved in your gallery, the fastest path to a clean PDF is our [PNG to PDF](/tools/png-to-pdf) tool. Upload your photos, arrange them in the correct order if you have multiple pages, and download a single combined PDF in seconds. It runs entirely in your browser, so your sensitive documents never leave your device.
+
+[[cta:tools|Convert your phone photos to PDF now]]
+
+## Method 2 — iPhone built-in scanner (Notes app)
+
+Every iPhone running iOS 11 or later has a built-in document scanner hidden inside the Notes app. Open the Notes app and create a new note. Tap the camera icon above the keyboard, then choose Scan Documents. Hold your phone over the document — the app will automatically detect the edges and capture the scan when it is steady. For multiple pages, keep scanning and the app adds each page to the same document. When finished, tap Save, then tap the scan inside the note, tap the share icon, and choose Save to Files as PDF.
+
+## Method 3 — Android built-in scanner (Google Drive)
+
+Open the Google Drive app and tap the plus button, then choose Scan. Hold your phone over the document and tap the shutter button. Google Drive automatically crops and enhances the image. Add additional pages if needed, then tap Save to store the result as a PDF directly in your Google Drive.
+
+## Method 4 — Samsung phones
+
+Samsung Galaxy phones have a scanning option through the Samsung Notes app, which offers more control over image enhancement settings. Some Samsung models also support scanning directly through the camera app using the Bixby Vision feature.
+
+## Tips for getting clean scans every time
+
+Lighting is the most important factor in scan quality. Scan on a light-coloured flat surface and use natural light or overhead room lighting. Hold your phone directly above the document, not at an angle. For multipage documents, keep all pages flat and scan them in sequence without moving the background surface between pages.
+
+## Combining multiple scanned documents into one PDF
+
+If you need to submit several documents together — a signed form, a copy of your ID, and a utility bill — use our [Merge PDF](/tools/merge-pdf) tool to combine them into a single file after scanning. This is particularly useful for rental applications, job applications, visa applications, and any submission that requires multiple supporting documents.
+
+[[cta:merge-pdf|Merge your scanned documents into one PDF]]
+
+## Reducing the file size of scanned PDFs
+
+Phone scans at high resolution can produce large PDF files — sometimes 5MB or more per page. After scanning, run your PDF through our [Compress PDF](/tools/compress-pdf) tool to reduce the file size dramatically while keeping the text perfectly readable.
+
+[[cta:compress-pdf|Compress your scanned PDF]]
+
+## Making scanned PDFs editable with OCR
+
+A standard phone scan produces an image-based PDF where you cannot select or edit the text. If you need to extract text from a scanned document, use our [PDF to Word](/tools/pdf-to-word) tool, which includes OCR support that recognises the text in your scan and converts it to editable characters.
+
+[[cta:pdf-to-word|Convert your scanned PDF to editable Word]]
+
+## Common use cases for phone scanning
+
+Tax season is one of the most common times people need to scan documents. W-2 forms, 1099s, receipts for deductions, and mortgage interest statements all need to be collected and often submitted digitally. Scanning each document as a PDF as you receive it, then combining them using [Merge PDF](/tools/merge-pdf), is much faster than dealing with a pile of paper at filing time.
+
+Rental applications typically require proof of income, bank statements, a copy of your ID, and references. Scanning and combining these gives landlords a professional, organised submission.
+
+Student submissions for university often require signed forms, transcripts, and supporting documents. Medical and insurance paperwork accumulates quickly and scanning to PDF makes it easy to store, find and share with providers.
+
+[[cta:tools|Scan, merge and compress your documents with SmartPDFTools]]`,
   },
 ];
 
