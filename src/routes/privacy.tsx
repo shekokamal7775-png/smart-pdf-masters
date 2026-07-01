@@ -18,7 +18,7 @@ export const Route = createFileRoute("/privacy")({
 });
 
 function PrivacyPage() {
-  const updated = "May 31, 2026";
+  const updated = "July 1, 2026";
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center">
@@ -32,7 +32,7 @@ function PrivacyPage() {
       <div className="mt-12 space-y-10 text-[15px] leading-relaxed text-foreground/90">
         <Section icon={FileText} title="1. Introduction">
           <p>
-            Welcome to <strong>SmartPDFTools</strong> (“we”, “us”, “our”). We respect your privacy and are
+            Welcome to <strong>SmartPDFTools</strong> ("we", "us", "our"). We respect your privacy and are
             committed to protecting your personal data. This Privacy Policy explains how we collect, use,
             and safeguard information when you visit{" "}
             <a href="https://www.smartpdfmasters.com" className="text-primary hover:underline">
@@ -44,7 +44,7 @@ function PrivacyPage() {
 
         <Section icon={Database} title="2. Information We Collect">
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Files you upload:</strong> processed only to perform the requested task (merge, split, convert, etc.).</li>
+            <li><strong>Files you upload:</strong> processed only to perform the requested task (merge, compress, convert, etc.).</li>
             <li><strong>Usage data:</strong> pages visited, browser type, device, language, referring URL, and approximate location.</li>
             <li><strong>Contact data:</strong> name, email, and message you submit through our Contact form.</li>
             <li><strong>Cookies & similar technologies:</strong> see the Cookies section below.</li>
@@ -64,7 +64,7 @@ function PrivacyPage() {
         <Section icon={Shield} title="4. File Processing & Security">
           <p>
             Uploaded files are transmitted over encrypted HTTPS connections and processed automatically.
-            Files are <strong>automatically deleted from our servers within a few hours</strong> after
+            Files are <strong>automatically deleted from our servers within one hour</strong> after
             processing. We never read, share, or sell the content of your documents.
           </p>
         </Section>
@@ -156,4 +156,4 @@ function Section({ icon: Icon, title, children }: { icon: any; title: string; ch
       <div className="space-y-3">{children}</div>
     </section>
   );
-            }
+}
