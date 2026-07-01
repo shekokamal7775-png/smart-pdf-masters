@@ -36,15 +36,15 @@ const toolHighlights = [
   { icon: Layers, title: "Merge PDF", desc: "Combine multiple PDF files into one organised document in seconds.", href: "/tools/merge-pdf" },
   { icon: Minimize2, title: "Compress PDF", desc: "Reduce PDF file size by up to 80% while keeping text sharp and images clear.", href: "/tools/compress-pdf" },
   { icon: FileText, title: "PDF to Word", desc: "Convert any PDF to a fully editable Word document with fonts and layout preserved.", href: "/tools/pdf-to-word" },
-  { icon: Image, title: "PNG to PDF", desc: "Turn JPG or PNG images into a clean, shareable PDF file instantly.", href: "/tools/png-to-pdf" },
+  { icon: Image, title: "PNG to PDF", desc: "Turn JPG or PNG images into a clean, shareable PDF file instantly.", href: "/tools/jpg-to-pdf" },
 ];
 
 const commonTasks = [
   { label: "Merge PDF files", href: "/tools/merge-pdf" },
   { label: "Compress PDF", href: "/tools/compress-pdf" },
   { label: "Convert PDF to Word", href: "/tools/pdf-to-word" },
-  { label: "JPG to PDF", href: "/tools/png-to-pdf" },
-  { label: "PNG to PDF", href: "/tools/png-to-pdf" },
+  { label: "JPG to PDF", href: "/tools/jpg-to-pdf" },
+  { label: "PNG to PDF", href: "/tools/jpg-to-pdf" },
   { label: "Combine scanned documents", href: "/tools/merge-pdf" },
   { label: "Reduce PDF size for email", href: "/tools/compress-pdf" },
   { label: "Edit PDF content", href: "/tools/pdf-to-word" },
@@ -273,7 +273,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* WHY MILLIONS USE PDF */}
+      {/* WHY PEOPLE USE PDF */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 bg-secondary/30 rounded-3xl">
         <div className="text-center mb-10">
           <h2 className="font-display text-4xl font-bold">Why People Use PDF Tools Every Day</h2>
