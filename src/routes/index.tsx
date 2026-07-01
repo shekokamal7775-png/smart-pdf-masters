@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
   Zap, ShieldCheck, Cloud, Globe, Upload, MousePointerClick, Download,
-  ArrowRight, Check, FileText, Layers, Minimize2, Image,
+  ArrowRight, Check, FileText, Layers, Minimize2, Image, CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ToolCard } from "@/components/ToolCard";
@@ -37,6 +37,39 @@ const toolHighlights = [
   { icon: Minimize2, title: "Compress PDF", desc: "Reduce PDF file size by up to 80% while keeping text sharp and images clear.", href: "/tools/compress-pdf" },
   { icon: FileText, title: "PDF to Word", desc: "Convert any PDF to a fully editable Word document with fonts and layout preserved.", href: "/tools/pdf-to-word" },
   { icon: Image, title: "PNG to PDF", desc: "Turn JPG or PNG images into a clean, shareable PDF file instantly.", href: "/tools/png-to-pdf" },
+];
+
+const commonTasks = [
+  { label: "Merge PDF files", href: "/tools/merge-pdf" },
+  { label: "Compress PDF", href: "/tools/compress-pdf" },
+  { label: "Convert PDF to Word", href: "/tools/pdf-to-word" },
+  { label: "JPG to PDF", href: "/tools/png-to-pdf" },
+  { label: "PNG to PDF", href: "/tools/png-to-pdf" },
+  { label: "Combine scanned documents", href: "/tools/merge-pdf" },
+  { label: "Reduce PDF size for email", href: "/tools/compress-pdf" },
+  { label: "Edit PDF content", href: "/tools/pdf-to-word" },
+];
+
+const whyChoose = [
+  "No installation required",
+  "Works on Windows, Mac, Android and iPhone",
+  "Fast browser-based processing",
+  "Secure encrypted file transfers",
+  "No watermarks added to your files",
+  "Completely free — no credit card needed",
+  "No sign-up or account required",
+  "Files automatically deleted within one hour",
+];
+
+const comparisonRows = [
+  { feature: "Completely free", value: true },
+  { feature: "No sign-up required", value: true },
+  { feature: "No watermarks", value: true },
+  { feature: "Encrypted file transfers", value: true },
+  { feature: "Mobile friendly", value: true },
+  { feature: "Browser-based (no install)", value: true },
+  { feature: "Files deleted within 1 hour", value: true },
+  { feature: "No daily limits", value: true },
 ];
 
 function HomePage() {
@@ -141,6 +174,25 @@ function HomePage() {
         </div>
       </section>
 
+      {/* COMMON PDF TASKS */}
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-12">
+          <h2 className="font-display text-4xl font-bold">Common PDF Tasks</h2>
+          <p className="mt-3 text-muted-foreground">The most frequent PDF tasks — all handled for free, right here.</p>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {commonTasks.map((task) => (
+            <Link key={task.label} to={task.href}>
+              <div className="flex items-center gap-3 p-4 rounded-xl border border-border bg-card hover:shadow-elegant hover:-translate-y-0.5 transition-smooth">
+                <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+                <span className="font-medium text-sm">{task.label}</span>
+                <ArrowRight className="h-4 w-4 text-muted-foreground ms-auto" />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* FEATURES */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center max-w-2xl mx-auto mb-14">
@@ -165,8 +217,38 @@ function HomePage() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
+      {/* WHY CHOOSE + COMPARISON */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 bg-secondary/30 rounded-3xl">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <h2 className="font-display text-4xl font-bold">Why Choose SmartPDFTools?</h2>
+          <p className="mt-3 text-muted-foreground">Everything you need, nothing you don't.</p>
+        </div>
+        <div className="grid gap-10 lg:grid-cols-2 items-start">
+          <div className="grid gap-3 sm:grid-cols-2">
+            {whyChoose.map((item) => (
+              <div key={item} className="flex items-start gap-3 p-4 rounded-xl border border-border bg-card shadow-soft">
+                <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-sm font-medium">{item}</span>
+              </div>
+            ))}
+          </div>
+          <div className="rounded-2xl border border-border bg-card shadow-soft overflow-hidden">
+            <div className="grid grid-cols-2 bg-gradient-primary text-primary-foreground px-6 py-4">
+              <span className="font-display font-bold">Feature</span>
+              <span className="font-display font-bold text-center">SmartPDFTools</span>
+            </div>
+            {comparisonRows.map((row, i) => (
+              <div key={row.feature} className={`grid grid-cols-2 px-6 py-3 ${i % 2 === 0 ? "bg-card" : "bg-secondary/30"}`}>
+                <span className="text-sm text-foreground/80">{row.feature}</span>
+                <span className="text-center text-green-500 font-bold text-lg">✅</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-14">
           <h2 className="font-display text-4xl font-bold">How it works</h2>
           <p className="mt-3 text-muted-foreground">Three steps is all it takes.</p>
@@ -191,7 +273,30 @@ function HomePage() {
         </div>
       </section>
 
-      {/* WHY SMARTPDFTOOLS */}
+      {/* WHY MILLIONS USE PDF */}
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 bg-secondary/30 rounded-3xl">
+        <div className="text-center mb-10">
+          <h2 className="font-display text-4xl font-bold">Why People Use PDF Tools Every Day</h2>
+          <p className="mt-3 text-muted-foreground">PDF is the world's most widely used document format — and for good reason.</p>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            { title: "Students", desc: "Students use PDF tools daily to submit assignments, combine lecture notes into a single file, compress large presentations before uploading to a portal, and convert scanned handwritten notes into searchable text." },
+            { title: "Business & Freelancers", desc: "Businesses rely on PDFs for invoices, proposals, contracts and reports. Compressing files before emailing, merging multi-page quotes into one document, and converting Word drafts to PDF for final delivery are everyday tasks." },
+            { title: "Government & Legal", desc: "Government agencies and legal professionals depend on PDFs for official documents, court filings and compliance records. Converting scanned forms into editable files and combining supporting documents into one submission are common needs." },
+            { title: "HR & Recruitment", desc: "HR teams handle CVs, offer letters, onboarding packs and policy documents in PDF format daily. Merging multiple applicant documents and compressing large employee files makes document management faster and cleaner." },
+            { title: "Banking & Finance", desc: "Banks and finance teams produce statements, loan agreements and audit reports as PDFs. Compressing large financial documents, converting scanned records to searchable PDFs, and merging multi-document packages are routine tasks." },
+            { title: "Healthcare", desc: "Medical professionals share referral letters, lab reports and patient summaries as PDFs. Converting scanned prescriptions to editable text and compressing large imaging reports for secure email delivery are frequent requirements." },
+          ].map((item) => (
+            <div key={item.title} className="rounded-2xl border border-border bg-card p-6 shadow-soft">
+              <h3 className="font-display text-lg font-bold text-primary mb-2">{item.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* WHY SMARTPDFTOOLS PROSE */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-display text-4xl font-bold mb-6">The simplest way to handle PDF files</h2>
