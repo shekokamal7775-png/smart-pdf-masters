@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
-  Zap, ShieldCheck, Cloud, Sparkles, Upload, MousePointerClick, Download,
-  Star, Quote, ArrowRight, Check,
+  Zap, ShieldCheck, Cloud, Globe, Upload, MousePointerClick, Download,
+  ArrowRight, Check, FileText, Layers, Minimize2, Image,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ToolCard } from "@/components/ToolCard";
@@ -12,30 +12,31 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SmartPDF - Free Online PDF Tools" },
-      { name: "description", content: "Free online PDF tools to merge, split, compress, convert, and edit PDF files. Fast, secure, and easy to use with no installation required." },
-      { property: "og:title", content: "SmartPDF - Free Online PDF Tools" },
-      { property: "og:description", content: "Free online PDF tools to merge, split, compress, convert, and edit PDF files. Fast, secure, and easy to use with no installation required." },
-      { property: "og:url", content: "https://smart-pdf-masters.lovable.app/" },
+      { title: "SmartPDFTools — Free Online PDF Tools" },
+      { name: "description", content: "Free browser-based PDF tools to merge, compress, convert and manage PDF files. No installation, no sign-up, no watermarks." },
+      { property: "og:title", content: "SmartPDFTools — Free Online PDF Tools" },
+      { property: "og:description", content: "Free browser-based PDF tools to merge, compress, convert and manage PDF files. No installation, no sign-up, no watermarks." },
+      { property: "og:url", content: "https://www.smartpdfmasters.com/" },
     ],
     links: [
-      { rel: "canonical", href: "https://smart-pdf-masters.lovable.app/" },
+      { rel: "canonical", href: "https://www.smartpdfmasters.com/" },
     ],
   }),
   component: HomePage,
 });
 
 const features = [
-  { icon: Zap, key: "fast" },
-  { icon: ShieldCheck, key: "secure" },
-  { icon: Cloud, key: "cloud" },
-  { icon: Sparkles, key: "ai" },
+  { icon: Zap, title: "Fast processing", desc: "Your files are processed instantly in your browser — no upload delays, no waiting." },
+  { icon: ShieldCheck, title: "Privacy first", desc: "Files are deleted within one hour. We never read or share your documents." },
+  { icon: Globe, title: "Works everywhere", desc: "Use any tool on desktop, tablet or mobile without installing anything." },
+  { icon: Cloud, title: "No sign-up needed", desc: "All four tools are completely free with no account, no daily limits, and no watermarks." },
 ];
 
-const testimonials = [
-  { name: "Amira F.", role: "Operations Lead", body: "Replaced three separate tools we were paying for. The AI summary feature alone saves my team hours every week." },
-  { name: "Marcus T.", role: "Legal Counsel", body: "Watermarks, redaction and bates numbering — finally one tool that nails the legal workflow without the Adobe price tag." },
-  { name: "Priya R.", role: "PhD Researcher", body: "OCR quality on academic PDFs is astonishing. Even handwritten margin notes get picked up correctly." },
+const toolHighlights = [
+  { icon: Layers, title: "Merge PDF", desc: "Combine multiple PDF files into one organised document in seconds.", href: "/tools/merge-pdf" },
+  { icon: Minimize2, title: "Compress PDF", desc: "Reduce PDF file size by up to 80% while keeping text sharp and images clear.", href: "/tools/compress-pdf" },
+  { icon: FileText, title: "PDF to Word", desc: "Convert any PDF to a fully editable Word document with fonts and layout preserved.", href: "/tools/pdf-to-word" },
+  { icon: Image, title: "PNG to PDF", desc: "Turn JPG or PNG images into a clean, shareable PDF file instantly.", href: "/tools/png-to-pdf" },
 ];
 
 function HomePage() {
@@ -53,32 +54,33 @@ function HomePage() {
             className="max-w-3xl mx-auto text-center"
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
-              <Sparkles className="h-3.5 w-3.5" /> {t("hero.badge")}
+              Free PDF tools — no sign-up required
             </span>
             <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05]">
-              {t("hero.title").split(",")[0]}
-              <span className="block text-gradient">{t("hero.title").split(",").slice(1).join(",") || ""}</span>
+              PDF tools that
+              <span className="block text-gradient">just work</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              {t("hero.subtitle")}
+              Merge, compress, convert and manage your PDF files directly in your browser.
+              Fast, free, and completely private — your files never leave your device.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link to="/tools">
-                <Button variant="hero" size="xl">{t("hero.cta.primary")} <ArrowRight className="h-4 w-4 rtl:rotate-180" /></Button>
+                <Button variant="hero" size="xl">Get started — it's free <ArrowRight className="h-4 w-4 rtl:rotate-180" /></Button>
               </Link>
               <Link to="/tools">
-                <Button variant="outline" size="xl">{t("hero.cta.secondary")}</Button>
+                <Button variant="outline" size="xl">Browse all tools</Button>
               </Link>
             </div>
             <div className="mt-12 flex flex-wrap justify-center gap-x-10 gap-y-4 text-sm">
               {[
-                { v: "12M+", k: "hero.stat.users" },
-                { v: "850M+", k: "hero.stat.files" },
-                { v: "4.9★", k: "hero.stat.rating" },
+                { v: "100% Free", k: "No hidden costs" },
+                { v: "No Sign-up", k: "Use instantly" },
+                { v: "1 Hour", k: "File auto-deleted" },
               ].map((s) => (
                 <div key={s.k} className="text-center">
                   <div className="font-display text-2xl font-bold text-foreground">{s.v}</div>
-                  <div className="text-xs text-muted-foreground">{t(s.k)}</div>
+                  <div className="text-xs text-muted-foreground">{s.k}</div>
                 </div>
               ))}
             </div>
@@ -92,7 +94,6 @@ function HomePage() {
           <h2 className="font-display text-4xl sm:text-5xl font-bold tracking-tight">{t("tools.heading")}</h2>
           <p className="mt-4 text-muted-foreground">{t("tools.subheading")}</p>
         </div>
-
         {categories.map((cat) => {
           const items = tools.filter((tt) => tt.category === cat.id);
           if (!items.length) return null;
@@ -110,16 +111,46 @@ function HomePage() {
         })}
       </section>
 
+      {/* TOOL HIGHLIGHTS */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 bg-secondary/30 rounded-3xl">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <h2 className="font-display text-4xl font-bold">Four tools. Every PDF task covered.</h2>
+          <p className="mt-3 text-muted-foreground">Everything you need to handle PDFs, in one place.</p>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {toolHighlights.map((tool, i) => (
+            <motion.div
+              key={tool.title}
+              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }} transition={{ delay: i * 0.08, duration: 0.4 }}
+            >
+              <Link to={tool.href}>
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-smooth h-full">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-elegant">
+                    <tool.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-4 font-display text-lg font-bold">{tool.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{tool.desc}</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm text-primary font-medium">
+                    Open tool <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* FEATURES */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <h2 className="font-display text-4xl font-bold">{t("section.features.title")}</h2>
-          <p className="mt-3 text-muted-foreground">{t("section.features.subtitle")}</p>
+          <h2 className="font-display text-4xl font-bold">Why SmartPDFTools</h2>
+          <p className="mt-3 text-muted-foreground">Built around the things that actually matter when handling documents.</p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => (
             <motion.div
-              key={f.key}
+              key={f.title}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: i * 0.08, duration: 0.4 }}
               className="rounded-2xl border border-border bg-card p-6 shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-smooth"
@@ -127,8 +158,8 @@ function HomePage() {
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-elegant">
                 <f.icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-4 font-display text-lg font-bold">{t(`feature.${f.key}.title`)}</h3>
-              <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{t(`feature.${f.key}.desc`)}</p>
+              <h3 className="mt-4 font-display text-lg font-bold">{f.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -137,23 +168,24 @@ function HomePage() {
       {/* HOW IT WORKS */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 bg-secondary/30 rounded-3xl">
         <div className="text-center mb-14">
-          <h2 className="font-display text-4xl font-bold">{t("section.how.title")}</h2>
+          <h2 className="font-display text-4xl font-bold">How it works</h2>
+          <p className="mt-3 text-muted-foreground">Three steps is all it takes.</p>
         </div>
         <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
           {[
-            { icon: Upload, k: "step1" },
-            { icon: MousePointerClick, k: "step2" },
-            { icon: Download, k: "step3" },
+            { icon: Upload, title: "Upload your file", desc: "Drag and drop your PDF or image onto the tool page, or click to browse." },
+            { icon: MousePointerClick, title: "Choose your action", desc: "Select the task — merge, compress, convert or create — and click to process." },
+            { icon: Download, title: "Download your result", desc: "Your processed file is ready to download instantly. No waiting, no email required." },
           ].map((s, i) => (
-            <div key={s.k} className="text-center relative">
+            <div key={s.title} className="text-center relative">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-primary text-primary-foreground shadow-elegant">
                 <s.icon className="h-7 w-7" />
               </div>
               <div className="absolute top-0 start-1/2 -translate-x-1/2 sm:start-auto sm:translate-x-0 sm:-top-3 sm:end-1/2 font-display text-6xl font-extrabold text-primary/10 -z-10">
                 0{i + 1}
               </div>
-              <h3 className="mt-5 font-display text-xl font-bold">{t(`section.how.${s.k}.title`)}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{t(`section.how.${s.k}.desc`)}</p>
+              <h3 className="mt-5 font-display text-xl font-bold">{s.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
             </div>
           ))}
         </div>
@@ -162,49 +194,16 @@ function HomePage() {
       {/* WHY SMARTPDFTOOLS */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="font-display text-4xl font-bold mb-6">Why SmartPDFTools is the Best Free PDF Solution</h2>
+          <h2 className="font-display text-4xl font-bold mb-6">The simplest way to handle PDF files</h2>
           <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-            SmartPDFTools is a completely free online platform designed to help you manage, edit, and convert PDF files with ease. Whether you need to merge multiple documents, compress large files for email, convert PDFs to editable Word formats, or turn images into professional PDFs, our tools handle everything in your browser – securely and instantly.
+            SmartPDFTools is a free, browser-based platform built to handle the most common PDF tasks without the complexity or cost of desktop software. Whether you need to combine documents, reduce a file size before emailing it, convert a PDF into an editable Word file, or turn phone photos into a PDF — everything runs directly in your browser.
           </p>
           <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-            Unlike other free PDF tools that limit your usage or add watermarks, SmartPDFTools offers unlimited access with no sign-up required. Your privacy is our priority: all uploaded files are automatically deleted from our servers within one hour, and we never share your data with third parties.
+            There are no daily limits, no watermarks, and no account required. Your files are processed locally whenever possible and deleted automatically within one hour. We never read or share your documents.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Join millions of users worldwide who trust SmartPDFTools for fast, reliable, and secure document processing – all completely free.
+            SmartPDFTools works on any device — desktop, tablet or mobile — with no installation needed. Just open the tool, process your file, and download the result.
           </p>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <h2 className="font-display text-4xl font-bold">{t("section.testimonials.title")}</h2>
-          <p className="mt-3 text-muted-foreground">{t("section.testimonials.subtitle")}</p>
-        </div>
-        <div className="grid gap-6 lg:grid-cols-3">
-          {testimonials.map((tm, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-              className="rounded-2xl border border-border bg-gradient-card p-7 shadow-soft"
-            >
-              <Quote className="h-6 w-6 text-primary/40" />
-              <p className="mt-3 text-foreground/90 leading-relaxed">"{tm.body}"</p>
-              <div className="mt-5 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary text-primary-foreground font-bold">
-                  {tm.name[0]}
-                </div>
-                <div>
-                  <div className="font-semibold text-sm">{tm.name}</div>
-                  <div className="text-xs text-muted-foreground">{tm.role}</div>
-                </div>
-                <div className="ms-auto flex">
-                  {Array.from({ length: 5 }).map((_, j) => <Star key={j} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />)}
-                </div>
-              </div>
-            </motion.div>
-          ))}
         </div>
       </section>
 
@@ -212,38 +211,20 @@ function HomePage() {
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="font-display text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
         <div className="space-y-4">
-          <div className="p-5 border rounded-xl bg-card">
-            <h3 className="font-semibold text-lg">Is SmartPDFTools really free to use?</h3>
-            <p className="text-muted-foreground mt-1">Yes! All our tools are completely free with no hidden charges, no daily limits, and no watermarks.</p>
-          </div>
-          <div className="p-5 border rounded-xl bg-card">
-            <h3 className="font-semibold text-lg">Do I need to create an account?</h3>
-            <p className="text-muted-foreground mt-1">No. You can use all tools without signing up or providing any personal information.</p>
-          </div>
-          <div className="p-5 border rounded-xl bg-card">
-            <h3 className="font-semibold text-lg">Are my files safe and secure?</h3>
-            <p className="text-muted-foreground mt-1">Absolutely. We use 256-bit TLS encryption and automatically delete all uploaded files within 1 hour of processing.</p>
-          </div>
-          <div className="p-5 border rounded-xl bg-card">
-            <h3 className="font-semibold text-lg">What file formats do you support?</h3>
-            <p className="text-muted-foreground mt-1">We support PDF, Word (DOCX), PNG, and JPG formats for conversion and processing.</p>
-          </div>
-          <div className="p-5 border rounded-xl bg-card">
-            <h3 className="font-semibold text-lg">Can I use SmartPDFTools on my phone?</h3>
-            <p className="text-muted-foreground mt-1">Yes! Our tools work on all devices – desktop, tablet, and mobile.</p>
-          </div>
-          <div className="p-5 border rounded-xl bg-card">
-            <h3 className="font-semibold text-lg">Is there a file size limit?</h3>
-            <p className="text-muted-foreground mt-1">We support files up to 50MB for all our free tools.</p>
-          </div>
-          <div className="p-5 border rounded-xl bg-card">
-            <h3 className="font-semibold text-lg">How do I contact support?</h3>
-            <p className="text-muted-foreground mt-1">You can email us at shekokamal7775@gmail.com or use our Contact page.</p>
-          </div>
-          <div className="p-5 border rounded-xl bg-card">
-            <h3 className="font-semibold text-lg">Do you offer API access for developers?</h3>
-            <p className="text-muted-foreground mt-1">API access is currently in development. Stay tuned for updates!</p>
-          </div>
+          {[
+            { q: "Is SmartPDFTools really free to use?", a: "Yes. All four tools are completely free with no hidden charges, no daily limits, and no watermarks." },
+            { q: "Do I need to create an account?", a: "No. You can use all tools without signing up or providing any personal information." },
+            { q: "Are my files safe and secure?", a: "Yes. Files are transmitted over encrypted connections and automatically deleted within one hour of processing. We never read or share your file content." },
+            { q: "What file formats do you support?", a: "Our tools support PDF, DOCX, PNG and JPG. Each tool page lists exactly which formats it accepts." },
+            { q: "Can I use SmartPDFTools on my phone?", a: "Yes. All tools work on iPhone, Android, tablet and desktop directly in the browser — no app needed." },
+            { q: "Does processing happen on my device or a server?", a: "Core processing runs in your browser whenever possible, which means your files never leave your device." },
+            { q: "How do I contact support?", a: "Use the Contact page or email us directly. We aim to respond within one business day." },
+          ].map((item, i) => (
+            <div key={i} className="p-5 border rounded-xl bg-card">
+              <h3 className="font-semibold text-lg">{item.q}</h3>
+              <p className="text-muted-foreground mt-1">{item.a}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -252,15 +233,15 @@ function HomePage() {
         <div className="rounded-3xl bg-gradient-primary p-12 sm:p-16 text-center shadow-elegant relative overflow-hidden">
           <div className="absolute inset-0 grid-pattern opacity-20" aria-hidden />
           <div className="relative">
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-primary-foreground">{t("section.cta.title")}</h2>
-            <p className="mt-4 text-primary-foreground/90 max-w-xl mx-auto">{t("section.cta.subtitle")}</p>
-            <Link to="/signup">
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-primary-foreground">Ready to handle your PDFs?</h2>
+            <p className="mt-4 text-primary-foreground/90 max-w-xl mx-auto">Four free tools. No account. No limits. Start now.</p>
+            <Link to="/tools">
               <Button size="xl" className="mt-8 bg-foreground text-background hover:bg-foreground/90 font-semibold">
-                {t("section.cta.button")} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+                Browse all tools <ArrowRight className="h-4 w-4 rtl:rotate-180" />
               </Button>
             </Link>
             <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-primary-foreground/85">
-              {["No credit card", "Free forever plan", "Cancel anytime"].map((x) => (
+              {["No credit card", "No sign-up required", "Files deleted within 1 hour"].map((x) => (
                 <span key={x} className="inline-flex items-center gap-1.5"><Check className="h-4 w-4" /> {x}</span>
               ))}
             </div>
@@ -269,4 +250,4 @@ function HomePage() {
       </section>
     </div>
   );
-      }
+}
