@@ -33,21 +33,21 @@ const features = [
 ];
 
 const toolHighlights = [
-  { icon: Layers, title: "Merge PDF", desc: "Combine multiple PDF files into one organised document in seconds.", href: "/tools/merge-pdf" },
-  { icon: Minimize2, title: "Compress PDF", desc: "Reduce PDF file size by up to 80% while keeping text sharp and images clear.", href: "/tools/compress-pdf" },
-  { icon: FileText, title: "PDF to Word", desc: "Convert any PDF to a fully editable Word document with fonts and layout preserved.", href: "/tools/pdf-to-word" },
-  { icon: Image, title: "PNG to PDF", desc: "Turn JPG or PNG images into a clean, shareable PDF file instantly.", href: "/tools/jpg-to-pdf" },
+  { icon: Layers, title: "Merge PDF", desc: "Combine multiple PDF files into one organised document in seconds.", slug: "merge-pdf" },
+  { icon: Minimize2, title: "Compress PDF", desc: "Reduce PDF file size by up to 80% while keeping text sharp and images clear.", slug: "compress-pdf" },
+  { icon: FileText, title: "PDF to Word", desc: "Convert any PDF to a fully editable Word document with fonts and layout preserved.", slug: "pdf-to-word" },
+  { icon: Image, title: "PNG to PDF", desc: "Turn JPG or PNG images into a clean, shareable PDF file instantly.", slug: "jpg-to-pdf" },
 ];
 
 const commonTasks = [
-  { label: "Merge PDF files", href: "/tools/merge-pdf" },
-  { label: "Compress PDF", href: "/tools/compress-pdf" },
-  { label: "Convert PDF to Word", href: "/tools/pdf-to-word" },
-  { label: "JPG to PDF", href: "/tools/jpg-to-pdf" },
-  { label: "PNG to PDF", href: "/tools/jpg-to-pdf" },
-  { label: "Combine scanned documents", href: "/tools/merge-pdf" },
-  { label: "Reduce PDF size for email", href: "/tools/compress-pdf" },
-  { label: "Edit PDF content", href: "/tools/pdf-to-word" },
+  { label: "Merge PDF files", slug: "merge-pdf" },
+  { label: "Compress PDF", slug: "compress-pdf" },
+  { label: "Convert PDF to Word", slug: "pdf-to-word" },
+  { label: "JPG to PDF", slug: "jpg-to-pdf" },
+  { label: "PNG to PDF", slug: "jpg-to-pdf" },
+  { label: "Combine scanned documents", slug: "merge-pdf" },
+  { label: "Reduce PDF size for email", slug: "compress-pdf" },
+  { label: "Edit PDF content", slug: "pdf-to-word" },
 ];
 
 const whyChoose = [
@@ -157,7 +157,7 @@ function HomePage() {
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: i * 0.08, duration: 0.4 }}
             >
-              <Link to={tool.href}>
+              <Link to="/tools/$slug" params={{ slug: tool.slug }}>
                 <div className="rounded-2xl border border-border bg-card p-6 shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-smooth h-full">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-elegant">
                     <tool.icon className="h-6 w-6" />
@@ -182,7 +182,7 @@ function HomePage() {
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
           {commonTasks.map((task) => (
-            <Link key={task.label} to={task.href}>
+            <Link key={task.label} to="/tools/$slug" params={{ slug: task.slug }}>
               <div className="flex items-center gap-3 p-4 rounded-xl border border-border bg-card hover:shadow-elegant hover:-translate-y-0.5 transition-smooth">
                 <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="font-medium text-sm">{task.label}</span>
