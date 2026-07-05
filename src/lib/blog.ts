@@ -540,27 +540,98 @@ After splitting, compress each section using [Compress PDF](/tools/compress-pdf)
 
 For very large PDFs that cannot be compressed enough to fit under email attachment limits, the most reliable solution is to upload the file to a cloud service and send a download link instead of the file itself. Google Drive, Dropbox and OneDrive all support this and are free for personal use. The recipient clicks the link rather than downloading an attachment, which is also more convenient on mobile.
 
-If privacy is a concern, use a service that supports expiring links so the file is not permanently accessible at a public URL.
-
 ## What makes PDF files large in the first place
 
-Understanding what inflates PDF file sizes helps you choose the right compression strategy. High-resolution images are the most common cause — a single full-page photograph embedded at print resolution can be several megabytes on its own. Embedded fonts add weight, particularly when the full font file is included rather than just the characters used in the document. Revision history, form field data, annotations and metadata all add kilobytes that serve no purpose in a file you are sending as a finished document. Some PDF creation tools, particularly those that export from design software, produce bloated files by default because they optimise for print quality rather than file size.
-
-## How to check your PDF size before sending
-
-On iPhone, open the Files app, find your PDF, and press and hold to get info. On Android, open your file manager and tap the file details. On a computer, right-click the file and choose Properties on Windows or Get Info on Mac. The file size displayed is what the recipient will need to download, but remember that the actual size transmitted over email will be slightly larger due to attachment encoding.
+Understanding what inflates PDF file sizes helps you choose the right compression strategy. High-resolution images are the most common cause. Embedded fonts add weight. Revision history, form field data, annotations and metadata all add kilobytes that serve no purpose in a file you are sending as a finished document.
 
 ## Tips for keeping PDFs small from the start
 
-If you regularly create PDFs that end up too large for email, adjusting your workflow can prevent the problem rather than fix it after the fact. When exporting from Microsoft Word, choose the Minimum size option in the save as PDF dialog. When scanning physical documents, set your scanner to 150 or 200 DPI rather than the default 300 DPI — the lower resolution is sufficient for reading on screen and produces much smaller files. When photographing documents with your phone and converting using our [PNG to PDF](/tools/jpg-to-pdf) tool, take the photo in good lighting at close range so you can use a lower camera resolution setting.
+When exporting from Microsoft Word, choose the Minimum size option in the save as PDF dialog. When scanning physical documents, set your scanner to 150 or 200 DPI rather than the default 300 DPI. When photographing documents with your phone and converting using our [PNG to PDF](/tools/jpg-to-pdf) tool, take the photo in good lighting at close range.
 
 [[cta:compress-pdf|Reduce PDF size for email — free]]
 
 ## Frequently asked questions
 
-What is the maximum PDF size for Gmail? Gmail allows attachments up to 25MB. Files larger than this must be sent as a Google Drive link, which Gmail can insert automatically. What is the maximum PDF size for Outlook? Outlook allows attachments up to 20MB by default, though some corporate email servers set lower limits. What is the fastest way to reduce PDF size? The fastest method is to use our [Compress PDF](/tools/compress-pdf) tool — upload, compress, download in under 30 seconds. Will compressing a PDF reduce its quality? Text remains perfectly sharp at all compression levels. Images may show minor quality reduction at maximum compression, but the result is still clear enough for screen viewing and standard printing.
+What is the maximum PDF size for Gmail? Gmail allows attachments up to 25MB. Files larger than this must be sent as a Google Drive link. What is the maximum PDF size for Outlook? Outlook allows attachments up to 20MB by default. What is the fastest way to reduce PDF size? Use our [Compress PDF](/tools/compress-pdf) tool — upload, compress, download in under 30 seconds. Will compressing a PDF reduce its quality? Text remains perfectly sharp at all compression levels. Images may show minor quality reduction at maximum compression, but the result is still clear enough for screen viewing.
 
 [[cta:tools|Try all PDF tools free at SmartPDFTools]]`,
+  },
+  {
+    slug: "save-webpage-as-pdf",
+    title: "How to Save a Webpage as PDF — Chrome, iPhone, Android & Mac",
+    excerpt: "Save any website as a clean PDF in seconds. Step-by-step guide for Chrome, Safari, iPhone, Android and Mac — free, no software needed.",
+    category: "PDF Tutorials",
+    author: "Mohamed Adel",
+    date: "July 5, 2026",
+    readTime: "7 min read",
+    cover: "/save-webpage-as-pdf.png.png",
+    content: `Saving a webpage as a PDF is one of the most useful things you can do with a browser — and most people do not know their device already has everything they need built in. Whether you want to save an article to read offline, archive a receipt or invoice, keep a copy of an important web page, or share a website with someone who does not have internet access, converting a webpage to PDF takes less than ten seconds on any device.
+
+This guide covers every method for every major platform in 2026, so you can save any webpage as a PDF regardless of whether you are on Chrome, Safari, Firefox, an iPhone, an Android phone, or a Mac.
+
+## Why save a webpage as PDF?
+
+A saved PDF captures the page exactly as it appears at that moment. Unlike a browser bookmark, a PDF does not disappear if the website goes offline, changes its content, or moves its URL. Unlike a screenshot, a PDF preserves selectable text that you can search, copy and quote. Unlike a printed page, a PDF takes up no physical space and can be shared instantly.
+
+Common reasons people save webpages as PDF include saving online receipts and order confirmations for expense reports, archiving news articles or research for later reference, capturing job postings before they expire, saving travel itineraries and booking confirmations, and keeping records of web-based contracts or terms of service.
+
+## How to save a webpage as PDF in Google Chrome (Windows and Mac)
+
+Chrome has a built-in print-to-PDF function that works on both Windows and Mac. Open the webpage you want to save. Press Ctrl and P on Windows, or Command and P on Mac, to open the print dialog. In the destination field, click the dropdown menu and select Save as PDF. Adjust the layout to portrait or landscape depending on the page content. Click Save, choose where to save the file, and click Save again.
+
+The resulting PDF will contain the full page content including text, images and links. If the page is very long, Chrome will split it across multiple pages automatically.
+
+## How to save a webpage as PDF on iPhone and iPad
+
+Safari on iPhone and iPad has a dedicated save-to-PDF feature that produces a full-page PDF rather than a screenshot. Open the webpage in Safari. Tap the share button at the bottom of the screen — it looks like a square with an arrow pointing up. Scroll down in the share sheet and tap Print. On the print preview screen, pinch outward with two fingers on the preview thumbnail. This converts the preview to a PDF. Tap the share button again in the top right corner, then choose Save to Files to save the PDF to your device.
+
+Alternatively, in newer versions of iOS you can tap the share button and look for the option labelled Create PDF directly in the share sheet, which skips the print step entirely.
+
+## How to save a webpage as PDF on Android
+
+The method on Android varies slightly depending on which browser you use. In Chrome for Android, open the webpage and tap the three-dot menu in the top right corner. Tap Share, then tap Print. In the printer dropdown at the top, select Save as PDF. Tap the PDF icon in the top right to save the file to your device.
+
+In Samsung Internet, open the menu and choose Print, then select Save as PDF from the printer options. The file will be saved to your Downloads folder by default.
+
+## How to save a webpage as PDF in Safari on Mac
+
+Mac users can save any webpage as a PDF directly from Safari without using the print dialog. Open the webpage in Safari. Go to the File menu in the menu bar and choose Export as PDF. Choose where to save the file and click Save. This method produces a clean PDF that often renders better than the print-to-PDF method because Safari optimises the output specifically for PDF export rather than treating it as a print job.
+
+## How to save a webpage as PDF in Firefox
+
+Firefox uses the same keyboard shortcut as Chrome. Press Ctrl and P on Windows or Command and P on Mac. In the print dialog, select Microsoft Print to PDF on Windows or Save as PDF on Mac from the printer dropdown. Click Print or Save to generate the PDF.
+
+## What to do after saving a webpage as PDF
+
+Webpages saved as PDF can be large files, particularly if the page contains many high-resolution images. If you need to share the saved PDF by email or upload it to a portal with a file size limit, run it through our [Compress PDF](/tools/compress-pdf) tool to reduce the file size while keeping all the text and images intact.
+
+[[cta:compress-pdf|Compress your saved webpage PDF]]
+
+If you have saved several related webpages as separate PDFs — for example, multiple pages of a research document or a series of related articles — use our [Merge PDF](/tools/merge-pdf) tool to combine them into a single organised file.
+
+[[cta:merge-pdf|Merge multiple saved PDFs into one]]
+
+If you need to edit the text content of a saved webpage PDF, convert it to a Word document first using our [PDF to Word](/tools/pdf-to-word) tool, make your changes, and export back to PDF.
+
+[[cta:pdf-to-word|Convert your PDF to an editable Word document]]
+
+## Tips for cleaner webpage PDFs
+
+Most web pages are designed for screen viewing, not printing, which means the PDF output can sometimes include navigation menus, sidebars, cookie banners and advertisements that clutter the saved document. Before saving, try switching the page to reader mode if your browser supports it — in Safari, tap the reader icon in the address bar; in Firefox, look for the reader view icon. Reader mode strips away everything except the main article content and produces a much cleaner PDF.
+
+If the page uses a dark background or coloured text that looks fine on screen but wastes ink and reduces readability in a PDF, check whether your browser's print settings include an option to remove background colours and images.
+
+## Frequently asked questions
+
+Can I save a webpage as PDF without printing? Yes. On Mac, use Safari's Export as PDF option under the File menu. On iPhone, use the Create PDF option in the share sheet. On Windows and Android, use the Save as PDF option in the print dialog — no physical printer is needed.
+
+Why does my saved PDF look different from the webpage? Web pages are designed for screens, not pages. Elements like sidebars, navigation menus and infinite scroll sections do not always translate cleanly to a fixed-page PDF format. Using reader mode before saving usually produces a cleaner result.
+
+How do I save a webpage as PDF on mobile without an app? Both iPhone and Android have built-in PDF creation through their share and print menus, so no additional app is required.
+
+Can I convert a PDF back to a webpage or editable document? Yes. Use our [PDF to Word](/tools/pdf-to-word) tool to convert any PDF to an editable Word document, which you can then edit in Microsoft Word or Google Docs.
+
+[[cta:tools|Manage all your PDFs with SmartPDFTools]]`,
   },
 ];
 
