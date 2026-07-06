@@ -90,7 +90,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
-          <p>© {year} SmartPDFTools. {t("footer.rights")}</p>
+          <p>© {year} SmartPDFMasters. {t("footer.rights")}</p>
           <p>Made with care for documents that work.</p>
         </div>
       </div>
