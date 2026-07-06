@@ -141,7 +141,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- New Articles -->
   <url>
     <loc>https://www.smartpdfmasters.com/blog/how-to-save-a-webpage-as-pdf</loc>
     <lastmod>2026-07-05</lastmod>
@@ -155,8 +154,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Tools Pages -->
 
   <url>
     <loc>https://www.smartpdfmasters.com/tools/merge-pdf</loc>
@@ -181,7 +178,7 @@
 
   <url>
     <loc>https://www.smartpdfmasters.com/tools/jpg-to-pdf</loc>
-    <lastmod>2026-06-28</_lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
