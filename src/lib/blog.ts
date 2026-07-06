@@ -595,7 +595,7 @@ Can I save a webpage as PDF without printing? Yes. On Mac use Safari Export as P
     author: "Sara Khalil",
     date: "July 6, 2026",
     readTime: "8 min read",
-    cover: "/pdf-vs-word.png.png",
+    cover: "/pdf-vs-word.png.jpeg",
     content: `PDF or Word? It sounds like a simple question, but choosing the wrong format at the wrong moment causes real problems — documents that cannot be edited when they need to be, files that look different on every device, contracts that get modified after signing, and resumes that break when a recruiter opens them on a different computer.
 
 This guide explains exactly what makes PDF and Word different, when each format is the right choice, and how to move between them quickly and without losing formatting.
