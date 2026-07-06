@@ -690,7 +690,7 @@ Which format does Google index better for search? Google can read both PDF and W
     author: "Sara Khalil",
     date: "July 7, 2026",
     readTime: "8 min read",
-    cover: "/how-to-merge-pdf.png.png.",
+    cover: "/how-to-merge-pdf.png.jpeg.",
     content: `Merging PDF files is one of the most common document tasks people search for every day. Whether you need to combine a resume and cover letter, join multiple invoices into one file, merge scanned pages into a single document, or consolidate a multi-chapter report, knowing how to merge PDF files quickly and for free saves time and eliminates the frustration of sending multiple attachments.
 
 This guide covers every method to combine PDF files in 2026 — from the fastest free online PDF merger to built-in tools on every major device — so you can merge any PDF files into one document in under a minute.
