@@ -784,6 +784,117 @@ Can I merge a PDF with a Word document? Not directly. Convert your Word document
 How do I merge PDF files on iPhone without an app? Open Safari, go to our [Merge PDF](/tools/merge-pdf) tool, upload your files, and download the merged result. No app installation is required.
 
 [[cta:merge-pdf|Merge your PDF files now — free]]`,
+  },
+{
+    slug: "convert-jpg-to-pdf-free",
+    title: "How to Convert JPG to PDF Free — Complete Guide for All Devices",
+    excerpt: "Convert any JPG, JPEG or PNG image to PDF instantly. Free online guide for iPhone, Android, Windows and Mac — no app download, no signup needed.",
+    category: "File Conversion",
+    author: "Layla Hassan",
+    date: "July 7, 2026",
+    readTime: "7 min read",
+    cover: "/convert-jpg-to-pdf.png.jpeg",
+    content: `Converting a JPG image to PDF is one of the most searched document tasks on the internet — and for good reason. Whether you need to turn a photo of a receipt into a PDF for your expense report, convert a scanned document image into a shareable PDF file, combine multiple photos into one PDF, or send an image in a format that looks professional and cannot be easily edited, knowing how to convert JPG to PDF quickly and for free is an essential skill.
+
+This complete guide covers every method to convert JPG to PDF in 2026 — online, on iPhone, on Android, on Windows, and on Mac — so you can convert any image to PDF on any device in under a minute.
+
+## What is the difference between JPG and PDF?
+
+A JPG (also written JPEG) is an image file. It stores a photograph or picture as a grid of coloured pixels. JPG files are compressed to keep file sizes small, which makes them ideal for photos and web images, but the compression can reduce image quality if the file is resaved multiple times. JPG files open in image viewers and can be edited in photo editors.
+
+A PDF is a document file. It can contain text, images, tables, links, and formatting all in one file that looks identical on every device and operating system. PDF files are the standard format for sharing finished documents because they cannot be accidentally edited and they look the same whether opened on a phone, a laptop, or a printer.
+
+Converting a JPG to PDF is useful when you need to share an image as a professional document, combine multiple photos into one file, submit an image through a portal that only accepts PDF uploads, or archive photos in a format that preserves quality and is universally readable.
+
+## Method 1 — Convert JPG to PDF online free (fastest method)
+
+The fastest way to convert JPG to PDF on any device is to use a free online converter that works directly in your browser. Our [PNG to PDF](/tools/jpg-to-pdf) tool converts JPG, JPEG, PNG and other image formats to PDF instantly — completely free, no signup required, no watermark added.
+
+Open the [PNG to PDF](/tools/jpg-to-pdf) tool in your browser. Click the upload area or drag and drop your JPG image onto the page. If you have multiple images to combine into one PDF, upload them all and arrange them in the order you want. Click Convert and wait a few seconds. Download your PDF file immediately.
+
+The tool works on iPhone, Android, tablet and desktop. Your images are processed in your browser, which means they never leave your device.
+
+[[cta:tools|Convert JPG to PDF free — no signup]]
+
+## Method 2 — Convert JPG to PDF on iPhone
+
+iPhone users have two easy ways to convert JPG images to PDF without downloading any additional apps.
+
+Using the Photos app: Open the Photos app and find the image you want to convert. Tap the Share button. Scroll down and tap Print. On the print preview screen, pinch outward with two fingers on the preview thumbnail. This converts the print preview to a PDF. Tap the Share button that appears in the top right corner, then choose Save to Files to save the PDF to your device.
+
+Using the Files app: Open the Files app and navigate to the image file. Tap and hold the image. Tap Quick Actions from the menu that appears. Tap Create PDF. The Files app converts the image to a PDF and saves it in the same folder automatically.
+
+For converting multiple JPG images into a single PDF file, use our [PNG to PDF](/tools/jpg-to-pdf) tool in Safari — upload all your images, arrange them in the correct order, and download one combined PDF.
+
+## Method 3 — Convert JPG to PDF on Android
+
+Android phones do not have a built-in JPG to PDF converter, but our [PNG to PDF](/tools/jpg-to-pdf) tool works perfectly in Chrome for Android without installing any app. Open Chrome, visit our tool, upload your JPG image or images, and download the converted PDF — the process is identical to the desktop version.
+
+Samsung Galaxy phones running One UI 5 or later also have a built-in option. Open the Gallery app, select the image, tap the More menu (three dots), and look for a Save as PDF option. The location of this option varies slightly depending on the Samsung model and software version.
+
+Google Photos on Android allows you to print any image to PDF. Open the image in Google Photos, tap the three-dot menu, tap Print, select Save as PDF from the printer dropdown, and tap the save icon.
+
+## Method 4 — Convert JPG to PDF on Windows
+
+Windows 10 and Windows 11 include a built-in print-to-PDF function that can convert any image to PDF without additional software.
+
+Open your JPG image in any viewer — Windows Photos, Paint, or any other app. Press Ctrl and P to open the print dialog. From the printer list, select Microsoft Print to PDF. Click Print. Choose where to save the file and click Save.
+
+This method works for converting a single image to PDF. For combining multiple JPG images into one PDF file, use our [PNG to PDF](/tools/jpg-to-pdf) tool — upload all your images, arrange them, and download a single combined PDF.
+
+## Method 5 — Convert JPG to PDF on Mac
+
+Mac users can convert JPG to PDF using the built-in Preview app in seconds. Open your JPG image in Preview. Go to the File menu and select Export as PDF. Choose where to save the file, give it a name, and click Save.
+
+To combine multiple JPG images into a single PDF on Mac using Preview: Open the first image in Preview. Go to View and select Thumbnails. Drag additional image files from Finder into the thumbnail panel in the order you want them. Go to File and select Print, then choose Save as PDF from the PDF button at the bottom left of the print dialog.
+
+## How to convert multiple JPG images to one PDF
+
+Converting multiple photos to a single PDF file is one of the most common reasons people need a JPG to PDF tool. Common use cases include combining photos of a multi-page document that was photographed page by page, creating a PDF portfolio of images, combining front and back photos of an ID document, and submitting multiple receipt photos as one PDF expense report.
+
+Our [PNG to PDF](/tools/jpg-to-pdf) tool handles multiple image files in one conversion. Upload all your JPG, JPEG, or PNG images at once, drag to arrange them in the correct order, and click Convert. The result is a single PDF containing all your images in sequence.
+
+[[cta:tools|Convert multiple JPG images to one PDF]]
+
+## How to compress a PDF after converting from JPG
+
+Images converted to PDF can produce large file sizes, particularly if the original photos were taken at high resolution. If you need to email your converted PDF or upload it to a portal with a file size limit, compress it after converting.
+
+After downloading your converted PDF, open our [Compress PDF](/tools/compress-pdf) tool, upload the file, and select the recommended compression level. The compressed PDF will be significantly smaller while keeping all images clear and readable.
+
+[[cta:compress-pdf|Compress your converted PDF]]
+
+## How to merge a JPG-converted PDF with other documents
+
+If you need to add your converted image PDF to an existing document — for example, adding a photo of a signed form to a digital application — use our [Merge PDF](/tools/merge-pdf) tool to combine the files. Upload both PDFs, arrange them in the correct order, and download the merged result.
+
+[[cta:merge-pdf|Merge your PDF files into one document]]
+
+## Tips for better JPG to PDF conversions
+
+For the clearest results, use the highest quality version of your image available. If you are photographing a document with your phone, take the photo in good lighting, hold the phone directly above the document, and make sure the entire page is visible in the frame. Avoid strong shadows or reflections that will appear in the converted PDF.
+
+If the image is rotated incorrectly, rotate it before converting. Most image viewers on iPhone, Android and Mac allow you to rotate photos before sharing or exporting.
+
+For scanned documents that need to be searchable or editable after conversion, use our [PDF to Word](/tools/pdf-to-word) tool after converting to extract the text using OCR.
+
+## Frequently asked questions
+
+How do I convert JPG to PDF for free? Use our [PNG to PDF](/tools/jpg-to-pdf) tool — upload your JPG image and download the PDF instantly. No signup, no watermark, completely free.
+
+Can I convert multiple JPG files to one PDF? Yes. Our tool accepts multiple images in one upload. Arrange them in the order you want and convert them all into a single PDF file.
+
+Does converting JPG to PDF reduce image quality? No. The conversion process does not reduce the quality of your image. The PDF contains your image at its original resolution.
+
+How do I convert JPG to PDF on iPhone without an app? Open Safari on your iPhone, go to our [PNG to PDF](/tools/jpg-to-pdf) tool, upload your image, and download the PDF. No app installation required.
+
+How do I convert JPG to PDF on Android without an app? Open Chrome on your Android phone, visit our tool, upload your JPG, and download the converted PDF.
+
+Can I convert PNG to PDF the same way? Yes. Our tool accepts PNG, JPG, JPEG and other common image formats. The conversion process is identical for all image types.
+
+What is the difference between JPG and JPEG? JPG and JPEG are the same format — JPEG is the full name (Joint Photographic Experts Group) and JPG is the shortened file extension used on older Windows systems. Both convert to PDF the same way.
+
+[[cta:tools|Convert JPG and PNG images to PDF at SmartPDFTools]]`,
   },  
 ];
 
