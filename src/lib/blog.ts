@@ -904,7 +904,7 @@ What is the difference between JPG and JPEG? JPG and JPEG are the same format �
     author: "Mohamed Adel",
     date: "July 8, 2026",
     readTime: "8 min read",
-    cover: "/how-to-print-to-pdf.png.png",
+    cover: "/how-to-print-to-pdf.png.jpeg",
     content: `Most people think printing means sending a document to a physical printer. But print to PDF — also called virtual printing or PDF printing — means saving any document, webpage, email, or file as a PDF instead of printing it on paper. It is one of the most useful things you can do on any device, and every major operating system already has this feature built in for free.
 
 Whether you want to save an email as PDF, print a webpage to PDF without ads, convert a Word document to PDF, archive a receipt from a shopping website, or turn any file into a shareable PDF document, this guide explains exactly how to do it on every major platform in 2026.
