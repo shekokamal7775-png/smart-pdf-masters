@@ -895,7 +895,128 @@ Can I convert PNG to PDF the same way? Yes. Our tool accepts PNG, JPG, JPEG and 
 What is the difference between JPG and JPEG? JPG and JPEG are the same format — JPEG is the full name (Joint Photographic Experts Group) and JPG is the shortened file extension used on older Windows systems. Both convert to PDF the same way.
 
 [[cta:tools|Convert JPG and PNG images to PDF at SmartPDFTools]]`,
-  },  
+  },
+ {
+    slug: "how-to-print-to-pdf-free",
+    title: "How to Print to PDF — Free Guide for Windows, Mac, iPhone & Android",
+    excerpt: "Learn how to print any document, webpage or file to PDF for free on any device. Step-by-step guide for Windows, Mac, iPhone, iPad and Android — no software needed.",
+    category: "PDF Tutorials",
+    author: "Mohamed Adel",
+    date: "July 8, 2026",
+    readTime: "8 min read",
+    cover: "/how-to-print-to-pdf.png.png",
+    content: `Most people think printing means sending a document to a physical printer. But print to PDF — also called virtual printing or PDF printing — means saving any document, webpage, email, or file as a PDF instead of printing it on paper. It is one of the most useful things you can do on any device, and every major operating system already has this feature built in for free.
+
+Whether you want to save an email as PDF, print a webpage to PDF without ads, convert a Word document to PDF, archive a receipt from a shopping website, or turn any file into a shareable PDF document, this guide explains exactly how to do it on every major platform in 2026.
+
+## What does print to PDF actually mean?
+
+When you print to PDF, your device creates a PDF file instead of sending ink to paper. The result is a document that looks exactly like a printed page — same layout, same fonts, same images — but saved as a digital file you can store, share, or email.
+
+Print to PDF is useful because it works from any application that has a print button. You do not need special software to convert a file to PDF. You just open the print dialog in any app, select a PDF option instead of a physical printer, and save the result. It works for webpages, emails, Word documents, Excel spreadsheets, photos, and almost any other type of file.
+
+## How to print to PDF on Windows 10 and Windows 11
+
+Windows 10 and Windows 11 include a built-in PDF printer called Microsoft Print to PDF. It appears in your printer list automatically — no installation required.
+
+Open the document, webpage, or file you want to convert to PDF. Press Ctrl and P to open the print dialog. In the printer dropdown, scroll through the list and select Microsoft Print to PDF. Choose the page range and any other settings you need. Click Print. A save dialog will appear — choose where you want to save the PDF file, give it a name, and click Save.
+
+The PDF is created immediately and saved to the location you chose. You can open it with any PDF viewer, share it by email, or upload it anywhere that accepts PDF files.
+
+If you want to reduce the file size of a PDF you have just printed — particularly useful for documents with many images — open our [Compress PDF](/tools/compress-pdf) tool after saving and run the file through it before sharing.
+
+[[cta:compress-pdf|Compress your PDF after printing]]
+
+## How to print to PDF on Mac
+
+Mac users have two built-in options for printing to PDF, both of which are available in every application that supports printing.
+
+The first method uses the PDF button in the print dialog. Open your document or webpage. Press Command and P to open the print dialog. At the bottom left of the print dialog, click the PDF button. A dropdown menu appears with several options. Click Save as PDF. Choose a name and location for your file and click Save.
+
+The second method works in Safari for saving webpages. With the webpage open, go to the File menu and select Export as PDF. This often produces a cleaner result than the print dialog for webpages because Safari optimises the output for PDF rather than treating it as a print job.
+
+## How to print to PDF on iPhone and iPad
+
+iPhone and iPad do not have a dedicated print to PDF button, but the feature is built into the print dialog through a gesture that most people have never discovered.
+
+Open the document, email, or webpage you want to save as PDF. Tap the Share button — the square with an arrow pointing up. Tap Print from the share sheet. On the print preview screen, use two fingers to pinch outward on the page preview thumbnail. This gesture converts the print preview into a PDF document. A new screen opens showing your PDF. Tap the Share button in the top right corner of this new screen to save it to Files, share it by email, or send it to another app.
+
+For iPads, the process is identical. The pinch-to-zoom gesture on the print preview is the key step that most guides skip.
+
+If you want to combine the PDF you just created with other documents, use our [Merge PDF](/tools/merge-pdf) tool directly in Safari on your iPhone.
+
+[[cta:merge-pdf|Merge your PDFs on iPhone]]
+
+## How to print to PDF on Android
+
+Android phones use Chrome as the default browser, which has a built-in print to PDF feature. For documents outside Chrome, the process depends on the app.
+
+In Chrome for Android: Open the webpage you want to save. Tap the three-dot menu in the top right corner. Tap Share, then tap Print. In the printer dropdown at the top of the screen, select Save as PDF. Tap the download icon (a circle with a downward arrow) to save the PDF to your device.
+
+In Google Docs, Sheets, or Slides: Open the document. Tap the three-dot menu. Tap Share and export. Tap Send a copy. Select PDF as the format. Tap OK and choose how to save or share the file.
+
+In Gmail: Open the email. Tap the three-dot menu. Tap Print. Select Save as PDF from the printer options and save the file.
+
+For most other Android apps, look for a Share button and then a Print option — the Save as PDF choice appears in the printer dropdown.
+
+## How to print to PDF in Google Chrome on any device
+
+Chrome has a consistent print to PDF workflow that works the same way on Windows, Mac, and Android. On any device, press Ctrl and P (or Command and P on Mac, or tap the menu and choose Print on mobile). In the destination field, click Change and select Save as PDF. Click Save and choose where to save the file.
+
+This works for any webpage you have open in Chrome, including online banking statements, email webmail, online receipts, news articles, and any other web content you want to archive as PDF.
+
+## How to print to PDF in Microsoft Word, Excel and PowerPoint
+
+All Microsoft Office applications can save directly to PDF without using the print dialog at all. Go to File, then Save As, and choose PDF from the format dropdown. This method often produces a better-quality PDF than using the print dialog because Office optimises the output for PDF format directly.
+
+Alternatively, you can use File and then Export and choose Create PDF/XPS Document. This gives you additional options including quality settings that affect the file size.
+
+If your exported PDF is larger than you expected — common with documents that contain many images or embedded objects — use our [Compress PDF](/tools/compress-pdf) tool to reduce the file size before sending it by email or uploading it anywhere.
+
+## How to print a PDF to a physical printer
+
+If you already have a PDF and want to print it on paper, the process is straightforward on any device. Open the PDF in any viewer — Adobe Acrobat Reader, Chrome, Preview on Mac, or the built-in Files app on iPhone. Press Ctrl and P on Windows, Command and P on Mac, or tap the Share button and then Print on iPhone and Android. Select your physical printer from the printer list. Choose the number of copies and page range. Click Print.
+
+For the best physical printing results, check the page sizing settings before confirming. Choose Actual Size to print at the document's original dimensions, or Fit to Page to scale the content to fill your paper size.
+
+## What to do when your PDF file is too large after printing
+
+Documents with high-resolution images, detailed graphics, or many pages can produce large PDF files when printed to PDF. Large files are harder to email, slower to upload, and take more storage space. The fix is straightforward — compress the PDF after creating it.
+
+Our [Compress PDF](/tools/compress-pdf) tool reduces PDF file size while keeping text perfectly sharp and images clear enough for any practical use. Upload your printed PDF, choose the compression level that suits your needs, and download the smaller result in seconds.
+
+[[cta:compress-pdf|Reduce your PDF file size for free]]
+
+## Converting a printed PDF to an editable Word document
+
+If you have printed a document to PDF and then realised you need to edit the content, you do not have to start from scratch. Our [PDF to Word](/tools/pdf-to-word) tool converts any PDF — including PDFs created using print to PDF — back to a fully editable Word document. The conversion preserves fonts, tables, images and layout so you can make your changes and then export back to PDF when you are done.
+
+[[cta:pdf-to-word|Convert your PDF back to Word]]
+
+## Combining multiple printed PDFs into one file
+
+If you have printed several documents to PDF separately and need to combine them into one file, use our [Merge PDF](/tools/merge-pdf) tool. Upload all your PDF files, arrange them in the correct order, and download a single merged PDF in seconds.
+
+This is particularly useful when you have printed multiple receipts, statements, or pages from different sources and need to submit them as one combined document.
+
+[[cta:merge-pdf|Merge multiple PDFs into one]]
+
+## Frequently asked questions about printing to PDF
+
+Is print to PDF free? Yes. Every major operating system — Windows, Mac, iOS and Android — includes a free built-in print to PDF feature. No additional software or subscription is required.
+
+What is the difference between print to PDF and Save as PDF? Print to PDF uses the print dialog and a virtual printer to create a PDF from any application. Save as PDF is a direct export option available in many apps like Microsoft Word and Google Docs. Both produce PDF files — Save as PDF often gives better quality because the app can optimise the output specifically for PDF format.
+
+Why is my printed PDF blurry? Blurry PDFs are usually caused by low-resolution images in the original document, or by choosing a low-quality print setting. For the sharpest results, use the highest quality setting in the print dialog, or use Save as PDF directly from the application rather than print to PDF.
+
+Can I print to PDF on my phone? Yes. Both iPhone and Android support print to PDF through their built-in print dialogs. On iPhone, use the pinch-to-zoom gesture on the print preview to convert it to PDF. On Android, select Save as PDF from the printer dropdown in the print dialog.
+
+How do I reduce the file size of a printed PDF? Use our [Compress PDF](/tools/compress-pdf) tool. Upload your PDF, choose your compression level, and download a smaller version that keeps text sharp and images clear.
+
+Can I print to PDF without installing any software? Yes. All the methods described in this guide use features already built into your device's operating system or browser. No downloads or installations are required.
+
+[[cta:tools|Manage all your PDF files with SmartPDFTools]]`,
+  }, 
 ];
 
 export const blogCategories = [
