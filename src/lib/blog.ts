@@ -1129,7 +1129,94 @@ Can I password protect a PDF on my phone? Yes. Browser-based tools work on iPhon
 Does password protecting a PDF change the file size? Applying password protection increases the file size slightly, but the change is usually negligible — typically less than one percent of the original size.
 
 [[cta:tools|Manage and protect your PDF files with SmartPDFTools]]`,
-  },  
+  },
+ {
+    slug: "how-to-split-pdf-files-free",
+    title: "How to Split a PDF into Multiple Files — Free Online Guide",
+    excerpt: "Need to split a large PDF into separate pages or sections? Learn the fastest free methods to split any PDF on Windows, Mac, iPhone and Android — no software needed.",
+    category: "PDF Tutorials",
+    author: "Sara Khalil",
+    date: "July 9, 2026",
+    readTime: "7 min read",
+    cover: "/split-pdf-free.png.png",
+    content: `A large PDF with dozens or hundreds of pages is not always useful as a single file. Sometimes you need to extract one page from a PDF, separate a report into individual chapters, pull out a specific section to share with someone, or divide a scanned document into individual files for different recipients.
+
+Splitting a PDF — also called extracting pages from a PDF, dividing a PDF, or separating a PDF — is one of the most common document tasks people search for, and every method in this guide is completely free.
+
+## What does splitting a PDF mean?
+
+Splitting a PDF means dividing a single PDF file into two or more separate PDF files. You might split a PDF by pages — for example, creating one file for pages 1 to 10 and another for pages 11 to 20. You might extract a single page from a larger document. You might separate a PDF into individual pages, one file per page. Or you might split a PDF at a specific point — everything before chapter three in one file, everything from chapter three onward in another.
+
+The original PDF is not changed by splitting. The result is new, smaller PDF files that contain the pages you selected.
+
+## Why split a PDF?
+
+There are many practical reasons to split a PDF. You want to share only one section of a large report with a colleague, not the entire document. A portal has a file size limit and your PDF is too large to upload as one file — splitting it and uploading sections separately solves this. You received a multi-page scanned document and need to send individual pages to different people. You want to extract a specific page — a certificate, a signed form, a single invoice — from a larger PDF. You need to reorganise a document and want to work with sections separately before recombining them.
+
+Whatever the reason, splitting a PDF takes less than a minute with the right method.
+
+## Method 1 — Split PDF using Google Chrome on any device
+
+Google Chrome has a built-in print-to-PDF feature that lets you extract specific pages from any PDF without installing any software. This method works on Windows, Mac, and Android.
+
+Open the PDF in Chrome. Press Ctrl and P on Windows or Command and P on Mac to open the print dialog. In the printer dropdown, select Save as PDF. In the Pages field, enter the specific page numbers you want to extract — for example, type 3 to extract only page 3, or type 5-10 to extract pages 5 through 10. Click Save. The resulting file is a new PDF containing only the pages you specified.
+
+Repeat this process for each section you want to create as a separate file.
+
+## Method 2 — Split PDF on Mac using Preview
+
+Mac users can split a PDF using the built-in Preview app without downloading anything. Open the PDF in Preview. Go to View and select Thumbnails to display the page panel on the left. Select the page or pages you want to extract — hold Command and click to select multiple non-consecutive pages, or hold Shift and click to select a range. Drag the selected page thumbnails out of the Preview window onto your desktop. Preview automatically creates a new PDF file containing only the pages you dragged out.
+
+This method is particularly convenient for extracting a few specific pages quickly. For splitting a large PDF into many sections, an online tool is faster.
+
+## Method 3 — Split PDF on iPhone and iPad
+
+iPhone and iPad users can use browser-based PDF splitting tools directly in Safari without installing any application. Open Safari, search for a free online PDF splitter, upload your PDF, specify which pages you want to extract or how you want to split the file, and download the resulting files.
+
+Alternatively, if you need to extract one page from a PDF on iPhone, open the PDF in the Files app, tap the Share button, tap Print, and use the pinch-to-zoom gesture on the print preview to create a new PDF. In the print settings, specify only the page number you want before converting to PDF.
+
+## Method 4 — Split PDF on Android
+
+Android users can also use browser-based PDF splitting tools in Chrome without installing additional apps. Open Chrome, visit a free PDF splitter tool, upload your file, specify your split points, and download the results.
+
+For extracting specific pages on Android, the Chrome print-to-PDF method works identically to the Windows version — open the PDF in Chrome, open the print dialog, select Save as PDF, enter your page range, and save.
+
+## How to split a PDF and then merge the sections
+
+A common workflow involves splitting a large PDF into sections, reordering or editing those sections, and then combining them back into one document. After splitting your PDF using any of the methods above, use our [Merge PDF](/tools/merge-pdf) tool to combine the sections in the correct order once you are done with them.
+
+[[cta:merge-pdf|Merge your PDF sections back together]]
+
+## How to reduce file size after splitting
+
+Splitting a PDF reduces the overall file size because each output file contains fewer pages than the original. However, if the pages you extracted contain high-resolution images or embedded fonts, the resulting files may still be larger than expected. Use our [Compress PDF](/tools/compress-pdf) tool on each split section to reduce the file size further before sharing or uploading.
+
+[[cta:compress-pdf|Compress your split PDF files]]
+
+## How to convert a split PDF page to Word
+
+If you need to edit the content of a page you extracted from a PDF, convert it to a Word document using our [PDF to Word](/tools/pdf-to-word) tool. This is particularly useful when you have extracted a specific section of a report or contract and need to update the content before sharing it.
+
+[[cta:pdf-to-word|Convert your extracted PDF to Word]]
+
+## Frequently asked questions about splitting PDFs
+
+How do I split a PDF for free? Use Google Chrome's print-to-PDF feature with a specific page range, use Preview on Mac to drag pages out as a new file, or use a browser-based PDF splitter tool on any device.
+
+How do I extract one page from a PDF? Open the PDF in Chrome, press Ctrl and P, select Save as PDF, enter the single page number you want in the Pages field, and click Save. The result is a new single-page PDF.
+
+Can I split a PDF on my phone? Yes. Browser-based tools work on iPhone and Android in Safari and Chrome without any app download. The Chrome page-range method also works on Android for extracting specific pages.
+
+Does splitting a PDF reduce its quality? No. Splitting extracts the pages exactly as they are in the original document without any quality reduction.
+
+How do I split a PDF into individual pages? To split a PDF into one file per page, you need to repeat the extraction process for each page individually, or use an online tool that offers a split-to-individual-pages option. Enter each page number separately to create one file per page.
+
+Can I split a password-protected PDF? You need to enter the password to open the PDF first. Once it is open in Chrome or Preview, the splitting process works the same way as for an unprotected file.
+
+What is the difference between splitting and extracting pages from a PDF? Splitting usually refers to dividing a PDF at a point — everything before page 10 in one file, everything from page 10 onward in another. Extracting usually refers to pulling out specific pages — pages 3, 7, and 15 as a separate file. Both operations produce new PDF files without changing the original.
+
+[[cta:tools|Work with all your PDF files at SmartPDFTools]]`,
+  }, 
 ];
 
 export const blogCategories = [
