@@ -1025,7 +1025,7 @@ Can I print to PDF without installing any software? Yes. All the methods describ
     author: "Mohamed Adel",
     date: "July 9, 2026",
     readTime: "7 min read",
-    cover: "/password-protect-pdf.png.png",
+    cover: "/password-protect-pdf.png.jpeg",
     content: `Sending a contract, a bank statement, a medical report, or any private document as an unprotected PDF is a risk that most people take without thinking twice. Anyone who receives the file — or intercepts it — can open it, read it, copy from it, and forward it to anyone else. Adding a password to a PDF file takes less than a minute and prevents all of this.
 
 This guide explains every method to password protect a PDF in 2026, on every major device, for free. You will also find answers to the most common questions about PDF password protection, PDF encryption, and how to remove a PDF password when you no longer need it.
