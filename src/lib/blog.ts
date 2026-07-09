@@ -1016,7 +1016,120 @@ How do I reduce the file size of a printed PDF? Use our [Compress PDF](/tools/co
 Can I print to PDF without installing any software? Yes. All the methods described in this guide use features already built into your device's operating system or browser. No downloads or installations are required.
 
 [[cta:tools|Manage all your PDF files with SmartPDFTools]]`,
-  }, 
+  },
+{
+    slug: "how-to-password-protect-pdf-free",
+    title: "How to Password Protect a PDF File — Free & Secure",
+    excerpt: "Learn how to add a password to any PDF file for free. Protect your documents on Windows, Mac, iPhone and Android without expensive software.",
+    category: "Online Security",
+    author: "Mohamed Adel",
+    date: "July 9, 2026",
+    readTime: "7 min read",
+    cover: "/password-protect-pdf.png.png",
+    content: `Sending a contract, a bank statement, a medical report, or any private document as an unprotected PDF is a risk that most people take without thinking twice. Anyone who receives the file — or intercepts it — can open it, read it, copy from it, and forward it to anyone else. Adding a password to a PDF file takes less than a minute and prevents all of this.
+
+This guide explains every method to password protect a PDF in 2026, on every major device, for free. You will also find answers to the most common questions about PDF password protection, PDF encryption, and how to remove a PDF password when you no longer need it.
+
+## What does it mean to password protect a PDF?
+
+Password protecting a PDF means encrypting the file so that anyone who tries to open it must enter a password first. Without the correct password, the PDF cannot be opened, read, printed, or copied. The password protection is built into the PDF file itself, which means it travels with the document wherever it goes — whether you email it, upload it to cloud storage, or share it through a messaging app.
+
+PDF password protection uses AES encryption, which is the same standard used by banks and government agencies to protect sensitive data. A well-encrypted PDF is effectively impossible to open without the password, even for someone with advanced technical knowledge, as long as you choose a strong password.
+
+## Who needs to password protect PDF files?
+
+PDF password protection is useful for anyone who handles sensitive documents. Legal professionals use it to protect contracts and client correspondence. Accountants and finance teams use it to secure financial statements, tax documents, and payslips before emailing them to clients. HR departments protect offer letters and salary information. Medical practices protect patient records and referral letters. Students protect thesis submissions and research papers. Business owners protect invoices, proposals, and confidential agreements.
+
+If a document contains information that could cause harm — financial, legal, reputational, or personal — if it fell into the wrong hands, it should be password protected before being shared.
+
+## How to password protect a PDF on Windows
+
+Windows does not include a built-in PDF password protection tool, but there are several free methods that work without purchasing software.
+
+Using Microsoft Word: If your document started as a Word file, you can add PDF password protection directly from Word before converting to PDF. Go to File, then Save As, and choose PDF as the format. Click the Options button in the save dialog. Check the box labelled Encrypt the document with a password. Enter your password and click OK, then save. The resulting PDF is encrypted and requires the password to open.
+
+Using a free online tool: Our [Compress PDF](/tools/compress-pdf) tool processes files privately in your browser with full encryption in transit, and we never read your document content. For password protection specifically, several free browser-based tools are available that add AES encryption to any PDF without requiring software installation. Look for a tool that specifies AES-256 encryption and confirms that files are deleted after processing.
+
+Using LibreOffice: LibreOffice Writer is a free, open-source word processor that can export PDFs with password protection. Open your document in LibreOffice, go to File, then Export as PDF. In the Security tab of the export dialog, enter an open password. Click Export. The resulting PDF is encrypted.
+
+## How to password protect a PDF on Mac
+
+Mac users have access to a straightforward built-in method through the Preview app and the print dialog.
+
+Using Preview: Open the PDF in Preview. Go to File, then Export as PDF. In the export dialog, check the box labelled Encrypt. Enter and verify your password. Click Save. The encrypted PDF is saved with password protection applied.
+
+This method uses the built-in PDF encryption in macOS and does not require any additional software. The resulting file is a standard encrypted PDF that can be opened on any device — Windows, iPhone, Android — as long as the recipient enters the correct password.
+
+## How to password protect a PDF on iPhone and iPad
+
+iPhone and iPad do not include a native PDF password protection feature in the built-in apps, but you can use browser-based tools through Safari without installing any application.
+
+Open Safari and search for a free PDF password protection tool that specifies AES-256 encryption and immediate file deletion after processing. Upload your PDF, set a password, and download the encrypted file. The process takes under a minute and the result is a standard encrypted PDF.
+
+Alternatively, the Files app on iPhone supports viewing password-protected PDFs — if you receive an encrypted PDF, open it in Files and you will be prompted to enter the password.
+
+## How to password protect a PDF on Android
+
+Android phones also rely on browser-based tools for PDF password protection, since there is no built-in feature in the standard Android apps.
+
+Open Chrome for Android and use a browser-based PDF encryption tool. Upload your file, set a strong password, and download the protected PDF. Choose a tool that confirms AES-256 encryption and that your file is deleted from the server immediately after processing.
+
+## How to choose a strong PDF password
+
+A PDF password is only as strong as the password itself. A short or obvious password can be guessed or broken by automated tools relatively quickly, even with AES encryption. A genuinely strong password that would take years to crack follows these rules.
+
+Use at least twelve characters — longer is better. Mix uppercase letters, lowercase letters, numbers, and symbols. Avoid any word that appears in a dictionary, in any language. Avoid personal information like names, birthdays, or addresses. Use a different password for each protected document, rather than using the same password for everything.
+
+If you are sharing a password-protected PDF with someone, send the password through a different channel than the PDF itself. If someone intercepts both the encrypted file and the password in the same email, the encryption offers no protection.
+
+## How to share a PDF password safely
+
+Never send the password in the same message or email as the protected PDF. Use a different channel for the password — a phone call, a text message, a messaging app like WhatsApp or Signal, or a password manager sharing feature. This way, even if someone intercepts your email, they have the encrypted file but not the key to open it.
+
+For highly sensitive documents, consider using expiring share links with download limits rather than attaching the file directly to an email. This adds another layer of control — you can revoke access at any time, and the file is not permanently stored in someone's inbox.
+
+## The difference between PDF password protection and PDF editing restrictions
+
+PDF files support two different types of password protection that serve different purposes.
+
+An open password — also called a document open password or user password — prevents anyone from opening the PDF without entering the password first. This is the type of protection described throughout this guide, and it is the most effective way to prevent unauthorised access to a PDF.
+
+A permissions password — also called an owner password or restrictions password — does not prevent opening the PDF, but restricts what the recipient can do with it. You can use a permissions password to prevent printing, copying text, editing, or extracting pages. The recipient can open and read the document without a password, but cannot do certain things with it.
+
+Both types can be applied to the same PDF, giving you maximum control over who can access the document and what they can do once they open it.
+
+## How to remove a PDF password
+
+If you password protected a PDF and no longer need the protection — for example, because you are archiving the document and will store it securely — you can remove the password using the same tools that applied it.
+
+In Preview on Mac, open the encrypted PDF, enter the password to unlock it, go to File, then Export as PDF, and this time leave the Encrypt checkbox unchecked. Save the file. The new copy has no password protection.
+
+In LibreOffice, open the PDF, go to File, then Export as PDF, open the Security tab, and clear the password fields before exporting. The new PDF will not require a password.
+
+## What to do before password protecting a large PDF
+
+If your PDF is large — more than a few megabytes — consider compressing it before applying password protection. A smaller file is faster to email, easier to upload, and more convenient for the recipient to download. Use our [Compress PDF](/tools/compress-pdf) tool to reduce the file size, then apply password protection using your preferred method.
+
+[[cta:compress-pdf|Compress your PDF before protecting it]]
+
+If you need to combine several documents into one protected PDF, use our [Merge PDF](/tools/merge-pdf) tool first to create a single file, then apply password protection to the merged result.
+
+[[cta:merge-pdf|Merge PDFs before password protecting]]
+
+## Frequently asked questions about PDF password protection
+
+Is it free to add a password to a PDF? Yes. Several free methods exist on every platform — Preview on Mac, LibreOffice on Windows, and browser-based tools on all devices — that add AES encryption to any PDF at no cost.
+
+Can a password-protected PDF be cracked? A PDF protected with AES-256 encryption and a strong password is extremely difficult to crack. The security comes from both the encryption standard and the strength of the password you choose. Weak or short passwords are vulnerable to automated guessing tools regardless of the encryption used.
+
+What happens if I forget my PDF password? There is no official way to recover a forgotten PDF password. The encryption is designed specifically to prevent access without the password. This is why keeping a secure record of passwords — in a password manager, for example — is important.
+
+Can I password protect a PDF on my phone? Yes. Browser-based tools work on iPhone and Android in Safari or Chrome without any app download. Look for a tool that specifies AES-256 encryption and immediate file deletion.
+
+Does password protecting a PDF change the file size? Applying password protection increases the file size slightly, but the change is usually negligible — typically less than one percent of the original size.
+
+[[cta:tools|Manage and protect your PDF files with SmartPDFTools]]`,
+  },  
 ];
 
 export const blogCategories = [
