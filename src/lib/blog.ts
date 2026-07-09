@@ -1138,7 +1138,7 @@ Does password protecting a PDF change the file size? Applying password protectio
     author: "Sara Khalil",
     date: "July 9, 2026",
     readTime: "7 min read",
-    cover: "/split-pdf-free.png.png",
+    cover: "/split-pdf-free.png.jpeg",
     content: `A large PDF with dozens or hundreds of pages is not always useful as a single file. Sometimes you need to extract one page from a PDF, separate a report into individual chapters, pull out a specific section to share with someone, or divide a scanned document into individual files for different recipients.
 
 Splitting a PDF — also called extracting pages from a PDF, dividing a PDF, or separating a PDF — is one of the most common document tasks people search for, and every method in this guide is completely free.
