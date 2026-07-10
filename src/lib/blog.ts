@@ -1225,7 +1225,7 @@ What is the difference between splitting and extracting pages from a PDF? Splitt
     author: "Layla Hassan",
     date: "July 10, 2026",
     readTime: "8 min read",
-    cover: "/compress-pdf-online-free.png.png",
+    cover: "/compress-pdf-online-free.png.jpeg",
     content: `A PDF file that is too large causes problems at every stage of your workflow. It bounces back from email servers, gets rejected by upload portals, takes minutes to download on a slow connection, and fills up storage space on your device. The solution is PDF compression — and in 2026, you can compress any PDF file for free in under thirty seconds without installing a single piece of software.
 
 This guide explains exactly how PDF compression works, which compression method produces the best results for your specific type of document, and how to reduce PDF file size on any device — Windows, Mac, iPhone, iPad, and Android — without losing quality that matters for reading, printing, or sharing.
