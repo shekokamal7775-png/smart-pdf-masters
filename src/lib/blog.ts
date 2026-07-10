@@ -1328,7 +1328,7 @@ Why is my PDF still large after compressing? If your PDF contains very high-reso
     author: "Daniel Park",
     date: "July 10, 2026",
     readTime: "8 min read",
-    cover: "/pdf-file-too-large.png.png",
+    cover: "/pdf-file-too-large.png.jpeg",
     content: `You have finished your document, exported it as PDF, and now you cannot send it. The file is too large for email. The upload portal rejects it. WhatsApp says the file exceeds the limit. Your colleague's inbox bounced it back. You are staring at a 45-megabyte PDF that needs to get to someone right now, and you are not sure what to do next.
 
 This situation happens to millions of people every day. The good news is that there are at least seven different ways to fix an oversized PDF file, most of them completely free and taking under a minute, and the right method depends on why your PDF is large in the first place.
