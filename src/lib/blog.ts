@@ -1216,7 +1216,217 @@ Can I split a password-protected PDF? You need to enter the password to open the
 What is the difference between splitting and extracting pages from a PDF? Splitting usually refers to dividing a PDF at a point — everything before page 10 in one file, everything from page 10 onward in another. Extracting usually refers to pulling out specific pages — pages 3, 7, and 15 as a separate file. Both operations produce new PDF files without changing the original.
 
 [[cta:tools|Work with all your PDF files at SmartPDFTools]]`,
-  }, 
+  },
+  {
+    slug: "how-to-compress-pdf-online-free",
+    title: "How to Compress PDF Online Free — Reduce PDF Size Without Losing Quality",
+    excerpt: "PDF file too large? Learn how to compress PDF files online for free and reduce PDF size on any device — no software, no signup, instant results.",
+    category: "PDF Tutorials",
+    author: "Layla Hassan",
+    date: "July 10, 2026",
+    readTime: "8 min read",
+    cover: "/compress-pdf-online-free.png.png",
+    content: `A PDF file that is too large causes problems at every stage of your workflow. It bounces back from email servers, gets rejected by upload portals, takes minutes to download on a slow connection, and fills up storage space on your device. The solution is PDF compression — and in 2026, you can compress any PDF file for free in under thirty seconds without installing a single piece of software.
+
+This guide explains exactly how PDF compression works, which compression method produces the best results for your specific type of document, and how to reduce PDF file size on any device — Windows, Mac, iPhone, iPad, and Android — without losing quality that matters for reading, printing, or sharing.
+
+## Why PDF files become too large
+
+Understanding what makes a PDF file large helps you choose the right compression approach. Most large PDF files are large for one of three reasons.
+
+The first and most common reason is high-resolution images. When you export a presentation, report, or brochure to PDF, the images are often embedded at print resolution — 300 dots per inch or higher. A single full-page photograph at print resolution can occupy several megabytes on its own. A document with ten such images can easily exceed 20 or 30 megabytes.
+
+The second reason is embedded fonts. PDF files can include the complete font files used in the document so that the text displays correctly on any device, even if the recipient does not have those fonts installed. A single font file can add hundreds of kilobytes to your PDF, and a document that uses many different fonts accumulates this weight quickly.
+
+The third reason is metadata, revision history, and embedded objects. Word processors and design applications often store edit history, thumbnail previews, form field data, annotations, and other invisible data inside the PDF file. None of this data is visible to the reader, but it adds to the file size.
+
+PDF compression addresses all three of these sources by resampling images to a lower resolution suitable for screen viewing, removing unnecessary embedded data, and subsetting fonts to include only the characters actually used in the document.
+
+## How to compress PDF files online free — the fastest method
+
+The fastest way to compress any PDF file is to use a browser-based PDF compressor that works directly on your device without uploading your files to a third-party server. Our [Compress PDF](/tools/compress-pdf) tool processes your file in your browser in seconds — completely free, no signup required, no watermark added to your compressed file.
+
+Open the [Compress PDF](/tools/compress-pdf) tool. Click the upload area or drag and drop your PDF file onto the page. Choose your compression level — recommended for most documents, or maximum if you need the smallest possible file size. Click Compress and wait a few seconds. Download your compressed PDF immediately.
+
+The entire process takes under thirty seconds for most files. Your compressed PDF will be significantly smaller than the original while keeping all text perfectly sharp and readable.
+
+[[cta:compress-pdf|Compress PDF online free — no signup]]
+
+## Compression levels explained — which one should you choose?
+
+Most PDF compression tools offer multiple quality levels. Choosing the right level for your specific use case makes a significant difference in both file size and output quality.
+
+High quality compression makes conservative reductions while keeping the document suitable for professional printing. Images are resampled to approximately 150 dots per inch, which is indistinguishable from the original when viewed on screen and acceptable for most office printing. Choose this level when the PDF will be printed professionally and you need to preserve as much detail as possible, but still need to reduce the file size for storage or email.
+
+Recommended compression is the balanced option that works well for the majority of PDF files. Images are resampled to approximately 100 dots per inch — sharp enough for comfortable reading on any screen and for standard office printing, but significantly smaller than the original. Most documents compressed at this level see a file size reduction of 50 to 80 percent without any visible quality difference for normal use.
+
+Maximum compression produces the smallest possible file by aggressively resampling images to screen resolution — approximately 72 dots per inch. Text remains perfectly sharp at maximum compression because text is rendered as vectors rather than pixels. Images will show quality reduction if examined closely, but the result is acceptable for documents that will be read on screen and do not need to be printed at high quality. Choose maximum compression when file size is the only priority — for example, when you need to attach a document to a messaging app with a strict size limit, or upload to a portal that enforces a tight file size cap.
+
+## How to compress PDF on Windows without software
+
+Windows 10 and Windows 11 do not include a built-in PDF compressor, but you can compress any PDF directly in your browser without installing anything.
+
+Open Chrome, Edge, Firefox, or any other browser. Visit our [Compress PDF](/tools/compress-pdf) tool. Upload your PDF, choose your compression level, and download the compressed result. The process is identical regardless of which browser you use.
+
+If you need to compress a PDF that you created from a Word document, another approach is to re-export the document from Word with lower image quality settings. In Word, go to File, then Save As, choose PDF, click Options, and look for the image quality setting. Choosing Standard rather than Minimum for the print quality will produce a smaller file than the default settings.
+
+## How to compress PDF on Mac
+
+Mac users have a quick option through the Preview app that can reduce PDF file size without any additional tools. Open the PDF in Preview. Go to File, then Export. In the Quartz Filter dropdown menu, select Reduce File Size. Click Save.
+
+This method works quickly but the results vary significantly depending on the content of your PDF. For some documents it produces excellent results; for others, the quality reduction is more noticeable than expected. If the Preview method produces a file that is too large or the quality is not acceptable, use our [Compress PDF](/tools/compress-pdf) tool for more precise control over the compression level.
+
+## How to compress PDF on iPhone and iPad
+
+iPhone and iPad do not include a built-in PDF compression feature, but our [Compress PDF](/tools/compress-pdf) tool works perfectly in Safari on iPhone and iPad without requiring any app download.
+
+Open Safari and go to our [Compress PDF](/tools/compress-pdf) tool. Tap the upload area to browse your files — you can select a PDF from your Files app, iCloud Drive, or any other storage location accessible from the Files picker. Choose your compression level and tap Compress. Download the compressed PDF to your device.
+
+The compressed PDF is saved to your Downloads folder by default and can be accessed through the Files app.
+
+## How to compress PDF on Android
+
+Android users can compress PDF files using our tool directly in Chrome for Android. Open Chrome, visit our [Compress PDF](/tools/compress-pdf) tool, upload your PDF, choose your compression level, and download the compressed result. The entire process works identically to the desktop version.
+
+## How much can you reduce a PDF file size?
+
+The amount a PDF compresses depends heavily on its content. Text-heavy documents like contracts, reports, and typed letters often compress by 60 to 80 percent because they contain relatively little image data. Presentation files and brochures with many full-page images sometimes compress by as little as 20 to 40 percent at high quality settings, but can compress by 70 to 90 percent at maximum compression. Scanned documents — which are essentially large images of pages — often compress significantly because the scanning process produces much higher resolution than necessary for screen reading.
+
+## Combining compression with other PDF tasks
+
+If you need to compress a PDF and then send it by email, the compressed file is ready to attach as soon as you download it. Most email clients accept PDF files up to 25 megabytes, so compressing a large PDF to under this limit solves the most common email delivery problem.
+
+If you need to combine multiple PDFs before compressing — for example, merging a multi-part report before sending it as one file — use our [Merge PDF](/tools/merge-pdf) tool first, then compress the merged result.
+
+[[cta:merge-pdf|Merge PDF files before compressing]]
+
+If you need to edit the content of a compressed PDF, use our [PDF to Word](/tools/pdf-to-word) tool to convert it to an editable Word document.
+
+[[cta:pdf-to-word|Convert compressed PDF to Word for editing]]
+
+## Frequently asked questions about compressing PDF files
+
+How do I compress a PDF file for free? Use our [Compress PDF](/tools/compress-pdf) tool — upload your file, choose a compression level, and download the compressed PDF. No signup, no watermark, completely free.
+
+Does compressing a PDF reduce its quality? Text remains perfectly sharp at all compression levels because text in PDF files is stored as mathematical vectors, not pixels. Images may show quality reduction at maximum compression, but the result is clear enough for screen reading and standard printing.
+
+How do I compress a PDF to under 1MB? Use the maximum compression setting in our [Compress PDF](/tools/compress-pdf) tool. For most text-heavy documents, this will reduce the file to well under 1MB. For image-heavy files, the result depends on the number and resolution of images in the original.
+
+How do I compress a PDF on my phone? Open Safari or Chrome on your phone, visit our [Compress PDF](/tools/compress-pdf) tool, upload your PDF, choose your compression level, and download the result. No app download is required.
+
+Can I compress a password-protected PDF? You need to remove the password protection before compressing. Open the PDF with the password, then upload it to our compression tool.
+
+Why is my PDF still large after compressing? If your PDF contains very high-resolution images or embedded files that are not affected by image resampling, the compression gains may be smaller than expected. Try the maximum compression setting for the smallest possible output.
+
+[[cta:compress-pdf|Compress your PDF file now — free]]`,
+  },
+  {
+    slug: "pdf-file-too-large-how-to-fix",
+    title: "PDF File Too Large? 7 Ways to Fix It Free in 2026",
+    excerpt: "Can't send your PDF because it's too large? Here are 7 proven free methods to fix oversized PDF files instantly — for Gmail, WhatsApp, email and upload portals.",
+    category: "Productivity Tips",
+    author: "Daniel Park",
+    date: "July 10, 2026",
+    readTime: "8 min read",
+    cover: "/pdf-file-too-large.png.png",
+    content: `You have finished your document, exported it as PDF, and now you cannot send it. The file is too large for email. The upload portal rejects it. WhatsApp says the file exceeds the limit. Your colleague's inbox bounced it back. You are staring at a 45-megabyte PDF that needs to get to someone right now, and you are not sure what to do next.
+
+This situation happens to millions of people every day. The good news is that there are at least seven different ways to fix an oversized PDF file, most of them completely free and taking under a minute, and the right method depends on why your PDF is large in the first place.
+
+## Why your PDF file is too large
+
+Before choosing a fix, it helps to understand why the file is large. The most common causes are high-resolution images embedded in the document, complete font files included to ensure correct display on other devices, invisible data like edit history, metadata, form fields, annotations, and thumbnail previews stored inside the file, and scanned pages saved at unnecessarily high resolution.
+
+Different types of documents have different causes. A presentation exported to PDF is usually large because of high-resolution images. A legal document with complex formatting is often large because of embedded fonts and metadata. A scanned paper document saved as PDF is large because the scanner captured the pages at print resolution rather than screen resolution.
+
+Knowing the cause helps you choose the most effective fix.
+
+## Fix 1 — Compress the PDF online free (fastest fix)
+
+For most oversized PDFs, compression is the fastest and most effective solution. A good PDF compressor reduces file size by resampling images to a lower resolution and removing invisible metadata, without changing anything visible in the document.
+
+Open our [Compress PDF](/tools/compress-pdf) tool, upload your oversized PDF, choose the recommended or maximum compression level, and download the smaller file. For most documents, this takes under thirty seconds and reduces the file size by 50 to 80 percent.
+
+[[cta:compress-pdf|Compress your oversized PDF now — free]]
+
+If you need to send a PDF by Gmail and the file exceeds 25MB, compressing it to under 25MB is usually the simplest fix. If the upload portal has a 10MB or 5MB limit, use maximum compression and check the result.
+
+## Fix 2 — Re-export the PDF from the original application
+
+If you still have the original Word document, PowerPoint file, or design file that you exported to PDF, re-exporting with lower quality settings often produces a much smaller PDF than compressing an already-exported file.
+
+In Microsoft Word, go to File, Save As, choose PDF as the format, click Options or More Options, and look for the image quality setting. Choosing Standard rather than High Fidelity or Print Quality reduces the image resolution in the exported PDF significantly.
+
+In PowerPoint, go to File, Export, Create PDF/XPS, click Options, and reduce the image quality slider. This can dramatically reduce the size of presentation PDFs that contain many slide images.
+
+In Adobe Illustrator or InDesign, the PDF export settings include detailed control over image compression, font subsetting, and metadata inclusion. Choosing PDF/X or Screen quality presets rather than Print quality presets produces much smaller files suitable for sharing.
+
+## Fix 3 — Convert to Word and re-export as a clean PDF
+
+If your PDF originated as a Word document and has accumulated tracked changes, comments, revision history, and embedded objects over multiple editing sessions, converting it back to Word and re-exporting as a clean PDF strips out all this invisible weight.
+
+Use our [PDF to Word](/tools/pdf-to-word) tool to convert the PDF to an editable DOCX file. Open it in Microsoft Word or Google Docs. Accept all tracked changes, delete all comments, and remove any embedded objects or images you do not need. Go to File and export or save as PDF. The clean export will be significantly smaller than the original.
+
+[[cta:pdf-to-word|Convert PDF to Word to clean and re-export]]
+
+## Fix 4 — Remove unnecessary pages
+
+If your PDF is large partly because it contains pages that the recipient does not need — blank pages, appendices, cover pages with full-bleed images — removing those pages before sending reduces the file size proportionally.
+
+On Mac, open the PDF in Preview, go to View and select Thumbnails, select the pages you want to remove by clicking their thumbnails, press Delete, and go to File and Export as PDF to save the reduced document.
+
+On Windows, use Google Chrome to extract only the pages you need. Open the PDF in Chrome, press Ctrl and P, select Save as PDF, enter the specific page range you want to keep in the Pages field, and save. The result is a new PDF containing only the pages you specified.
+
+After removing unnecessary pages, compress the result using our [Compress PDF](/tools/compress-pdf) tool for maximum reduction.
+
+## Fix 5 — Split the PDF and send in parts
+
+If your PDF is genuinely large because it contains a lot of necessary content — a long report, a thesis, a complete contract package — splitting it into sections and sending them separately keeps each attachment under the size limit without any quality reduction.
+
+Decide on logical split points — by chapter, by section, or by a specific page count — and use Chrome's page-range print-to-PDF method to create each section. Open the PDF in Chrome, press Ctrl and P, select Save as PDF, and enter the page range for each section. Repeat until you have all sections as separate files.
+
+After splitting, use our [Merge PDF](/tools/merge-pdf) tool if you need to recombine any of the sections later.
+
+[[cta:merge-pdf|Merge split PDF sections back together]]
+
+## Fix 6 — Send via a download link instead of an attachment
+
+For PDF files that are genuinely too large to compress to a sendable size — architectural drawings, high-resolution portfolios, large research datasets — uploading the file to a cloud service and sending a download link is more reliable than any compression method.
+
+Google Drive allows files up to 5TB and generates shareable links instantly. Upload your PDF, right-click it, click Share, and copy the link. The recipient clicks the link and downloads the file directly without any email attachment size restriction.
+
+Dropbox, OneDrive, and WeTransfer work similarly. WeTransfer is particularly convenient because it does not require either party to have an account — you upload the file, enter the recipient's email address, and they receive a download link that is valid for seven days.
+
+If you are sharing a sensitive document and privacy is a concern, use a service that supports expiring links and password-protected downloads.
+
+## Fix 7 — Use PNG to PDF for image-heavy documents
+
+If your PDF is large because it was created by combining many high-resolution images — photographs, scanned pages, screenshots — and you have the original image files, converting them to PDF using our [PNG to PDF](/tools/jpg-to-pdf) tool often produces a smaller file than the original because the tool optimises image compression during the PDF creation process.
+
+This approach works best when you have the original PNG or JPG files rather than a PDF that was already created from them.
+
+[[cta:tools|Convert images to PDF with SmartPDFMasters]]
+
+## How to check your PDF size before sending
+
+On Windows, right-click the PDF file in File Explorer and select Properties. The file size is shown on the General tab. On Mac, right-click the file in Finder and select Get Info. On iPhone, open the Files app, press and hold the file, and tap Info. On Android, open your file manager app, find the PDF, and tap or long-press for details.
+
+## PDF size limits for common services
+
+Gmail allows email attachments up to 25MB. Outlook allows attachments up to 20MB by default, though some corporate email servers set lower limits. WhatsApp allows document sharing up to 100MB. Facebook Messenger allows files up to 25MB. LinkedIn allows file attachments up to 100MB in messages. Most government and university upload portals set limits between 5MB and 25MB per file, though this varies significantly by institution and form type.
+
+## Frequently asked questions about large PDF files
+
+Why is my PDF so large even though it does not have many images? Large PDFs without many visible images are usually large because of embedded fonts, metadata, revision history, or form fields. Re-exporting from the original application with clean settings or using our [Compress PDF](/tools/compress-pdf) tool at maximum compression usually resolves this.
+
+How do I make a PDF smaller for WhatsApp? Use our [Compress PDF](/tools/compress-pdf) tool at the recommended or maximum compression level. WhatsApp allows documents up to 100MB, so most PDFs will send successfully after compression.
+
+How do I reduce PDF size below 1MB? Use maximum compression in our [Compress PDF](/tools/compress-pdf) tool. For text-heavy documents, this usually achieves files well under 1MB. For image-heavy files, try also removing unnecessary pages and re-exporting from the original application.
+
+How do I reduce PDF size for free without losing quality? Use the recommended compression level in our [Compress PDF](/tools/compress-pdf) tool. This setting reduces file size significantly while keeping text perfectly sharp and images clear enough for screen reading and standard printing.
+
+[[cta:compress-pdf|Fix your oversized PDF file now — free]]`,
+  },
 ];
 
 export const blogCategories = [
