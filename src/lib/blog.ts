@@ -882,7 +882,7 @@ Both iPhone and Android have built-in PDF creation through their share and print
     author: "Sara Khalil",
     date: "July 6, 2026",
     readTime: "8 min read",
-    cover: "/pdf-vs-word.png.png",
+    cover: "/pdf-vs-word.png.jpeg",
     content: `PDF or Word? It sounds simple — but choosing the wrong format causes real problems. Documents that cannot be edited when they need to be. Files that look different on every device. Contracts that get modified after signing. Resumes that break when opened on a different computer.
 
 ## The Core Difference Between PDF and Word
@@ -967,7 +967,7 @@ Word offers password protection, but it is significantly weaker than PDF encrypt
     author: "Sara Khalil",
     date: "July 7, 2026",
     readTime: "8 min read",
-    cover: "/how-to-merge-pdf.png.png",
+    cover: "/how-to-merge-pdf.png.jpeg",
     content: `Merging PDF files is one of the most common document tasks people search for every day. Whether you need to combine a resume and cover letter, join multiple invoices, merge scanned pages, or consolidate a report — knowing how to merge PDFs quickly and free saves significant time.
 
 ## What Does Merging PDF Files Mean?
@@ -1060,7 +1060,7 @@ Enter the password to open the PDF first. Once open, you can upload it to our me
     author: "Layla Hassan",
     date: "July 7, 2026",
     readTime: "7 min read",
-    cover: "/convert-jpg-to-pdf.png.png",
+    cover: "/convert-jpg-to-pdf.png.jpeg",
     content: `Converting a JPG image to PDF is one of the most searched document tasks. Whether you need to turn a photo of a receipt into a PDF, convert a scanned document image into a shareable file, combine multiple photos into one PDF, or submit an image through a portal that only accepts PDFs — this guide covers every method on every device.
 
 ## What Is the Difference Between JPG and PDF?
@@ -1157,7 +1157,7 @@ JPG and JPEG are the same format — JPEG is the full name and JPG is the shorte
     author: "Mohamed Adel",
     date: "July 8, 2026",
     readTime: "8 min read",
-    cover: "/how-to-print-to-pdf.png.png",
+    cover: "/how-to-print-to-pdf.png.jpeg",
     content: `Print to PDF means saving any document, webpage, email, or file as a PDF instead of sending it to a physical printer. Every major operating system has this feature built in for free — no software to install, no account to create.
 
 ## What Does Print to PDF Actually Mean?
@@ -1255,7 +1255,7 @@ Yes. Both iPhone and Android support print to PDF through their built-in print d
     author: "Mohamed Adel",
     date: "July 9, 2026",
     readTime: "7 min read",
-    cover: "/password-protect-pdf.png.png",
+    cover: "/password-protect-pdf.png.jpeg",
     content: `Sending a contract, bank statement, medical report, or any private document as an unprotected PDF is a risk most people take without thinking. Anyone who receives the file can open it, read it, copy from it, and forward it to anyone else. Adding a password to a PDF takes less than a minute and prevents all of this.
 
 ## What Does Password Protecting a PDF Mean?
@@ -1352,7 +1352,7 @@ Applying password protection increases the file size slightly — typically less
     author: "Sara Khalil",
     date: "July 9, 2026",
     readTime: "7 min read",
-    cover: "/split-pdf-free.png.png",
+    cover: "/split-pdf-free.png.jpeg",
     content: `A large PDF with dozens of pages is not always useful as a single file. Sometimes you need to extract one page, separate a report into chapters, pull out a specific section, or divide a scanned document into individual files.
 
 ## What Does Splitting a PDF Mean?
@@ -1437,7 +1437,7 @@ Enter the password to open the PDF first. Once open in Chrome or Preview, the sp
     author: "Layla Hassan",
     date: "July 10, 2026",
     readTime: "8 min read",
-    cover: "/compress-pdf-online-free.png.png",
+    cover: "/compress-pdf-online-free.png.jpeg",
     content: `A PDF file that is too large causes problems at every stage of your workflow. It bounces back from email servers, gets rejected by upload portals, takes minutes to download, and fills up storage space. In 2026, you can compress any PDF file for free in under thirty seconds without installing any software.
 
 ## Why PDF Files Become Too Large
@@ -1521,7 +1521,7 @@ Very high-resolution images or embedded files can limit compression gains. Try m
     author: "Daniel Park",
     date: "July 10, 2026",
     readTime: "8 min read",
-    cover: "/pdf-file-too-large.png.png",
+    cover: "/pdf-file-too-large.png.jpeg",
     content: `You have finished your document, exported it as PDF, and now you cannot send it. The file is too large for email. The upload portal rejects it. WhatsApp says the file exceeds the limit. There are at least seven different ways to fix an oversized PDF file — most of them completely free and taking under a minute.
 
 ## Why Your PDF File Is Too Large
