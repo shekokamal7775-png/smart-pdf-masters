@@ -42,32 +42,124 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!post) throw notFound();
     return { post };
   },
-  head: ({ loaderData }) => {
-    if (!loaderData) return { meta: [{ title: "Article not found" }] };
-    const { post } = loaderData;
+head: ({ loaderData }) => {
+  if (!loaderData) {
     return {
-      meta: [
-        { title: `${post.title} | SmartPDFTools Blog` },
-        { name: "description", content: post.excerpt },
-        { property: "og:title", content: post.title },
-        { property: "og:description", content: post.excerpt },
-        { property: "og:image", content: post.cover },
-        { property: "og:type", content: "article" },
-        { name: "twitter:image", content: post.cover },
-      ],
-      scripts: [{
+      meta: [{ title: "Article not found" }],
+    };
+  }
+
+  const { post } = loaderData;
+
+  return {
+    meta: [
+      {
+        title:
+          post.metaTitle ||
+          `${post.title} | SmartPDFMasters`,
+      },
+
+      {
+        name: "description",
+        content:
+          post.metaDescription || post.excerpt,
+      },
+
+      ...(post.keywords
+        ? [
+            {
+              name: "keywords",
+              content: Array.isArray(post.keywords)
+                ? post.keywords.join(", ")
+                : post.keywords,
+            },
+          ]
+        : []),
+
+      {
+        property: "og:title",
+        content: post.metaTitle || post.title,
+      },
+
+      {
+        property: "og:description",
+        content:
+          post.metaDescription || post.excerpt,
+      },
+
+      {
+        property: "og:image",
+        content: post.cover,
+      },
+
+      {
+        property: "og:type",
+        content: "article",
+      },
+
+      {
+        property: "og:url",
+        content: `https://www.smartpdfmasters.com/blog/${post.slug}`,
+      },
+
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+
+      {
+        name: "twitter:title",
+        content: post.metaTitle || post.title,
+      },
+
+      {
+        name: "twitter:description",
+        content:
+          post.metaDescription || post.excerpt,
+      },
+
+      {
+        name: "twitter:image",
+        content: post.cover,
+      },
+    ],
+
+    links: [
+      {
+        rel: "canonical",
+        href: `https://www.smartpdfmasters.com/blog/${post.slug}`,
+      },
+    ],
+
+    scripts: [
+      {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BlogPosting",
           headline: post.title,
           image: post.cover,
-          author: { "@type": "Person", name: post.author },
+          author: {
+            "@type": "Person",
+            name: post.author,
+          },
           datePublished: post.date,
-          publisher: { "@type": "Organization", name: "SmartPDFTools" },
+          publisher: {
+            "@type": "Organization",
+            name: "SmartPDFMasters",
+          },
+          keywords: post.keywords,
         }),
-      }],
-    };
+      },
+    ],
+  };
+},  
+  
+  
+        
+        
+  
+    
   },
   component: PostPage,
   notFoundComponent: () => (
