@@ -1758,7 +1758,7 @@ Use our [PNG to PDF](/tools/jpg-to-pdf) tool — upload your JPG images, arrange
     author: "Sara Khalil",
     date: "July 12, 2026",
     readTime: "8 min read",
-    cover: "/fill-out-pdf-form-free.png.png",
+    cover: "/fill-out-pdf-form-free.png.jpeg",
     content: `Filling out a PDF form used to mean printing it, writing by hand, scanning it, and sending it back — a process that could take twenty minutes for something that should take two. In 2026, you can fill out any PDF form directly on your screen in seconds, on any device, completely free, without printing a single page.
 
 This guide explains how to fill out both types of PDF forms — interactive fillable forms that already have clickable fields, and flat non-fillable forms that look like scanned documents — using built-in tools and free browser-based options on Windows, Mac, iPhone, iPad, and Android.
