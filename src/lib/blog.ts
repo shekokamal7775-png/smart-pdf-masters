@@ -1619,7 +1619,7 @@ Use the recommended compression level in our [Compress PDF](/tools/compress-pdf)
     author: "Layla Hassan",
     date: "July 12, 2026",
     readTime: "7 min read",
-    cover: "/convert-pdf-to-jpg.png.png",
+    cover: "/convert-pdf-to-jpg.png.jpeg",
     content: `Converting a PDF to a JPG image is one of the most searched document tasks online. Whether you need to extract a page from a PDF as an image to post on social media, share a single page without sending the entire document, use a PDF page as a thumbnail or preview, embed PDF content into a presentation, or send a page as an image to someone who does not have a PDF viewer — knowing how to convert PDF to JPG quickly and for free is an essential skill.
 
 This guide covers every method to convert PDF to JPG in 2026 — online, on iPhone, on Android, on Windows, and on Mac — so you can extract any PDF page as a high-quality image on any device in under a minute.
