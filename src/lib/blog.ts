@@ -2059,7 +2059,7 @@ Use a browser-based PDF rotation tool or Preview on Mac to rotate the pages to t
     author: "Sara Khalil",
     date: "July 13, 2026",
     readTime: "7 min read",
-    cover: "/delete-pages-from-pdf.png.png",
+    cover: "/delete-pages-from-pdf.png.jpeg",
     content: `Deleting pages from a PDF is something millions of people need to do every day — removing blank pages from a scanned document, cutting out pages that contain confidential information before sharing, trimming a long report to just the sections a specific recipient needs, or stripping cover pages and legal boilerplate before archiving.
 
 In 2026, removing pages from a PDF is completely free on every major device using built-in tools or browser-based options that require no software installation.
