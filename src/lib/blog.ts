@@ -1891,6 +1891,289 @@ Yes. Most government PDF forms are fillable and can be completed in Adobe Acroba
 
 [[cta:tools|Fill, sign and manage your PDF forms — SmartPDFMasters]]`,
   },
+ {
+    slug: "how-to-rotate-pdf-pages-free",
+    title: "How to Rotate PDF Pages Free — Fix Upside Down and Sideways PDFs",
+    metaTitle: "How to Rotate PDF Pages Free — Fix Upside Down PDFs on Any Device 2026",
+    metaDescription: "Learn how to rotate PDF pages free online in seconds. Fix upside down, sideways or incorrectly oriented PDF pages on Windows, Mac, iPhone and Android — no software needed.",
+    keywords: [
+      "rotate PDF pages free",
+      "rotate PDF online",
+      "fix upside down PDF",
+      "turn PDF pages",
+      "rotate PDF page 90 degrees",
+      "rotate PDF permanently",
+      "flip PDF pages",
+      "rotate single page PDF",
+      "rotate PDF without software",
+      "rotate scanned PDF"
+    ],
+    excerpt: "Fix upside down, sideways or incorrectly oriented PDF pages instantly — free guide for Windows, Mac, iPhone and Android with no software needed.",
+    category: "PDF Tutorials",
+    author: "Mohamed Adel",
+    date: "July 13, 2026",
+    readTime: "7 min read",
+    cover: "/rotate-pdf-pages-free.png.png",
+    content: `Receiving a PDF where all the pages are sideways or upside down is one of the most frustrating document problems — especially when you need to share it professionally or print it correctly. Scanned documents frequently come out rotated incorrectly because the paper was placed in the scanner at the wrong angle. PDFs exported from phones often have orientation issues because the phone camera was held in a different position than expected.
+
+Rotating PDF pages permanently — so the change is saved into the file and not just displayed differently on your screen — is straightforward and completely free on every major device in 2026.
+
+## What Does Rotating a PDF Page Actually Mean?
+
+When you rotate a page in a PDF viewer, you are usually changing only how it appears on your screen — the rotation is not saved into the file itself. Close and reopen the PDF and it is back to its original orientation.
+
+Permanently rotating a PDF page means saving the rotation into the file structure so that the page displays correctly in every PDF viewer, on every device, for every recipient you send it to. This is what most people actually need when they search for how to rotate PDF pages.
+
+## Why PDF Pages End Up in the Wrong Orientation
+
+Scanned documents are the most common cause of rotated PDF pages. If the paper is placed in the scanner sideways, or if the scanner does not automatically detect the paper orientation, the resulting PDF pages will be rotated 90 degrees or 180 degrees from their correct orientation.
+
+Phone camera scans are another common cause. When you photograph a document with your phone and convert it to PDF, the orientation depends on how you held the phone when taking the photo. Portrait orientation photographs become portrait PDF pages. Landscape orientation photographs become landscape PDF pages. If you mixed orientations across multiple photos, your combined PDF will have inconsistent page rotation.
+
+Some PDF export tools and older versions of PDF creation software do not correctly preserve the page orientation from the original document, producing PDFs where all pages appear rotated.
+
+## Method 1 — Rotate PDF Pages on Mac Using Preview (Permanent Rotation)
+
+Mac users can permanently rotate PDF pages using the built-in Preview app without installing any additional software. This is the most reliable free method for Mac.
+
+Open the PDF in Preview. Go to View in the menu bar and select Thumbnails to display the page panel on the left side of the window. Click on the thumbnail of the page you want to rotate. To rotate the page 90 degrees clockwise, go to Tools in the menu bar and choose Rotate Right. To rotate the page 90 degrees counter-clockwise, choose Rotate Left. To rotate 180 degrees, apply the same rotation twice.
+
+To rotate multiple pages at once, hold Command and click each page thumbnail you want to rotate, then apply the rotation. To rotate all pages, press Command and A to select all thumbnails, then rotate.
+
+After rotating, go to File and choose Export as PDF to save the rotated version as a new file. This is important — simply closing the file does not always save the rotation permanently in all versions of Preview. Exporting as a new PDF guarantees the rotation is embedded correctly in the file.
+
+If you need to merge the rotated PDF with other documents afterward, use our [Merge PDF](/tools/merge-pdf) tool.
+
+[[cta:merge-pdf|Merge your PDF files after rotating]]
+
+## Method 2 — Rotate PDF Pages on Windows
+
+Windows does not include a built-in tool for permanently rotating PDF pages. The available free options are a browser-based tool or Adobe Acrobat Reader's limited rotation feature.
+
+Using a browser-based PDF rotation tool: Open Chrome, Edge, or Firefox and search for a free online PDF page rotator. Upload your PDF, select the pages you want to rotate, choose the rotation direction and degree, and download the corrected PDF. This is the most practical free solution on Windows and takes under a minute for most documents.
+
+Using Microsoft Edge: Edge's built-in PDF viewer lets you rotate pages for viewing using the View menu, but this rotation is not permanent — it is lost when you close the file.
+
+After rotating and downloading your corrected PDF, if the file size is larger than expected, use our [Compress PDF](/tools/compress-pdf) tool to reduce the size before sharing.
+
+[[cta:compress-pdf|Compress your PDF after rotating]]
+
+## Method 3 — Rotate PDF Pages on iPhone and iPad
+
+iPhone and iPad have a rotation option built into the Files app and the Markup tool for individual page adjustments.
+
+Open the PDF in the Files app. Tap on a page to select it. If you see a rotation option in the file menu, use it to rotate the selected page. The rotation is saved into the file automatically.
+
+For more comprehensive rotation of multiple pages, use a browser-based PDF rotation tool in Safari. Open Safari, visit a free online PDF page rotator, upload your PDF, rotate the pages you need to fix, and download the corrected file.
+
+For scanned documents that you photographed with your iPhone and converted using our [PNG to PDF](/tools/jpg-to-pdf) tool, make sure you take your photos in the correct orientation before converting — this prevents rotation issues before they start.
+
+[[cta:tools|Convert phone photos to PDF — SmartPDFMasters]]
+
+## Method 4 — Rotate PDF Pages on Android
+
+Android does not include a built-in PDF page rotation tool. Use a browser-based PDF rotation tool in Chrome for Android.
+
+Open Chrome, visit a free online PDF page rotator, upload your PDF file from your device storage, select the pages you want to rotate, apply the rotation, and download the corrected PDF. The process takes under a minute and requires no app installation.
+
+## Method 5 — Rotate PDF Pages Using Google Drive
+
+Google Drive offers an indirect way to rotate PDF pages by converting the PDF to Google Docs format, adjusting the content, and re-exporting. This works best for text-heavy documents where the content has not been rendered as an image.
+
+Upload your PDF to Google Drive. Right-click it and choose Open with Google Docs. Google will convert the PDF to an editable document. In Google Docs, go to File then Page setup to adjust the page orientation between portrait and landscape. After adjusting, go to File then Download then PDF Document to re-export as a corrected PDF.
+
+Note that this method works best for simple documents. Complex layouts with tables, images, and precise formatting may not convert correctly.
+
+## How to Rotate Only One Page in a PDF While Keeping Others Unchanged
+
+Rotating a single page in a multi-page PDF while keeping all other pages in their original orientation requires a tool that supports individual page rotation rather than applying rotation to all pages at once.
+
+On Mac, Preview handles this precisely — select only the specific page thumbnail in the sidebar, apply the rotation, and export. Only the selected page is rotated.
+
+In browser-based tools, look for a tool that shows individual page thumbnails and lets you apply rotation to individual pages by clicking on each one separately.
+
+## How to Fix a Rotated Scanned PDF
+
+Scanned PDFs with rotation issues require the same rotation fix as any other PDF, but there is an additional consideration — the text in a scanned PDF is stored as an image rather than as selectable text. After rotating the page to the correct orientation, the content will display correctly but the text will still not be selectable or searchable.
+
+If you need selectable, searchable text after rotating your scanned PDF, use our [PDF to Word](/tools/pdf-to-word) tool after rotating. It uses OCR to recognise the text in the scanned images and converts it to actual, editable text.
+
+[[cta:pdf-to-word|Convert rotated scanned PDF to editable Word]]
+
+## Permanently Saving PDF Rotation — Why It Matters
+
+Many PDF viewers allow you to rotate pages for viewing without saving the rotation to the file. This is sometimes called a "view rotation" rather than a "permanent rotation." The distinction matters significantly when you are sharing the PDF with others.
+
+If you rotate a PDF for viewing only in your PDF viewer, the file on disk is unchanged. Anyone who opens the same file on their device will see it in the original (incorrect) orientation. Only you see the rotated version because your PDF viewer remembers your preference locally.
+
+Permanent rotation saves the corrected orientation directly into the PDF file structure. Every person who opens the file on any device will see the pages in the correct orientation without needing to rotate them manually.
+
+Always export or save the file after rotating to ensure the rotation is permanent rather than just a view preference.
+
+## Tips for Preventing Rotation Issues
+
+When scanning documents, check the orientation of your pages in the scanner preview before confirming the scan. Most modern scanners show a live preview that lets you verify the orientation is correct.
+
+When photographing documents with a phone for conversion to PDF, hold your phone in the same orientation as the document you are photographing. For standard A4 or letter-size documents, hold your phone in portrait orientation directly above the document.
+
+When exporting from Word, PowerPoint, or any other application to PDF, check the page orientation in the print settings before exporting. Landscape documents exported with portrait page settings will produce rotated pages.
+
+## Frequently Asked Questions
+
+**How do I rotate a PDF page permanently for free?**
+On Mac, open the PDF in Preview, select the page thumbnail, use Tools then Rotate Right or Rotate Left, and then File then Export as PDF to save permanently. On Windows and all other devices, use a free browser-based PDF rotation tool to rotate pages and download the corrected file.
+
+**How do I rotate only one page in a PDF without rotating all pages?**
+On Mac, select only the specific page thumbnail in Preview's sidebar before applying rotation — other pages are not affected. In browser-based tools, look for individual page rotation options that let you rotate specific pages rather than all pages at once.
+
+**Why does my rotated PDF go back to the wrong orientation when I reopen it?**
+This happens when the rotation was applied as a view preference only and was not saved permanently into the file. Always export or save the file after rotating to embed the correct orientation into the PDF file structure.
+
+**Can I rotate a PDF on my phone for free?**
+Yes. On iPhone, use the Files app rotation option or a browser-based tool in Safari. On Android, use a free online PDF rotation tool in Chrome. No app download is required.
+
+**How do I fix a scanned PDF that is sideways?**
+Use a browser-based PDF rotation tool or Preview on Mac to rotate the pages to the correct orientation. If you also need the text to be selectable after rotating, use our [PDF to Word](/tools/pdf-to-word) tool afterward to run OCR on the corrected pages.
+
+[[cta:tools|Manage all your PDF files — SmartPDFMasters]]`,
+  },
+  {
+    slug: "how-to-delete-pages-from-pdf-free",
+    title: "How to Delete Pages from a PDF Free — Complete Guide for All Devices",
+    metaTitle: "How to Delete Pages from a PDF Free — Windows, Mac, iPhone & Android 2026",
+    metaDescription: "Learn how to delete or remove specific pages from a PDF file free online in seconds. Complete guide for Windows, Mac, iPhone, iPad and Android — no software needed.",
+    keywords: [
+      "delete pages from PDF free",
+      "remove page from PDF",
+      "delete PDF pages online",
+      "extract and remove PDF pages",
+      "delete blank pages from PDF",
+      "remove pages from PDF without software",
+      "delete page PDF Mac",
+      "delete page PDF iPhone",
+      "PDF page remover free",
+      "trim PDF pages online"
+    ],
+    excerpt: "Learn how to delete specific pages from any PDF file for free — complete guide for Windows, Mac, iPhone and Android with no software needed.",
+    category: "PDF Tutorials",
+    author: "Sara Khalil",
+    date: "July 13, 2026",
+    readTime: "7 min read",
+    cover: "/delete-pages-from-pdf.png.png",
+    content: `Deleting pages from a PDF is something millions of people need to do every day — removing blank pages from a scanned document, cutting out pages that contain confidential information before sharing, trimming a long report to just the sections a specific recipient needs, or stripping cover pages and legal boilerplate before archiving.
+
+In 2026, removing pages from a PDF is completely free on every major device using built-in tools or browser-based options that require no software installation.
+
+## Why You Might Need to Delete Pages from a PDF
+
+Scanned documents frequently contain blank pages, because double-sided scanning of single-sided documents produces an empty page for every other sheet. Removing these blank pages makes the document cleaner and reduces file size.
+
+Long reports and technical documents often contain sections that are not relevant for every recipient. Deleting irrelevant sections before sharing reduces the file size and prevents information from reaching people who should not see it.
+
+Contract packages, legal documents, and application submissions sometimes include draft versions, internal notes, or pages that should be removed before the final version is distributed.
+
+Confidential pages — containing salaries, personal identification numbers, medical information, or legally privileged content — sometimes need to be removed from a document before it is shared with external parties who should not see those details.
+
+## Method 1 — Delete PDF Pages on Mac Using Preview (Built-in, Free)
+
+Mac users can delete pages from PDF files using the built-in Preview app without installing any additional software. Preview is the most reliable free option for Mac.
+
+Open the PDF in Preview. Go to View in the menu bar and choose Thumbnails to display the page panel on the left side of the window. Click on the thumbnail of the page you want to delete. To select multiple pages, hold Command and click each additional thumbnail you want to remove. To select a consecutive range of pages, click the first thumbnail, then hold Shift and click the last thumbnail in the range.
+
+Once you have selected all the pages you want to remove, press the Delete key on your keyboard. The selected pages disappear from the thumbnail panel. Go to File and choose Export as PDF to save the document with the pages removed as a new file. Do not use Save — use Export as PDF to create a new file that reflects your deletions.
+
+After saving, verify the page count by checking the thumbnail panel. If the count does not reflect your deletions, the export may not have worked correctly — try again using File then Export as PDF.
+
+If you need to combine the trimmed PDF with another document, use our [Merge PDF](/tools/merge-pdf) tool afterward.
+
+[[cta:merge-pdf|Merge your trimmed PDF with other documents]]
+
+## Method 2 — Delete PDF Pages on Windows
+
+Windows does not include a built-in PDF page deletion tool. The most practical free options are browser-based.
+
+Using a browser-based PDF page remover: Open Chrome, Edge, or Firefox and search for a free online PDF page remover or PDF editor that supports page deletion. Upload your PDF, select the pages you want to remove using the visual thumbnail display, confirm the deletion, and download the trimmed PDF.
+
+Using Google Chrome's page-range print-to-PDF: This method does not delete pages — instead, it extracts the pages you want to keep, which achieves the same result. Open the PDF in Chrome, press Ctrl and P, select Save as PDF from the printer dropdown, and enter only the page numbers you want to keep in the Pages field. For example, if you want to remove pages 3 and 7 from a 10-page document, enter 1-2,4-6,8-10. Click Save. The downloaded PDF contains only the pages you specified.
+
+This Chrome method is particularly useful because it requires no additional tools and works immediately without any software installation.
+
+## Method 3 — Delete PDF Pages on iPhone and iPad
+
+iPhone and iPad users can delete PDF pages using the built-in Files app.
+
+Open the PDF in the Files app. Long-press on the PDF file icon to open the file options menu. Choose Markup if available, or open the file and tap the Share button followed by Markup. In Markup mode, tap the page navigation at the bottom of the screen. Tap and hold on the thumbnail of the page you want to remove. Look for a Delete Page option in the menu that appears.
+
+Alternatively, for more precise control and the ability to delete multiple pages at once, use a browser-based PDF page removal tool in Safari. Open Safari, visit a free online PDF editor that supports page deletion, upload your PDF, select the pages to remove, and download the trimmed result.
+
+After trimming, if the resulting file is larger than expected, use our [Compress PDF](/tools/compress-pdf) tool to reduce the file size.
+
+[[cta:compress-pdf|Compress your trimmed PDF]]
+
+## Method 4 — Delete PDF Pages on Android
+
+Android does not include a built-in PDF page deletion tool. Use the Chrome browser method or a browser-based tool.
+
+Chrome page-range method on Android: Open the PDF in Chrome on Android. Tap the three-dot menu and choose Print. Select Save as PDF from the printer dropdown. Enter the page numbers you want to keep in the Pages field (excluding the pages you want to remove). Save the PDF.
+
+Browser-based tool: Open Chrome for Android, visit a free online PDF page removal tool, upload your PDF, select the pages to delete, and download the trimmed result.
+
+## Method 5 — Delete Blank Pages from a Scanned PDF
+
+Blank pages in scanned PDFs appear when a double-sided document is scanned without the scanner knowing which sides are blank. The scanner captures an image of the blank page the same as any other page, resulting in a PDF that alternates between content pages and blank pages.
+
+To remove blank pages from a scanned PDF, you need to either manually identify and delete each blank page, or use an online tool that can automatically detect and remove blank pages.
+
+On Mac, open the PDF in Preview and scroll through the thumbnails to identify blank pages visually. They will appear as white rectangles in the thumbnail panel. Select each blank page thumbnail and press Delete, then Export as PDF.
+
+For large scanned documents with many blank pages, look for an online tool with automatic blank page detection — these tools scan the content of each page and remove pages with no visible content without requiring you to identify each blank page manually.
+
+After removing blank pages, the remaining file will be smaller. You can further reduce the size using our [Compress PDF](/tools/compress-pdf) tool before archiving or sharing.
+
+## How to Remove Pages from a PDF Without Changing the Original File
+
+If you want to share a version of your PDF with certain pages removed while keeping the original file intact, the safest approach is to work on a copy rather than the original.
+
+Before starting, duplicate the file. On Mac, right-click the PDF in Finder and choose Duplicate. On Windows, copy and paste the file in File Explorer to create a copy. On iPhone, use the Files app copy option. Perform all page deletions on the copy, not the original.
+
+This way, if you make a mistake or need to access the deleted pages later, the original file is always available.
+
+## How to Remove Pages from a PDF and Convert the Result to Word
+
+If you need to delete pages from a PDF and then edit the remaining content, combine these two operations: delete the unnecessary pages first, then convert the trimmed PDF to an editable Word document.
+
+Delete the pages using Preview on Mac, the Chrome page-range method, or a browser-based tool. Download the trimmed PDF. Then use our [PDF to Word](/tools/pdf-to-word) tool to convert the trimmed PDF to an editable DOCX file.
+
+[[cta:pdf-to-word|Convert your trimmed PDF to editable Word]]
+
+## How to Delete Pages from a Protected PDF
+
+If your PDF is password protected, you need to enter the password to open it before you can delete any pages. Once you have unlocked the PDF with the password, the page deletion process is the same as for an unprotected file.
+
+If the PDF has permissions restrictions that prevent editing or page extraction — a separate type of protection from the open password — you may not be able to delete pages until those restrictions are removed. The permissions password controls what actions can be performed on an open PDF, independent of the open password.
+
+## Frequently Asked Questions
+
+**How do I delete pages from a PDF for free?**
+On Mac, open the PDF in Preview, select the page thumbnails you want to remove, press Delete, and export as PDF. On Windows and all other devices, use the Chrome print-to-PDF method with a specific page range, or use a free browser-based PDF page removal tool.
+
+**How do I remove a specific page from a PDF on Windows?**
+Open the PDF in Chrome, press Ctrl + P, select Save as PDF, and in the Pages field enter the pages you want to keep (excluding the page you want to remove). For example, to remove page 5 from a 10-page document, enter 1-4,6-10. Click Save.
+
+**Can I delete pages from a PDF on my phone for free?**
+On iPhone, use the Files app Markup option or a browser-based tool in Safari. On Android, use Chrome's print-to-PDF page range method or a free online PDF editor in Chrome.
+
+**How do I delete blank pages from a scanned PDF?**
+Open the PDF in Preview on Mac, identify blank page thumbnails visually, select them, press Delete, and export as PDF. On other devices, use a browser-based tool with blank page detection, or manually identify and remove each blank page using a page range in Chrome's print-to-PDF.
+
+**Will deleting pages from a PDF affect the remaining content?**
+No. Deleting pages from a PDF removes only those specific pages — the content, formatting, images, and text on the remaining pages are completely unchanged.
+
+**How do I delete multiple pages from a PDF at once?**
+On Mac in Preview, hold Command and click each page thumbnail you want to remove, then press Delete. In browser-based tools, look for a multi-select option that lets you choose multiple pages before confirming the deletion.
+
+[[cta:tools|Work with all your PDF files — SmartPDFMasters]]`,
+  }, 
 ];
 
 export const blogCategories = [
