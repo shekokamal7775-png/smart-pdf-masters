@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
     author: "Sara Khalil",
     date: "May 8, 2026",
     readTime: "8 min read",
-    cover: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&q=80",
+    cover: "https:/best pdf tools online 2026.png ",
     content: `PDF remains the world's most-used document format, with trillions of files shared every year. Whether you are a student submitting assignments, a freelancer sending invoices, or a business sharing contracts, finding the right free PDF tool saves you time and protects your documents.
 
 We spent two months testing more than 40 popular PDF platforms across desktop, web and mobile, scoring each one on speed, output quality, privacy practices and value for money.
