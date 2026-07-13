@@ -122,7 +122,7 @@ Yes, if the tool processes files locally in your browser and deletes server copi
     author: "Mohamed Adel",
     date: "May 4, 2026",
     readTime: "5 min read",
-    cover: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80",
+    cover: "https:/public/how to convert pdf to word.png",
     content: `Converting a PDF to a Word document sounds simple — until your tables fall apart and fonts get replaced by Times New Roman. With the right method, you can move from a locked PDF to a fully editable DOCX in under two minutes, with fonts, columns, lists and images intact.
 
 ## Why Are PDFs Hard to Convert to Word?
