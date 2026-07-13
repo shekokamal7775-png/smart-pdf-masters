@@ -191,7 +191,7 @@ Yes. Open our [PDF to Word](/tools/pdf-to-word) tool in Safari or Chrome on your
     author: "Layla Hassan",
     date: "Apr 28, 2026",
     readTime: "4 min read",
-    cover: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80",
+    cover: "https:/how-to-compress-pdf-files.png",
     content: `Email attachment limits typically cap at 25MB. A single PDF with a few high-resolution images can easily exceed that, leaving you unable to send the file. PDF compression reduces file size while keeping text sharp and images clear enough for their intended use.
 
 ## How PDF Compression Works
