@@ -59,10 +59,12 @@ export function Footer() {
                 <FileText className="h-5 w-5 text-primary-foreground" strokeWidth={2.5} />
               </div>
               <span className="font-display text-lg font-bold">
-                Smart<span className="text-primary">PDF</span>Tools
+                Smart<span className="text-primary">PDF</span>Masters
               </span>
             </Link>
-            <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">{t("footer.tagline")}</p>
+            <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">
+              Free browser-based PDF tools — merge, compress, convert and manage your documents privately and instantly.
+            </p>
             <div className="flex gap-2">
               {[Twitter, Facebook, Linkedin, Instagram, Github].map((Icon, i) => (
                 <a key={i} href="#" aria-label="social"
@@ -90,7 +92,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
-          <p>© {year} SmartPDFMasters. {t("footer.rights")}</p>
+          <p>© {year} SmartPDFMasters. All rights reserved.</p>
           <p>Made with care for documents that work.</p>
         </div>
       </div>
