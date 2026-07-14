@@ -5,13 +5,17 @@ export type ToolCategory = "organize" | "convert";
 export interface Tool {
   slug: string;
   icon: LucideIcon;
-  color: string; // tailwind text color class
-  bg: string; // tailwind bg tint class
+  color: string;
+  bg: string;
   category: ToolCategory;
   badge?: "popular" | "new" | "ai";
   title: { en: string; ar: string };
   desc: { en: string; ar: string };
   seoDesc: { en: string; ar: string };
+  relatedArticle?: {
+    slug: string;
+    title: string;
+  };
 }
 
 export const tools: Tool[] = [
@@ -31,6 +35,10 @@ export const tools: Tool[] = [
       en: "Free online tool to merge PDF files. Combine multiple PDFs into a single document in seconds. No watermark, secure.",
       ar: "أداة مجانية لدمج ملفات PDF عبر الإنترنت في مستند واحد بثوانٍ. آمنة ومن دون علامة مائية.",
     },
+    relatedArticle: {
+      slug: "how-to-merge-pdf-files-free",
+      title: "How to Merge PDF Files Free — Complete Guide",
+    },
   },
   {
     slug: "compress-pdf",
@@ -47,6 +55,10 @@ export const tools: Tool[] = [
     seoDesc: {
       en: "Compress PDF files online for free. Reduce PDF size without losing quality.",
       ar: "اضغط ملفات PDF عبر الإنترنت مجاناً دون فقدان الجودة.",
+    },
+    relatedArticle: {
+      slug: "how-to-compress-pdf-online-free",
+      title: "How to Compress PDF Online Free — Complete Guide",
     },
   },
   {
@@ -65,6 +77,10 @@ export const tools: Tool[] = [
       en: "Convert PDF to editable Word DOCX files free online.",
       ar: "حوّل PDF إلى DOCX قابل للتعديل عبر الإنترنت مجاناً.",
     },
+    relatedArticle: {
+      slug: "how-to-convert-pdf-to-word",
+      title: "How to Convert PDF to Word Without Losing Formatting",
+    },
   },
   {
     slug: "jpg-to-pdf",
@@ -80,6 +96,10 @@ export const tools: Tool[] = [
     seoDesc: {
       en: "Convert PNG and JPG images to a single PDF document online for free.",
       ar: "حوّل صور PNG وJPG إلى ملف PDF واحد مجاناً عبر الإنترنت.",
+    },
+    relatedArticle: {
+      slug: "convert-jpg-to-pdf-free",
+      title: "How to Convert JPG to PDF Free — Complete Guide",
     },
   },
 ];
