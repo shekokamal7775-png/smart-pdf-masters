@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "We tested 40+ PDF platforms and ranked the absolute best for converting, editing, signing and securing your documents.",
     category: "PDF Tutorials",
     author: "Sara Khalil",
-    date: "May 8, 2026",
+    date: "july 14, 2026",
     readTime: "8 min read",
     cover: "https:/best pdf tools online 2026.png ",
     content: `PDF remains the world's most-used document format, with trillions of files shared every year. Whether you are a student submitting assignments, a freelancer sending invoices, or a business sharing contracts, finding the right free PDF tool saves you time and protects your documents.
@@ -120,7 +120,7 @@ Yes, if the tool processes files locally in your browser and deletes server copi
     excerpt: "A 2-minute tutorial that preserves fonts, tables, columns and images — even from scanned documents.",
     category: "File Conversion",
     author: "Mohamed Adel",
-    date: "May 4, 2026",
+    date: "july 14, 2026",
     readTime: "5 min read",
     cover: "https:/how to convert pdf to word.png",
     content: `Converting a PDF to a Word document sounds simple — until your tables fall apart and fonts get replaced by Times New Roman. With the right method, you can move from a locked PDF to a fully editable DOCX in under two minutes, with fonts, columns, lists and images intact.
@@ -189,7 +189,7 @@ Yes. Open our [PDF to Word](/tools/pdf-to-word) tool in Safari or Chrome on your
     excerpt: "Shrink huge PDFs — perfect for email attachments and faster uploads.",
     category: "PDF Tutorials",
     author: "Layla Hassan",
-    date: "Apr 28, 2026",
+    date: "july 14, 2026",
     readTime: "4 min read",
     cover: "https:/how-to-compress-pdf-files.png",
     content: `Email attachment limits typically cap at 25MB. A single PDF with a few high-resolution images can easily exceed that, leaving you unable to send the file. PDF compression reduces file size while keeping text sharp and images clear enough for their intended use.
@@ -263,7 +263,7 @@ Yes. Our tool works on iPhone and Android in any browser without downloading an 
     excerpt: "Chat with PDFs, summarise reports, extract tables — here's how AI is actually changing document workflows.",
     category: "AI Tools",
     author: "Daniel Park",
-    date: "Apr 22, 2026",
+    date: "july 14, 2026",
     readTime: "7 min read",
     cover: "https:/ai-pdf-tools-explained.png",
     content: `Every PDF application now claims to be AI-powered. Most just add a chatbot and call it innovation. After six months auditing the AI features of 25 different PDF tools, here is an honest breakdown of what actually saves time — and what is marketing dressed as artificial intelligence.
@@ -328,7 +328,7 @@ Only if the tool has a clear policy against using your files for AI training and
     excerpt: "Edit text, add images, sign and annotate without paying a cent. Here's what works.",
     category: "Productivity Tips",
     author: "Sara Khalil",
-    date: "Apr 15, 2026",
+    date: "july 14, 2026",
     readTime: "6 min read",
     cover: "https:/best-free-pdf-editors.png",
     content: `Adobe Acrobat Pro costs $239.88 per year. For occasional PDF editing, that is significant overkill. There are excellent free alternatives that handle 95 percent of everyday PDF editing without asking for a credit card.
@@ -395,7 +395,7 @@ Yes. SmartPDFMasters, PDFescape and Xodo all work on iPhone in Safari without re
     excerpt: "Protect sensitive documents with passwords, encryption, redaction and digital signatures.",
     category: "Online Security",
     author: "Mohamed Adel",
-    date: "Apr 9, 2026",
+    date: "july 14, 2026",
     readTime: "9 min read",
     cover: "https:/secure-pdf-management-tips.png",
     content: `PDFs routinely carry the most sensitive information people and businesses handle — contracts, identification documents, medical records, financial statements. A single security mistake can lead to identity theft, regulatory fines, or serious legal liability. Most PDF security risks are entirely preventable with a handful of straightforward practices.
@@ -454,7 +454,7 @@ A digital signature (PAdES standard) is a cryptographic proof verified by PDF re
     excerpt: "Discover how the right PDF tools can transform your daily workflow, save hours, and reduce stress.",
     category: "Productivity Tips",
     author: "Sara Khalil",
-    date: "June 25, 2026",
+    date: "July 14, 2026",
     readTime: "5 min read",
     cover: "/pdf-productivity-guide.png.png",
     content: `Most people treat PDF tools as a last resort — something you reach for only when you absolutely have to convert or compress a file. But the right PDF workflow eliminates entire categories of friction from your workday and frees up significant time every week.
@@ -505,7 +505,7 @@ For the four most common tasks — merging, compressing, converting, and image-t
     excerpt: "Learn how to edit a PDF for free online without losing formatting.",
     category: "PDF Tutorials",
     author: "Sara Khalil",
-    date: "June 27, 2026",
+    date: "July 14, 2026",
     readTime: "8 min read",
     cover: "/edit-pdf-guide-2026.png.png",
     content: `Adobe Acrobat Pro costs $239.88 per year. For a student fixing a typo, a freelancer updating an invoice, or a business owner adding a logo to a contract template, that price is not justifiable. In 2026, you can edit PDFs for free using browser-based tools — no installation, no subscription, no technical knowledge needed.
@@ -574,7 +574,7 @@ Yes. No credit card, no hidden charges, no limited trials. All four core tools a
     excerpt: "The exact PDF formatting rules recruiters and applicant tracking systems expect in 2026.",
     category: "Productivity Tips",
     author: "Daniel Park",
-    date: "June 29, 2026",
+    date: "July 14, 2026",
     readTime: "9 min read",
     cover: "/job-application-pdf-checklist.png.png",
     content: `Every year, millions of job applications are rejected before a human ever reads them — not because the candidate was unqualified, but because the PDF itself failed. A resume that looked perfect on the candidate's laptop arrived garbled in the recruiter's inbox, or got silently dropped by an applicant tracking system that could not parse the file correctly.
@@ -653,7 +653,7 @@ Arial, Calibri, Georgia or Times New Roman. These fonts embed correctly in PDF f
     excerpt: "Turn any paper document into a clean, shareable PDF using just your smartphone — no scanner needed.",
     category: "PDF Tutorials",
     author: "Layla Hassan",
-    date: "July 1, 2026",
+    date: "July 14, 2026",
     readTime: "7 min read",
     cover: "/scan-documents-phone-to-pdf.png.png",
     content: `The smartphone in your pocket is a more capable document scanner than anything available in an office supply store ten years ago. Modern phone cameras combined with the right technique produce clean, readable PDFs from any paper document — contracts, receipts, ID documents, handwritten notes, tax forms.
@@ -732,7 +732,7 @@ Use our [Compress PDF](/tools/compress-pdf) tool — it reduces scanned PDF size
     excerpt: "PDF too large to send by email? Learn the fastest free methods to shrink any PDF for Gmail, Outlook and Yahoo.",
     category: "PDF Tutorials",
     author: "Layla Hassan",
-    date: "July 2, 2026",
+    date: "July 14, 2026",
     readTime: "6 min read",
     cover: "/reduce-pdf-size-email.png.png",
     content: `You finish a report, export it as PDF, hit send — and get an error. The file is too large. Gmail limits attachments to 25MB. Outlook caps at 20MB. Yahoo Mail stops at 25MB. This guide covers every method to reduce PDF file size specifically for email.
@@ -800,7 +800,7 @@ Text remains perfectly sharp at all compression levels. Images may show minor qu
     excerpt: "Save any website as a clean PDF in seconds — step-by-step guide for Chrome, Safari, iPhone, Android and Mac.",
     category: "PDF Tutorials",
     author: "Mohamed Adel",
-    date: "July 5, 2026",
+    date: "July 14, 2026",
     readTime: "7 min read",
     cover: "/save-webpage-as-pdf.png.png",
     content: `Saving a webpage as a PDF is something most people need to do — and most devices already have everything required built in. Whether you want to save a receipt, archive an article, keep a record of a contract, or share a webpage offline, converting a webpage to PDF takes under ten seconds on any device.
@@ -880,7 +880,7 @@ Both iPhone and Android have built-in PDF creation through their share and print
     excerpt: "Not sure whether to save as PDF or Word? This complete guide explains the differences and when to use each format.",
     category: "File Conversion",
     author: "Sara Khalil",
-    date: "July 6, 2026",
+    date: "July 14, 2026",
     readTime: "8 min read",
     cover: "/pdf-vs-word.png.jpeg",
     content: `PDF or Word? It sounds simple — but choosing the wrong format causes real problems. Documents that cannot be edited when they need to be. Files that look different on every device. Contracts that get modified after signing. Resumes that break when opened on a different computer.
@@ -965,7 +965,7 @@ Word offers password protection, but it is significantly weaker than PDF encrypt
     excerpt: "Learn how to merge PDF files free online in seconds. Combine multiple PDFs into one document on any device.",
     category: "PDF Tutorials",
     author: "Sara Khalil",
-    date: "July 7, 2026",
+    date: "July 14, 2026",
     readTime: "8 min read",
     cover: "/how-to-merge-pdf.png.jpeg",
     content: `Merging PDF files is one of the most common document tasks people search for every day. Whether you need to combine a resume and cover letter, join multiple invoices, merge scanned pages, or consolidate a report — knowing how to merge PDFs quickly and free saves significant time.
@@ -1058,7 +1058,7 @@ Enter the password to open the PDF first. Once open, you can upload it to our me
     excerpt: "Convert any JPG, JPEG or PNG image to PDF instantly — free guide for iPhone, Android, Windows and Mac.",
     category: "File Conversion",
     author: "Layla Hassan",
-    date: "July 7, 2026",
+    date: "July 14, 2026",
     readTime: "7 min read",
     cover: "/convert-jpg-to-pdf.png.jpeg",
     content: `Converting a JPG image to PDF is one of the most searched document tasks. Whether you need to turn a photo of a receipt into a PDF, convert a scanned document image into a shareable file, combine multiple photos into one PDF, or submit an image through a portal that only accepts PDFs — this guide covers every method on every device.
@@ -1155,7 +1155,7 @@ JPG and JPEG are the same format — JPEG is the full name and JPG is the shorte
     excerpt: "Learn how to print any document, webpage or file to PDF for free on any device.",
     category: "PDF Tutorials",
     author: "Mohamed Adel",
-    date: "July 8, 2026",
+    date: "July 14, 2026",
     readTime: "8 min read",
     cover: "/how-to-print-to-pdf.png.jpeg",
     content: `Print to PDF means saving any document, webpage, email, or file as a PDF instead of sending it to a physical printer. Every major operating system has this feature built in for free — no software to install, no account to create.
@@ -1253,7 +1253,7 @@ Yes. Both iPhone and Android support print to PDF through their built-in print d
     excerpt: "Learn how to add a password to any PDF file for free. Protect your documents with AES encryption on any device.",
     category: "Online Security",
     author: "Mohamed Adel",
-    date: "July 9, 2026",
+    date: "July 14, 2026",
     readTime: "7 min read",
     cover: "/password-protect-pdf.png.jpeg",
     content: `Sending a contract, bank statement, medical report, or any private document as an unprotected PDF is a risk most people take without thinking. Anyone who receives the file can open it, read it, copy from it, and forward it to anyone else. Adding a password to a PDF takes less than a minute and prevents all of this.
@@ -1350,7 +1350,7 @@ Applying password protection increases the file size slightly — typically less
     excerpt: "Need to split a large PDF into separate pages or sections? Free guide for Windows, Mac, iPhone and Android.",
     category: "PDF Tutorials",
     author: "Sara Khalil",
-    date: "July 9, 2026",
+    date: "July 14, 2026",
     readTime: "7 min read",
     cover: "/split-pdf-free.png.jpeg",
     content: `A large PDF with dozens of pages is not always useful as a single file. Sometimes you need to extract one page, separate a report into chapters, pull out a specific section, or divide a scanned document into individual files.
@@ -1435,7 +1435,7 @@ Enter the password to open the PDF first. Once open in Chrome or Preview, the sp
     excerpt: "PDF file too large? Learn how to compress PDF files online for free and reduce PDF size on any device.",
     category: "PDF Tutorials",
     author: "Layla Hassan",
-    date: "July 10, 2026",
+    date: "July 14, 2026",
     readTime: "8 min read",
     cover: "/compress-pdf-online-free.png.jpeg",
     content: `A PDF file that is too large causes problems at every stage of your workflow. It bounces back from email servers, gets rejected by upload portals, takes minutes to download, and fills up storage space. In 2026, you can compress any PDF file for free in under thirty seconds without installing any software.
@@ -1519,7 +1519,7 @@ Very high-resolution images or embedded files can limit compression gains. Try m
     excerpt: "Can't send your PDF because it's too large? Here are 7 proven free methods to fix oversized PDF files instantly.",
     category: "Productivity Tips",
     author: "Daniel Park",
-    date: "July 10, 2026",
+    date: "July 14, 2026",
     readTime: "8 min read",
     cover: "/pdf-file-too-large.png.jpeg",
     content: `You have finished your document, exported it as PDF, and now you cannot send it. The file is too large for email. The upload portal rejects it. WhatsApp says the file exceeds the limit. There are at least seven different ways to fix an oversized PDF file — most of them completely free and taking under a minute.
@@ -1617,7 +1617,7 @@ Use the recommended compression level in our [Compress PDF](/tools/compress-pdf)
     excerpt: "Learn how to convert any PDF page to JPG or PNG image free online — step-by-step guide for Windows, Mac, iPhone and Android with no software needed.",
     category: "File Conversion",
     author: "Layla Hassan",
-    date: "July 12, 2026",
+    date: "July 14, 2026",
     readTime: "7 min read",
     cover: "/convert-pdf-to-jpg.png.jpeg",
     content: `Converting a PDF to a JPG image is one of the most searched document tasks online. Whether you need to extract a page from a PDF as an image to post on social media, share a single page without sending the entire document, use a PDF page as a thumbnail or preview, embed PDF content into a presentation, or send a page as an image to someone who does not have a PDF viewer — knowing how to convert PDF to JPG quickly and for free is an essential skill.
@@ -1911,7 +1911,7 @@ Yes. Most government PDF forms are fillable and can be completed in Adobe Acroba
     excerpt: "Fix upside down, sideways or incorrectly oriented PDF pages instantly — free guide for Windows, Mac, iPhone and Android with no software needed.",
     category: "PDF Tutorials",
     author: "Mohamed Adel",
-    date: "July 13, 2026",
+    date: "July 14, 2026",
     readTime: "7 min read",
     cover: "/rotate-pdf-pages-free.png.png",
     content: `Receiving a PDF where all the pages are sideways or upside down is one of the most frustrating document problems — especially when you need to share it professionally or print it correctly. Scanned documents frequently come out rotated incorrectly because the paper was placed in the scanner at the wrong angle. PDFs exported from phones often have orientation issues because the phone camera was held in a different position than expected.
@@ -2057,7 +2057,7 @@ Use a browser-based PDF rotation tool or Preview on Mac to rotate the pages to t
     excerpt: "Learn how to delete specific pages from any PDF file for free — complete guide for Windows, Mac, iPhone and Android with no software needed.",
     category: "PDF Tutorials",
     author: "Sara Khalil",
-    date: "July 13, 2026",
+    date: "July 14, 2026",
     readTime: "7 min read",
     cover: "/delete-pages-from-pdf.png.jpeg",
     content: `Deleting pages from a PDF is something millions of people need to do every day — removing blank pages from a scanned document, cutting out pages that contain confidential information before sharing, trimming a long report to just the sections a specific recipient needs, or stripping cover pages and legal boilerplate before archiving.
