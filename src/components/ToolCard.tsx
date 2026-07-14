@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 import type { Tool } from "@/lib/tools";
 import { useI18n } from "@/lib/i18n";
 
@@ -20,11 +20,13 @@ export function ToolCard({ tool, index = 0 }: { tool: Tool; index?: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.4, delay: Math.min(index * 0.04, 0.4) }}
+      className="flex flex-col h-full"
     >
+      {/* Tool Card */}
       <Link
         to="/tools/$slug"
         params={{ slug: tool.slug }}
-        className="group relative flex h-full flex-col rounded-2xl border border-border bg-gradient-card p-6 shadow-soft transition-smooth hover:shadow-elegant hover:-translate-y-1 hover:border-primary/30"
+        className="group relative flex flex-col rounded-2xl border border-border bg-gradient-card p-6 shadow-soft transition-smooth hover:shadow-elegant hover:-translate-y-1 hover:border-primary/30"
       >
         {tool.badge && (
           <span className={`absolute top-4 end-4 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${badgeStyles[tool.badge]}`}>
@@ -40,6 +42,22 @@ export function ToolCard({ tool, index = 0 }: { tool: Tool; index?: number }) {
           {lang === "ar" ? "ابدأ" : "Open tool"} <ArrowRight className="h-3.5 w-3.5 rtl:rotate-180" />
         </div>
       </Link>
+
+      {/* Related Article Link */}
+      {tool.relatedArticle && (
+        <Link
+          to="/blog/$slug"
+          params={{ slug: tool.relatedArticle.slug }}
+          className="mt-2 flex items-center gap-2 rounded-xl border border-border/60 bg-secondary/30 px-4 py-2.5 text-xs text-muted-foreground hover:text-primary hover:border-primary/30 hover:bg-secondary/60 transition-smooth group"
+        >
+          <BookOpen className="h-3.5 w-3.5 flex-shrink-0 text-primary/70 group-hover:text-primary transition-smooth" />
+          <span className="line-clamp-1 flex-1">
+            {lang === "ar" ? "اقرأ الدليل: " : "Read guide: "}
+            <span className="font-medium">{tool.relatedArticle.title}</span>
+          </span>
+          <ArrowRight className="h-3 w-3 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-smooth rtl:rotate-180" />
+        </Link>
+      )}
     </motion.div>
   );
 }
