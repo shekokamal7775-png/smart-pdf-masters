@@ -2201,7 +2201,7 @@ On Mac in Preview, hold Command and click each page thumbnail you want to remove
     author: "Layla Hassan",
     date: "July 15, 2026",
     readTime: "9 min read",
-    cover: "/make-pdf-smaller.png.png",
+    cover: "/make-pdf-smaller.png.png ",
     content: `Making a PDF smaller is one of the most searched document tasks on the internet — and for good reason. A PDF that is too large cannot be emailed, gets rejected by upload portals, takes too long to share on WhatsApp, and uses unnecessary storage on your device. Whether your PDF is 50MB, 100MB, or even larger, there are at least eight proven free methods to make it significantly smaller without losing quality that matters for reading, printing, or professional sharing.
 
 This complete guide explains exactly why PDFs become large, which method works best for each type of document, and how to make a PDF smaller on Windows, Mac, iPhone, iPad, and Android — all for free.
