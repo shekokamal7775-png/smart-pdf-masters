@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { toast } from "sonner";
 import { getToolConfig, type ToolSlug } from "@/lib/pdf-tools";
+import { PDFDocument } from "pdf-lib";
 
 interface Props {
   slug: string;
@@ -22,13 +23,6 @@ function triggerDownload(blob: Blob, name: string) {
     URL.revokeObjectURL(url);
   }, 1500);
 }
-
-const DEFAULT_NAMES: Record<string, string> = {
-  "merge-pdf": "merged.pdf",
-  "compress-pdf": "compressed.pdf",
-  "pdf-to-word": "converted.docx",
-  "jpg-to-pdf": "images.pdf",
-};
 
 export function ToolProcessor({ slug }: Props) {
   const { t, lang } = useI18n();
@@ -61,26 +55,24 @@ export function ToolProcessor({ slug }: Props) {
     }
     setBusy(true);
     try {
-      const fd = new FormData();
-      fd.append("slug", slug);
-      for (const f of files) fd.append("files", f, f.name);
-      const res = await fetch("/api/pdf-process", { method: "POST", body: fd });
-      if (!res.ok) {
-        const msg = await res.text();
-        throw new Error(msg || `Request failed (${res.status})`);
+      if (slug === "merge-pdf") {
+        const mergedPdf = await PDFDocument.create();
+        for (const file of files) {
+          const arrayBuffer = await file.arrayBuffer();
+          const pdf = await PDFDocument.load(arrayBuffer);
+          const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
+          copiedPages.forEach((page) => mergedPdf.addPage(page));
+        }
+        const pdfBytes = await mergedPdf.save();
+        const blob = new Blob([pdfBytes], { type: "application/pdf" });
+        triggerDownload(blob, "merged.pdf");
+        toast.success(lang === "ar" ? "تم الدمج بنجاح!" : "Merged successfully!");
+      } else {
+        throw new Error("Local processing for this tool is not implemented yet.");
       }
-      const name =
-        res.headers.get("X-Output-Filename") || DEFAULT_NAMES[slug] || "output";
-      const blob = await res.blob();
-      triggerDownload(blob, name);
-      toast.success(lang === "ar" ? "تم بنجاح! بدأ التنزيل." : "Done! Your download has started.");
     } catch (err) {
       console.error("[ToolProcessor]", err);
-      toast.error(
-        lang === "ar"
-          ? "حدث خطأ أثناء المعالجة. حاول مرة أخرى."
-          : "Processing failed. Please try again.",
-      );
+      toast.error(lang === "ar" ? "حدث خطأ أثناء المعالجة." : "Processing failed.");
     } finally {
       setBusy(false);
     }
@@ -89,10 +81,7 @@ export function ToolProcessor({ slug }: Props) {
   return (
     <div className="space-y-4">
       <div
-        onDragOver={(e) => {
-          e.preventDefault();
-          setHover(true);
-        }}
+        onDragOver={(e) => { e.preventDefault(); setHover(true); }}
         onDragLeave={() => setHover(false)}
         onDrop={onDrop}
         className={`relative rounded-3xl border-2 border-dashed p-10 sm:p-16 text-center transition-smooth ${
@@ -122,10 +111,7 @@ export function ToolProcessor({ slug }: Props) {
       {files.length > 0 && (
         <div className="rounded-2xl border border-border bg-card p-4 space-y-3">
           {files.map((f, i) => (
-            <div
-              key={i}
-              className="flex items-center justify-between gap-3 rounded-xl bg-secondary/50 p-3"
-            >
+            <div key={i} className="flex items-center justify-between gap-3 rounded-xl bg-secondary/50 p-3">
               <div className="flex items-center gap-3 min-w-0">
                 <FileCheck2 className="h-5 w-5 text-primary flex-shrink-0" />
                 <div className="min-w-0">
@@ -133,32 +119,16 @@ export function ToolProcessor({ slug }: Props) {
                   <p className="text-xs text-muted-foreground">{(f.size / 1024).toFixed(0)} KB</p>
                 </div>
               </div>
-              <button
-                onClick={() => setFiles(files.filter((_, idx) => idx !== i))}
-                className="text-muted-foreground hover:text-destructive"
-              >
+              <button onClick={() => setFiles(files.filter((_, idx) => idx !== i))} className="text-muted-foreground hover:text-destructive">
                 <X className="h-4 w-4" />
               </button>
             </div>
           ))}
-
-          <Button
-            variant="hero"
-            size="lg"
-            className="w-full"
-            onClick={handleProcess}
-            disabled={busy}
-          >
+          <Button variant="hero" size="lg" className="w-full" onClick={handleProcess} disabled={busy}>
             {busy ? (
-              <>
-                <Loader2 className="h-4 w-4 animate-spin" />{" "}
-                {lang === "ar" ? "جاري المعالجة..." : "Processing..."}
-              </>
+              <> <Loader2 className="h-4 w-4 animate-spin" /> {lang === "ar" ? "جاري المعالجة..." : "Processing..."} </>
             ) : (
-              <>
-                <Download className="h-4 w-4" />{" "}
-                {lang === "ar" ? "معالجة وتحميل" : "Process & Download"}
-              </>
+              <> <Download className="h-4 w-4" /> {lang === "ar" ? "معالجة وتحميل" : "Process & Download"} </>
             )}
           </Button>
         </div>
