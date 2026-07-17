@@ -1,78 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// Only tools actually supported by the iLovePDF REST API.
-// See: https://developer.ilovepdf.com/docs/api-reference (Process > tool)
-// NOTE: iLovePDF does NOT expose a PDF → Word tool via its API.
-// `officepdf` converts Office documents TO PDF, not the reverse.
+// الأدوات المدعومة حالياً عبر API الخاص بـ iLovePDF
 const TOOL_MAP: Record<string, string> = {
   "merge-pdf": "merge",
   "compress-pdf": "compress",
   "jpg-to-pdf": "imagepdf",
-  "pdf-to-word": "convertapi",
+  // تم إيقاف pdf-to-word مؤقتاً لتجنب توقف الموقع عن العمل
 };
 
 const OUTPUT_NAME: Record<string, string> = {
   "merge-pdf": "merged.pdf",
   "compress-pdf": "compressed.pdf",
   "jpg-to-pdf": "images.pdf",
-  "pdf-to-word": "converted.docx",
 };
 
 const CONTENT_TYPE: Record<string, string> = {
   "merge-pdf": "application/pdf",
   "compress-pdf": "application/pdf",
   "jpg-to-pdf": "application/pdf",
-  "pdf-to-word":
-    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 };
 
-async function processWithConvertApi(file: File): Promise<Response> {
-  const secret = process.env.CONVERTAPI_SECRET;
-  if (!secret) throw new Error("CONVERTAPI_SECRET not configured");
-
-  const fd = new FormData();
-  fd.append("File", file, file.name);
-  fd.append("StoreFile", "false");
-
-  const res = await fetch(
-    `https://v2.convertapi.com/convert/pdf/to/docx?Secret=${encodeURIComponent(secret)}`,
-    { method: "POST", body: fd },
-  );
-  if (!res.ok) throw new Error(`convertapi ${res.status}: ${await res.text()}`);
-
-  const json = (await res.json()) as {
-    Files?: { FileName?: string; FileData?: string; Url?: string }[];
-  };
-  const first = json.Files?.[0];
-  if (!first) throw new Error("convertapi: no files in response");
-
-  let buf: ArrayBuffer;
-  if (first.FileData) {
-    const bin = atob(first.FileData);
-    const arr = new Uint8Array(bin.length);
-    for (let i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
-    buf = arr.buffer;
-  } else if (first.Url) {
-    const dl = await fetch(first.Url);
-    if (!dl.ok) throw new Error(`convertapi download ${dl.status}`);
-    buf = await dl.arrayBuffer();
-  } else {
-    throw new Error("convertapi: missing FileData/Url");
-  }
-
-  const filename = OUTPUT_NAME["pdf-to-word"];
-  return new Response(buf, {
-    status: 200,
-    headers: {
-      "Content-Type": CONTENT_TYPE["pdf-to-word"],
-      "Content-Length": String(buf.byteLength),
-      "Content-Disposition": `attachment; filename="${filename}"`,
-      "X-Output-Filename": filename,
-      "Cache-Control": "no-store",
-    },
-  });
-}
-
+// الدالة المسؤولة عن الحصول على التوكن (Token)
 async function getToken(): Promise<string> {
   const publicKey = process.env.ILOVEPDF_PUBLIC_KEY;
   if (!publicKey) throw new Error("ILOVEPDF_PUBLIC_KEY not configured");
@@ -147,11 +95,10 @@ async function processWithILovePdf(slug: string, files: File[]): Promise<Respons
   // 4. Poll until TaskSuccess
   await waitForTaskSuccess(base, task, authH);
 
-  // 5. Download as arrayBuffer
+  // 5. Download
   const dl = await fetch(`${base}/download/${task}`, { headers: authH });
   if (!dl.ok) throw new Error(`download ${dl.status}: ${await dl.text()}`);
   const buf = await dl.arrayBuffer();
-  if (buf.byteLength === 0) throw new Error("download returned empty body");
 
   const filename = OUTPUT_NAME[slug] || "output";
   const ct = CONTENT_TYPE[slug] || "application/octet-stream";
@@ -176,16 +123,18 @@ export const Route = createFileRoute("/api/pdf-process")({
           const form = await request.formData();
           const slug = String(form.get("slug") || "");
           const files = form.getAll("files").filter((f): f is File => f instanceof File);
+          
           if (files.length === 0) return new Response("No files", { status: 400 });
-          if (!TOOL_MAP[slug]) {
-            return new Response(
-              `Tool "${slug}" is not supported by the iLovePDF API.`,
-              { status: 400 },
-            );
-          }
+          
+          // حماية إضافية: إذا حاول المستخدم استخدام أداة موقوفة
           if (slug === "pdf-to-word") {
-            return await processWithConvertApi(files[0]);
+            return new Response("Service currently unavailable. Please try later.", { status: 503 });
           }
+
+          if (!TOOL_MAP[slug]) {
+            return new Response(`Tool "${slug}" is not supported.`, { status: 400 });
+          }
+
           return await processWithILovePdf(slug, files);
         } catch (e) {
           console.error("[pdf-process]", e);
