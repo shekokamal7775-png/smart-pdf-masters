@@ -1,4 +1,4 @@
-import { Combine, Minimize2, FileText, Image as ImageIcon, type LucideIcon } from "lucide-react";
+import { Combine, Minimize2, FileText, Image as ImageIcon, RotateCw, Scissors, type LucideIcon } from "lucide-react";
 
 export type ToolCategory = "organize" | "convert";
 
@@ -53,12 +53,54 @@ export const tools: Tool[] = [
       ar: "قلّل حجم ملف PDF مع الحفاظ على أفضل جودة.",
     },
     seoDesc: {
-      en: "Compress PDF files online for free. Reduce PDF size without losing quality.",
+      en: "Compress PDF files online for free. Reduce PDF size without losing quality. Fast, secure, no watermark.",
       ar: "اضغط ملفات PDF عبر الإنترنت مجاناً دون فقدان الجودة.",
     },
     relatedArticle: {
       slug: "how-to-compress-pdf-online-free",
       title: "How to Compress PDF Online Free — Complete Guide",
+    },
+  },
+  {
+    slug: "rotate-pdf",
+    icon: RotateCw,
+    color: "text-purple-500",
+    bg: "bg-purple-500/10",
+    category: "organize",
+    badge: "new",
+    title: { en: "Rotate PDF", ar: "تدوير PDF" },
+    desc: {
+      en: "Fix upside down or sideways PDF pages — rotate 90°, 180° or 270°.",
+      ar: "صحّح اتجاه صفحات PDF المقلوبة أو المائلة بتدوير 90° أو 180° أو 270°.",
+    },
+    seoDesc: {
+      en: "Rotate PDF pages free online. Fix upside down and sideways PDFs permanently. Rotate 90, 180 or 270 degrees. No software needed.",
+      ar: "قم بتدوير صفحات PDF مجاناً عبر الإنترنت. صحّح اتجاه صفحات PDF المقلوبة أو المائلة بشكل دائم.",
+    },
+    relatedArticle: {
+      slug: "how-to-rotate-pdf-pages-free",
+      title: "How to Rotate PDF Pages Free — Fix Upside Down PDFs",
+    },
+  },
+  {
+    slug: "split-pdf",
+    icon: Scissors,
+    color: "text-orange-500",
+    bg: "bg-orange-500/10",
+    category: "organize",
+    badge: "new",
+    title: { en: "Split PDF", ar: "تقسيم PDF" },
+    desc: {
+      en: "Split a PDF into separate pages or sections — extract exactly what you need.",
+      ar: "قسّم ملف PDF إلى صفحات أو أقسام منفصلة — استخرج ما تحتاجه بالضبط.",
+    },
+    seoDesc: {
+      en: "Split PDF files free online. Extract pages from PDF, divide PDFs into sections, or separate every page. No software needed.",
+      ar: "قسّم ملفات PDF مجاناً عبر الإنترنت. استخرج صفحات من PDF أو قسّمه إلى أقسام منفصلة.",
+    },
+    relatedArticle: {
+      slug: "how-to-split-pdf-files-free",
+      title: "How to Split a PDF into Multiple Files — Free Guide",
     },
   },
   {
@@ -74,7 +116,7 @@ export const tools: Tool[] = [
       ar: "حوّل PDF إلى مستند Word قابل للتعديل.",
     },
     seoDesc: {
-      en: "Convert PDF to editable Word DOCX files free online.",
+      en: "Convert PDF to editable Word DOCX files free online. Preserve fonts, tables and layout.",
       ar: "حوّل PDF إلى DOCX قابل للتعديل عبر الإنترنت مجاناً.",
     },
     relatedArticle: {
@@ -94,7 +136,7 @@ export const tools: Tool[] = [
       ar: "حوّل صور PNG وJPG إلى ملف PDF واحد.",
     },
     seoDesc: {
-      en: "Convert PNG and JPG images to a single PDF document online for free.",
+      en: "Convert PNG and JPG images to a single PDF document online for free. No watermark, no signup.",
       ar: "حوّل صور PNG وJPG إلى ملف PDF واحد مجاناً عبر الإنترنت.",
     },
     relatedArticle: {
