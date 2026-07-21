@@ -3534,7 +3534,331 @@ WeTransfer's free plan allows files up to 2GB per transfer. Download links are v
 Use our [Compress PDF](/tools/compress-pdf) tool. Upload your PDF, choose maximum compression, and download the smaller file in under 30 seconds.
 
 [[cta:tools|Try all free PDF tools — SmartPDFMasters]]`,
-  }, 
+  },
+ {
+    slug: "how-to-convert-pdf-to-png-free",
+    title: "How to Convert PDF to PNG Free — Extract PDF Pages as Images Instantly",
+    metaTitle: "How to Convert PDF to PNG Free — Extract PDF Pages as High-Quality Images 2026",
+    metaDescription: "Learn how to convert PDF to PNG free online in 2026. Extract PDF pages as high-quality PNG images on Windows, Mac, iPhone and Android — no software, no signup needed.",
+    keywords: [
+      "convert PDF to PNG free",
+      "PDF to PNG online free",
+      "PDF to PNG converter",
+      "extract image from PDF free",
+      "PDF page to PNG",
+      "save PDF as PNG free",
+      "PDF to image converter free",
+      "convert PDF to PNG high quality",
+      "PDF to PNG without software",
+      "PDF to transparent PNG",
+      "PDF to PNG iPhone",
+      "PDF to PNG Android",
+      "PDF to PNG Windows",
+      "PDF to PNG Mac",
+      "convert PDF to picture free",
+      "PDF screenshot to PNG",
+      "export PDF page as image",
+      "PDF to PNG no watermark",
+      "free PDF to image converter online",
+      "convert PDF to PNG 300 DPI"
+    ],
+    excerpt: "Learn how to convert any PDF page to PNG image free online — extract high-quality PNG images from any PDF on Windows, Mac, iPhone and Android with no software needed.",
+    category: "File Conversion",
+    author: "Sara Khalil",
+    date: "July 21, 2026",
+    readTime: "8 min read",
+    cover: "/convert-pdf-to-png.png.png",
+    content: `Converting a PDF to PNG is one of the most searched document conversion tasks on the internet — and it is something millions of people need every day. You need a PNG version of a PDF page to use as a thumbnail or preview image. You want to embed a document page as an image in a website or presentation. You need to share a single page visually on social media without sending the entire PDF. You want a high-quality PNG of a chart, graph, certificate, or invoice page for use in another document. You received a PDF and need the images it contains as separate PNG files.
+
+This complete guide covers every free method to convert PDF to PNG in 2026 — online, on Windows, on Mac, on iPhone, and on Android — including how to get the highest quality PNG output and how to convert specific pages rather than the entire document.
+
+## Why PNG Instead of JPG When Converting PDF Pages?
+
+When you convert a PDF page to an image, you typically have the choice between PNG and JPG format. Understanding the difference helps you choose the right format for your specific use case.
+
+PNG uses lossless compression, which means no image data is discarded during compression. Every pixel in the original PDF page is preserved exactly in the PNG file. Text appears perfectly sharp with no compression artefacts. Fine lines, logos, diagrams, and areas of flat colour reproduce cleanly and accurately. PNG also supports a transparent background, which is important when you need the PDF page content placed on a coloured background without a white rectangle around it.
+
+JPG uses lossy compression, which reduces file size by discarding some image data. For photographs and complex photographic content, the quality reduction is often barely perceptible. But for PDF pages that contain text, charts, diagrams, or any sharp lines, JPG compression causes visible blurring around text edges and colour banding in flat areas. At high enough quality settings, JPG is acceptable for photograph-heavy pages, but for document pages with text, PNG is the clearly better choice.
+
+**Choose PNG when:** the PDF page contains primarily text, diagrams, charts, logos, screenshots, or any content with sharp edges and flat colours. This includes most business documents, academic papers, certificates, invoices, and presentations.
+
+**Choose JPG when:** the PDF page contains primarily full-bleed photographs where file size matters more than absolute sharpness. Even then, high-quality JPG settings at 90 percent or above are acceptable.
+
+## Method 1 — Convert PDF to PNG Online Free (Any Device)
+
+The fastest way to convert a PDF to PNG on any device is to use a browser-based converter that works without installing any software. Open a free online PDF to PNG converter in Chrome, Safari, or any browser. Upload your PDF, select the pages you want to convert, choose PNG format and your preferred resolution, and download the resulting image files.
+
+When choosing an online PDF to PNG converter, prioritise tools that process files in your browser rather than uploading to a remote server, offer resolution control (ideally up to 300 DPI for print quality or 150 DPI for screen use), support individual page selection rather than only converting the entire document, and do not add watermarks to the output images.
+
+After downloading your PNG files, if you need to convert them back into a PDF — for example, to create a new PDF from selected pages of the original — use our [PNG to PDF](/tools/jpg-to-pdf) tool to combine your PNG images into a new PDF.
+
+[[cta:tools|Convert PNG images back to PDF — SmartPDFMasters]]
+
+## Method 2 — Convert PDF to PNG on Mac Using Preview (Free, Built-in)
+
+Mac users have the most straightforward free method available — the built-in Preview app can export any PDF page as a PNG image without any additional software.
+
+Open the PDF in Preview. Go to View in the menu bar and choose Thumbnails to display the page panel on the left side of the window. Navigate to the page you want to convert to PNG. Go to File in the menu bar and choose Export. In the Format dropdown menu, select PNG. Adjust the Resolution slider — 150 DPI is good for screen use, 300 DPI is appropriate for print use. Choose where to save the file and click Save.
+
+To convert multiple pages to individual PNG files, select multiple page thumbnails in the sidebar (hold Command for non-consecutive pages, or Shift for a consecutive range) before choosing File then Export. Preview will export each selected page as a separate PNG file.
+
+The resolution setting in Preview's export dialog directly controls the quality of the output PNG. Higher resolution produces larger, sharper PNG files. For most screen display purposes, 150 DPI produces excellent results. For printing or use in high-resolution graphics, choose 300 DPI.
+
+## Method 3 — Convert PDF to PNG on Windows (Free Methods)
+
+Windows does not include a built-in PDF to PNG converter, but there are several free approaches available without purchasing software.
+
+**Method 3a — Screenshot method (simplest, lower quality):** Open the PDF in Microsoft Edge or any PDF viewer. Navigate to the page you want to convert. Press Windows key, Shift, and S to open the Snipping Tool. Drag to select the area of the PDF page you want to capture. Click the Edit button in the notification that appears. Go to File then Save As and choose PNG format. This method captures only what is visible on screen at your monitor's resolution — typically 72 to 96 DPI — which is adequate for casual use but not for high-quality output.
+
+**Method 3b — Print to image method (better quality):** Open the PDF in Edge or Chrome. Press Ctrl and P to open the print dialog. Select a PDF printer like Microsoft Print to PDF, then close without printing. Instead, use the browser's built-in screenshot tools at maximum zoom for higher quality captures.
+
+**Method 3c — Browser-based converter (best quality):** Open Chrome or Edge and use a browser-based PDF to PNG converter for the highest quality results without installing any software. This method allows you to specify resolution settings and processes pages more accurately than screenshots.
+
+## Method 4 — Convert PDF to PNG on iPhone (Free, No App Needed)
+
+iPhone has a built-in method for converting PDF pages to PNG images that most users have not discovered — the Screenshots with Full Page feature combined with the Files app Markup tool.
+
+**Method using Screenshots:** Open the PDF in Safari or the Files app. Take a screenshot by pressing the Side button and Volume Up button simultaneously (Face ID models) or the Side button and Home button simultaneously (Touch ID models). Tap the screenshot thumbnail that appears in the bottom left corner. Tap Full Page in the top right to capture the entire PDF page. Tap Done and choose Save to Photos. The saved image in Photos is a PNG file.
+
+**Method using Files app:** Open the PDF in the Files app. Tap the Share button. Tap Create PDF — this may seem counterintuitive, but in some iOS versions this process allows you to then share individual pages as images. Alternatively, tap the page in the viewer, tap the Share button, and look for a Save Image or Copy option that creates a PNG.
+
+For the most reliable iPhone results, use a browser-based PDF to PNG converter in Safari. The process works identically to the desktop version and produces higher quality output than screenshots.
+
+## Method 5 — Convert PDF to PNG on Android (Free)
+
+Android's most reliable free method for PDF to PNG conversion is using the screenshot system combined with Google Chrome's PDF viewer, or using a browser-based converter.
+
+**Screenshot method:** Open the PDF in Chrome for Android. Navigate to the page you want. Take a screenshot by pressing the Volume Down and Power buttons simultaneously. The screenshot is saved to your Gallery as a PNG image. For higher quality, zoom in on the PDF before screenshotting and capture sections at higher apparent resolution.
+
+**Browser-based converter:** Open Chrome for Android and use a free online PDF to PNG converter. Upload your PDF, select your pages and resolution settings, and download the resulting PNG files to your device. This method produces significantly higher quality output than screenshots.
+
+## How to Convert a Specific Page of a PDF to PNG
+
+When you only need one or a few specific pages from a PDF converted to PNG, rather than the entire document, there are two practical approaches:
+
+**Option 1 — Extract the page first, then convert:** Use our [Split PDF](/tools/split-pdf) tool to extract the specific page or pages you need as a separate PDF. Then convert that smaller PDF to PNG using any of the methods above. This approach is useful when using Mac's Preview, as it simplifies the export process.
+
+[[cta:tools|Split your PDF to extract specific pages]]
+
+**Option 2 — Screenshot the specific page:** Navigate to the specific page in any PDF viewer and take a high-quality screenshot of just that page. This is the quickest method for casual use.
+
+## How to Convert a PDF to High-Quality PNG for Printing
+
+If you need a PNG version of a PDF page for printing purposes — for use in print layouts, for sending to a print service, or for inserting into a high-resolution design file — you need to convert at a minimum of 300 DPI.
+
+At 300 DPI, an A4 page (210mm × 297mm) produces a PNG image of 2480 × 3508 pixels. This is sufficient for most commercial printing purposes. For very high-quality offset printing, 600 DPI (4960 × 7016 pixels for A4) may be specified, though most PDF to image converters cap at 300 DPI.
+
+On Mac, use Preview's Export function and set the resolution to 300 DPI explicitly. On other platforms, use a browser-based converter that offers explicit DPI settings.
+
+## Converting All PDF Pages to PNG at Once
+
+If you need to convert every page of a PDF to a separate PNG image — for example, to create a gallery of document pages for a website, or to process pages individually in an image editor — look for a batch PDF to PNG converter that processes all pages in a single operation and delivers them in a ZIP file.
+
+On Mac, Preview handles multi-page export by selecting all thumbnails and choosing Export — each page is saved as a separate numbered PNG file. For Windows and mobile users, a browser-based batch converter is the most practical free option.
+
+After converting all pages to PNG, if you need to convert them back into a PDF (perhaps after editing), use our [PNG to PDF](/tools/jpg-to-pdf) tool to combine all your PNG images into a new PDF in the correct order.
+
+[[cta:tools|Convert PNG images back to PDF — SmartPDFMasters]]
+
+## How to Compress a PDF Before Converting to PNG
+
+If your PDF is very large — many pages or high-resolution embedded images — compressing it before converting to PNG can significantly speed up the conversion process.
+
+Use our [Compress PDF](/tools/compress-pdf) tool to reduce the PDF file size before converting. This is particularly helpful for scanned PDFs where the large file size is caused by high-resolution page images.
+
+[[cta:compress-pdf|Compress PDF before converting to PNG]]
+
+## Frequently Asked Questions
+
+**How do I convert a PDF to PNG for free?**
+Use a browser-based PDF to PNG converter for the best quality on any device. On Mac, use Preview's Export function and choose PNG format. On iPhone, use a browser-based converter in Safari or take a Full Page screenshot. On Android, use a browser-based converter in Chrome.
+
+**What is the best quality for PDF to PNG conversion?**
+Choose 300 DPI for print use and 150 DPI for screen display. PNG format is always better than JPG for PDF pages containing text, diagrams, or charts because it uses lossless compression.
+
+**How do I convert a single page of a PDF to PNG?**
+On Mac, navigate to the specific page in Preview, then go to File then Export and choose PNG. On other devices, extract the page first using our Split PDF tool, then convert the single-page PDF to PNG.
+
+**Can I convert a PDF to PNG on my phone without an app?**
+Yes. On iPhone, use a browser-based converter in Safari. On Android, use Chrome with a browser-based converter. No app download is required.
+
+**What is the difference between PDF to PNG and PDF to JPG?**
+PNG uses lossless compression and preserves text sharpness perfectly. JPG uses lossy compression that can blur text edges. For document pages, PNG is always the better choice. For photograph-heavy pages where file size matters, high-quality JPG is acceptable.
+
+**How do I convert a PDF to PNG without a watermark?**
+Use a browser-based converter that explicitly states no watermark is added. Avoid free converters that overlay branding on output images — these watermarks cannot always be removed afterward.
+
+[[cta:tools|Try all free PDF tools — SmartPDFMasters]]`,
+  },
+  {
+    slug: "how-to-add-signature-to-pdf-free",
+    title: "How to Add a Signature to a PDF Free — Complete Guide 2026",
+    metaTitle: "How to Add a Signature to a PDF Free — Windows, Mac, iPhone & Android 2026",
+    metaDescription: "Learn how to add a signature to any PDF for free in 2026. Sign PDFs on Windows, Mac, iPhone and Android using built-in tools — no Adobe Acrobat, no signup, no cost.",
+    keywords: [
+      "add signature to PDF free",
+      "sign PDF free online",
+      "how to sign a PDF",
+      "PDF signature free",
+      "add signature PDF without Adobe",
+      "electronic signature PDF free",
+      "sign PDF online free no signup",
+      "draw signature on PDF free",
+      "digital signature PDF free",
+      "sign PDF iPhone free",
+      "sign PDF Android free",
+      "sign PDF Mac free",
+      "sign PDF Windows free",
+      "add handwritten signature to PDF",
+      "e-sign PDF free",
+      "sign PDF document free",
+      "PDF signing free online",
+      "how to electronically sign PDF",
+      "sign PDF free no watermark",
+      "insert signature into PDF free"
+    ],
+    excerpt: "Learn how to add a signature to any PDF file for free in 2026 — draw, upload or type your signature on Windows, Mac, iPhone and Android without Adobe Acrobat.",
+    category: "PDF Tutorials",
+    author: "Layla Hassan",
+    date: "July 21, 2026",
+    readTime: "9 min read",
+    cover: "/add-signature-to-pdf-free.png.png",
+    content: `Adding a signature to a PDF is something millions of people need to do every day — signing contracts, approving documents, completing application forms, countersigning agreements, and authorising work orders. Until recently, the standard workflow was to print the PDF, sign it with a pen, scan it, and send it back — a process that takes ten to twenty minutes and requires a printer and scanner. In 2026, you can add a signature to any PDF in under two minutes, completely free, on any device, without printing a single page.
+
+This complete guide explains every free method to add a signature to a PDF in 2026 — on Windows, Mac, iPhone, iPad, and Android — including the difference between drawn signatures and digital signatures, and which type is appropriate for which situation.
+
+## The Difference Between a Drawn Signature and a Digital Signature
+
+Before choosing a method, it is important to understand that the word "signature" means two different things in the context of PDFs, and they have very different legal standing.
+
+### Drawn Signatures (Image-Based Signatures)
+
+A drawn signature is an image of your handwritten signature placed on a PDF page. You create it by drawing on a touchscreen or trackpad, uploading a photograph of your signature, or typing your name in a cursive font. The result looks like a handwritten signature but is technically just an image file placed on top of the PDF content.
+
+Drawn signatures are accepted for most everyday business documents — internal approvals, delivery confirmations, contractor agreements between parties who know each other, consent forms, and personal documents. They are the type of signature produced by most free signing tools.
+
+The limitation of drawn signatures is that they contain no cryptographic verification. Anyone can copy the signature image from one document and paste it onto another. There is no way to verify that the signature was placed by a specific person at a specific time, or that the document has not been changed after signing.
+
+### Cryptographic Digital Signatures
+
+A cryptographic digital signature uses a private key and a certificate to create a mathematical proof of identity and document integrity. When you apply a cryptographic digital signature to a PDF, anyone who opens the file can verify exactly who signed it, when they signed it, and whether the document has been modified since signing.
+
+Cryptographic digital signatures are required for certain legal and regulated documents — eIDAS-regulated documents in the EU, legally binding contracts in some jurisdictions, tax authority submissions in some countries, and documents where tamper evidence is specifically required.
+
+Most free tools produce drawn signatures. Cryptographic digital signatures typically require a certificate issued by a Certificate Authority and are provided by paid services like DocuSign or Adobe Sign.
+
+For the vast majority of everyday signing needs, a drawn signature is perfectly appropriate. The guide below covers free methods for drawn signatures, which is what most people need.
+
+## Method 1 — Sign a PDF on Mac Using Preview (Free, Built-in)
+
+Mac users have the most convenient free signature tool built directly into their operating system — Preview's signature feature, which has been available since macOS Sierra.
+
+Open the PDF in Preview. Go to View in the menu bar and choose Show Markup Toolbar, or click the pen tip icon in the Preview toolbar. In the Markup Toolbar, click the Signature button — it looks like a cursive signature. If you have not created a signature before, a dialog appears offering three methods to create one.
+
+**Trackpad method:** Click Trackpad and draw your signature using your finger on the trackpad. Press any key when finished.
+
+**Camera method:** Click Camera. Sign your name on a piece of white paper. Hold it up to your Mac's camera, facing the screen. Preview captures your signature from the paper.
+
+**iPhone or iPad method:** If your iPhone or iPad is nearby, click iPhone or iPad. A drawing interface appears on your phone or tablet. Draw your signature with your finger or Apple Pencil, and it transfers to your Mac automatically.
+
+After creating your signature, Preview saves it for future use. Select your signature from the Signature dropdown in the Markup Toolbar. Click on the PDF where you want to place the signature. Drag and resize the signature image to fit the signature line. Go to File then Export as PDF to save the signed document.
+
+Preview's signature tool is completely free, saves your signature permanently for reuse, and produces clean signed PDFs with no watermarks.
+
+## Method 2 — Sign a PDF on iPhone and iPad (Free, Built-in)
+
+iPhone and iPad have a built-in signature tool through the Markup system that works in the Files app, Mail app, and any app that supports document annotation.
+
+**Method 1 — Files app:** Open the PDF in the Files app. Tap the pen tip icon to open Markup. Tap the plus button in the bottom right corner. Tap Signature. Draw your signature with your finger or Apple Pencil in the signature panel. Tap Done. Your signature appears as a moveable, resizable object. Drag it to the correct position on the document. Tap Done again to save the signed PDF.
+
+**Method 2 — Mail app:** When you receive a PDF attached to an email and need to sign and return it, tap the PDF attachment to open it. Tap the Markup and Reply button (a pen icon with an arrow). This opens the PDF with Markup tools. Add your signature as described above. Tap Done. A new email is automatically created with the signed PDF attached, ready to send back.
+
+**Method 3 — Share Sheet:** Open the PDF in any app, tap the Share button, and look for a Markup option in the share sheet. This opens Markup for the PDF from any compatible app.
+
+iPhone and iPad Markup saves your signature for future use once you create it, so subsequent signings take only a few seconds.
+
+## Method 3 — Sign a PDF on Android (Free Methods)
+
+Android does not include a built-in PDF signature tool equivalent to Mac's Preview or iPhone's Markup. The available free options are Google Drive, Adobe Acrobat Reader (free version), and browser-based signing tools.
+
+**Using Adobe Acrobat Reader (free):** Download the free Adobe Acrobat Reader app from the Google Play Store. Open your PDF in the app. Tap the pencil icon to open editing tools. Look for the Fill & Sign option. Tap the Signature tool and draw your signature with your finger. Place the signature in the correct position on the document. Save the signed PDF.
+
+**Using Google Drive:** Upload the PDF to Google Drive. Open it in Google Drive's built-in PDF viewer. Tap the edit icon. Look for a drawing or signature tool. Draw or add your signature. Save the changes.
+
+**Using a browser-based signing tool:** Open Chrome for Android and navigate to a free online PDF signing tool. Upload your PDF, add your signature by drawing it on the touchscreen, position it correctly, and download the signed PDF. Choose a tool that explicitly states no watermarks and processes files privately.
+
+## Method 4 — Sign a PDF on Windows (Free Methods)
+
+Windows does not include a built-in PDF signature tool, but several free options are available without purchasing software.
+
+**Using Adobe Acrobat Reader (free):** Adobe Acrobat Reader, the free version of Adobe's PDF reader, includes a Fill & Sign tool that allows drawing signatures on PDFs. Download it from Adobe's website. Open your PDF in Reader. Go to Tools then Fill & Sign. Click the Sign icon (a pen nib). Choose Add Signature. Draw your signature in the panel. Click Apply. Click on the PDF where you want to place the signature. Save the signed document.
+
+**Using Microsoft Edge:** Microsoft Edge can open PDFs and includes basic drawing tools. Open the PDF in Edge by dragging it into the browser or using File then Open. Click the Draw tool in the Edge PDF toolbar. Draw your signature directly onto the PDF at the signature line. The drawing is saved when you print to PDF or save the file.
+
+**Using a browser-based tool:** Open Chrome or Edge and use a free online PDF signing tool. Most browser-based PDF signers allow you to draw a signature with your mouse, upload an image of your signature, or type your name in a signature font. Choose a tool that processes files in your browser for maximum privacy.
+
+## How to Create a Clean Digital Signature Image for Uploading
+
+Many PDF signing tools allow you to upload an image of your signature rather than drawing it on screen. This is often more convenient and produces a more natural-looking result than mouse-drawn signatures.
+
+To create a clean signature image for uploading:
+
+Sign your name on white paper using a black or dark blue pen. Photograph the signature with your phone in good lighting, making sure the paper is flat and evenly lit with no shadows. Crop the image to just the signature area using any photo editor or your phone's built-in cropping tool. The result is a signature image you can upload to any PDF signing tool.
+
+For a transparent background version — so your signature appears naturally on the document without a white rectangle — use an app that supports background removal. Many free photo editing apps on iPhone and Android can remove white backgrounds from images, producing a PNG with a transparent background.
+
+## Positioning Your Signature Correctly on a PDF
+
+After adding your signature to a PDF, position it precisely over the designated signature line. Most PDF signing tools allow you to drag the signature image to any position on the page and resize it by dragging the corner handles.
+
+Standard practice is to place the signature so the baseline of the signature rests on the signature line rather than floating above it. If the signature block includes a printed name below the signature line, make sure your signature does not overlap with it.
+
+After positioning, zoom in to verify the signature looks correct at high magnification before saving and sending the document.
+
+## After Signing — Compressing and Sharing
+
+A PDF with a high-resolution signature image embedded can be slightly larger than the original unsigned file. If you need to send the signed PDF by email or upload it to a portal with a file size limit, compress it first using our [Compress PDF](/tools/compress-pdf) tool.
+
+[[cta:compress-pdf|Compress your signed PDF before sending]]
+
+If you need to combine your signed PDF with other documents — for example, attaching a signed cover letter to a signed application form — use our [Merge PDF](/tools/merge-pdf) tool to join them into one complete submission.
+
+[[cta:merge-pdf|Merge your signed PDFs together]]
+
+## Legal Considerations for PDF Signatures
+
+The legal standing of a PDF signature depends on the jurisdiction, the type of document, and the level of verification associated with the signature.
+
+In the European Union, the eIDAS regulation establishes three levels of electronic signature: Simple Electronic Signatures (any electronic mark indicating agreement), Advanced Electronic Signatures (uniquely linked to the signer with some identity verification), and Qualified Electronic Signatures (highest level, requiring a qualified certificate from a trusted authority).
+
+Drawn image signatures generally qualify as Simple Electronic Signatures under eIDAS and are legally binding for most everyday commercial agreements in EU member states.
+
+In the United States, the ESIGN Act and UETA give electronic signatures the same legal weight as handwritten signatures for most commercial and personal documents. A drawn image signature is generally sufficient for most business contracts.
+
+For high-value transactions, regulated financial or legal documents, government submissions, or any document where the identity of the signatory may be disputed, consult a legal professional about whether a higher-assurance signature method is required.
+
+## Frequently Asked Questions
+
+**How do I add a signature to a PDF for free?**
+On Mac, use Preview's built-in Signature tool in the Markup Toolbar. On iPhone, use the Markup tool in the Files app or Mail app. On Windows, use Adobe Acrobat Reader's free Fill & Sign tool. On Android, use the free Adobe Acrobat Reader app or a browser-based signing tool.
+
+**How do I sign a PDF without Adobe Acrobat?**
+On Mac, use Preview. On iPhone and iPad, use the built-in Markup tool. On Windows, use Microsoft Edge's draw tool or a browser-based PDF signer. All of these are completely free.
+
+**Can I add a signature to a PDF on my phone for free?**
+Yes. On iPhone, the built-in Markup tool handles PDF signing without any app download. On Android, the free Adobe Acrobat Reader app or a browser-based tool in Chrome works without any subscription.
+
+**How do I create a digital signature for a PDF?**
+For a drawn image signature, use Preview on Mac, Markup on iPhone, or the free Adobe Acrobat Reader. For a cryptographic digital signature (with verified identity and tamper evidence), you need a certificate from a Certificate Authority — this typically requires a paid service.
+
+**Is a drawn PDF signature legally valid?**
+For most everyday commercial documents, yes. In the EU, drawn signatures qualify as Simple Electronic Signatures under eIDAS. In the US, they are generally accepted under ESIGN and UETA. For specific regulated documents or high-value transactions, consult a legal professional.
+
+**How do I sign a PDF and send it back by email on iPhone?**
+Open the PDF attachment in Mail, tap the Markup and Reply button (pen with arrow icon), add your signature using the Markup Signature tool, tap Done, and a new reply email is automatically created with the signed PDF attached.
+
+[[cta:tools|Manage all your PDFs — SmartPDFMasters]]`,
+  },
 ];
 
 export const blogCategories = [
