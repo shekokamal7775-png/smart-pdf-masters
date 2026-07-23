@@ -3859,6 +3859,315 @@ Open the PDF attachment in Mail, tap the Markup and Reply button (pen with arrow
 
 [[cta:tools|Manage all your PDFs — SmartPDFMasters]]`,
   },
+{
+    slug: "how-to-unlock-pdf-free",
+    title: "How to Unlock a PDF File Free — Remove Password and Restrictions",
+    metaTitle: "How to Unlock a PDF File Free 2026 — Remove Password & Restrictions Instantly",
+    metaDescription: "Learn how to unlock a PDF file for free in 2026. Remove PDF passwords, unlock PDF restrictions, and edit locked PDFs on Windows, Mac, iPhone and Android — no software needed.",
+    keywords: [
+      "unlock PDF free",
+      "how to unlock PDF file",
+      "remove PDF password free",
+      "unlock PDF restrictions free",
+      "open locked PDF free",
+      "PDF password remover free",
+      "unlock PDF online free",
+      "remove PDF password online",
+      "how to unlock protected PDF",
+      "PDF unlocker free online",
+      "decrypt PDF free",
+      "remove PDF restrictions free",
+      "unlock PDF without password",
+      "bypass PDF password free",
+      "how to open password protected PDF",
+      "unlock PDF editing free",
+      "remove PDF security free",
+      "PDF lock remover free",
+      "unlock PDF for editing free",
+      "how to copy text from locked PDF"
+    ],
+    excerpt: "Learn how to unlock any PDF file for free in 2026 — remove passwords, lift editing restrictions, and open locked PDFs on Windows, Mac, iPhone and Android without software.",
+    category: "Online Security",
+    author: "Mohamed Adel",
+    date: "July 23, 2026",
+    readTime: "8 min read",
+    cover: "/unlock-pdf-free.png.png",
+    content: `A locked PDF file stops you from opening it, editing it, copying text from it, or printing it. Whether you forgot the password to a PDF you created yourself, received a restricted PDF that prevents copying or editing, or need to modify a protected document, unlocking a PDF is a common and legitimate need.
+
+This complete guide explains every free method to unlock a PDF file in 2026 — removing open passwords, lifting editing and printing restrictions, and making locked PDF content accessible — on Windows, Mac, iPhone, iPad, and Android.
+
+## Understanding the Two Types of PDF Locks
+
+Before choosing an unlocking method, it is important to understand that PDF files can be locked in two completely different ways, and they require different approaches.
+
+### Type 1 — Open Password (Document Open Password)
+
+An open password prevents anyone from opening the PDF at all. When you try to open the file, you see a password prompt. Without the correct password, you cannot view, read, or access the document in any way.
+
+To unlock a PDF with an open password, you must know the correct password. There is no legitimate free tool that can bypass strong AES-256 encryption — claims to the contrary are almost always malware or scams. If you know the password, you can remove it using the methods below. If you have forgotten the password to a PDF you created yourself, some recovery tools may help if the password was short or simple.
+
+### Type 2 — Permissions Restrictions (Owner Password)
+
+Permissions restrictions do not prevent you from opening the PDF — you can read it normally. But they prevent certain actions: copying text, editing content, printing, adding annotations, extracting pages, or filling in forms.
+
+These restrictions are enforced by the PDF viewer respecting the permissions embedded in the file. Many free tools can remove permissions restrictions from a PDF you are entitled to use, because this type of protection is significantly weaker than open password encryption.
+
+## Method 1 — Unlock PDF Using Google Chrome (Remove Restrictions, Free)
+
+Google Chrome can effectively remove permissions restrictions from a PDF that you can already open. This method works on Windows, Mac, and Android.
+
+Open the restricted PDF in Google Chrome — drag and drop the file into a Chrome window, or go to File then Open. Chrome opens and displays the PDF normally. Press Ctrl and P on Windows or Command and P on Mac to open the print dialog. In the printer dropdown, select Save as PDF. Click Save and choose where to save the new file.
+
+The PDF saved through Chrome's print-to-PDF function is a new file with no permissions restrictions. Text can be copied, the file can be edited in PDF editors, and pages can be extracted. This method works because Chrome renders the PDF visually and creates a new PDF from the rendered output, which does not inherit the original file's permission restrictions.
+
+After unlocking, if you need to edit the text content, use our [PDF to Word](/tools/pdf-to-word) tool to convert the unlocked PDF to an editable Word document.
+
+[[cta:pdf-to-word|Convert unlocked PDF to Word — free]]
+
+## Method 2 — Unlock PDF on Mac Using Preview (Remove Restrictions and Open Password)
+
+Mac's Preview app can remove both permissions restrictions and open passwords from PDFs you have legitimate access to.
+
+**Removing permissions restrictions:** Open the restricted PDF in Preview — since you can already open it, no password is needed. Go to File then Export as PDF. In the export dialog, make sure the Encrypt checkbox is not checked. Click Save. The exported PDF has no restrictions applied.
+
+**Removing an open password (if you know the password):** Open the PDF in Preview and enter the password when prompted. Go to File then Export as PDF. In the export dialog, uncheck the Encrypt checkbox. Enter the current password if prompted. Click Save. The new PDF file has no password protection.
+
+After removing restrictions, use our [Compress PDF](/tools/compress-pdf) tool if the file size increased after export.
+
+[[cta:compress-pdf|Compress your unlocked PDF]]
+
+## Method 3 — Unlock PDF Using Microsoft Word (Windows)
+
+If you have Microsoft Word installed, you can use it to remove restrictions from a PDF by opening it and re-exporting as a clean PDF.
+
+Open Microsoft Word. Go to File then Open and select the restricted PDF. Word converts the PDF to an editable document automatically. Make any edits you need, or leave the content unchanged. Go to File then Save As and choose PDF as the format. Save the new file.
+
+The saved PDF is a fresh document with no inherited restrictions from the original. This method also allows you to edit the content in Word before re-exporting, which is useful when you need to update the document as well as remove restrictions.
+
+## Method 4 — Unlock PDF Online Free (Browser-Based Tools)
+
+Several free browser-based PDF unlocker tools can remove permissions restrictions from PDFs you have legitimate access to. These tools process the PDF and deliver an unlocked version without requiring any software installation.
+
+When using an online PDF unlocker, always choose a tool that processes files in your browser rather than uploading to a remote server, confirms immediate file deletion after processing, and does not add watermarks to the output. Our tools at [SmartPDFMasters](/tools) process files locally in your browser for maximum privacy.
+
+For PDFs where you need to edit the content after unlocking, use our [PDF to Word](/tools/pdf-to-word) tool to convert the unlocked document to an editable format. To combine the unlocked PDF with other documents, use our [Merge PDF](/tools/merge-pdf) tool.
+
+[[cta:merge-pdf|Merge your unlocked PDF with other documents]]
+
+## Method 5 — Unlock PDF on iPhone and iPad
+
+iPhone and iPad can remove permissions restrictions from PDFs using the built-in Files app and Markup tools.
+
+Open the restricted PDF in the Files app. Since you can already view it, permissions restrictions do not block reading. Tap the Share button and choose Print. On the print preview screen, pinch outward with two fingers on the preview thumbnail — this converts the print preview to a PDF. Tap the Share button in the top right corner. Choose Save to Files. The saved PDF is a new file without restrictions.
+
+For PDFs with an open password on iPhone, enter the password when prompted by the Files app to open the document, then use the Share then Print method above to save an unrestricted copy.
+
+## Method 6 — Unlock PDF on Android
+
+Android users can use Google Chrome's print-to-PDF method to remove permissions restrictions.
+
+Open the PDF in Chrome for Android. Tap the three-dot menu and choose Print. In the printer dropdown, select Save as PDF. Tap the save icon to download the unrestricted file.
+
+For PDFs that require an open password on Android, open them in Adobe Acrobat Reader (free version), enter the password, then use Chrome's print-to-PDF method to save an unrestricted copy.
+
+## What to Do After Unlocking a PDF
+
+Once you have an unlocked PDF, you have several options depending on what you need to do with it.
+
+**Edit the content:** Use our [PDF to Word](/tools/pdf-to-word) tool to convert the unlocked PDF to a fully editable Word document. Make your changes in Word or Google Docs, then export back to PDF.
+
+[[cta:pdf-to-word|Edit your unlocked PDF in Word]]
+
+**Combine with other files:** Use our [Merge PDF](/tools/merge-pdf) tool to combine the unlocked PDF with other documents into one file.
+
+**Reduce file size:** Use our [Compress PDF](/tools/compress-pdf) tool to reduce the unlocked PDF's file size before sharing.
+
+**Rotate pages:** Use our [Rotate PDF](/tools/rotate-pdf) tool to fix any page orientation issues.
+
+**Split into sections:** Use our [Split PDF](/tools/split-pdf) tool to extract specific pages from the unlocked document.
+
+[[cta:tools|Work with your unlocked PDF — SmartPDFMasters]]
+
+## Important Legal and Ethical Considerations
+
+PDF passwords and restrictions exist to protect the interests of document creators and owners. Removing protection from a PDF you do not own or are not entitled to access is illegal in most jurisdictions under computer misuse and copyright laws.
+
+The methods described in this guide are appropriate only for PDFs you created yourself, PDFs you have received and are entitled to use, documents where you have forgotten the password to your own file, and PDFs where restrictions are preventing legitimate use of content you have legal access to.
+
+Never use PDF unlocking tools to circumvent protection on copyrighted content, confidential business documents you are not authorised to access, or files where the password protection was applied specifically to prevent your access.
+
+## Frequently Asked Questions
+
+**How do I unlock a PDF for free?**
+Use Google Chrome's print-to-PDF method to remove permissions restrictions from any PDF you can open. Go to File then Print, select Save as PDF, and save the new unrestricted file.
+
+**How do I remove a PDF password without knowing it?**
+If the password is an open password using strong AES-256 encryption, there is no free method to remove it without knowing the password. Permissions restrictions (which do not prevent opening) can be removed using Chrome's print-to-PDF method or Preview on Mac.
+
+**How do I unlock a PDF on iPhone?**
+Open the PDF in the Files app, tap Share then Print, pinch outward on the print preview to convert it to a PDF, then tap Share and save the unlocked file to Files.
+
+**What is the difference between an open password and PDF restrictions?**
+An open password prevents anyone from opening the PDF without the password. PDF restrictions allow the PDF to be opened and read but prevent specific actions like copying text, editing, or printing.
+
+**How do I copy text from a locked PDF?**
+If the PDF has permissions restrictions preventing copying but can be opened, use Chrome's print-to-PDF method to create an unrestricted copy, then copy text from the new file. If the PDF has an open password, you must enter the correct password to open it first.
+
+[[cta:tools|Try all free PDF tools — SmartPDFMasters]]`,
+  },
+  {
+    slug: "how-to-combine-pdf-files-on-iphone-free",
+    title: "How to Combine PDF Files on iPhone Free — Complete Guide 2026",
+    metaTitle: "How to Combine PDF Files on iPhone Free — 5 Easy Methods 2026",
+    metaDescription: "Learn how to combine PDF files on iPhone for free in 2026. Merge multiple PDFs into one on iPhone and iPad using the Files app, Safari, and free tools — no app download needed.",
+    keywords: [
+      "combine PDF files on iPhone free",
+      "merge PDF iPhone free",
+      "how to combine PDF on iPhone",
+      "merge PDF iPad free",
+      "combine PDF iOS free",
+      "join PDF files iPhone",
+      "merge PDF without app iPhone",
+      "how to merge PDF on iPhone",
+      "combine multiple PDFs iPhone",
+      "iPhone PDF merger free",
+      "iOS merge PDF free",
+      "combine PDF Safari iPhone",
+      "Files app merge PDF iPhone",
+      "how to join PDFs on iPhone",
+      "merge PDF documents iPhone free",
+      "combine PDF on iPad",
+      "iPhone combine PDF without Adobe",
+      "free PDF merger iPhone 2026",
+      "merge PDF iOS without app",
+      "how to put two PDFs together iPhone"
+    ],
+    excerpt: "Learn how to combine PDF files on iPhone and iPad for free in 2026 — using the Files app, Safari, and free tools. No app download, no signup, works on all iPhone models.",
+    category: "PDF Tutorials",
+    author: "Sara Khalil",
+    date: "July 23, 2026",
+    readTime: "7 min read",
+    cover: "/combine-pdf-iphone-free.png.png",
+    content: `Combining PDF files on iPhone is something millions of people need to do — merging scanned documents, joining a cover letter with a resume, combining multiple receipts into one expense report, or consolidating reading materials into a single file. The good news is that you can combine PDFs on iPhone completely free in 2026, without downloading any additional app, using tools that are already on your device or accessible in Safari.
+
+This complete guide covers every method to combine PDF files on iPhone and iPad in 2026, from the built-in Files app to browser-based tools in Safari, so you can merge any PDFs on your iPhone in under a minute.
+
+## Method 1 — Combine PDFs Using the Files App (Built-in, No App Needed)
+
+The Files app on iPhone and iPad running iOS 15 or later includes a built-in PDF combining feature that most users have never discovered. This is the fastest free method for combining PDFs directly on your iPhone without Safari, without additional apps, and without any internet connection.
+
+Open the Files app on your iPhone. Navigate to the folder where your PDF files are stored — this could be On My iPhone, iCloud Drive, or any connected storage. Make sure all the PDFs you want to combine are visible in the same folder.
+
+Tap the three-dot menu icon in the top right corner of the Files app and choose Select. Tap each PDF file you want to combine — in the order you want them merged. Selected files show a blue checkmark. After selecting all your PDFs, tap the three-dot menu at the bottom right of the screen. Look for Create PDF or Merge from the options that appear.
+
+The Files app combines your selected PDFs into a new file and saves it in the same folder. The combined PDF contains all pages from your selected files in the order you selected them.
+
+If you need to reorder the files before merging, make sure you tap them in the exact sequence you want the pages to appear in the final document. The merge order follows the selection order.
+
+After combining, if the merged file is larger than you need, open it in Safari and use our [Compress PDF](/tools/compress-pdf) tool to reduce the file size before sharing.
+
+[[cta:compress-pdf|Compress your combined PDF on iPhone]]
+
+## Method 2 — Combine PDFs Using Our Merge PDF Tool in Safari (Best Results)
+
+For the most reliable PDF combining with full control over page order, use our [Merge PDF](/tools/merge-pdf) tool directly in Safari on your iPhone. This method works on all iPhone models regardless of iOS version and gives you the ability to drag and reorder files before merging.
+
+Open Safari on your iPhone and go to smartpdfmasters.com. Tap the Merge PDF tool. Tap the upload area and select your PDF files from the Files app or iCloud Drive. You can select multiple files at once. Once uploaded, drag the file thumbnails to arrange them in the order you want. Tap Merge and wait a few seconds. Tap Download to save the combined PDF to your device.
+
+The download saves to your Downloads folder in the Files app, where you can move, share, or open it immediately.
+
+[[cta:merge-pdf|Combine your PDFs on iPhone now — free]]
+
+This method is ideal when you need to combine PDFs from different locations — some from iCloud Drive, some from email attachments, some downloaded from websites — because the Files picker in Safari lets you access all storage locations at once.
+
+## Method 3 — Combine PDFs from Email Attachments on iPhone
+
+If you received PDF files as email attachments and need to combine them, iPhone's Mail app integrates with the Files app and Markup system to make this straightforward.
+
+Open each email containing a PDF attachment. Tap and hold the attachment. Choose Save to Files and save each PDF to a folder on your iPhone or iCloud Drive.
+
+Once all PDF attachments are saved to the same folder, use the Files app method (Method 1) or our Safari tool (Method 2) to combine them.
+
+Alternatively, for a quick single-step method: open the first PDF from Mail, tap the Share button, and look for a Print option. In the print preview, pinch outward to convert to PDF view. Tap Share again and choose Save to Files. Repeat for each PDF. Then combine the saved files using Method 1 or Method 2.
+
+## Method 4 — Combine PDFs Using Shortcuts App (Automation Method)
+
+iPhone's Shortcuts app allows you to create a reusable shortcut that combines PDFs automatically. This is useful if you regularly need to merge PDFs on your iPhone.
+
+Open the Shortcuts app. Tap the plus button to create a new shortcut. Search for the action Combine PDF and add it. Configure the shortcut to ask for input each time so you can select which files to combine. Add a Save File action to specify where the combined PDF is saved.
+
+Once set up, you can run this shortcut from the Shortcuts app, from your iPhone home screen, or through Siri — just say "Combine my PDFs" if you have configured the shortcut with a name.
+
+The Shortcuts method is particularly useful for students who regularly merge lecture notes, professionals who combine weekly reports, or anyone who merges the same types of documents repeatedly.
+
+## Method 5 — Combine a PDF with Photos on iPhone
+
+If you have a mixture of PDF files and photos that you want to combine into a single PDF, convert your photos to PDF first and then merge everything together.
+
+Open Safari and use our [PNG to PDF](/tools/jpg-to-pdf) tool to convert your photos or screenshots to PDF format. Upload your images, arrange them in the correct order, and download the resulting PDF.
+
+Then use our [Merge PDF](/tools/merge-pdf) tool to combine the photo PDFs with your existing PDF files into one complete document. This is particularly useful for job applications where you need to combine a typed cover letter PDF with scanned supporting documents photographed with your camera.
+
+[[cta:tools|Convert photos to PDF then merge — SmartPDFMasters]]
+
+## How to Combine PDFs on iPhone and Send by Email
+
+After combining your PDFs on iPhone, sharing the merged file by email is straightforward.
+
+Find the combined PDF in the Files app. Tap and hold the file. Choose Share. Tap Mail from the share sheet. The PDF is automatically attached to a new email. Add the recipient's address and send.
+
+If the combined PDF is too large to send by email — Gmail's limit is 25MB, Outlook's is 20MB — compress it first using our [Compress PDF](/tools/compress-pdf) tool in Safari before attaching it to the email.
+
+## How to Combine PDF Files on iPhone Without iCloud
+
+All the methods above work without iCloud if you prefer to keep files stored only on your device. In the Files app, navigate to On My iPhone rather than iCloud Drive to access files stored locally. When saving combined PDFs, choose On My iPhone as the save location.
+
+Our [Merge PDF](/tools/merge-pdf) tool in Safari processes files entirely in your browser — files are never uploaded to any server — so it works whether you use iCloud or not, and without any internet connection beyond loading the tool page initially.
+
+## Combining Large PDF Files on iPhone
+
+If you need to combine large PDF files on iPhone — for example, combining several scanned documents that are each 5MB or more — the process is the same as for smaller files, but may take slightly longer to process.
+
+After combining large PDFs, always compress the result before sharing. Use our [Compress PDF](/tools/compress-pdf) tool to reduce the combined file size significantly while keeping text sharp and readable. This is especially important for scanned documents, which compress very effectively.
+
+After merging and compressing, if you need to edit the content of the combined document, use our [PDF to Word](/tools/pdf-to-word) tool to convert it to an editable Word document.
+
+[[cta:pdf-to-word|Convert combined PDF to Word for editing]]
+
+## Troubleshooting — Common Issues When Combining PDFs on iPhone
+
+**The Files app does not show a Merge option:** Make sure you are running iOS 15 or later. Update your iPhone if needed. Also ensure you are selecting PDF files — the merge option only appears when all selected files are PDFs.
+
+**The combined PDF pages are in the wrong order:** In the Files app, the pages combine in selection order. Deselect all and reselect in the correct order. In our Safari tool, drag the file thumbnails to reorder before merging.
+
+**The combined PDF is too large to share:** Use our [Compress PDF](/tools/compress-pdf) tool after merging to reduce the file size.
+
+**Safari cannot access my PDF files:** In iOS Settings, go to Safari then allow access to Files. Alternatively, save your PDFs to iCloud Drive which Safari can always access.
+
+**The merged file looks different from the originals:** PDF combining preserves pages exactly as they are in the original files. If pages look different, check that the original PDFs were not formatted differently from each other.
+
+## Frequently Asked Questions
+
+**How do I combine PDF files on iPhone for free?**
+Use the Files app: tap Select, choose multiple PDFs, tap the three-dot menu, and choose Create PDF or Merge. Alternatively, use our free [Merge PDF](/tools/merge-pdf) tool in Safari — no app download required.
+
+**Can I merge PDFs on iPhone without an app?**
+Yes. Both the Files app method and our Safari browser tool work without downloading any additional app. Our tool processes files in your browser for complete privacy.
+
+**How do I combine PDFs on iPhone and keep them in order?**
+In the Files app, select your PDFs in the exact order you want them merged. In our Safari Merge PDF tool, drag the file thumbnails to arrange them in the correct sequence before tapping Merge.
+
+**How do I combine a PDF and a photo on iPhone?**
+Convert the photo to PDF first using our [PNG to PDF](/tools/jpg-to-pdf) tool in Safari, then use our [Merge PDF](/tools/merge-pdf) tool to combine the photo PDF with your other PDF files.
+
+**Does combining PDFs on iPhone reduce quality?**
+No. Combining PDFs joins the pages exactly as they appear in the original files without any quality reduction.
+
+**How do I reduce the size of a combined PDF on iPhone?**
+Use our [Compress PDF](/tools/compress-pdf) tool in Safari after merging. Upload the combined PDF, choose your compression level, and download the smaller file.
+
+[[cta:merge-pdf|Combine PDF files on iPhone now — free]]`,
+  }, 
 ];
 
 export const blogCategories = [
