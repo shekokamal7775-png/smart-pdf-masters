@@ -55,12 +55,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "SmartPDFMasters — Free Online PDF Tools" },
-      { name: "description", content: "Free online PDF tools to merge, compress, convert and edit PDF files. Fast, secure and easy to use with no installation required. Try SmartPDFMasters free." },
-      { name: "keywords", content: "SmartPDFMasters, PDF tools, merge PDF, compress PDF, PDF to Word, convert PDF, edit PDF, free PDF editor, online PDF tools, PDF compressor, PDF merger" },
+      { name: "description", content: "Free online PDF tools to merge, compress, rotate, split, convert and edit PDF files. Fast, secure and easy to use with no installation required. Try SmartPDFMasters free." },
+      { name: "keywords", content: "SmartPDFMasters, PDF tools, merge PDF, compress PDF, rotate PDF, split PDF, PDF to Word, convert PDF, free PDF editor, online PDF tools" },
       { name: "author", content: "SmartPDFMasters" },
       { name: "robots", content: "index, follow" },
       { property: "og:title", content: "SmartPDFMasters — Free Online PDF Tools" },
-      { property: "og:description", content: "Free online PDF tools to merge, compress, convert and edit PDF files. Fast, secure and easy to use with no installation required." },
+      { property: "og:description", content: "Free online PDF tools to merge, compress, rotate, split, convert and edit PDF files. Fast, secure and easy to use with no installation required." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "SmartPDFMasters" },
       { property: "og:url", content: "https://www.smartpdfmasters.com/" },
@@ -68,10 +68,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@SmartPDFMasters" },
       { name: "theme-color", content: "#dc2626" },
       { name: "google-site-verification", content: "bPdyWSIDRVm1WxiTdQBi6z90aQZv2tQQRKwhMI5djCk" },
-      { name: "twitter:title", content: "SmartPDFMasters — Free Online PDF Tools" },
-      { name: "twitter:description", content: "Free online PDF tools to merge, compress, convert and edit PDF files. Fast, secure and easy to use with no installation required." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/080b78fc-1c45-4405-ae43-c91c494bad11/id-preview-9d17de04--c32813af-7de2-491b-b3ba-577d01487480.lovable.app-1778468325197.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/080b78fc-1c45-4405-ae43-c91c494bad11/id-preview-9d17de04--c32813af-7de2-491b-b3ba-577d01487480.lovable.app-1778468325197.png" },
     ],
     links: [
       { rel: "icon", href: "/favicon.png", type: "image/png" },
@@ -106,42 +102,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           gtag('config', 'G-RJR9RK8L7R');
         `,
       },
-      {
-        async: true,
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2068276839048778",
-        crossOrigin: "anonymous",
-      },
     ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
-});                                                                              
+});
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
         <HeadContent />
-
-        {/* Monetag */}
+        {/* Monetag Multitag */}
         <script
           src="https://quge5.com/88/tag.min.js"
-          async
           data-zone="263284"
+          async={true}
           data-cfasync="false"
-        ></script>
-
+        />
       </head>
       <body>
         {children}
         <Scripts />
       </body>
-        </html>
+    </html>
   );
 }
-      
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
