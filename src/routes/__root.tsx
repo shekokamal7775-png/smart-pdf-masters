@@ -117,7 +117,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
-});
+});                                                                              
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
@@ -138,10 +138,10 @@ function RootShell({ children }: { children: React.ReactNode }) {
         {children}
         <Scripts />
       </body>
-    </html>
+        </html>
   );
 }
-  
+      
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
