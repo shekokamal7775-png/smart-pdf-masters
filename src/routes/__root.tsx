@@ -122,7 +122,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head><HeadContent /></head>
+      <head>
+        <HeadContent />
+
+        {/* Monetag */}
+        <script
+          src="https://quge5.com/88/tag.min.js"
+          async
+          data-zone="263284"
+          data-cfasync="false"
+        ></script>
+
+      </head>
       <body>
         {children}
         <Scripts />
@@ -130,7 +141,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
     </html>
   );
 }
-
+  
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
