@@ -4167,7 +4167,327 @@ No. Combining PDFs joins the pages exactly as they appear in the original files 
 Use our [Compress PDF](/tools/compress-pdf) tool in Safari after merging. Upload the combined PDF, choose your compression level, and download the smaller file.
 
 [[cta:merge-pdf|Combine PDF files on iPhone now — free]]`,
-  }, 
+  },
+ {
+    slug: "how-to-make-pdf-searchable-free",
+    title: "How to Make a PDF Searchable Free — Convert Scanned PDF to Searchable Text",
+    metaTitle: "How to Make a PDF Searchable Free 2026 — OCR Scanned PDF to Searchable Text",
+    metaDescription: "Learn how to make any PDF searchable for free in 2026. Convert scanned PDFs to searchable, selectable text using free OCR tools on Windows, Mac, iPhone and Android — no software needed.",
+    keywords: [
+      "make PDF searchable free",
+      "how to make PDF searchable",
+      "convert scanned PDF to searchable text",
+      "OCR PDF free online",
+      "searchable PDF free",
+      "make scanned PDF searchable",
+      "PDF OCR free online 2026",
+      "how to search text in scanned PDF",
+      "convert image PDF to searchable PDF",
+      "OCR scanned document free",
+      "make PDF text selectable free",
+      "searchable PDF converter free",
+      "Google Drive OCR PDF free",
+      "PDF text recognition free",
+      "make PDF searchable without Adobe",
+      "OCR PDF iPhone free",
+      "OCR PDF Android free",
+      "OCR PDF Mac free",
+      "free PDF OCR tool online",
+      "convert PDF image to text free"
+    ],
+    excerpt: "Learn how to make any scanned or image-based PDF fully searchable for free in 2026 — convert scanned PDFs to selectable, searchable text on Windows, Mac, iPhone and Android.",
+    category: "PDF Tutorials",
+    author: "Daniel Park",
+    date: "July 25, 2026",
+    readTime: "9 min read",
+    cover: "/make-pdf-searchable-free.png.png",
+    content: `A scanned PDF looks exactly like a normal document on screen, but there is a crucial difference that makes it significantly less useful: you cannot search for words in it, select and copy text from it, or have a screen reader read it aloud. Every page is stored as a photograph of the text rather than as actual text characters.
+
+Making a PDF searchable means running it through OCR — Optical Character Recognition — which analyses the images of text in your scanned pages and converts them into real, selectable, searchable text characters. Once a PDF is searchable, you can press Ctrl + F to find any word instantly, copy and paste paragraphs into other documents, and use assistive technology to read the content aloud.
+
+This complete guide explains every free method to make a PDF searchable in 2026 on Windows, Mac, iPhone, iPad, and Android — without paying for Adobe Acrobat or any other premium software.
+
+## Why Scanned PDFs Are Not Searchable
+
+When you scan a paper document or photograph it with your phone, the resulting PDF stores each page as a raster image — a grid of coloured pixels that happens to look like text. From the PDF's perspective, there is no difference between a page of typed text and a photograph of a tree: both are just collections of pixels.
+
+PDF viewers like Adobe Acrobat Reader display these pixel images correctly on screen, so the document looks normal. But when you press Ctrl + F to search, the viewer has no text to search through — only pixels. The same is true for copy and paste: there are no text characters in the file to copy, only an image of what text looks like.
+
+OCR solves this by using pattern recognition to identify which pixel patterns correspond to which letters and words, then creating a hidden text layer in the PDF that sits over the original image. The document still looks the same visually, but now contains actual text that can be searched, copied, and read by assistive technology.
+
+## Method 1 — Make PDF Searchable Using Google Drive OCR (Free, No Software)
+
+Google Drive includes built-in OCR that can make scanned PDFs searchable for free. This method works on any device with a browser and requires only a free Google account.
+
+Go to Google Drive at drive.google.com and upload your scanned PDF by clicking the New button and choosing File upload. Wait for the upload to complete. Right-click the uploaded PDF file. Choose Open with and then Google Docs.
+
+Google Drive automatically runs OCR on the scanned pages as it converts the PDF to a Google Docs document. This process may take a few seconds to a few minutes depending on the number of pages and the complexity of the document.
+
+Once opened in Google Docs, the document contains actual searchable text extracted from your scanned pages. You can search within it using Ctrl + F, copy and paste text, and edit the content. To save it as a searchable PDF, go to File then Download then PDF Document. The downloaded PDF contains both the original scanned images and the OCR text layer, making it fully searchable.
+
+This method is completely free, works without installing any software, and handles most common document types accurately. The OCR quality is good for clearly printed documents in English and most major languages. Handwritten text and unusual fonts may require manual correction.
+
+After making your PDF searchable, if the file size is larger than you need, use our [Compress PDF](/tools/compress-pdf) tool to reduce it while keeping the searchable text layer intact.
+
+[[cta:compress-pdf|Compress your searchable PDF — free]]
+
+## Method 2 — Make PDF Searchable on Mac Using Preview (Built-in OCR)
+
+Mac users running macOS Sequoia (15) or later have built-in text recognition in the Preview app that can make scanned PDFs searchable without any additional software or internet connection.
+
+Open the scanned PDF in Preview. Go to Tools in the menu bar. Look for a Recognize Text option or similar language depending on your macOS version. Click it to run text recognition on the document. Preview processes each page and adds a searchable text layer.
+
+Once complete, you can press Command + F to search for text, select and copy paragraphs, and the document is saved as a searchable PDF automatically.
+
+For Mac users running older versions of macOS that do not include text recognition in Preview, the Google Drive method (Method 1) works identically in Safari and is completely free.
+
+## Method 3 — Make PDF Searchable Using Microsoft Word (Windows and Mac)
+
+Microsoft Word can open PDF files and, in the process, runs OCR on scanned content — converting image-based pages to editable text. If you have Microsoft Word installed, this is the fastest free method that does not require an internet connection.
+
+Open Microsoft Word. Go to File then Open and select your scanned PDF. Word displays a notice that it is converting the PDF and that scanned content will be processed with OCR. Click OK. Word converts each scanned page to editable text using its built-in OCR engine.
+
+Review the converted document and correct any OCR errors — pay particular attention to numbers, punctuation, and unusual characters, which are the most likely to be misrecognised.
+
+When the document looks correct, go to File then Save As and choose PDF format. The saved PDF is fully searchable because it was rebuilt from the OCR-extracted text.
+
+To edit the searchable content further or use it in another document, use our [PDF to Word](/tools/pdf-to-word) tool to convert it back to an editable Word format at any time.
+
+[[cta:pdf-to-word|Convert searchable PDF to editable Word — free]]
+
+## Method 4 — Make PDF Searchable Using Adobe Acrobat Reader (Free Version)
+
+The free version of Adobe Acrobat Reader includes a basic text recognition feature for making scanned PDFs searchable. Download Adobe Acrobat Reader (the free version, not Acrobat Pro) from Adobe's website.
+
+Open your scanned PDF in Acrobat Reader. Go to Edit in the menu bar and look for Recognize Text or Make Searchable option. In some versions of Reader this appears when you try to select text in a scanned document — a banner appears offering to make the document searchable. Follow the prompts to run OCR.
+
+Note that the free Acrobat Reader's OCR capabilities are more limited than the paid Acrobat Pro. For most standard typed documents, the free version produces acceptable results. For complex layouts with multiple columns, tables, or unusual fonts, you may get better results with the Google Drive method.
+
+## Method 5 — Make PDF Searchable on iPhone and iPad
+
+iPhone and iPad running iOS 16 or later include Live Text, a system-wide OCR feature that can recognise text in images and PDFs. While Live Text does not create a permanently searchable PDF file, it allows you to select and copy text from scanned PDFs directly in the Files app or Preview.
+
+Open your scanned PDF in the Files app. Tap and hold on any text in the PDF — if Live Text recognises it, a selection handle appears around the text, allowing you to copy it. This works for extracting specific text from scanned documents without needing to process the entire file.
+
+For creating a permanently searchable PDF on iPhone, use the Google Drive method. Open Safari, go to drive.google.com, upload your PDF, open it with Google Docs, and download it as a searchable PDF. This works identically to the desktop process on iPhone and iPad.
+
+## Method 6 — Make PDF Searchable on Android
+
+Android users can use Google Drive's OCR through Chrome for Android using the same process as on desktop. Open Chrome, go to drive.google.com, upload your scanned PDF, right-tap (long press) the file, choose Open with Google Docs, and download the result as a searchable PDF.
+
+Alternatively, the Google Docs app on Android supports opening PDFs from Google Drive with OCR — tap the three-dot menu on any uploaded PDF and choose Open with Google Docs.
+
+## How to Check if a PDF Is Already Searchable
+
+Before running OCR on a PDF, check whether it is already searchable by pressing Ctrl + F (Windows) or Command + F (Mac) in your PDF viewer and searching for a word you can see on the page. If the viewer highlights the word, the PDF is already searchable. If the search returns no results, the PDF is image-based and needs OCR.
+
+On iPhone, try to select text in the PDF by tapping and holding on a word. If a selection cursor appears, the PDF is searchable. If nothing happens, it is image-based.
+
+## Improving OCR Accuracy
+
+The accuracy of OCR text recognition depends heavily on the quality of the original scanned document. For the best results from any free OCR method, ensure your scanned pages are clear and well-lit with no shadows across the text. Text should be horizontal on the page — tilted or rotated text significantly reduces accuracy. Use scans at 300 DPI or higher for best results with complex layouts. Black text on white or light-coloured backgrounds recognises far more accurately than light text on dark backgrounds.
+
+If your scanned PDF has incorrectly rotated pages — a common issue with phone camera scans — fix the rotation before running OCR using our [Rotate PDF](/tools/rotate-pdf) tool. Correct orientation significantly improves recognition accuracy.
+
+[[cta:rotate-pdf|Fix PDF page rotation before OCR — free]]
+
+## What to Do with a Searchable PDF
+
+Once your PDF is searchable, you have significantly more options for working with it. You can search for any word or phrase using Ctrl + F and jump directly to its location. You can select and copy paragraphs of text to paste into emails, documents, or notes. Screen readers and assistive technology can read the document aloud. You can use our [PDF to Word](/tools/pdf-to-word) tool to convert the searchable PDF to a fully editable Word document for making changes to the content.
+
+To combine your newly searchable PDF with other documents, use our [Merge PDF](/tools/merge-pdf) tool to join them into one organised file.
+
+[[cta:merge-pdf|Merge your searchable PDF with other documents]]
+
+If the searchable PDF is large — which often happens because it contains both the original scan images and the added text layer — reduce its size using our [Compress PDF](/tools/compress-pdf) tool before sharing or archiving.
+
+## Frequently Asked Questions
+
+**How do I make a scanned PDF searchable for free?**
+Upload your scanned PDF to Google Drive and open it with Google Docs. Google automatically runs OCR on the pages. Download the result as a PDF. The downloaded file is fully searchable with no cost and no software installation required.
+
+**Why can't I search for text in my PDF?**
+Your PDF is image-based — each page is stored as a photograph of text rather than actual text characters. You need to run OCR on it to add a searchable text layer. Use Google Drive (free) or Microsoft Word to convert it.
+
+**Can I make a PDF searchable on iPhone without an app?**
+Yes. Open Safari, go to Google Drive, upload your PDF, open it with Google Docs, and download it as a PDF. The entire process works in Safari without any app download.
+
+**How accurate is free OCR for making PDFs searchable?**
+For clearly printed typed documents in standard fonts, free OCR tools like Google Drive achieve very high accuracy. Handwritten text, unusual fonts, very small text, and poor-quality scans result in more errors that need manual correction.
+
+**Will making a PDF searchable change how it looks?**
+No. OCR adds a hidden text layer to the document without changing its visual appearance. The PDF looks identical to the original scan.
+
+**Can I make a password-protected PDF searchable?**
+You need to remove the password protection before running OCR. Enter the password to open the PDF, then process it with your chosen OCR method.
+
+[[cta:tools|Try all free PDF tools — SmartPDFMasters]]`,
+  },
+  {
+    slug: "how-to-reduce-pdf-size-on-mac-free",
+    title: "How to Reduce PDF Size on Mac Free — Complete Guide 2026",
+    metaTitle: "How to Reduce PDF Size on Mac Free 2026 — 6 Methods That Actually Work",
+    metaDescription: "Learn how to reduce PDF file size on Mac for free in 2026. Six proven methods using Preview, Quartz filters, Automator, and free online tools — no Adobe Acrobat needed.",
+    keywords: [
+      "reduce PDF size on Mac free",
+      "how to reduce PDF size Mac",
+      "compress PDF Mac free 2026",
+      "make PDF smaller Mac free",
+      "reduce PDF file size Mac without Adobe",
+      "Preview reduce PDF size Mac",
+      "Quartz filter reduce PDF size Mac",
+      "compress PDF Mac Preview free",
+      "shrink PDF Mac free online",
+      "PDF size reducer Mac 2026",
+      "reduce PDF MB Mac free",
+      "make PDF smaller Mac without software",
+      "compress PDF Safari Mac free",
+      "reduce PDF size Mac email",
+      "PDF compressor Mac free download",
+      "how to compress PDF Mac 2026",
+      "small PDF Mac free",
+      "reduce large PDF Mac free",
+      "PDF file too large Mac fix free",
+      "compress PDF Mac Monterey Ventura Sonoma free"
+    ],
+    excerpt: "Learn how to reduce PDF file size on Mac for free in 2026 — six proven methods using Preview, Quartz filters, Automator, and free online tools without needing Adobe Acrobat.",
+    category: "PDF Tutorials",
+    author: "Layla Hassan",
+    date: "July 25, 2026",
+    readTime: "8 min read",
+    cover: "/reduce-pdf-size-mac-free.png.png",
+    content: `Mac users have more built-in options for reducing PDF file size than any other platform — Preview, Quartz filters, Automator, and ColorSync Utility are all available on every Mac without downloading anything. But the results from these built-in tools vary significantly, and knowing which method works best for which type of PDF makes the difference between a dramatically smaller file and one that is barely changed.
+
+This complete guide covers every free method to reduce PDF size on Mac in 2026 — from the simplest one-click Preview export to advanced Automator workflows — and explains exactly when to use each one for the best results.
+
+## Why Your PDF Is Large on Mac
+
+Before choosing a compression method, it helps to understand what is making your specific PDF large. The right method depends on the cause.
+
+**PDFs exported from Keynote or PowerPoint** are often large because presentation slides contain full-resolution images, decorative backgrounds, and embedded fonts. Compression works very well on these because the images have significant redundant data.
+
+**PDFs created from scanned paper documents** are large because each page is stored as a high-resolution photograph. These compress well with image resampling but the text may not be selectable.
+
+**PDFs exported from Pages, Word, or Google Docs** with many embedded images or revision history can be reduced significantly by re-exporting with lower quality settings or by removing the tracked changes before exporting.
+
+**PDFs downloaded from the web** may already be optimised, in which case further compression produces minimal size reduction without quality trade-offs.
+
+## Method 1 — Reduce PDF Size on Mac Using Preview (Quickest Built-in Method)
+
+Preview is the fastest starting point for reducing PDF size on Mac. While its compression capabilities are limited compared to dedicated tools, it is instant and requires no downloads.
+
+Open your PDF in Preview. Go to File in the menu bar and choose Export as PDF. In the export dialog that appears, click the Quartz Filter dropdown menu. Select Reduce File Size. Choose where to save the file and click Save.
+
+The result is a smaller PDF. The Preview Reduce File Size filter aggressively resamples images to 72 DPI — adequate for screen viewing but not suitable for professional printing. Text remains sharp.
+
+The main limitation of Preview's Reduce File Size filter is that it applies the same aggressive image reduction regardless of the original document type. For some PDFs — particularly those with many images — this produces noticeably lower quality output. For text-heavy documents, the quality difference is imperceptible.
+
+After using Preview to compress, if the result is still larger than you need, combine it with our online [Compress PDF](/tools/compress-pdf) tool for additional reduction.
+
+[[cta:compress-pdf|Compress further with our free online tool]]
+
+## Method 2 — Reduce PDF Size on Mac Using a Custom Quartz Filter (Better Quality)
+
+Preview's default Reduce File Size filter is very aggressive. You can create a custom Quartz filter that resamples images to 150 DPI rather than 72 DPI — producing a much better balance between file size reduction and image quality.
+
+Open ColorSync Utility (find it using Spotlight — press Command + Space and type ColorSync). Click the Filters tab. Click the Add button (plus sign) at the bottom left to create a new filter. Name it something like PDF 150 DPI Compress. In the filter settings, add an Image Sampling component. Set the compression to JPEG. Set the quality to Medium. Set the resolution to 150 DPI. Save the filter.
+
+Now when you use Preview's Export as PDF option, your new custom filter appears in the Quartz Filter dropdown. Select it instead of the default Reduce File Size filter for better quality output at a still significantly smaller file size.
+
+This method produces excellent results for most PDFs and is appropriate for documents that will be printed at standard office quality or shared professionally.
+
+## Method 3 — Reduce PDF Size on Mac Using Automator (Batch Processing)
+
+If you regularly need to compress many PDF files on Mac, Automator lets you create a workflow that processes multiple PDFs at once — much more efficient than compressing files one by one in Preview.
+
+Open Automator (find it in your Applications folder or using Spotlight). Choose Quick Action or Workflow as the document type. In the search bar, type PDF. Find the action called Apply Quartz Filter to PDF Documents and drag it into your workflow. In the action settings, choose your preferred Quartz filter — either the built-in Reduce File Size or a custom filter you created in ColorSync.
+
+Add a Move Finder Items action afterward to specify where the compressed files should be saved — otherwise Automator overwrites the originals.
+
+Save the workflow. You can now drag multiple PDF files onto your workflow to compress them all at once. In Finder, right-click selected PDF files, choose Quick Actions, and your Automator workflow appears in the list.
+
+## Method 4 — Reduce PDF Size on Mac Using Safari and Our Compress PDF Tool (Best Quality Control)
+
+For the most control over compression quality — choosing between light, medium, and maximum compression — use our [Compress PDF](/tools/compress-pdf) tool directly in Safari on your Mac.
+
+Open Safari and go to smartpdfmasters.com. Click the Compress PDF tool. Drag your PDF from Finder onto the upload area, or click to browse. Select your compression level — Recommended for the best balance, Maximum for the smallest possible file. Click Compress and wait a few seconds. Download the compressed PDF.
+
+This method gives you three distinct quality levels and processes your file in the browser without uploading to any server. For most PDFs, it achieves 50 to 80 percent size reduction while keeping text perfectly sharp and images clear for screen viewing and standard printing.
+
+[[cta:compress-pdf|Compress PDF on Mac — free in Safari]]
+
+This is the recommended method when you need reliable, predictable compression results and want control over the output quality.
+
+## Method 5 — Re-export from the Original Application (Best Results for Presentations and Designs)
+
+If you still have the original Keynote, Pages, Word, or design file that you exported to PDF, re-exporting with lower image quality settings almost always produces a smaller PDF than compressing an already-exported file.
+
+**From Keynote:** Go to File then Export To then PDF. In the export options, choose the Image Quality setting — choose Good rather than Best for a significantly smaller file that still looks excellent on screen.
+
+**From Pages:** Go to File then Export To then PDF. Click the Image Quality dropdown and choose Good or Better rather than Best.
+
+**From Microsoft Word on Mac:** Go to File then Save As, choose PDF, and click Options. Look for image quality settings and reduce from High to Standard.
+
+**From Google Docs in Chrome:** Go to File then Download then PDF Document. Google automatically uses moderate image quality that produces reasonably sized files.
+
+Re-exporting from the source typically produces 30 to 60 percent smaller files than compressing an already-exported PDF, because you are controlling image quality at the source rather than resampling images that have already been embedded.
+
+## Method 6 — Remove Unnecessary Content Before Compressing (For Documents from Word Processors)
+
+If your PDF was created from a Word or Pages document that went through multiple editing sessions, it may contain hidden content that inflates the file size — tracked changes, comments, revision history, attached notes, and embedded document previews.
+
+Use our [PDF to Word](/tools/pdf-to-word) tool to convert the PDF back to a Word document. Open the resulting DOCX in Microsoft Word for Mac. Go to the Review tab and Accept All Changes to remove tracked changes. Delete all comments. Remove any attached notes or annotations. Go to File then Save As and export as a fresh PDF with standard quality settings.
+
+[[cta:pdf-to-word|Convert PDF to Word to remove hidden content]]
+
+The clean re-export strips out all accumulated hidden data. The result is often dramatically smaller than the original PDF without any visible change to the document content.
+
+## Comparing the Methods — When to Use Each One
+
+For a quick reduction with no setup required: use Method 1 (Preview Reduce File Size filter). Acceptable for casual use where image quality is not important.
+
+For better quality reduction with no setup required: use Method 4 (our Compress PDF tool in Safari). Best for most situations — gives you quality control and reliable results.
+
+For high-volume batch compression: use Method 3 (Automator workflow). Set it up once and compress many files at once without manual effort.
+
+For presentation and design PDFs: use Method 5 (re-export from source). Re-exporting Keynote or design files with lower image quality always outperforms post-export compression.
+
+For documents with tracked changes and revision history: use Method 6 (convert to Word, clean, re-export). The only way to remove hidden content bloat.
+
+## What to Do After Reducing PDF Size on Mac
+
+Once you have a smaller PDF, you can share it by email — most compressed PDFs of standard business documents are well under Gmail's 25MB and Outlook's 20MB attachment limits. You can upload it to university portals, government submission systems, or job application platforms that impose file size limits. You can archive the compressed version in iCloud Drive or an external drive to save storage space.
+
+If you need to combine your compressed PDF with other documents, use our [Merge PDF](/tools/merge-pdf) tool to join them into one file.
+
+[[cta:merge-pdf|Merge compressed PDFs on Mac — free]]
+
+If you need to extract specific pages from a large PDF before or after compressing, use our [Split PDF](/tools/split-pdf) tool to divide the document into smaller sections.
+
+[[cta:tools|Try all free PDF tools on Mac — SmartPDFMasters]]
+
+## Frequently Asked Questions
+
+**How do I reduce PDF size on Mac for free without Adobe Acrobat?**
+Use Preview's built-in Export as PDF function with the Reduce File Size Quartz filter — go to File then Export as PDF and choose Reduce File Size from the Quartz Filter dropdown. For better quality control, use our free Compress PDF tool in Safari.
+
+**Why does Preview's Reduce File Size make my PDF blurry?**
+Preview's default Reduce File Size filter resamples images to 72 DPI, which is very aggressive. Create a custom Quartz filter in ColorSync Utility set to 150 DPI for significantly better image quality while still reducing file size substantially.
+
+**How do I reduce PDF size on Mac without losing quality?**
+Use our [Compress PDF](/tools/compress-pdf) tool in Safari with the Recommended compression level. Text remains perfectly sharp at all compression levels because it is stored as vectors. Images are resampled to screen resolution, which is indistinguishable from the original when viewed on screen.
+
+**How do I reduce PDF size on Mac Monterey, Ventura, or Sonoma?**
+All methods in this guide work on macOS Monterey (12), Ventura (13), and Sonoma (14). Preview, ColorSync Utility, and Automator are available on all these versions. Our online Compress PDF tool works in Safari on all Mac versions.
+
+**How do I reduce a large Keynote PDF on Mac?**
+Re-export from Keynote directly rather than compressing the already-exported PDF. Go to File then Export To then PDF and choose Good rather than Best for image quality. This produces much smaller files than compressing an exported PDF.
+
+**Can I compress multiple PDFs at once on Mac?**
+Yes. Create an Automator workflow using the Apply Quartz Filter to PDF Documents action. Once set up, you can compress many PDFs simultaneously by selecting them in Finder and running the workflow through Quick Actions.
+
+[[cta:compress-pdf|Reduce your PDF size on Mac now — free]]`,
+  },
 ];
 
 export const blogCategories = [
