@@ -115,12 +115,19 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
-        {/* Monetag Multitag */}
         <script
-          src="https://quge5.com/88/tag.min.js"
-          data-zone="263284"
-          async={true}
-          data-cfasync="false"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                var s = document.createElement('script');
+                s.src = 'https://quge5.com/88/tag.min.js';
+                s.async = true;
+                s.setAttribute('data-zone', '263284');
+                s.setAttribute('data-cfasync', 'false');
+                document.head.appendChild(s);
+              })();
+            `
+          }}
         />
       </head>
       <body>
