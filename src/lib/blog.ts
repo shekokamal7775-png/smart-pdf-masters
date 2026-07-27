@@ -4488,6 +4488,315 @@ Yes. Create an Automator workflow using the Apply Quartz Filter to PDF Documents
 
 [[cta:compress-pdf|Reduce your PDF size on Mac now — free]]`,
   },
+{
+    slug: "how-to-extract-text-from-pdf-free",
+    title: "How to Extract Text from PDF Free — Copy Text from Any PDF Instantly",
+    metaTitle: "How to Extract Text from PDF Free 2026 — Copy Text from Any PDF Instantly",
+    metaDescription: "Learn how to extract text from any PDF file free in 2026. Copy text from scanned PDFs, locked PDFs, and image-based PDFs on Windows, Mac, iPhone and Android — no software needed.",
+    keywords: [
+      "extract text from PDF free",
+      "copy text from PDF free",
+      "how to extract text from PDF",
+      "PDF text extractor free online",
+      "copy text from scanned PDF free",
+      "extract text from image PDF",
+      "PDF to text free online",
+      "copy text locked PDF free",
+      "extract text PDF iPhone free",
+      "extract text PDF Android free",
+      "PDF text extraction tool free",
+      "how to copy text from PDF",
+      "extract text from PDF without software",
+      "PDF to text converter free",
+      "copy paste PDF text free online",
+      "extract text scanned PDF OCR free",
+      "PDF text grabber free",
+      "extract all text PDF free",
+      "copy text from PDF Mac free",
+      "PDF content extractor free"
+    ],
+    excerpt: "Learn how to extract and copy text from any PDF file free in 2026 — including scanned PDFs, locked PDFs, and image-based PDFs on Windows, Mac, iPhone and Android.",
+    category: "PDF Tutorials",
+    author: "Daniel Park",
+    date: "July 26, 2026",
+    readTime: "8 min read",
+    cover: "/extract-text-from-pdf-free.png.png",
+    content: `Extracting text from a PDF is one of the most fundamental document tasks — copying a paragraph to paste into an email, pulling data from a table, grabbing a quote from a research paper, or extracting all the text from a document to reuse in another format. But PDFs are designed to preserve layout rather than make text easily accessible, and depending on how the PDF was created, extracting text ranges from trivial to genuinely challenging.
+
+This complete guide explains every free method to extract text from any PDF in 2026 — from simple copy-paste for digital PDFs to OCR-based extraction for scanned documents — on Windows, Mac, iPhone, iPad, and Android.
+
+## Why Extracting Text from PDFs Is Sometimes Difficult
+
+Not all PDFs are the same. The method that works perfectly for one PDF may produce garbled output for another. Understanding the three main types of PDFs helps you choose the right extraction method immediately.
+
+**Digitally created PDFs** were generated directly from a word processor, spreadsheet, or design application — never printed or scanned. These PDFs contain actual text characters stored in the file, and text can be selected and copied directly in any PDF viewer.
+
+**Scanned PDFs** were created by scanning or photographing a paper document. Each page is stored as an image with no text layer. Text cannot be selected or copied without first running OCR on the document.
+
+**Restricted PDFs** are digitally created documents with permissions settings that prevent selecting, copying, or extracting text. The text exists in the file but the PDF viewer is instructed not to allow copying.
+
+## Method 1 — Extract Text by Selecting and Copying (Digitally Created PDFs)
+
+For digitally created PDFs, the simplest and fastest extraction method is to select the text with your cursor and copy it.
+
+Open the PDF in any PDF viewer — Adobe Acrobat Reader, Chrome, Preview on Mac, or the Files app on iPhone. Click at the beginning of the text you want to extract. Hold Shift and click at the end of the selection to select a range of text. Press Ctrl + C (Windows) or Command + C (Mac) to copy. Paste into any text editor, email, or document with Ctrl + V or Command + V.
+
+To select all text in the document at once, press Ctrl + A (Windows) or Command + A (Mac) while the PDF is open, then copy.
+
+This method works instantly for any PDF where the text layer is accessible. If the text does not highlight when you click and drag, the PDF is either scanned or has copy restrictions.
+
+If you need the extracted text in a fully formatted editable document rather than plain text, use our [PDF to Word](/tools/pdf-to-word) tool to convert the entire PDF to an editable DOCX file that preserves formatting, tables, and layout.
+
+[[cta:pdf-to-word|Convert PDF to editable Word — free]]
+
+## Method 2 — Extract Text from Scanned PDFs Using Google Drive OCR (Free)
+
+For scanned PDFs where text cannot be selected directly, Google Drive's built-in OCR can extract the text for free without installing any software.
+
+Go to Google Drive at drive.google.com and upload your scanned PDF by clicking New then File upload. Once uploaded, right-click the file and choose Open with Google Docs. Google Docs runs OCR automatically and opens the document with the extracted text alongside the original images. You can now select, copy, and edit all the text that was recognised from your scanned pages.
+
+For the best OCR accuracy, ensure your scanned PDF was scanned at 300 DPI or higher with clear, even lighting and no shadows over the text. Google Drive OCR handles English and most major European languages very accurately. Handwritten text and unusual fonts produce more errors.
+
+After extracting text via Google Docs, if you need to work with the content as a proper Word document, download it as DOCX using File then Download then Microsoft Word.
+
+## Method 3 — Extract Text on Mac Using Preview (Built-in)
+
+Mac's Preview app can extract text from digitally created PDFs directly. For scanned PDFs on macOS Sequoia or later, Preview also includes text recognition.
+
+Open the PDF in Preview. For text selection in digital PDFs, choose the Text Selection tool from the toolbar (it looks like a cursor with lines). Click and drag to select text, then copy and paste.
+
+For scanned PDFs on macOS Sequoia, go to Tools then Recognize Text. Preview processes the pages and adds a text layer, after which you can select and copy the recognised text.
+
+To extract all text quickly, press Command + A to select everything, then Command + C to copy all text at once.
+
+## Method 4 — Extract Text from Restricted PDFs (Permissions Workaround)
+
+If a PDF has permissions restrictions that prevent text selection and copying, you can often work around this by printing the PDF to a new file, which creates a fresh copy without the inherited restrictions.
+
+Open the restricted PDF in Google Chrome — you should be able to view it even if you cannot copy from it. Press Ctrl + P (Windows) or Command + P (Mac). Select Save as PDF from the printer dropdown. Save the new file. Open the new file in any PDF viewer — the copy restrictions from the original are not inherited by the printed copy, so you can now select and copy text normally.
+
+After removing restrictions, use our [PDF to Word](/tools/pdf-to-word) tool to convert the unrestricted document to a fully editable Word file for easier text extraction and editing.
+
+## Method 5 — Extract Text on iPhone Using Live Text
+
+iPhone and iPad running iOS 16 or later include Live Text, which can recognise and extract text from PDFs directly in the Files app.
+
+Open your PDF in the Files app. Tap and hold on any text in the document. Live Text recognises the text and displays selection handles, allowing you to copy specific words, sentences, or paragraphs. Tap Copy to copy the selected text to your clipboard.
+
+For extracting large amounts of text from a scanned PDF on iPhone, the Google Drive method works identically in Safari — upload the PDF to drive.google.com, open it with Google Docs, and copy the extracted text.
+
+## Method 6 — Extract Text on Android Using Google Drive
+
+Android users can extract text from PDFs — both digital and scanned — using Google Drive and Google Docs.
+
+Open the Google Drive app and upload your PDF. Tap the three-dot menu on the uploaded file and choose Open with Google Docs. Google Docs runs OCR if needed and presents the text in editable form. Select and copy the text you need, or download the document as DOCX for full editing.
+
+Alternatively, open the PDF in Chrome for Android — for digitally created PDFs, long-press on text to start selection, then copy and paste as needed.
+
+## How to Extract All Text from a Multi-Page PDF
+
+For extracting all text from a long PDF document at once, the most efficient free method is to use our [PDF to Word](/tools/pdf-to-word) tool. This converts the entire PDF to an editable Word document, giving you access to all the text in a structured, easily searchable format.
+
+[[cta:pdf-to-word|Extract all text by converting PDF to Word — free]]
+
+After conversion, open the DOCX file in Microsoft Word or Google Docs. Press Ctrl + A to select all text, then Ctrl + C to copy, or use Find and Replace to locate specific terms throughout the document.
+
+## How to Extract Text from a Specific Page
+
+To extract text from only one or a few specific pages of a large PDF, first extract those pages as a separate file using our [Split PDF](/tools/split-pdf) tool, then use any of the text extraction methods above on the smaller file.
+
+[[cta:tools|Split PDF to extract specific pages — SmartPDFMasters]]
+
+## How to Extract Data from PDF Tables
+
+PDF tables are particularly challenging to extract accurately because the table structure — rows, columns, and cell boundaries — is not stored as structured data in the PDF. It is created visually from lines and positioned text.
+
+For extracting table data to use in Excel or Google Sheets, the most reliable free method is to convert the PDF to Word using our [PDF to Word](/tools/pdf-to-word) tool, then copy the table from Word and paste it into Excel, which recognises the table structure and organises the data into rows and columns automatically.
+
+## Frequently Asked Questions
+
+**How do I extract text from a PDF for free?**
+For digital PDFs, open in any PDF viewer and select text then copy. For scanned PDFs, upload to Google Drive and open with Google Docs to run free OCR. For the most complete extraction with formatting preserved, use our PDF to Word tool.
+
+**Why can't I copy text from my PDF?**
+Either the PDF is scanned (contains images of text rather than actual text characters) or it has permissions restrictions preventing copying. Use Google Drive OCR for scanned PDFs, and Chrome's print-to-PDF method to remove permissions restrictions.
+
+**How do I extract text from a scanned PDF for free?**
+Upload to Google Drive and open with Google Docs — it runs OCR automatically and makes the text copyable. Alternatively, use our PDF to Word tool which includes OCR support.
+
+**Can I extract text from a PDF on iPhone for free?**
+Yes. Use Live Text by tapping and holding on text in the Files app. For scanned PDFs, upload to Google Drive in Safari and open with Google Docs to extract text via OCR.
+
+**How do I extract data from a PDF table?**
+Use our PDF to Word tool to convert the PDF, then copy the table from Word and paste into Excel. Excel recognises the table structure and organises data into rows and columns.
+
+[[cta:tools|Try all free PDF tools — SmartPDFMasters]]`,
+  },
+  {
+    slug: "how-to-annotate-pdf-free",
+    title: "How to Annotate a PDF Free — Highlight, Comment and Mark Up PDFs",
+    metaTitle: "How to Annotate a PDF Free 2026 — Highlight, Comment & Mark Up Any PDF",
+    metaDescription: "Learn how to annotate a PDF for free in 2026. Add highlights, comments, sticky notes, drawings and text boxes to any PDF on Windows, Mac, iPhone, iPad and Android — no software needed.",
+    keywords: [
+      "annotate PDF free",
+      "how to annotate PDF",
+      "highlight PDF free online",
+      "add comments to PDF free",
+      "PDF annotation tool free 2026",
+      "annotate PDF iPhone free",
+      "annotate PDF Android free",
+      "annotate PDF Mac free",
+      "annotate PDF Windows free",
+      "PDF highlighter free online",
+      "add sticky notes to PDF free",
+      "PDF markup tool free",
+      "draw on PDF free",
+      "underline text in PDF free",
+      "PDF comment tool free online",
+      "annotate PDF without Adobe free",
+      "PDF annotator free no signup",
+      "review PDF free online",
+      "markup PDF free 2026",
+      "annotate scanned PDF free"
+    ],
+    excerpt: "Learn how to annotate any PDF for free in 2026 — add highlights, comments, sticky notes, drawings and text boxes on Windows, Mac, iPhone, iPad and Android without Adobe.",
+    category: "Productivity Tips",
+    author: "Sara Khalil",
+    date: "July 26, 2026",
+    readTime: "9 min read",
+    cover: "/annotate-pdf-free.png.png",
+    content: `Annotating PDFs is essential for students reviewing research papers, professionals marking up contracts, teachers providing feedback on assignments, and anyone who needs to record their thoughts, corrections, or questions directly on a document. In 2026, every major device includes built-in PDF annotation tools that are completely free — and third-party options add significant power without any cost.
+
+This complete guide covers every free method to annotate a PDF in 2026 — highlighting text, adding comments and sticky notes, drawing shapes and freehand marks, adding text boxes, and underlining — on Windows, Mac, iPhone, iPad, and Android.
+
+## What PDF Annotation Actually Means
+
+PDF annotation refers to any mark, note, or drawing added to a PDF document without changing the underlying content of the document itself. Annotations sit as a separate layer on top of the original PDF content — they can be removed or edited without affecting the text or images beneath them.
+
+Common types of PDF annotations include text highlights in yellow, green, pink, or blue, comments and sticky notes that display as speech bubbles or note icons, underlines and strikethroughs applied to text, freehand drawings made with a stylus or finger, shapes like rectangles, circles, and arrows, text boxes containing typed notes, and stamps or watermarks.
+
+Most PDF viewers save annotations directly into the PDF file so they are visible to anyone who opens the document, regardless of which application they use to view it.
+
+## Method 1 — Annotate PDF on iPhone and iPad (Built-in, No App Needed)
+
+iPhone and iPad have the most capable built-in PDF annotation tools of any platform — the Markup system is available in the Files app, Mail app, and through the Share menu in almost any application.
+
+Open your PDF in the Files app. Tap the pen tip icon in the top right corner of the screen to open Markup. The Markup toolbar appears at the bottom of the screen with tools for drawing, adding shapes, adding text, and highlighting.
+
+To highlight text: tap the Highlighter tool from the toolbar. Tap and drag across the text you want to highlight. The text is highlighted in yellow by default — tap the colour dot to change to other highlight colours.
+
+To add a comment: tap the plus button at the right end of the toolbar. Choose Text to add a typed text box, or choose Sticky Note to add a note that appears as a coloured square on the page.
+
+To draw freehand: choose a pen tool from the toolbar. Draw directly on the PDF with your finger or Apple Pencil. Adjust the line weight and colour using the toolbar options.
+
+To add shapes: tap the plus button and choose a shape — rectangle, circle, arrow, or speech bubble. Position and resize the shape on the page.
+
+When finished, tap Done to save all annotations into the PDF. The annotated PDF is saved in place and maintains all your marks when opened on any other device or platform.
+
+For Apple Pencil users on iPad, the Markup tools become significantly more powerful — you can write handwritten notes that are automatically converted to text, draw precisely, and annotate with the precision of a real pen.
+
+After annotating, if the file is large, use our [Compress PDF](/tools/compress-pdf) tool in Safari to reduce the file size before sharing.
+
+[[cta:compress-pdf|Compress your annotated PDF before sharing]]
+
+## Method 2 — Annotate PDF on Mac Using Preview (Built-in, Free)
+
+Mac's Preview app includes a full set of annotation tools that are built into the operating system and require no additional downloads.
+
+Open the PDF in Preview. Click the pen tip icon in the toolbar, or go to View then Show Markup Toolbar. The Markup Toolbar appears below the main toolbar with all annotation options.
+
+To highlight text: click the Highlight Text tool (looks like a highlighter). Click and drag across text to highlight it. Right-click a highlight to change its colour or add a note to it.
+
+To add a note: click the Note tool (speech bubble icon). Click anywhere on the page to add a sticky note. Type your comment in the note window that appears.
+
+To underline or strikethrough: select text using the text selection tool. Right-click and choose from the annotation options — highlight, underline, or strikethrough.
+
+To draw shapes: click the Shapes button in the Markup Toolbar. Choose from rectangle, oval, line, arrow, speech bubble, or other shapes. Click and drag on the page to draw the shape. Resize and reposition as needed.
+
+To add a text box: click the Text tool (large T icon). Click anywhere on the page and type your annotation. Adjust font, size, and colour in the text formatting toolbar.
+
+All annotations are saved automatically when you close Preview. To save an explicitly new version with annotations embedded for sharing, go to File then Export as PDF.
+
+## Method 3 — Annotate PDF on Windows Using Microsoft Edge (Built-in, Free)
+
+Windows 10 and Windows 11 include annotation tools built into Microsoft Edge, which is the default PDF viewer.
+
+Open your PDF in Microsoft Edge by right-clicking the file and choosing Open with then Microsoft Edge. The PDF toolbar appears at the top of the window with annotation tools.
+
+To draw on the PDF: click the Draw tool (pencil icon) in the toolbar. Choose your colour and line width. Draw directly on the PDF with your mouse. This tool is best for circling items or adding freehand marks.
+
+To add a text note: click the Add notes button (pencil with plus icon). Click anywhere on the page and type your annotation in the text box that appears.
+
+To highlight text: select the text you want to highlight using the mouse, then click the Highlight button that appears in the mini toolbar, or use the Highlight tool from the main toolbar.
+
+For more advanced annotation including sticky notes, strikethroughs, shapes, and stamps, Adobe Acrobat Reader (the free version) provides a more complete annotation toolkit.
+
+## Method 4 — Annotate PDF Using Adobe Acrobat Reader (Free Version, Windows and Mac)
+
+Adobe Acrobat Reader is the free version of Adobe's PDF software and includes a comprehensive annotation toolkit with more options than any other free desktop tool.
+
+Download Adobe Acrobat Reader (the free version) from Adobe's website. Open your PDF. Go to the Comment tool in the toolbar or use the Tools menu.
+
+The Comment panel gives you access to: sticky notes that appear as note icons on the page, text highlights in multiple colours, underlines and strikethroughs, drawing tools for freehand marks, shapes and lines, stamps for pre-defined annotations like Approved, Reviewed, or Confidential, and text boxes for typed annotations.
+
+All annotations are saved into the PDF file when you save. The free Acrobat Reader saves annotation files that open correctly in any other PDF viewer.
+
+## Method 5 — Annotate PDF on Android Using Adobe Acrobat Reader (Free)
+
+Android does not include a built-in PDF annotation tool comparable to iOS Markup or macOS Preview. The best free option is Adobe Acrobat Reader for Android, available free from the Google Play Store.
+
+Open your PDF in Acrobat Reader. Tap the pen icon to access annotation tools. Use the highlight tool to select and colour text, the note tool to add comments, and the draw tool to add freehand marks. Save the annotated PDF to your device.
+
+## Method 6 — Annotate PDF Online Free Using Browser-Based Tools
+
+Several free browser-based PDF annotation tools let you annotate PDFs without installing any software on any device — useful when you are on a device that does not have good built-in annotation support, or when you need more annotation types than the built-in tools provide.
+
+When choosing a browser-based annotation tool, look for one that processes files locally in your browser rather than uploading to a remote server, supports the annotation types you need, and does not add watermarks to the output PDF.
+
+After annotating online, you may need to compress the resulting PDF if the annotation layer has increased the file size. Use our [Compress PDF](/tools/compress-pdf) tool to reduce the size.
+
+## How to Share Annotated PDFs
+
+After annotating a PDF, sharing it is straightforward. The annotations are embedded in the file and visible to anyone who opens it in any PDF viewer. You can email it, share it through messaging apps, upload it to cloud storage, or send it through any standard file sharing method.
+
+If the annotated PDF is too large for email — annotations sometimes increase file size — use our [Compress PDF](/tools/compress-pdf) tool to reduce it before sending.
+
+[[cta:compress-pdf|Compress annotated PDF for sharing — free]]
+
+If you need to combine your annotated PDF with other documents, use our [Merge PDF](/tools/merge-pdf) tool.
+
+[[cta:merge-pdf|Merge annotated PDFs — free]]
+
+If you need to extract the text content from an annotated PDF to edit it in Word, use our [PDF to Word](/tools/pdf-to-word) tool — it extracts the document text while preserving most annotations.
+
+## How to Remove Annotations from a PDF
+
+If you want to share a clean version of an annotated PDF with all marks removed, open the PDF in Preview on Mac, select all annotations in the sidebar and delete them, then Export as PDF. In Adobe Acrobat Reader, go to Comment then select and delete individual annotations.
+
+For a quick method that removes all annotations at once, print the PDF to a new file using Chrome's print-to-PDF function — the printed output captures only the visual content of each page, removing the annotation layer entirely.
+
+## Frequently Asked Questions
+
+**How do I annotate a PDF for free?**
+On iPhone, use the built-in Markup tool in the Files app. On Mac, use Preview's Markup Toolbar. On Windows, use Microsoft Edge's built-in tools or the free Adobe Acrobat Reader. On Android, use the free Adobe Acrobat Reader app.
+
+**How do I highlight text in a PDF for free?**
+On iPhone, open in Files app, tap Markup, and use the Highlighter tool. On Mac, open in Preview, enable the Markup Toolbar, and use the Highlight Text tool. On Windows, open in Edge and use the Highlight tool from the toolbar.
+
+**Can I add comments to a PDF without Adobe Acrobat Pro?**
+Yes. The free Adobe Acrobat Reader, Preview on Mac, and iOS Markup all support adding comments and sticky notes to PDFs at no cost.
+
+**How do I annotate a PDF on iPhone without an app?**
+Open the PDF in the Files app and tap the pen tip icon to open the built-in Markup tool. No additional app download is required.
+
+**Do PDF annotations stay when I share the file?**
+Yes. Annotations are embedded in the PDF file and are visible to anyone who opens the document in any PDF viewer, on any device.
+
+**How do I annotate a scanned PDF?**
+Scanned PDFs can be annotated the same way as any PDF — the annotation tools draw over the scanned images. If you also need the scanned text to be searchable and selectable, first make the PDF searchable using Google Drive OCR, then annotate the resulting searchable PDF.
+
+[[cta:tools|Try all free PDF tools — SmartPDFMasters]]`,
+  }, 
 ];
 
 export const blogCategories = [
