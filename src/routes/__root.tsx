@@ -115,13 +115,11 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
-        {/* Monetag Multitag Zone 263284 */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){var s=document.createElement('script');s.src='https://quge5.com/88/tag.min.js';s.async=true;s.setAttribute('data-zone','263284');s.setAttribute('data-cfasync','false');document.head.appendChild(s);})();`
           }}
         />
-        {/* Monetag Zone 11427556 */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(s){s.dataset.zone='11427556',s.src='https://al5sm.com/tag.min.js'})([document.documentElement,document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`
