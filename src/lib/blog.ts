@@ -4796,7 +4796,303 @@ Yes. Annotations are embedded in the PDF file and are visible to anyone who open
 Scanned PDFs can be annotated the same way as any PDF — the annotation tools draw over the scanned images. If you also need the scanned text to be searchable and selectable, first make the PDF searchable using Google Drive OCR, then annotate the resulting searchable PDF.
 
 [[cta:tools|Try all free PDF tools — SmartPDFMasters]]`,
-  }, 
+  },
+ {
+    slug: "how-to-convert-word-to-pdf-free",
+    title: "How to Convert Word to PDF Free — Complete Guide 2026",
+    metaTitle: "How to Convert Word to PDF Free 2026 — Windows, Mac, iPhone & Android Guide",
+    metaDescription: "Learn how to convert Word documents to PDF free in 2026. Step-by-step guide for Windows, Mac, iPhone and Android — no software needed, instant results, no watermarks.",
+    keywords: [
+      "convert Word to PDF free",
+      "Word to PDF free online",
+      "how to convert Word to PDF",
+      "Word document to PDF free",
+      "DOCX to PDF free online",
+      "save Word as PDF free",
+      "Word to PDF converter free 2026",
+      "convert Word to PDF Windows free",
+      "convert Word to PDF Mac free",
+      "Word to PDF iPhone free",
+      "Word to PDF Android free",
+      "Microsoft Word save as PDF",
+      "Google Docs to PDF free",
+      "DOCX to PDF no watermark",
+      "Word to PDF no signup free",
+      "convert Word file to PDF free",
+      "best Word to PDF converter 2026",
+      "free Word PDF converter online",
+      "LibreOffice Word to PDF free",
+      "Word to PDF quality free"
+    ],
+    excerpt: "Learn how to convert any Word document to PDF free in 2026 — complete guide for Windows, Mac, iPhone and Android with no software installation and no watermarks.",
+    category: "File Conversion",
+    author: "Sara Khalil",
+    date: "July 28, 2026",
+    readTime: "7 min read",
+    cover: "/convert-word-to-pdf-free.png.png",
+    content: `Converting a Word document to PDF is one of the most common document tasks in the world — millions of people do it every day before sending a resume, submitting an assignment, sharing a contract, or delivering a finished report. PDF locks your formatting so the document looks identical on every device, while Word files can shift layout, fonts, and spacing depending on the software the recipient has installed.
+
+The good news is that converting Word to PDF is completely free in 2026 on every major platform — no software to buy, no watermarks, no file size limits. Every method in this guide is free and available right now on your device.
+
+## Why Convert Word to PDF?
+
+Word documents are editable by design — anyone who receives a DOCX file can change the content, accidentally or intentionally. Fonts that are not installed on the recipient's device are substituted automatically, often breaking carefully designed layouts. Tables shift. Margins change. A document that looks perfect on your screen can look completely different when the recipient opens it on their computer.
+
+PDF solves all of these problems. A PDF looks identical on every device and operating system — the same fonts, the same spacing, the same layout — whether opened on a Windows laptop, a Mac, an iPhone, or an Android phone. PDF is also the expected format for professional submissions: job applications, university assignments, legal documents, invoices, and contracts are almost always requested as PDFs.
+
+## Method 1 — Convert Word to PDF in Microsoft Word (Windows and Mac)
+
+Microsoft Word has built-in PDF export on both Windows and Mac — no additional software or internet connection required.
+
+**On Windows:** Open your Word document. Go to File in the menu bar. Choose Save As. In the format dropdown, select PDF. Choose where to save the file and click Save. Alternatively, go to File then Export then Create PDF/XPS Document. Click Publish to save the PDF.
+
+**On Mac:** Open your Word document. Go to File in the menu bar. Choose Save As. Click the Format dropdown at the bottom of the save dialog and select PDF. Click Save. Alternatively, press Command + P to open the print dialog and click the PDF button at the bottom left, then choose Save as PDF.
+
+**Quality tip:** In Word for Windows, when you choose File then Save As then PDF, click the Options button before saving. Make sure Standard (publishing online and printing) is selected rather than Minimum size. The Standard option preserves full image quality and produces a better PDF.
+
+If your converted PDF is larger than expected, use our [Compress PDF](/tools/compress-pdf) tool to reduce the file size before emailing or uploading.
+
+[[cta:compress-pdf|Compress your Word-to-PDF file — free]]
+
+## Method 2 — Convert Word to PDF Using Google Docs (Free, Any Device)
+
+Google Docs is one of the fastest free Word to PDF converters available — it works on any device with a browser and requires only a free Google account.
+
+Go to drive.google.com and upload your Word document by clicking New then File upload. Once uploaded, double-click the file to open it in Google Docs. Google Docs automatically converts the DOCX to its own format for editing. To save as PDF, go to File then Download then PDF Document. The PDF downloads immediately to your device.
+
+This method is particularly useful on devices that do not have Microsoft Word installed, including Chromebooks, older computers, and school or work computers where you cannot install software.
+
+**Important:** Google Docs may slightly reformat complex Word documents — particularly those with unusual fonts, precise table layouts, or heavy use of styles. Always check the downloaded PDF against your original Word file to ensure the layout is preserved correctly. For simple documents like letters, reports, and standard resumes, Google Docs conversion is accurate and reliable.
+
+## Method 3 — Convert Word to PDF on iPhone and iPad (Free)
+
+iPhone and iPad can convert Word documents to PDF directly without any app download.
+
+**Using the Files app:** If your Word document is saved in the Files app, tap and hold the file. Choose Quick Actions from the menu. Tap Create PDF. The Files app converts the Word document to PDF and saves it in the same folder automatically.
+
+**Using Microsoft Word for iPhone:** If you have the free Microsoft Word app installed, open your document. Tap the three-dot menu in the top right corner. Choose Export then Send a Copy. Select PDF as the format and tap OK. You can then save the PDF to Files or share it directly.
+
+**Using Google Docs on iPhone:** Open the Google Docs app, open your document, tap the three-dot menu, choose Share and export then Save as then PDF Document. The PDF saves to your Files app.
+
+After converting on iPhone, if you need to combine the PDF with other documents, use our [Merge PDF](/tools/merge-pdf) tool in Safari.
+
+[[cta:merge-pdf|Merge your converted PDF with other documents — free]]
+
+## Method 4 — Convert Word to PDF on Android (Free)
+
+Android users have several free options for converting Word to PDF.
+
+**Using Google Docs:** Upload your Word document to Google Drive. Open it in Google Docs. Tap the three-dot menu and choose Share and export then Save as then PDF Document. The PDF downloads to your device.
+
+**Using Microsoft Word for Android:** Open the free Microsoft Word app and open your document. Tap the three-dot menu and choose Export then PDF. Save to your preferred location.
+
+**Using a browser-based converter:** Open Chrome for Android and search for a free Word to PDF converter. Upload your DOCX file, convert, and download the PDF. Choose a tool that processes files locally in your browser and does not require an account.
+
+## Method 5 — Convert Word to PDF Using LibreOffice (Free Desktop Software)
+
+LibreOffice Writer is a free, open-source word processor that can open Word documents and export them as PDF — completely free with no watermarks and no file size limits.
+
+Download LibreOffice from libreoffice.org. Open your Word document in LibreOffice Writer. Go to File then Export as PDF. In the export dialog, adjust settings if needed and click Export. The resulting PDF is saved to your chosen location.
+
+LibreOffice is particularly useful for converting many Word files to PDF in one session, and for converting older DOC files that Google Docs may not handle as accurately.
+
+## How to Convert Multiple Word Files to PDF at Once
+
+If you need to convert many Word documents to PDF, the most efficient free approach is Google Drive's conversion feature combined with our [Merge PDF](/tools/merge-pdf) tool.
+
+Upload all your Word files to Google Drive. Open each one in Google Docs and download as PDF. Then use our [Merge PDF](/tools/merge-pdf) tool to combine all the converted PDFs into one complete document if needed.
+
+[[cta:merge-pdf|Merge multiple converted PDFs — free]]
+
+## Common Problems When Converting Word to PDF
+
+**Fonts look different in the PDF:** The Word document uses a font that is not embedded. In Word, go to File then Options then Save and check the box for Embed fonts in the file before converting.
+
+**Images are blurry in the PDF:** The PDF was exported with minimum quality settings. Re-export using Standard or High quality settings.
+
+**Tables shifted or broke:** Complex tables sometimes reformat during conversion, especially in Google Docs. For precise table layouts, use Microsoft Word's built-in PDF export rather than Google Docs.
+
+**PDF is too large to email:** Use our [Compress PDF](/tools/compress-pdf) tool after converting to reduce the file size while keeping text perfectly sharp.
+
+[[cta:compress-pdf|Compress your converted PDF — free]]
+
+## What to Do After Converting Word to PDF
+
+Once you have your PDF, you can share it by email, upload it to any portal, or archive it for long-term storage. If you need to make further edits after converting, use our [PDF to Word](/tools/pdf-to-word) tool to convert back to an editable Word document at any time.
+
+[[cta:pdf-to-word|Convert PDF back to Word for editing — free]]
+
+## Frequently Asked Questions
+
+**How do I convert a Word document to PDF for free?**
+In Microsoft Word, go to File then Save As and choose PDF format. In Google Docs, go to File then Download then PDF Document. Both methods are completely free and require no additional software.
+
+**How do I convert Word to PDF on iPhone without an app?**
+Tap and hold your Word file in the Files app, choose Quick Actions, and tap Create PDF. No app download required.
+
+**Why does my Word to PDF look different from the original?**
+Fonts that are not installed on the converting device may be substituted, and complex layouts can shift in some converters. For the most accurate conversion, use Microsoft Word's built-in Save as PDF feature.
+
+**How do I reduce the PDF size after converting from Word?**
+Use our [Compress PDF](/tools/compress-pdf) tool — upload your PDF, choose your compression level, and download the smaller file in under 30 seconds.
+
+**Can I convert a Word file to PDF on Android for free?**
+Yes. Use the free Google Docs app or Microsoft Word app on Android — both include free PDF export with no watermarks.
+
+[[cta:tools|Try all free PDF tools — SmartPDFMasters]]`,
+  },
+  {
+    slug: "how-to-convert-pdf-to-powerpoint-free",
+    title: "How to Convert PDF to PowerPoint Free — Complete Guide 2026",
+    metaTitle: "How to Convert PDF to PowerPoint Free 2026 — PDF to PPT on Any Device",
+    metaDescription: "Learn how to convert PDF to PowerPoint free in 2026. Extract slides from PDF to editable PPT on Windows, Mac, iPhone and Android — no Adobe needed, no watermarks.",
+    keywords: [
+      "convert PDF to PowerPoint free",
+      "PDF to PPT free online",
+      "how to convert PDF to PowerPoint",
+      "PDF to PowerPoint converter free 2026",
+      "PDF to PPTX free online",
+      "convert PDF slides to PowerPoint free",
+      "PDF to PPT no watermark",
+      "free PDF PowerPoint converter",
+      "PDF to presentation free online",
+      "convert PDF to editable PowerPoint",
+      "PDF to PPT iPhone free",
+      "PDF to PPT Android free",
+      "PDF to PowerPoint Mac free",
+      "PDF to PowerPoint Windows free",
+      "extract slides from PDF free",
+      "PDF to PPT no signup",
+      "best PDF to PowerPoint converter free",
+      "convert lecture PDF to PowerPoint",
+      "PDF presentation converter free",
+      "PDF to PPTX converter online free"
+    ],
+    excerpt: "Learn how to convert any PDF to PowerPoint free in 2026 — extract slides from PDF to editable PPT on Windows, Mac, iPhone and Android without Adobe Acrobat.",
+    category: "File Conversion",
+    author: "Mohamed Adel",
+    date: "July 28, 2026",
+    readTime: "8 min read",
+    cover: "/convert-pdf-to-powerpoint-free.png.png",
+    content: `Converting a PDF to PowerPoint is one of the most searched document conversion tasks for students, teachers, business professionals, and presenters. Whether you received a presentation as a PDF and need to edit the slides, want to add your company branding to a PDF presentation, need to update outdated information in a slide deck, or want to repurpose PDF content into a new presentation — knowing how to convert PDF to PowerPoint free saves significant time and money.
+
+This complete guide covers every free method to convert PDF to PowerPoint in 2026 on Windows, Mac, iPhone, iPad, and Android — without paying for Adobe Acrobat Pro or any other premium software.
+
+## Why Convert PDF to PowerPoint?
+
+PDF presentations are common — companies share pitch decks as PDFs to prevent editing, conferences distribute speaker presentations as PDFs, and academic institutions often share course materials in PDF format. But receiving a presentation as a PDF means you cannot modify the slides, add your own content, update figures, change the design, or use the slides as a starting point for your own presentation.
+
+Converting PDF to PowerPoint gives you a fully editable version of the presentation where you can change text, replace images, modify layouts, update data, add new slides, and adapt the content for your own needs. For teachers who want to update course materials, students who want to annotate slides, and professionals who need to repurpose existing content, PDF to PowerPoint conversion is an essential skill.
+
+## Understanding What PDF to PowerPoint Conversion Does
+
+PDF to PowerPoint conversion is technically more complex than PDF to Word conversion. A PDF stores presentation content as a series of fixed-layout pages — each slide is essentially a flat image of positioned text, shapes, and images, without any underlying slide structure that the converter can read.
+
+A good converter analyses the visual layout of each PDF page, identifies which elements are text, which are images, and which are shapes, then reconstructs them as editable PowerPoint elements on separate slides. The result is an editable PPTX file where text can be changed, images can be moved, and the slide layout can be modified.
+
+The accuracy of the conversion depends on how the original PDF was created. PDFs generated directly from PowerPoint often convert back accurately because the elements are cleanly separated. PDFs created by scanning printed slides or exporting from design software with complex layouts convert with more errors.
+
+## Method 1 — Convert PDF to PowerPoint Using Microsoft PowerPoint (Windows and Mac)
+
+Microsoft PowerPoint can open PDF files directly and convert them to editable presentations — a feature many users are not aware of.
+
+**On Windows:** Open Microsoft PowerPoint. Go to File then Open. Navigate to your PDF file and select it. PowerPoint will display a notice that it is converting the PDF to a presentation. Click OK. PowerPoint converts each page of the PDF to a separate slide.
+
+**On Mac:** The process is identical — go to File then Open, select your PDF file, and PowerPoint converts it automatically.
+
+The quality of PowerPoint's built-in PDF conversion varies significantly depending on the PDF content. For simple slide layouts with clear text and standard fonts, the conversion is reasonably accurate. For complex designs with overlapping elements, custom fonts, or heavily formatted layouts, the slides will need manual adjustment after conversion.
+
+After converting, compress the resulting presentation if needed, then convert back to PDF using our tools.
+
+## Method 2 — Convert PDF to PowerPoint Using Google Slides (Free, Any Device)
+
+Google Slides is a free browser-based presentation tool that can open PDF files and convert them to editable slides without requiring any software installation.
+
+Go to drive.google.com and upload your PDF by clicking New then File upload. Once uploaded, right-click the PDF and choose Open with then Google Slides. Google Slides converts each page of the PDF to a separate slide in a new presentation.
+
+After the conversion, you can edit the slides directly in Google Slides — change text, replace images, modify colours, and rearrange content. When finished editing, download the presentation as a PowerPoint file by going to File then Download then Microsoft PowerPoint (.pptx).
+
+Google Slides is the most widely accessible free PDF to PowerPoint converter because it works on any device with a browser — no software installation needed. The conversion quality is good for text-based presentations and acceptable for moderately complex layouts.
+
+## Method 3 — Convert PDF to PowerPoint on iPhone and iPad (Free)
+
+iPhone and iPad users can convert PDF to PowerPoint using Google Slides in Safari, which works identically to the desktop version.
+
+Open Safari and go to drive.google.com. Upload your PDF and open it with Google Slides. Edit the slides if needed and download as PowerPoint. The PPTX file downloads to your Files app, where you can open it in Microsoft PowerPoint for iPhone or share it directly.
+
+Alternatively, the Keynote app on iPhone and iPad can import PDF files. Open Keynote, tap the plus button to create a new presentation, and look for an option to import from PDF. Keynote converts the PDF pages to Keynote slides, which you can then export as PowerPoint PPTX if needed.
+
+## Method 4 — Convert PDF to PowerPoint on Android (Free)
+
+Android users can use Google Slides through Chrome or the Google Slides app to convert PDF to PowerPoint.
+
+**Using Chrome:** Open drive.google.com in Chrome, upload your PDF, and open it with Google Slides. Edit and download as PPTX.
+
+**Using the Google Slides app:** Open the Google Slides app and tap the plus button. Choose Import slides and select your PDF from Google Drive. Google Slides converts the PDF pages to editable slides. Tap the three-dot menu and choose Share and export then Download then PowerPoint to save as PPTX.
+
+## Method 5 — Convert PDF to PowerPoint Using LibreOffice Impress (Free Desktop Software)
+
+LibreOffice Impress is a free, open-source presentation application that can open PDF files and allow editing of individual slides — useful for desktop users who need offline conversion.
+
+Download LibreOffice from libreoffice.org. Open LibreOffice Impress. Go to File then Open and select your PDF file. LibreOffice Impress opens the PDF with each page as an editable drawing object on separate slides. Edit as needed, then go to File then Save As and choose PowerPoint format to save as PPTX.
+
+## How to Get the Best PDF to PowerPoint Conversion Results
+
+The quality of any PDF to PowerPoint conversion depends significantly on how the original PDF was created and how you prepare it before converting.
+
+**Before converting**, if your PDF is very large — many pages or high-resolution images — compress it using our [Compress PDF](/tools/compress-pdf) tool to reduce the file size. Smaller files convert faster and sometimes more accurately.
+
+[[cta:compress-pdf|Compress PDF before converting to PowerPoint — free]]
+
+**If you only need specific slides**, extract those pages first using our [Split PDF](/tools/split-pdf) tool. Convert only the pages you need rather than the entire document — this produces a more manageable output.
+
+[[cta:tools|Split PDF to extract specific slides — SmartPDFMasters]]
+
+**After converting**, plan to spend time adjusting the slide layouts. Text boxes may need repositioning, font sizes may need adjustment, and images may need to be resized or replaced. PDF to PowerPoint conversion is a starting point for editing, not a pixel-perfect reproduction of the original.
+
+## What to Do When PDF to PowerPoint Conversion Is Imperfect
+
+No free PDF to PowerPoint converter produces perfect results for every PDF. When the converted slides need significant adjustment, there are two practical approaches.
+
+**Accept the conversion as a rough draft:** Use the converted PPTX as a structural starting point — the slide order, general layout, and text content — then redesign the slides from scratch using your brand colours and fonts. This is faster than creating a new presentation from nothing.
+
+**Extract and reuse the content:** If the slide visuals do not convert well, focus on extracting the text content. Use our [PDF to Word](/tools/pdf-to-word) tool to extract all the text from the PDF as an editable document, then copy the text into a new PowerPoint presentation and design the slides yourself.
+
+[[cta:pdf-to-word|Extract PDF text as editable Word — free]]
+
+## Converting PDF Presentations Back to PDF After Editing
+
+After editing your converted PowerPoint presentation, you will likely want to convert it back to PDF for sharing. In PowerPoint, go to File then Save As and choose PDF. In Google Slides, go to File then Download then PDF Document.
+
+If the resulting PDF is larger than you need, use our [Compress PDF](/tools/compress-pdf) tool to reduce the file size before sharing.
+
+[[cta:compress-pdf|Compress your presentation PDF — free]]
+
+## Combining PDF Slides with Other Documents
+
+If you need to combine your converted PDF presentation with other documents — for example, adding a cover page, attaching supporting data, or merging with another PDF — use our [Merge PDF](/tools/merge-pdf) tool after converting back to PDF.
+
+[[cta:merge-pdf|Merge presentation PDFs — free]]
+
+## Frequently Asked Questions
+
+**How do I convert a PDF to PowerPoint for free?**
+Open Microsoft PowerPoint and use File then Open to open your PDF directly. Or upload your PDF to Google Drive and open it with Google Slides, then download as PowerPoint. Both methods are completely free.
+
+**Why does my PDF to PowerPoint conversion look different from the original?**
+PDF stores content as positioned elements without slide structure. Converters reconstruct slides by analysing the visual layout, which is imperfect for complex designs. Expect to adjust text boxes, images, and layouts after converting.
+
+**Can I convert PDF to PowerPoint on iPhone without an app?**
+Yes. Open Safari, go to Google Drive, upload your PDF, open it with Google Slides, and download as PowerPoint. No app download required.
+
+**How do I convert a scanned PDF presentation to PowerPoint?**
+Scanned PDF presentations are stored as images with no text layer. The best approach is to use Google Slides or LibreOffice Impress to open the PDF, which places each scanned page as an image on a separate slide. You can then add text boxes over the images or use our PDF to Word tool with OCR to extract the text separately.
+
+**Does converting PDF to PowerPoint reduce quality?**
+The conversion process itself does not reduce image quality. However, complex layouts, custom fonts, and precise positioning often do not transfer perfectly from PDF to PowerPoint format.
+
+[[cta:tools|Try all free PDF tools — SmartPDFMasters]]`,
+  },
 ];
 
 export const blogCategories = [
