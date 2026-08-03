@@ -1,159 +1,230 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Shield, Cookie, Database, Mail, Lock, FileText } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — SmartPDFTools" },
-      { name: "description", content: "Learn how SmartPDFTools collects, uses, and protects your personal information, including cookies, analytics, and AdSense disclosures." },
-      { property: "og:title", content: "Privacy Policy — SmartPDFTools" },
-      { property: "og:description", content: "How SmartPDFTools handles your data, cookies, analytics, and third-party advertising." },
-      { property: "og:url", content: "https://www.smartpdfmasters.com/privacy" },
+      { title: "Privacy Policy — SmartPDFMasters" },
+      { name: "description", content: "SmartPDFMasters privacy policy. Learn how we handle your data, files, and personal information. We process all files in your browser and never store your documents." },
+      { name: "robots", content: "index, follow" },
     ],
-    links: [
-      { rel: "canonical", href: "https://www.smartpdfmasters.com/privacy" },
-    ],
+    links: [{ rel: "canonical", href: "https://www.smartpdfmasters.com/privacy" }],
   }),
   component: PrivacyPage,
 });
 
 function PrivacyPage() {
-  const updated = "July 1, 2026";
   return (
-    <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16">
-      <div className="text-center">
-        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-primary text-primary-foreground shadow-elegant">
-          <Shield className="h-6 w-6" />
-        </div>
-        <h1 className="mt-6 font-display text-5xl sm:text-6xl font-bold tracking-tight">Privacy Policy</h1>
-        <p className="mt-3 text-sm text-muted-foreground">Last updated: {updated}</p>
+    <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-12">
+        <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight mb-4">
+          Privacy Policy
+        </h1>
+        <p className="text-muted-foreground">
+          Last updated: July 28, 2026
+        </p>
       </div>
 
-      <div className="mt-12 space-y-10 text-[15px] leading-relaxed text-foreground/90">
-        <Section icon={FileText} title="1. Introduction">
+      <div className="space-y-10 text-foreground/80 leading-relaxed">
+
+        <section>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">1. Introduction</h2>
           <p>
-            Welcome to <strong>SmartPDFTools</strong> ("we", "us", "our"). We respect your privacy and are
-            committed to protecting your personal data. This Privacy Policy explains how we collect, use,
-            and safeguard information when you visit{" "}
-            <a href="https://www.smartpdfmasters.com" className="text-primary hover:underline">
-              www.smartpdfmasters.com
+            Welcome to SmartPDFMasters ("we," "our," or "us"). SmartPDFMasters is a free, browser-based PDF tools platform available at <strong>www.smartpdfmasters.com</strong>. This Privacy Policy explains how we collect, use, and protect information when you use our website and tools.
+          </p>
+          <p className="mt-3">
+            By using SmartPDFMasters, you agree to the terms of this Privacy Policy. If you do not agree, please discontinue use of the site.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">2. Information We Collect</h2>
+
+          <h3 className="font-semibold text-lg text-foreground mb-2">2.1 Files You Upload</h3>
+          <p>
+            All PDF and image files you upload to SmartPDFMasters are processed <strong>entirely in your browser</strong> using JavaScript. Your files are never transmitted to our servers, never stored on our infrastructure, and never accessed by our team. The processing happens locally on your device. Once you close the browser tab or navigate away, all file data is immediately discarded from browser memory.
+          </p>
+
+          <h3 className="font-semibold text-lg text-foreground mt-5 mb-2">2.2 Usage Data</h3>
+          <p>
+            We use Google Analytics to collect anonymised usage data including pages visited, time spent on the site, browser type, operating system, and general geographic location (country level). This data helps us understand how visitors use SmartPDFMasters so we can improve the tools and content. No personally identifiable information is collected through Google Analytics.
+          </p>
+
+          <h3 className="font-semibold text-lg text-foreground mt-5 mb-2">2.3 Cookies</h3>
+          <p>
+            SmartPDFMasters uses cookies for the following purposes:
+          </p>
+          <ul className="mt-3 space-y-2 list-none">
+            {[
+              "Analytics cookies — used by Google Analytics to track anonymised visitor behaviour and site usage statistics.",
+              "Advertising cookies — used by Google AdSense to serve relevant advertisements to visitors. These cookies may track browsing behaviour across websites to personalise ad content.",
+              "Preference cookies — used to remember your theme preference (light or dark mode) and language setting between sessions.",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4">
+            You can control or disable cookies through your browser settings. Disabling advertising cookies will not remove advertisements from the site but will result in less personalised ad content.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">3. Google AdSense and Advertising</h2>
+          <p>
+            SmartPDFMasters uses <strong>Google AdSense</strong> to display advertisements. Google AdSense is an advertising service provided by Google LLC. When you visit our website, Google AdSense may use cookies and similar technologies to:
+          </p>
+          <ul className="mt-3 space-y-2 list-none">
+            {[
+              "Display advertisements relevant to your interests based on your browsing history.",
+              "Measure the effectiveness of advertisements shown on our site.",
+              "Prevent you from seeing the same advertisement too frequently.",
+              "Understand which advertisements you have interacted with.",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4">
+            Google's use of advertising cookies enables it and its partners to serve ads based on your visits to SmartPDFMasters and other sites on the internet. You may opt out of personalised advertising by visiting{" "}
+            <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">
+              Google's Ads Settings
             </a>{" "}
-            and use our online PDF tools.
+            or by visiting{" "}
+            <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">
+              www.aboutads.info
+            </a>.
           </p>
-        </Section>
-
-        <Section icon={Database} title="2. Information We Collect">
-          <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Files you upload:</strong> processed only to perform the requested task (merge, compress, convert, etc.).</li>
-            <li><strong>Usage data:</strong> pages visited, browser type, device, language, referring URL, and approximate location.</li>
-            <li><strong>Contact data:</strong> name, email, and message you submit through our Contact form.</li>
-            <li><strong>Cookies & similar technologies:</strong> see the Cookies section below.</li>
-          </ul>
-        </Section>
-
-        <Section icon={Lock} title="3. How We Use Your Information">
-          <ul className="list-disc pl-6 space-y-2">
-            <li>To provide, operate, and improve our PDF tools and services.</li>
-            <li>To respond to your inquiries and customer support requests.</li>
-            <li>To analyze website traffic and improve user experience.</li>
-            <li>To display relevant advertising and measure ad performance.</li>
-            <li>To comply with legal obligations and prevent abuse.</li>
-          </ul>
-        </Section>
-
-        <Section icon={Shield} title="4. File Processing & Security">
-          <p>
-            Uploaded files are transmitted over encrypted HTTPS connections and processed automatically.
-            Files are <strong>automatically deleted from our servers within one hour</strong> after
-            processing. We never read, share, or sell the content of your documents.
+          <p className="mt-4">
+            For more information about how Google uses data collected through AdSense, please review{" "}
+            <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">
+              Google's Privacy & Terms
+            </a>.
           </p>
-        </Section>
+        </section>
 
-        <Section icon={Cookie} title="5. Cookies & Tracking Technologies">
+        <section>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">4. Google Analytics</h2>
           <p>
-            We use cookies and similar technologies to remember your preferences, measure traffic, and
-            serve advertisements. You can disable cookies in your browser settings, but some features
-            may not work properly.
+            We use Google Analytics, a web analytics service provided by Google LLC, to help us understand how visitors use SmartPDFMasters. Google Analytics uses cookies to collect anonymised information about your visit, including pages viewed, time on site, and general location data.
           </p>
-        </Section>
-
-        <Section icon={Database} title="6. Google AdSense & Third-Party Advertising">
-          <p>
-            We use <strong>Google AdSense</strong> to display advertisements. Google and its partners
-            use cookies to serve ads based on your prior visits to this and other websites.
-          </p>
-          <ul className="list-disc pl-6 space-y-2 mt-3">
-            <li>Google uses the <strong>DoubleClick DART cookie</strong> to serve ads based on your visits to our site and other sites.</li>
-            <li>You may opt out of personalized advertising by visiting{" "}
-              <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google Ads Settings</a>.
-            </li>
-            <li>Learn more about{" "}
-              <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">how Google uses information from sites that use its services</a>.
-            </li>
-            <li>You can also opt out of third-party vendor use of cookies at{" "}
-              <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">aboutads.info/choices</a>.
-            </li>
-          </ul>
-        </Section>
-
-        <Section icon={Database} title="7. Google Analytics">
-          <p>
-            We use <strong>Google Analytics</strong> to understand how visitors interact with our website.
-            Google Analytics collects anonymized data such as IP address, browser type, and pages viewed.
-            You can opt out using the{" "}
-            <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+          <p className="mt-3">
+            Google Analytics data is processed by Google in accordance with their privacy policy. We do not combine Google Analytics data with any personally identifiable information. You can opt out of Google Analytics tracking by installing the{" "}
+            <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">
               Google Analytics Opt-out Browser Add-on
             </a>.
           </p>
-        </Section>
+        </section>
 
-        <Section icon={Shield} title="8. Your Rights (GDPR & CCPA)">
-          <p>Depending on your jurisdiction, you may have the right to:</p>
-          <ul className="list-disc pl-6 space-y-2 mt-3">
-            <li>Access, update, or delete your personal data.</li>
-            <li>Object to or restrict certain processing of your data.</li>
-            <li>Withdraw consent for data processing at any time.</li>
-            <li>Lodge a complaint with a data protection authority.</li>
+        <section>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">5. How We Use Information</h2>
+          <p>We use the information we collect to:</p>
+          <ul className="mt-3 space-y-2 list-none">
+            {[
+              "Improve the tools, content, and user experience on SmartPDFMasters.",
+              "Understand which tools and articles are most useful to our visitors.",
+              "Display relevant advertisements through Google AdSense.",
+              "Monitor site performance and identify technical issues.",
+              "Comply with legal obligations.",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
-        </Section>
+        </section>
 
-        <Section icon={Shield} title="9. Children's Privacy">
+        <section>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">6. Data Sharing and Third Parties</h2>
           <p>
-            Our services are not directed to children under 13. We do not knowingly collect personal
-            information from children. If you believe a child has provided us with personal data,
-            please contact us so we can remove it.
+            We do not sell, rent, or trade your personal information to third parties. We share anonymised, aggregated usage data with:
           </p>
-        </Section>
+          <ul className="mt-3 space-y-2 list-none">
+            {[
+              "Google LLC — for Google Analytics (anonymised usage statistics) and Google AdSense (advertising).",
+              "Vercel Inc. — our hosting provider, which serves the website files to your browser.",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4">
+            We do not share file content — your documents are never transmitted to any third party.
+          </p>
+        </section>
 
-        <Section icon={FileText} title="10. Changes to This Policy">
+        <section>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">7. Your Rights (GDPR)</h2>
           <p>
-            We may update this Privacy Policy from time to time. Changes will be posted on this page
-            with an updated revision date.
+            If you are located in the European Economic Area (EEA) or United Kingdom, you have the following rights under GDPR:
           </p>
-        </Section>
+          <ul className="mt-3 space-y-2 list-none">
+            {[
+              "Right to access — you can request information about what data we hold about you.",
+              "Right to erasure — you can request deletion of any personal data we hold.",
+              "Right to object — you can object to the processing of your data for marketing or advertising purposes.",
+              "Right to data portability — you can request a copy of your data in a machine-readable format.",
+              "Right to withdraw consent — you can withdraw consent for cookies at any time through your browser settings.",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4">
+            To exercise any of these rights, please contact us through our{" "}
+            <a href="/contact" className="text-primary underline hover:text-primary/80">Contact page</a>.
+          </p>
+        </section>
 
-        <Section icon={Mail} title="11. Contact Us">
+        <section>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">8. Children's Privacy</h2>
           <p>
-            If you have any questions about this Privacy Policy, please{" "}
-            <Link to="/contact" className="text-primary hover:underline">contact us</Link>{" "}
-            or email <a href="mailto:shekokamal7775@gmail.com" className="text-primary hover:underline">shekokamal7775@gmail.com</a>.
+            SmartPDFMasters is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided personal information through our site, please contact us and we will delete it promptly.
           </p>
-        </Section>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">9. Security</h2>
+          <p>
+            We take reasonable technical measures to protect the information we collect. All connections to SmartPDFMasters are encrypted using TLS (HTTPS). Since your files are processed locally in your browser and never transmitted to our servers, the security risk to your document content is minimised by design.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">10. Links to Other Websites</h2>
+          <p>
+            Our articles and tool pages may contain links to external websites for reference and further reading. These external sites have their own privacy policies and we are not responsible for their content or practices. We encourage you to review the privacy policy of any external site you visit.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">11. Changes to This Privacy Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time. When we make significant changes, we will update the "Last updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of SmartPDFMasters after changes are made constitutes acceptance of the updated policy.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">12. Contact Us</h2>
+          <p>
+            If you have any questions about this Privacy Policy, how we handle your data, or your rights under applicable privacy laws, please contact us:
+          </p>
+          <div className="mt-4 rounded-2xl border border-border bg-card p-6">
+            <p><strong>SmartPDFMasters</strong></p>
+            <p className="mt-1">Website: <a href="https://www.smartpdfmasters.com" className="text-primary underline">www.smartpdfmasters.com</a></p>
+            <p className="mt-1">Contact: <a href="/contact" className="text-primary underline">www.smartpdfmasters.com/contact</a></p>
+          </div>
+        </section>
+
       </div>
     </div>
-  );
-}
-
-function Section({ icon: Icon, title, children }: { icon: any; title: string; children: React.ReactNode }) {
-  return (
-    <section className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-soft">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent text-primary">
-          <Icon className="h-5 w-5" />
-        </div>
-        <h2 className="font-display text-xl font-bold">{title}</h2>
-      </div>
-      <div className="space-y-3">{children}</div>
-    </section>
   );
 }
