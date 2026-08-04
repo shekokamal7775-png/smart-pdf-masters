@@ -15,7 +15,7 @@ function AuthorsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 prose prose-lg dark:prose-invert">
       <h1>Our Authors</h1>
-      <p>The writers behind SmartPDFTools guides and tutorials.</p>
+      <p>The writers behind SmartPDFmasters guides and tutorials.</p>
 
       {authors.map((author) => (
         <div key={author.name} className="my-6 p-4 border rounded-lg">
