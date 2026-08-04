@@ -11,7 +11,7 @@ function EditorialPolicyPage() {
       <p><strong>Last updated:</strong> June 28, 2026</p>
       
       <h2>Our Mission</h2>
-      <p>SmartPDFTools provides accurate, helpful, and unbiased information about PDF tools and document management.</p>
+      <p>SmartPDFmasters provides accurate, helpful, and unbiased information about PDF tools and document management.</p>
       
       <h2>Content Standards</h2>
       <ul>
