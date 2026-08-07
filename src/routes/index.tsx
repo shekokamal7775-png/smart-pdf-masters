@@ -48,7 +48,7 @@ const features = [
   { icon: Zap, title: "Fast processing", desc: "Your files are processed instantly in your browser — no upload delays, no waiting." },
   { icon: ShieldCheck, title: "Privacy first", desc: "Files never leave your device. We never read, store, or share your documents." },
   { icon: Globe, title: "Works everywhere", desc: "Use any tool on desktop, tablet or mobile without installing anything." },
-  { icon: Cloud, title: "No sign-up needed", desc: "All six tools are completely free with no account, no daily limits, and no watermarks." },
+  { icon: Cloud, title: "No sign-up needed", desc: "All ten tools are completely free with no account, no daily limits, and no watermarks." },
 ];
 
 const toolHighlights = [
