@@ -347,7 +347,7 @@ function HomePage() {
       {/* TOOL HIGHLIGHTS */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 bg-secondary/30 rounded-3xl">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <h2 className="font-display text-4xl font-bold">Six tools. Every PDF task covered.</h2>
+          <h2 className="font-display text-4xl font-bold">ten tools. Every PDF task covered.</h2>
           <p className="mt-3 text-muted-foreground">Everything you need to handle PDFs, in one place.</p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
