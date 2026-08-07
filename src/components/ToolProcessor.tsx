@@ -1,597 +1,232 @@
-import { Link } from "@tanstack/react-router";
-import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, Check } from "lucide-react";
-import type { Tool } from "@/lib/tools";
+import { useCallback, useState, type DragEvent } from "react";
+import { UploadCloud, FileCheck2, X, Loader2, Download, RotateCw, Scissors, Trash2, Droplets } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
+import { toast } from "sonner";
+import { getToolConfig, processFiles, type ToolSlug } from "@/lib/pdf-tools";
 
-const badgeStyles: Record<string, string> = {
-  popular: "bg-amber-500/15 text-amber-600 dark:text-amber-400",
-  new: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400",
-  ai: "bg-gradient-primary text-primary-foreground",
-};
+interface Props { slug: string; }
 
-// 3D-style SVG previews with gradients and shadows for every tool
-const toolPreviews: Record<string, React.ReactNode> = {
-  "merge-pdf": (
-    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-      <defs>
-        <linearGradient id="mg-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#fff1f2" /><stop offset="1" stopColor="#ffe4e6" />
-        </linearGradient>
-        <linearGradient id="mg-card1" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#fda4af" /><stop offset="1" stopColor="#f43f5e" />
-        </linearGradient>
-        <linearGradient id="mg-card2" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#fb7185" /><stop offset="1" stopColor="#e11d48" />
-        </linearGradient>
-        <linearGradient id="mg-result" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#fff1f2" /><stop offset="1" stopColor="#fda4af" />
-        </linearGradient>
-        <filter id="mg-shadow"><feDropShadow dx="2" dy="3" stdDeviation="3" floodOpacity="0.15" /></filter>
-        <filter id="mg-shadow2"><feDropShadow dx="3" dy="4" stdDeviation="5" floodOpacity="0.2" /></filter>
-      </defs>
-      <rect width="160" height="90" rx="10" fill="url(#mg-bg)" />
-      <g filter="url(#mg-shadow)">
-        <rect x="8" y="10" width="36" height="46" rx="4" fill="url(#mg-card1)" />
-        <rect x="8" y="10" width="36" height="10" rx="4" fill="#f43f5e" />
-        <rect x="13" y="26" width="22" height="2.5" rx="1.2" fill="white" fillOpacity="0.8" />
-        <rect x="13" y="31" width="18" height="2" rx="1" fill="white" fillOpacity="0.5" />
-        <rect x="13" y="36" width="20" height="2" rx="1" fill="white" fillOpacity="0.5" />
-        <rect x="13" y="41" width="14" height="2" rx="1" fill="white" fillOpacity="0.4" />
-        <text x="11" y="21" fontSize="6" fill="white" fontWeight="bold">PDF</text>
-      </g>
-      <g filter="url(#mg-shadow)">
-        <rect x="8" y="62" width="36" height="20" rx="4" fill="url(#mg-card2)" />
-        <rect x="13" y="68" width="22" height="2" rx="1" fill="white" fillOpacity="0.8" />
-        <rect x="13" y="73" width="16" height="2" rx="1" fill="white" fillOpacity="0.5" />
-        <text x="32" y="79" fontSize="5" fill="white" fontWeight="bold" fillOpacity="0.7">PDF</text>
-      </g>
-      <circle cx="60" cy="45" r="10" fill="#f43f5e" fillOpacity="0.15" />
-      <path d="M55 45 L65 45" stroke="#f43f5e" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M61 41 L65 45 L61 49" stroke="#f43f5e" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      <g filter="url(#mg-shadow2)">
-        <rect x="78" y="6" width="74" height="78" rx="6" fill="url(#mg-result)" stroke="#fda4af" strokeWidth="1.5" />
-        <rect x="78" y="6" width="74" height="14" rx="6" fill="#f43f5e" />
-        <rect x="78" y="14" width="74" height="6" fill="#f43f5e" />
-        <text x="82" y="17" fontSize="7" fill="white" fontWeight="bold">MERGED.PDF</text>
-        <rect x="86" y="28" width="52" height="3" rx="1.5" fill="#f43f5e" fillOpacity="0.6" />
-        <rect x="86" y="34" width="44" height="2.5" rx="1.2" fill="#f43f5e" fillOpacity="0.35" />
-        <rect x="86" y="39" width="48" height="2.5" rx="1.2" fill="#f43f5e" fillOpacity="0.35" />
-        <rect x="86" y="44" width="40" height="2.5" rx="1.2" fill="#f43f5e" fillOpacity="0.25" />
-        <rect x="86" y="52" width="52" height="2.5" rx="1.2" fill="#f43f5e" fillOpacity="0.35" />
-        <rect x="86" y="57" width="36" height="2.5" rx="1.2" fill="#f43f5e" fillOpacity="0.25" />
-        <rect x="86" y="62" width="44" height="2.5" rx="1.2" fill="#f43f5e" fillOpacity="0.25" />
-        <rect x="86" y="68" width="40" height="2.5" rx="1.2" fill="#f43f5e" fillOpacity="0.2" />
-        <rect x="86" y="73" width="48" height="2.5" rx="1.2" fill="#f43f5e" fillOpacity="0.2" />
-      </g>
-    </svg>
-  ),
-  "compress-pdf": (
-    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-      <defs>
-        <linearGradient id="cp-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#fffbeb" /><stop offset="1" stopColor="#fef3c7" />
-        </linearGradient>
-        <linearGradient id="cp-big" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#fcd34d" /><stop offset="1" stopColor="#f59e0b" />
-        </linearGradient>
-        <linearGradient id="cp-small" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#fbbf24" /><stop offset="1" stopColor="#d97706" />
-        </linearGradient>
-        <filter id="cp-shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodOpacity="0.18" /></filter>
-        <filter id="cp-shadow2"><feDropShadow dx="1" dy="2" stdDeviation="2" floodOpacity="0.15" /></filter>
-      </defs>
-      <rect width="160" height="90" rx="10" fill="url(#cp-bg)" />
-      <g filter="url(#cp-shadow)">
-        <rect x="6" y="6" width="54" height="72" rx="5" fill="url(#cp-big)" />
-        <rect x="6" y="6" width="54" height="14" rx="5" fill="#f59e0b" />
-        <rect x="6" y="14" width="54" height="6" fill="#f59e0b" />
-        <text x="10" y="17" fontSize="7.5" fill="white" fontWeight="bold">PDF</text>
-        <rect x="14" y="28" width="36" height="3" rx="1.5" fill="white" fillOpacity="0.7" />
-        <rect x="14" y="34" width="30" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
-        <rect x="14" y="39" width="34" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
-        <rect x="14" y="46" width="32" height="10" rx="3" fill="white" fillOpacity="0.2" />
-        <rect x="14" y="59" width="36" height="2" rx="1" fill="white" fillOpacity="0.4" />
-        <rect x="14" y="64" width="28" height="2" rx="1" fill="white" fillOpacity="0.3" />
-        <text x="8" y="74" fontSize="9" fill="white" fontWeight="bold" fillOpacity="0.9">12 MB</text>
-      </g>
-      <g>
-        <circle cx="85" cy="45" r="12" fill="#f59e0b" fillOpacity="0.2" />
-        <path d="M79 45 L91 45" stroke="#f59e0b" strokeWidth="2.5" strokeLinecap="round" />
-        <path d="M87 41 L91 45 L87 49" stroke="#f59e0b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M82 38 L82 34 M82 52 L82 56" stroke="#f59e0b" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="2 2" />
-      </g>
-      <g filter="url(#cp-shadow2)">
-        <rect x="100" y="18" width="54" height="48" rx="5" fill="url(#cp-small)" />
-        <rect x="100" y="18" width="54" height="12" rx="5" fill="#d97706" />
-        <rect x="100" y="24" width="54" height="6" fill="#d97706" />
-        <text x="104" y="28" fontSize="7" fill="white" fontWeight="bold">PDF</text>
-        <rect x="108" y="36" width="36" height="2.5" rx="1.2" fill="white" fillOpacity="0.7" />
-        <rect x="108" y="41" width="28" height="2" rx="1" fill="white" fillOpacity="0.5" />
-        <rect x="108" y="46" width="32" height="2" rx="1" fill="white" fillOpacity="0.5" />
-        <text x="102" y="60" fontSize="9" fill="white" fontWeight="bold" fillOpacity="0.9">1.2 MB</text>
-      </g>
-      <circle cx="127" cy="14" r="8" fill="#16a34a" />
-      <text x="121" y="18" fontSize="10" fill="white" fontWeight="bold">↓</text>
-      <text x="107" y="72" fontSize="6" fill="#92400e" fontWeight="bold">90% SMALLER</text>
-    </svg>
-  ),
-  "rotate-pdf": (
-    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-      <defs>
-        <linearGradient id="rp-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#faf5ff" /><stop offset="1" stopColor="#ede9fe" />
-        </linearGradient>
-        <linearGradient id="rp-wrong" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#d8b4fe" /><stop offset="1" stopColor="#9333ea" />
-        </linearGradient>
-        <linearGradient id="rp-right" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#e9d5ff" /><stop offset="1" stopColor="#a855f7" />
-        </linearGradient>
-        <filter id="rp-shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodOpacity="0.18" /></filter>
-      </defs>
-      <rect width="160" height="90" rx="10" fill="url(#rp-bg)" />
-      <g filter="url(#rp-shadow)">
-        <rect x="6" y="26" width="54" height="38" rx="4" fill="url(#rp-wrong)" fillOpacity="0.7" stroke="#c084fc" strokeWidth="1.5" strokeDasharray="4 2" />
-        <rect x="6" y="26" width="12" height="38" rx="4" fill="#9333ea" fillOpacity="0.5" />
-        <text x="7" y="48" fontSize="7" fill="white" fontWeight="bold" transform="rotate(90 7 48)">PDF</text>
-        <rect x="24" y="33" width="30" height="2" rx="1" fill="white" fillOpacity="0.6" />
-        <rect x="24" y="38" width="24" height="2" rx="1" fill="white" fillOpacity="0.4" />
-        <rect x="24" y="43" width="28" height="2" rx="1" fill="white" fillOpacity="0.4" />
-        <rect x="24" y="48" width="22" height="2" rx="1" fill="white" fillOpacity="0.3" />
-        <text x="8" y="70" fontSize="6" fill="#7e22ce" fontWeight="bold">SIDEWAYS</text>
-      </g>
-      <g>
-        <path d="M68 22 C76 12 90 12 94 22" stroke="#a855f7" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-        <path d="M91 18 L94 22 L90 25" stroke="#a855f7" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M68 68 C76 78 90 78 94 68" stroke="#a855f7" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-        <path d="M71 72 L68 68 L72 65" stroke="#a855f7" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="81" cy="45" r="10" fill="#a855f7" fillOpacity="0.15" />
-        <text x="76" y="49" fontSize="12" fill="#9333ea">↻</text>
-      </g>
-      <g filter="url(#rp-shadow)">
-        <rect x="100" y="6" width="54" height="78" rx="5" fill="url(#rp-right)" />
-        <rect x="100" y="6" width="54" height="14" rx="5" fill="#9333ea" />
-        <rect x="100" y="14" width="54" height="6" fill="#9333ea" />
-        <text x="104" y="17" fontSize="7" fill="white" fontWeight="bold">PDF</text>
-        <rect x="108" y="28" width="38" height="3" rx="1.5" fill="white" fillOpacity="0.7" />
-        <rect x="108" y="34" width="30" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
-        <rect x="108" y="39" width="34" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
-        <rect x="108" y="44" width="28" height="2" rx="1" fill="white" fillOpacity="0.4" />
-        <rect x="108" y="52" width="38" height="2" rx="1" fill="white" fillOpacity="0.4" />
-        <rect x="108" y="57" width="32" height="2" rx="1" fill="white" fillOpacity="0.3" />
-      </g>
-      <circle cx="148" cy="10" r="8" fill="#16a34a" />
-      <path d="M144 10 L147 13 L152 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  ),
-  "split-pdf": (
-    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-      <defs>
-        <linearGradient id="sp-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#fff7ed" /><stop offset="1" stopColor="#ffedd5" />
-        </linearGradient>
-        <linearGradient id="sp-main" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#fdba74" /><stop offset="1" stopColor="#f97316" />
-        </linearGradient>
-        <linearGradient id="sp-part" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#fed7aa" /><stop offset="1" stopColor="#fb923c" />
-        </linearGradient>
-        <filter id="sp-shadow"><feDropShadow dx="2" dy="3" stdDeviation="3" floodOpacity="0.15" /></filter>
-        <filter id="sp-shadow2"><feDropShadow dx="1" dy="2" stdDeviation="2" floodOpacity="0.12" /></filter>
-      </defs>
-      <rect width="160" height="90" rx="10" fill="url(#sp-bg)" />
-      <g filter="url(#sp-shadow)">
-        <rect x="6" y="6" width="48" height="78" rx="5" fill="url(#sp-main)" />
-        <rect x="6" y="6" width="48" height="13" rx="5" fill="#ea580c" />
-        <rect x="6" y="13" width="48" height="6" fill="#ea580c" />
-        <text x="10" y="16" fontSize="7" fill="white" fontWeight="bold">PDF</text>
-        <rect x="13" y="26" width="32" height="2.5" rx="1.2" fill="white" fillOpacity="0.7" />
-        <rect x="13" y="31" width="28" height="2" rx="1" fill="white" fillOpacity="0.5" />
-        <rect x="13" y="36" width="30" height="2" rx="1" fill="white" fillOpacity="0.5" />
-        <line x1="13" y1="42" x2="46" y2="42" stroke="white" strokeWidth="1" strokeDasharray="3 2" strokeOpacity="0.5" />
-        <rect x="13" y="46" width="32" height="2.5" rx="1.2" fill="white" fillOpacity="0.7" />
-        <rect x="13" y="51" width="26" height="2" rx="1" fill="white" fillOpacity="0.5" />
-        <rect x="13" y="56" width="30" height="2" rx="1" fill="white" fillOpacity="0.5" />
-        <line x1="13" y1="62" x2="46" y2="62" stroke="white" strokeWidth="1" strokeDasharray="3 2" strokeOpacity="0.5" />
-        <rect x="13" y="66" width="32" height="2.5" rx="1.2" fill="white" fillOpacity="0.7" />
-        <rect x="13" y="71" width="28" height="2" rx="1" fill="white" fillOpacity="0.5" />
-      </g>
-      <circle cx="72" cy="45" r="10" fill="#f97316" fillOpacity="0.15" />
-      <circle cx="68" cy="42" r="4" stroke="#f97316" strokeWidth="2" fill="none" />
-      <circle cx="68" cy="48" r="4" stroke="#f97316" strokeWidth="2" fill="none" />
-      <path d="M71 40 L80 34" stroke="#f97316" strokeWidth="2" strokeLinecap="round" />
-      <path d="M71 50 L80 56" stroke="#f97316" strokeWidth="2" strokeLinecap="round" />
-      <path d="M68 45 L80 45" stroke="#f97316" strokeWidth="2" strokeLinecap="round" />
-      <g filter="url(#sp-shadow2)">
-        <rect x="88" y="4" width="66" height="22" rx="4" fill="url(#sp-part)" />
-        <rect x="88" y="4" width="66" height="8" rx="4" fill="#ea580c" fillOpacity="0.8" />
-        <rect x="88" y="8" width="66" height="4" fill="#ea580c" fillOpacity="0.8" />
-        <text x="92" y="10" fontSize="5.5" fill="white" fontWeight="bold">PART 1</text>
-        <rect x="94" y="16" width="40" height="2" rx="1" fill="white" fillOpacity="0.7" />
-        <rect x="94" y="20" width="32" height="2" rx="1" fill="white" fillOpacity="0.5" />
-      </g>
-      <g filter="url(#sp-shadow2)">
-        <rect x="88" y="34" width="66" height="22" rx="4" fill="url(#sp-part)" />
-        <rect x="88" y="34" width="66" height="8" rx="4" fill="#ea580c" fillOpacity="0.8" />
-        <rect x="88" y="38" width="66" height="4" fill="#ea580c" fillOpacity="0.8" />
-        <text x="92" y="40" fontSize="5.5" fill="white" fontWeight="bold">PART 2</text>
-        <rect x="94" y="46" width="40" height="2" rx="1" fill="white" fillOpacity="0.7" />
-        <rect x="94" y="50" width="32" height="2" rx="1" fill="white" fillOpacity="0.5" />
-      </g>
-      <g filter="url(#sp-shadow2)">
-        <rect x="88" y="64" width="66" height="22" rx="4" fill="url(#sp-part)" />
-        <rect x="88" y="64" width="66" height="8" rx="4" fill="#ea580c" fillOpacity="0.8" />
-        <rect x="88" y="68" width="66" height="4" fill="#ea580c" fillOpacity="0.8" />
-        <text x="92" y="70" fontSize="5.5" fill="white" fontWeight="bold">PART 3</text>
-        <rect x="94" y="76" width="40" height="2" rx="1" fill="white" fillOpacity="0.7" />
-        <rect x="94" y="80" width="32" height="2" rx="1" fill="white" fillOpacity="0.5" />
-      </g>
-    </svg>
-  ),
-  "delete-pages-pdf": (
-    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-      <defs>
-        <linearGradient id="dp-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#fef2f2" /><stop offset="1" stopColor="#fee2e2" />
-        </linearGradient>
-        <linearGradient id="dp-main" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#fca5a5" /><stop offset="1" stopColor="#dc2626" />
-        </linearGradient>
-        <filter id="dp-shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodOpacity="0.18" /></filter>
-      </defs>
-      <rect width="160" height="90" rx="10" fill="url(#dp-bg)" />
-      <g filter="url(#dp-shadow)">
-        <rect x="20" y="6" width="54" height="78" rx="5" fill="url(#dp-main)" />
-        <rect x="20" y="6" width="54" height="13" rx="5" fill="#dc2626" />
-        <rect x="20" y="13" width="54" height="6" fill="#dc2626" />
-        <text x="24" y="16" fontSize="7" fill="white" fontWeight="bold">PDF</text>
-        <rect x="27" y="26" width="34" height="2.5" rx="1.2" fill="white" fillOpacity="0.7" />
-        <rect x="27" y="31" width="28" height="2" rx="1" fill="white" fillOpacity="0.5" />
-        {/* Crossed out page */}
-        <g opacity="0.5">
-          <rect x="27" y="38" width="34" height="14" rx="2" fill="white" fillOpacity="0.3" stroke="white" strokeWidth="1" strokeDasharray="2 2" />
-          <path d="M27 38 L61 52 M61 38 L27 52" stroke="white" strokeWidth="1.5" />
-        </g>
-        <rect x="27" y="56" width="34" height="2.5" rx="1.2" fill="white" fillOpacity="0.7" />
-        <rect x="27" y="61" width="26" height="2" rx="1" fill="white" fillOpacity="0.5" />
-        <rect x="27" y="66" width="30" height="2" rx="1" fill="white" fillOpacity="0.4" />
-      </g>
-      {/* Trash can icon */}
-      <g transform="translate(95, 30)">
-        <circle cx="30" cy="20" r="26" fill="#dc2626" fillOpacity="0.12" />
-        <path d="M18 16 L42 16 L40 40 C40 42 38 44 36 44 L24 44 C22 44 20 42 20 40 Z" fill="#dc2626" fillOpacity="0.8" />
-        <rect x="15" y="12" width="30" height="4" rx="2" fill="#dc2626" />
-        <rect x="24" y="8" width="12" height="4" rx="2" fill="#dc2626" />
-        <line x1="25" y1="22" x2="25" y2="38" stroke="white" strokeWidth="2" strokeLinecap="round" />
-        <line x1="30" y1="22" x2="30" y2="38" stroke="white" strokeWidth="2" strokeLinecap="round" />
-        <line x1="35" y1="22" x2="35" y2="38" stroke="white" strokeWidth="2" strokeLinecap="round" />
-      </g>
-    </svg>
-  ),
-  "add-watermark-pdf": (
-    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-      <defs>
-        <linearGradient id="wm-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#ecfeff" /><stop offset="1" stopColor="#cffafe" />
-        </linearGradient>
-        <linearGradient id="wm-main" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#67e8f9" /><stop offset="1" stopColor="#0891b2" />
-        </linearGradient>
-        <filter id="wm-shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodOpacity="0.18" /></filter>
-      </defs>
-      <rect width="160" height="90" rx="10" fill="url(#wm-bg)" />
-      <g filter="url(#wm-shadow)">
-        <rect x="30" y="6" width="100" height="78" rx="6" fill="url(#wm-main)" />
-        <rect x="30" y="6" width="100" height="14" rx="6" fill="#0e7490" />
-        <rect x="30" y="14" width="100" height="6" fill="#0e7490" />
-        <text x="36" y="17" fontSize="7" fill="white" fontWeight="bold">DOCUMENT.PDF</text>
-        <rect x="40" y="28" width="70" height="2.5" rx="1.2" fill="white" fillOpacity="0.6" />
-        <rect x="40" y="34" width="60" height="2" rx="1" fill="white" fillOpacity="0.4" />
-        <rect x="40" y="39" width="65" height="2" rx="1" fill="white" fillOpacity="0.4" />
-        <rect x="40" y="52" width="70" height="2" rx="1" fill="white" fillOpacity="0.4" />
-        <rect x="40" y="57" width="55" height="2" rx="1" fill="white" fillOpacity="0.3" />
-        <rect x="40" y="62" width="60" height="2" rx="1" fill="white" fillOpacity="0.3" />
-        {/* Diagonal watermark text */}
-        <text
-          x="80" y="55"
-          fontSize="16" fontWeight="bold"
-          fill="white" fillOpacity="0.35"
-          textAnchor="middle"
-          transform="rotate(-30 80 55)"
-        >
-          CONFIDENTIAL
-        </text>
-      </g>
-      {/* Droplet icon overlay */}
-      <circle cx="130" cy="18" r="9" fill="#0891b2" />
-      <path d="M130 12 C133 17 133 20 130 23 C127 20 127 17 130 12 Z" fill="white" />
-    </svg>
-  ),
-  "pdf-to-word": (
-    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-      <defs>
-        <linearGradient id="pw-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#eff6ff" /><stop offset="1" stopColor="#dbeafe" />
-        </linearGradient>
-        <linearGradient id="pw-pdf" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#93c5fd" /><stop offset="1" stopColor="#2563eb" />
-        </linearGradient>
-        <linearGradient id="pw-word" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#dbeafe" /><stop offset="1" stopColor="#60a5fa" />
-        </linearGradient>
-        <filter id="pw-shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodOpacity="0.18" /></filter>
-      </defs>
-      <rect width="160" height="90" rx="10" fill="url(#pw-bg)" />
-      <g filter="url(#pw-shadow)">
-        <rect x="6" y="8" width="50" height="74" rx="5" fill="url(#pw-pdf)" />
-        <rect x="6" y="8" width="50" height="14" rx="5" fill="#1d4ed8" />
-        <rect x="6" y="16" width="50" height="6" fill="#1d4ed8" />
-        <text x="11" y="18" fontSize="8" fill="white" fontWeight="bold">PDF</text>
-        <rect x="14" y="30" width="34" height="3" rx="1.5" fill="white" fillOpacity="0.8" />
-        <rect x="14" y="36" width="28" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
-        <rect x="14" y="41" width="32" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
-        <rect x="14" y="48" width="28" height="10" rx="3" fill="white" fillOpacity="0.2" />
-        <rect x="14" y="61" width="34" height="2" rx="1" fill="white" fillOpacity="0.4" />
-        <rect x="14" y="66" width="26" height="2" rx="1" fill="white" fillOpacity="0.3" />
-        <rect x="14" y="71" width="30" height="2" rx="1" fill="white" fillOpacity="0.3" />
-      </g>
-      <circle cx="86" cy="45" r="12" fill="#3b82f6" fillOpacity="0.15" />
-      <path d="M79 45 L93 45" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M88 41 L93 45 L88 49" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      <g filter="url(#pw-shadow)">
-        <rect x="104" y="8" width="50" height="74" rx="5" fill="url(#pw-word)" />
-        <rect x="104" y="8" width="50" height="22" rx="5" fill="#2563eb" />
-        <rect x="104" y="22" width="50" height="8" fill="#2563eb" />
-        <text x="116" y="24" fontSize="20" fill="white" fontWeight="bold">W</text>
-        <rect x="112" y="36" width="36" height="3" rx="1.5" fill="#2563eb" fillOpacity="0.5" />
-        <rect x="112" y="42" width="30" height="2.5" rx="1.2" fill="#2563eb" fillOpacity="0.35" />
-        <rect x="112" y="47" width="34" height="2.5" rx="1.2" fill="#2563eb" fillOpacity="0.35" />
-        <rect x="112" y="52" width="28" height="2" rx="1" fill="#2563eb" fillOpacity="0.25" />
-        <rect x="112" y="59" width="36" height="2" rx="1" fill="#2563eb" fillOpacity="0.3" />
-        <rect x="112" y="64" width="26" height="2" rx="1" fill="#2563eb" fillOpacity="0.25" />
-        <rect x="112" y="69" width="30" height="2" rx="1" fill="#2563eb" fillOpacity="0.25" />
-        <text x="106" y="77" fontSize="6" fill="#1e3a8a" fontWeight="bold">.DOCX — EDITABLE</text>
-      </g>
-    </svg>
-  ),
-  "jpg-to-pdf": (
-    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-      <defs>
-        <linearGradient id="jp-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#f0fdf4" /><stop offset="1" stopColor="#dcfce7" />
-        </linearGradient>
-        <linearGradient id="jp-img1" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#86efac" /><stop offset="1" stopColor="#16a34a" />
-        </linearGradient>
-        <linearGradient id="jp-img2" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#4ade80" /><stop offset="1" stopColor="#15803d" />
-        </linearGradient>
-        <linearGradient id="jp-pdf" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#bbf7d0" /><stop offset="1" stopColor="#22c55e" />
-        </linearGradient>
-        <filter id="jp-shadow"><feDropShadow dx="2" dy="3" stdDeviation="3" floodOpacity="0.15" /></filter>
-      </defs>
-      <rect width="160" height="90" rx="10" fill="url(#jp-bg)" />
-      <g filter="url(#jp-shadow)">
-        <rect x="4" y="22" width="50" height="34" rx="4" fill="url(#jp-img1)" fillOpacity="0.4" stroke="#22c55e" strokeWidth="1" />
-        <rect x="8" y="16" width="50" height="34" rx="4" fill="url(#jp-img1)" fillOpacity="0.6" stroke="#22c55e" strokeWidth="1" />
-        <rect x="12" y="10" width="50" height="36" rx="4" fill="url(#jp-img2)" />
-        <rect x="12" y="10" width="50" height="10" rx="4" fill="#15803d" fillOpacity="0.4" />
-        <circle cx="24" cy="22" r="5" fill="#fde68a" fillOpacity="0.8" />
-        <path d="M18 38 L28 22 L38 32 L44 24 L58 38" fill="#15803d" fillOpacity="0.5" />
-        <path d="M18 38 L28 22 L38 32 L44 24 L58 38" stroke="white" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
-        <text x="14" y="52" fontSize="6" fill="white" fontWeight="bold">JPG/PNG</text>
-      </g>
-      <circle cx="86" cy="45" r="12" fill="#22c55e" fillOpacity="0.15" />
-      <path d="M79 45 L93 45" stroke="#22c55e" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M88 41 L93 45 L88 49" stroke="#22c55e" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      <g filter="url(#jp-shadow)">
-        <rect x="100" y="6" width="54" height="78" rx="5" fill="url(#jp-pdf)" />
-        <rect x="100" y="6" width="54" height="13" rx="5" fill="#16a34a" />
-        <rect x="100" y="13" width="54" height="6" fill="#16a34a" />
-        <text x="104" y="16" fontSize="7" fill="white" fontWeight="bold">PDF</text>
-        <rect x="107" y="24" width="40" height="26" rx="3" fill="#16a34a" fillOpacity="0.3" />
-        <circle cx="115" cy="32" r="4" fill="#fde68a" fillOpacity="0.7" />
-        <path d="M109 44 L118 32 L126 38 L132 30 L145 44" fill="#16a34a" fillOpacity="0.3" />
-        <path d="M109 44 L118 32 L126 38 L132 30 L145 44" stroke="white" strokeWidth="1.2" fill="none" strokeLinejoin="round" />
-        <rect x="107" y="55" width="40" height="2.5" rx="1.2" fill="#16a34a" fillOpacity="0.5" />
-        <rect x="107" y="60" width="32" height="2" rx="1" fill="#16a34a" fillOpacity="0.35" />
-        <rect x="107" y="65" width="36" height="2" rx="1" fill="#16a34a" fillOpacity="0.35" />
-        <rect x="107" y="70" width="28" height="2" rx="1" fill="#16a34a" fillOpacity="0.25" />
-      </g>
-    </svg>
-  ),
-  "pdf-to-jpg": (
-    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-      <defs>
-        <linearGradient id="pj-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#fdf2f8" /><stop offset="1" stopColor="#fce7f3" />
-        </linearGradient>
-        <linearGradient id="pj-pdf" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#fbcfe8" /><stop offset="1" stopColor="#ec4899" />
-        </linearGradient>
-        <linearGradient id="pj-img" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#f9a8d4" /><stop offset="1" stopColor="#db2777" />
-        </linearGradient>
-        <filter id="pj-shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodOpacity="0.18" /></filter>
-      </defs>
-      <rect width="160" height="90" rx="10" fill="url(#pj-bg)" />
-      <g filter="url(#pj-shadow)">
-        <rect x="6" y="8" width="50" height="74" rx="5" fill="url(#pj-pdf)" />
-        <rect x="6" y="8" width="50" height="14" rx="5" fill="#db2777" />
-        <rect x="6" y="16" width="50" height="6" fill="#db2777" />
-        <text x="11" y="18" fontSize="8" fill="white" fontWeight="bold">PDF</text>
-        <rect x="14" y="30" width="34" height="3" rx="1.5" fill="white" fillOpacity="0.8" />
-        <rect x="14" y="36" width="28" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
-        <rect x="14" y="41" width="32" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
-        <rect x="14" y="48" width="28" height="10" rx="3" fill="white" fillOpacity="0.2" />
-        <rect x="14" y="61" width="34" height="2" rx="1" fill="white" fillOpacity="0.4" />
-      </g>
-      <circle cx="86" cy="45" r="12" fill="#ec4899" fillOpacity="0.15" />
-      <path d="M79 45 L93 45" stroke="#ec4899" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M88 41 L93 45 L88 49" stroke="#ec4899" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      <g filter="url(#pj-shadow)">
-        <rect x="104" y="14" width="50" height="38" rx="5" fill="url(#pj-img)" />
-        <circle cx="116" cy="26" r="4" fill="#fde68a" fillOpacity="0.8" />
-        <path d="M108 44 L118 30 L126 36 L134 26 L148 44" fill="white" fillOpacity="0.3" />
-        <path d="M108 44 L118 30 L126 36 L134 26 L148 44" stroke="white" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
-        <text x="107" y="12" fontSize="6" fill="#be185d" fontWeight="bold">.JPG</text>
-      </g>
-      <g filter="url(#pj-shadow)">
-        <rect x="104" y="56" width="50" height="26" rx="4" fill="url(#pj-img)" fillOpacity="0.7" />
-        <text x="112" y="72" fontSize="7" fill="white" fontWeight="bold">.PNG</text>
-      </g>
-    </svg>
-  ),
-  "word-to-pdf": (
-    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-      <defs>
-        <linearGradient id="wp-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#eef2ff" /><stop offset="1" stopColor="#e0e7ff" />
-        </linearGradient>
-        <linearGradient id="wp-word" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#a5b4fc" /><stop offset="1" stopColor="#4f46e5" />
-        </linearGradient>
-        <linearGradient id="wp-pdf" x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#c7d2fe" /><stop offset="1" stopColor="#6366f1" />
-        </linearGradient>
-        <filter id="wp-shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodOpacity="0.18" /></filter>
-      </defs>
-      <rect width="160" height="90" rx="10" fill="url(#wp-bg)" />
-      <g filter="url(#wp-shadow)">
-        <rect x="6" y="8" width="50" height="74" rx="5" fill="url(#wp-word)" />
-        <rect x="6" y="8" width="50" height="22" rx="5" fill="#4338ca" />
-        <rect x="6" y="22" width="50" height="8" fill="#4338ca" />
-        <text x="18" y="24" fontSize="20" fill="white" fontWeight="bold">W</text>
-        <rect x="14" y="36" width="34" height="3" rx="1.5" fill="white" fillOpacity="0.7" />
-        <rect x="14" y="42" width="28" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
-        <rect x="14" y="47" width="32" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
-        <rect x="14" y="52" width="26" height="2" rx="1" fill="white" fillOpacity="0.4" />
-        <rect x="14" y="59" width="34" height="2" rx="1" fill="white" fillOpacity="0.4" />
-        <rect x="14" y="64" width="24" height="2" rx="1" fill="white" fillOpacity="0.3" />
-        <text x="8" y="77" fontSize="6" fill="white" fontWeight="bold" fillOpacity="0.9">.DOCX</text>
-      </g>
-      <circle cx="86" cy="45" r="12" fill="#6366f1" fillOpacity="0.15" />
-      <path d="M79 45 L93 45" stroke="#6366f1" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M88 41 L93 45 L88 49" stroke="#6366f1" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      <g filter="url(#wp-shadow)">
-        <rect x="104" y="8" width="50" height="74" rx="5" fill="url(#wp-pdf)" />
-        <rect x="104" y="8" width="50" height="14" rx="5" fill="#4f46e5" />
-        <rect x="104" y="16" width="50" height="6" fill="#4f46e5" />
-        <text x="109" y="18" fontSize="8" fill="white" fontWeight="bold">PDF</text>
-        <rect x="112" y="30" width="34" height="3" rx="1.5" fill="white" fillOpacity="0.8" />
-        <rect x="112" y="36" width="28" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
-        <rect x="112" y="41" width="32" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
-        <rect x="112" y="61" width="34" height="2" rx="1" fill="white" fillOpacity="0.4" />
-        {/* Check badge */}
-        <circle cx="140" cy="72" r="8" fill="#16a34a" />
-        <path d="M136 72 L139 75 L144 68" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      </g>
-    </svg>
-  ),
-};
+function triggerDownload(blob: Blob, name: string) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = name;
+  a.rel = "noopener";
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 1500);
+}
 
-const quickBenefits = [
-  { label: "Free", icon: "✓" },
-  { label: "Secure", icon: "✓" },
-  { label: "No Sign-up", icon: "✓" },
-];
+export function ToolProcessor({ slug }: Props) {
+  const { lang } = useI18n();
+  const cfg = getToolConfig(slug as ToolSlug);
+  const [files, setFiles] = useState<File[]>([]);
+  const [hover, setHover] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [rotation, setRotation] = useState<90 | 180 | 270>(90);
+  const [splitPages, setSplitPages] = useState("");
+  const [deletePages, setDeletePages] = useState("");
+  const [watermarkText, setWatermarkText] = useState("CONFIDENTIAL");
+  const [watermarkOpacity, setWatermarkOpacity] = useState(0.3);
+const onDrop = useCallback((e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setHover(false);
+    const dropped = Array.from(e.dataTransfer.files);
+    setFiles(cfg.multiple ? [...files, ...dropped] : dropped.slice(0, 1));
+  }, [files, cfg.multiple]);
 
-export function ToolCard({ tool, index = 0 }: { tool: Tool; index?: number }) {
-  const { t, lang } = useI18n();
-  const Icon = tool.icon;
-  const preview = toolPreviews[tool.slug];
+  const onPick = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.files) return;
+    const picked = Array.from(e.target.files);
+    setFiles(cfg.multiple ? [...files, ...picked] : picked.slice(0, 1));
+    e.target.value = "";
+  };
+
+  const handleProcess = async () => {
+    if (files.length === 0) { toast.error(lang === "ar" ? "اختر ملفًا أولاً" : "Please pick a file first."); return; }
+    if (slug === "merge-pdf" && files.length < 2) { toast.error(lang === "ar" ? "اختر ملفين على الأقل" : "Please select at least 2 files to merge."); return; }
+    if (slug === "delete-pages-pdf" && !deletePages.trim()) { toast.error(lang === "ar" ? "أدخل أرقام الصفحات المراد حذفها" : "Please enter the page numbers to delete."); return; }
+
+setBusy(true);
+    try {
+      const results = await processFiles(slug as ToolSlug, files, {
+        rotationDegrees: rotation,
+        splitPages,
+        deletePages,
+        watermarkText,
+        watermarkOpacity,
+      });
+      results.forEach(({ blob, name }) => triggerDownload(blob, name));
+      toast.success(
+        results.length > 1
+          ? lang === "ar" ? `تم تحميل ${results.length} ملفات!` : `${results.length} files downloaded!`
+          : lang === "ar" ? "تمت المعالجة بنجاح!" : "Done! Your file is ready."
+      );
+    } catch (err: unknown) {
+      console.error("[ToolProcessor]", err);
+      toast.error(lang === "ar" ? "حدث خطأ. يرجى المحاولة مرة أخرى." : "Something went wrong. Please try again.");
+    } finally {
+      setBusy(false);
+    }
+  };
+const buttonLabels: Record<string, string> = {
+    "merge-pdf": lang === "ar" ? "دمج وتحميل" : "Merge & Download",
+    "compress-pdf": lang === "ar" ? "ضغط وتحميل" : "Compress & Download",
+    "pdf-to-word": lang === "ar" ? "تحويل وتحميل" : "Convert & Download",
+    "jpg-to-pdf": lang === "ar" ? "تحويل وتحميل" : "Convert & Download",
+    "rotate-pdf": lang === "ar" ? "تدوير وتحميل" : "Rotate & Download",
+    "split-pdf": lang === "ar" ? "تقسيم وتحميل" : "Split & Download",
+    "delete-pages-pdf": lang === "ar" ? "حذف وتحميل" : "Delete & Download",
+    "add-watermark-pdf": lang === "ar" ? "إضافة علامة وتحميل" : "Add Watermark & Download",
+    "pdf-to-jpg": lang === "ar" ? "تحويل وتحميل" : "Convert & Download",
+    "word-to-pdf": lang === "ar" ? "تحويل وتحميل" : "Convert & Download",
+  };
+
+  const getButtonLabel = () => busy
+    ? (lang === "ar" ? "جاري المعالجة..." : "Processing...")
+    : (buttonLabels[slug] || (lang === "ar" ? "معالجة وتحميل" : "Process & Download"));
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.4) }}
-      className="flex flex-col h-full"
-    >
-      <motion.div
-        whileHover={{ y: -6, scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="flex flex-col h-full"
+    <div className="space-y-4">
+      {/* Upload Zone */}
+      <div
+        onDragOver={(e) => { e.preventDefault(); setHover(true); }}
+        onDragLeave={() => setHover(false)}
+        onDrop={onDrop}
+        className={`relative rounded-3xl border-2 border-dashed p-10 sm:p-16 text-center transition-smooth ${hover ? "border-primary bg-accent/40 scale-[1.01]" : "border-border bg-card"}`}
       >
-        <Link
-          to="/tools/$slug"
-          params={{ slug: tool.slug }}
-          className="group relative flex flex-col rounded-2xl border border-border bg-gradient-card shadow-soft hover:shadow-elegant hover:border-primary/30 overflow-hidden transition-colors duration-300"
-        >
-          {tool.badge && (
-            <span className={`absolute top-3 end-3 z-10 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide shadow-sm ${badgeStyles[tool.badge]}`}>
-              {t(`common.${tool.badge}`)}
+        <input type="file" accept={cfg.accept} multiple={cfg.multiple} onChange={onPick} className="absolute inset-0 cursor-pointer opacity-0" aria-label="Upload file" />
+        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-primary shadow-elegant animate-float">
+          <UploadCloud className="h-10 w-10 text-primary-foreground" strokeWidth={2} />
+        </div>
+<h3 className="mt-6 font-display text-2xl font-bold">{lang === "ar" ? "اسحب ملفك هنا" : "Drop your file here"}</h3>
+        <p className="mt-1 text-muted-foreground">{lang === "ar" ? "أو انقر للاختيار" : "or click to browse"}</p>
+        <p className="mt-3 text-xs text-muted-foreground">
+          {lang === "ar" ? "المعالجة تتم بالكامل داخل متصفحك — لا يتم رفع أي ملف." : "Processed entirely in your browser — your files never leave your device."}
+        </p>
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
+          {cfg.accept.split(",").map((fmt) => (
+            <span key={fmt} className="rounded-full border border-border bg-secondary/50 px-2.5 py-0.5 text-xs font-medium text-muted-foreground">
+              {fmt.trim().replace(".", "").replace("application/pdf", "PDF").replace("image/png", "PNG").replace("image/jpeg", "JPG").replace("application/vnd.openxmlformats-officedocument.wordprocessingml.document", "DOCX").toUpperCase()}
             </span>
-          )}
+          ))}
+        </div>
+      </div>
 
-          {preview ? (
-            <div
-              className="w-full h-32 overflow-hidden rounded-t-2xl"
-              role="img"
-              aria-label={`${tool.title.en} — free online PDF tool`}
-            >
-              {preview}
+      {/* Tool-specific options */}
+      {files.length > 0 && (
+        <>
+          {/* Rotate Options */}
+          {slug === "rotate-pdf" && (
+            <div className="rounded-2xl border border-border bg-card p-4">
+              <p className="text-sm font-medium mb-3">{lang === "ar" ? "اختر زاوية التدوير:" : "Choose rotation angle:"}</p>
+              <div className="grid grid-cols-3 gap-2">
+                {([90, 180, 270] as const).map((deg) => (
+                  <button key={deg} onClick={() => setRotation(deg)}
+                    className={`flex flex-col items-center gap-2 rounded-xl border-2 p-3 transition-smooth ${rotation === deg ? "border-primary bg-primary/5 text-primary" : "border-border bg-secondary/30 text-muted-foreground hover:border-primary/50"}`}>
+                    <RotateCw className="h-5 w-5" style={{ transform: `rotate(${deg - 90}deg)` }} />
+                    <span className="text-xs font-semibold">{deg}°</span>
+                  </button>
+                ))}
+              </div>
             </div>
-          ) : (
-            <div className="w-full h-32 flex items-center justify-center rounded-t-2xl bg-gradient-to-br from-secondary/50 to-secondary/20">
-              <div className={`flex h-16 w-16 items-center justify-center rounded-2xl ${tool.bg} ${tool.color} shadow-lg`}>
-                <Icon className="h-8 w-8" strokeWidth={2} />
+          )}
+{/* Split Options */}
+          {slug === "split-pdf" && (
+            <div className="rounded-2xl border border-border bg-card p-4 space-y-3">
+              <p className="text-sm font-medium">{lang === "ar" ? "خيارات التقسيم:" : "Split options:"}</p>
+              <label className="text-xs text-muted-foreground block mb-1.5">
+                {lang === "ar" ? "أدخل نطاقات الصفحات (مثال: 1-3,5,7-9) أو اتركها فارغة لتقسيم كل صفحة:" : "Enter page ranges (e.g. 1-3,5,7-9) or leave empty to split every page:"}
+              </label>
+              <input type="text" value={splitPages} onChange={(e) => setSplitPages(e.target.value)}
+                placeholder={lang === "ar" ? "مثال: 1-3,5,7-9" : "e.g. 1-3,5,7-9"}
+                className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50" />
+              <div className="flex items-center gap-2 rounded-lg bg-secondary/50 p-3">
+                <Scissors className="h-4 w-4 text-primary flex-shrink-0" />
+                <p className="text-xs text-muted-foreground">{lang === "ar" ? "كل نطاق سيتم تحميله كملف PDF منفصل." : "Each range will be downloaded as a separate PDF file."}</p>
               </div>
             </div>
           )}
 
-          <div className="p-5 flex flex-col flex-1">
-            <div className="flex items-center gap-3 mb-2">
-              <div className={`flex h-9 w-9 items-center justify-center rounded-xl ${tool.bg} ${tool.color} shadow-sm transition-transform duration-300 group-hover:scale-110 flex-shrink-0`}>
-                <Icon className="h-5 w-5" strokeWidth={2.2} />
+          {/* Delete Pages Options */}
+          {slug === "delete-pages-pdf" && (
+            <div className="rounded-2xl border border-border bg-card p-4 space-y-3">
+              <p className="text-sm font-medium">{lang === "ar" ? "أدخل أرقام الصفحات المراد حذفها:" : "Enter page numbers to delete:"}</p>
+              <input type="text" value={deletePages} onChange={(e) => setDeletePages(e.target.value)}
+                placeholder={lang === "ar" ? "مثال: 1,3,5-7" : "e.g. 1,3,5-7"}
+                className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50" />
+              <div className="flex items-center gap-2 rounded-lg bg-secondary/50 p-3">
+                <Trash2 className="h-4 w-4 text-primary flex-shrink-0" />
+                <p className="text-xs text-muted-foreground">{lang === "ar" ? "أدخل أرقام الصفحات أو نطاقات مفصولة بفواصل." : "Enter page numbers or ranges separated by commas. E.g. 1,3,5-7"}</p>
               </div>
-              <h3 className="font-display text-base font-bold leading-tight">{tool.title[lang]}</h3>
             </div>
+          )}
 
-            <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-3">
-              {tool.desc[lang]}
-            </p>
-
-            <div className="flex items-center gap-3 mb-3">
-              {quickBenefits.map((b) => (
-                <span key={b.label} className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
-                  <Check className="h-3 w-3" />
-                  {b.label}
-                </span>
-              ))}
+          {/* Watermark Options */}
+          {slug === "add-watermark-pdf" && (
+            <div className="rounded-2xl border border-border bg-card p-4 space-y-3">
+              <p className="text-sm font-medium">{lang === "ar" ? "إعدادات العلامة المائية:" : "Watermark settings:"}</p>
+              <div>
+                <label className="text-xs text-muted-foreground block mb-1.5">{lang === "ar" ? "نص العلامة المائية:" : "Watermark text:"}</label>
+                <input type="text" value={watermarkText} onChange={(e) => setWatermarkText(e.target.value)}
+                  placeholder="CONFIDENTIAL"
+                  className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50" />
+              </div>
+              <div>
+                <label className="text-xs text-muted-foreground block mb-1.5">
+                  {lang === "ar" ? `الشفافية: ${Math.round(watermarkOpacity * 100)}%` : `Opacity: ${Math.round(watermarkOpacity * 100)}%`}
+                </label>
+                <input type="range" min="0.1" max="0.8" step="0.1" value={watermarkOpacity}
+                  onChange={(e) => setWatermarkOpacity(parseFloat(e.target.value))}
+                  className="w-full" />
+              </div>
+              <div className="flex items-center gap-2 rounded-lg bg-secondary/50 p-3">
+                <Droplets className="h-4 w-4 text-primary flex-shrink-0" />
+                <p className="text-xs text-muted-foreground">{lang === "ar" ? "ستُضاف العلامة المائية على كل صفحات الملف." : "Watermark will be added to every page of the PDF."}</p>
+              </div>
             </div>
-
-            <div className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-              {lang === "ar" ? "ابدأ الآن" : "Open tool"}
-              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1 rtl:rotate-180" />
-            </div>
-          </div>
-        </Link>
-      </motion.div>
-
-      {tool.relatedArticle && (
-        <motion.div
-          whileHover={{ y: -2 }}
-          transition={{ type: "spring", stiffness: 400, damping: 25 }}
-        >
-          <Link
-            to="/blog/$slug"
-            params={{ slug: tool.relatedArticle.slug }}
-            className="mt-2 flex items-center gap-2 rounded-xl border border-border/60 bg-secondary/30 px-4 py-2.5 text-xs text-muted-foreground hover:text-primary hover:border-primary/30 hover:bg-secondary/60 transition-all duration-200 group"
-          >
-            <BookOpen className="h-3.5 w-3.5 flex-shrink-0 text-primary/70 group-hover:text-primary transition-colors" />
-            <span className="line-clamp-1 flex-1">
-              {lang === "ar" ? "اقرأ الدليل: " : "Read guide: "}
-              <span className="font-medium">{tool.relatedArticle.title}</span>
-            </span>
-            <ArrowRight className="h-3 w-3 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-0.5 rtl:rotate-180" />
-          </Link>
-        </motion.div>
+          )}
+        </>
       )}
-    </motion.div>
+{/* File List */}
+      {files.length > 0 && (
+        <div className="rounded-2xl border border-border bg-card p-4 space-y-3">
+          <p className="text-xs font-medium text-muted-foreground px-1">
+            {lang === "ar" ? `${files.length} ملف محدد` : `${files.length} file${files.length > 1 ? "s" : ""} selected`}
+          </p>
+          {files.map((f, i) => (
+            <div key={i} className="flex items-center justify-between gap-3 rounded-xl bg-secondary/50 p-3">
+              <div className="flex items-center gap-3 min-w-0">
+                <FileCheck2 className="h-5 w-5 text-primary flex-shrink-0" />
+                <div className="min-w-0">
+                  <p className="text-sm font-medium truncate">{f.name}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {f.size > 1024 * 1024 ? `${(f.size / (1024 * 1024)).toFixed(1)} MB` : `${(f.size / 1024).toFixed(0)} KB`}
+                  </p>
+                </div>
+              </div>
+              <button onClick={() => setFiles(files.filter((_, idx) => idx !== i))}
+                className="flex-shrink-0 rounded-lg p-1 text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-smooth" aria-label="Remove file">
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+          ))}
+          {slug === "merge-pdf" && files.length === 1 && (
+            <p className="text-xs text-amber-600 dark:text-amber-400 px-1">
+              {lang === "ar" ? "أضف ملف PDF آخر على الأقل للدمج" : "Add at least one more PDF to merge"}
+            </p>
+          )}
+<Button variant="hero" size="lg" className="w-full" onClick={handleProcess}
+            disabled={busy || (slug === "merge-pdf" && files.length < 2)}>
+            {busy ? (
+              <div className="flex items-center gap-2"><Loader2 className="h-4 w-4 animate-spin" /><span>{getButtonLabel()}</span></div>
+            ) : (
+              <div className="flex items-center gap-2"><Download className="h-4 w-4" /><span>{getButtonLabel()}</span></div>
+            )}
+          </Button>
+        </div>
+      )}
+    </div>
   );
 }
