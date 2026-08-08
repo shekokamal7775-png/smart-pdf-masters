@@ -112,6 +112,30 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+  <loc>https://www.smartpdfmasters.com/tools/delete-pdf-pages</loc>
+  <lastmod>2026-08-08</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://www.smartpdfmasters.com/tools/watermark-pdf</loc>
+  <lastmod>2026-08-08</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://www.smartpdfmasters.com/tools/pdf-to-image</loc>
+  <lastmod>2026-08-08</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://www.smartpdfmasters.com/tools/word-to-pdf</loc>
+  <lastmod>2026-08-08</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
 
   <!-- Blog Posts -->
   <url>
