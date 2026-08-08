@@ -10,7 +10,7 @@ const badgeStyles: Record<string, string> = {
   ai: "bg-gradient-primary text-primary-foreground",
 };
 
-// 3D-style SVG previews with gradients and shadows
+// 3D-style SVG previews with gradients and shadows for every tool
 const toolPreviews: Record<string, React.ReactNode> = {
   "merge-pdf": (
     <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
@@ -31,7 +31,6 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <filter id="mg-shadow2"><feDropShadow dx="3" dy="4" stdDeviation="5" floodOpacity="0.2" /></filter>
       </defs>
       <rect width="160" height="90" rx="10" fill="url(#mg-bg)" />
-      {/* File 1 */}
       <g filter="url(#mg-shadow)">
         <rect x="8" y="10" width="36" height="46" rx="4" fill="url(#mg-card1)" />
         <rect x="8" y="10" width="36" height="10" rx="4" fill="#f43f5e" />
@@ -41,18 +40,15 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <rect x="13" y="41" width="14" height="2" rx="1" fill="white" fillOpacity="0.4" />
         <text x="11" y="21" fontSize="6" fill="white" fontWeight="bold">PDF</text>
       </g>
-      {/* File 2 */}
       <g filter="url(#mg-shadow)">
         <rect x="8" y="62" width="36" height="20" rx="4" fill="url(#mg-card2)" />
         <rect x="13" y="68" width="22" height="2" rx="1" fill="white" fillOpacity="0.8" />
         <rect x="13" y="73" width="16" height="2" rx="1" fill="white" fillOpacity="0.5" />
         <text x="32" y="79" fontSize="5" fill="white" fontWeight="bold" fillOpacity="0.7">PDF</text>
       </g>
-      {/* Arrow */}
       <circle cx="60" cy="45" r="10" fill="#f43f5e" fillOpacity="0.15" />
       <path d="M55 45 L65 45" stroke="#f43f5e" strokeWidth="2.5" strokeLinecap="round" />
       <path d="M61 41 L65 45 L61 49" stroke="#f43f5e" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      {/* Result */}
       <g filter="url(#mg-shadow2)">
         <rect x="78" y="6" width="74" height="78" rx="6" fill="url(#mg-result)" stroke="#fda4af" strokeWidth="1.5" />
         <rect x="78" y="6" width="74" height="14" rx="6" fill="#f43f5e" />
@@ -86,7 +82,6 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <filter id="cp-shadow2"><feDropShadow dx="1" dy="2" stdDeviation="2" floodOpacity="0.15" /></filter>
       </defs>
       <rect width="160" height="90" rx="10" fill="url(#cp-bg)" />
-      {/* Big PDF */}
       <g filter="url(#cp-shadow)">
         <rect x="6" y="6" width="54" height="72" rx="5" fill="url(#cp-big)" />
         <rect x="6" y="6" width="54" height="14" rx="5" fill="#f59e0b" />
@@ -100,14 +95,12 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <rect x="14" y="64" width="28" height="2" rx="1" fill="white" fillOpacity="0.3" />
         <text x="8" y="74" fontSize="9" fill="white" fontWeight="bold" fillOpacity="0.9">12 MB</text>
       </g>
-      {/* Arrow with compress badge */}
       <g>
         <circle cx="85" cy="45" r="12" fill="#f59e0b" fillOpacity="0.2" />
         <path d="M79 45 L91 45" stroke="#f59e0b" strokeWidth="2.5" strokeLinecap="round" />
         <path d="M87 41 L91 45 L87 49" stroke="#f59e0b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M82 38 L82 34 M82 52 L82 56" stroke="#f59e0b" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="2 2" />
       </g>
-      {/* Small PDF */}
       <g filter="url(#cp-shadow2)">
         <rect x="100" y="18" width="54" height="48" rx="5" fill="url(#cp-small)" />
         <rect x="100" y="18" width="54" height="12" rx="5" fill="#d97706" />
@@ -118,7 +111,6 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <rect x="108" y="46" width="32" height="2" rx="1" fill="white" fillOpacity="0.5" />
         <text x="102" y="60" fontSize="9" fill="white" fontWeight="bold" fillOpacity="0.9">1.2 MB</text>
       </g>
-      {/* Down arrow badge */}
       <circle cx="127" cy="14" r="8" fill="#16a34a" />
       <text x="121" y="18" fontSize="10" fill="white" fontWeight="bold">↓</text>
       <text x="107" y="72" fontSize="6" fill="#92400e" fontWeight="bold">90% SMALLER</text>
@@ -139,7 +131,6 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <filter id="rp-shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodOpacity="0.18" /></filter>
       </defs>
       <rect width="160" height="90" rx="10" fill="url(#rp-bg)" />
-      {/* Sideways PDF */}
       <g filter="url(#rp-shadow)">
         <rect x="6" y="26" width="54" height="38" rx="4" fill="url(#rp-wrong)" fillOpacity="0.7" stroke="#c084fc" strokeWidth="1.5" strokeDasharray="4 2" />
         <rect x="6" y="26" width="12" height="38" rx="4" fill="#9333ea" fillOpacity="0.5" />
@@ -150,7 +141,6 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <rect x="24" y="48" width="22" height="2" rx="1" fill="white" fillOpacity="0.3" />
         <text x="8" y="70" fontSize="6" fill="#7e22ce" fontWeight="bold">SIDEWAYS</text>
       </g>
-      {/* Rotation arrows */}
       <g>
         <path d="M68 22 C76 12 90 12 94 22" stroke="#a855f7" strokeWidth="2.5" strokeLinecap="round" fill="none" />
         <path d="M91 18 L94 22 L90 25" stroke="#a855f7" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -159,7 +149,6 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <circle cx="81" cy="45" r="10" fill="#a855f7" fillOpacity="0.15" />
         <text x="76" y="49" fontSize="12" fill="#9333ea">↻</text>
       </g>
-      {/* Correct PDF */}
       <g filter="url(#rp-shadow)">
         <rect x="100" y="6" width="54" height="78" rx="5" fill="url(#rp-right)" />
         <rect x="100" y="6" width="54" height="14" rx="5" fill="#9333ea" />
@@ -172,7 +161,6 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <rect x="108" y="52" width="38" height="2" rx="1" fill="white" fillOpacity="0.4" />
         <rect x="108" y="57" width="32" height="2" rx="1" fill="white" fillOpacity="0.3" />
       </g>
-      {/* Check badge */}
       <circle cx="148" cy="10" r="8" fill="#16a34a" />
       <path d="M144 10 L147 13 L152 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
@@ -193,7 +181,6 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <filter id="sp-shadow2"><feDropShadow dx="1" dy="2" stdDeviation="2" floodOpacity="0.12" /></filter>
       </defs>
       <rect width="160" height="90" rx="10" fill="url(#sp-bg)" />
-      {/* Source PDF */}
       <g filter="url(#sp-shadow)">
         <rect x="6" y="6" width="48" height="78" rx="5" fill="url(#sp-main)" />
         <rect x="6" y="6" width="48" height="13" rx="5" fill="#ea580c" />
@@ -210,14 +197,12 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <rect x="13" y="66" width="32" height="2.5" rx="1.2" fill="white" fillOpacity="0.7" />
         <rect x="13" y="71" width="28" height="2" rx="1" fill="white" fillOpacity="0.5" />
       </g>
-      {/* Scissors */}
       <circle cx="72" cy="45" r="10" fill="#f97316" fillOpacity="0.15" />
       <circle cx="68" cy="42" r="4" stroke="#f97316" strokeWidth="2" fill="none" />
       <circle cx="68" cy="48" r="4" stroke="#f97316" strokeWidth="2" fill="none" />
       <path d="M71 40 L80 34" stroke="#f97316" strokeWidth="2" strokeLinecap="round" />
       <path d="M71 50 L80 56" stroke="#f97316" strokeWidth="2" strokeLinecap="round" />
       <path d="M68 45 L80 45" stroke="#f97316" strokeWidth="2" strokeLinecap="round" />
-      {/* Parts */}
       <g filter="url(#sp-shadow2)">
         <rect x="88" y="4" width="66" height="22" rx="4" fill="url(#sp-part)" />
         <rect x="88" y="4" width="66" height="8" rx="4" fill="#ea580c" fillOpacity="0.8" />
@@ -244,6 +229,85 @@ const toolPreviews: Record<string, React.ReactNode> = {
       </g>
     </svg>
   ),
+  "delete-pages-pdf": (
+    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <defs>
+        <linearGradient id="dp-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#fef2f2" /><stop offset="1" stopColor="#fee2e2" />
+        </linearGradient>
+        <linearGradient id="dp-main" x1="0" y1="0" x2="1" y2="1">
+          <stop stopColor="#fca5a5" /><stop offset="1" stopColor="#dc2626" />
+        </linearGradient>
+        <filter id="dp-shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodOpacity="0.18" /></filter>
+      </defs>
+      <rect width="160" height="90" rx="10" fill="url(#dp-bg)" />
+      <g filter="url(#dp-shadow)">
+        <rect x="20" y="6" width="54" height="78" rx="5" fill="url(#dp-main)" />
+        <rect x="20" y="6" width="54" height="13" rx="5" fill="#dc2626" />
+        <rect x="20" y="13" width="54" height="6" fill="#dc2626" />
+        <text x="24" y="16" fontSize="7" fill="white" fontWeight="bold">PDF</text>
+        <rect x="27" y="26" width="34" height="2.5" rx="1.2" fill="white" fillOpacity="0.7" />
+        <rect x="27" y="31" width="28" height="2" rx="1" fill="white" fillOpacity="0.5" />
+        {/* Crossed out page */}
+        <g opacity="0.5">
+          <rect x="27" y="38" width="34" height="14" rx="2" fill="white" fillOpacity="0.3" stroke="white" strokeWidth="1" strokeDasharray="2 2" />
+          <path d="M27 38 L61 52 M61 38 L27 52" stroke="white" strokeWidth="1.5" />
+        </g>
+        <rect x="27" y="56" width="34" height="2.5" rx="1.2" fill="white" fillOpacity="0.7" />
+        <rect x="27" y="61" width="26" height="2" rx="1" fill="white" fillOpacity="0.5" />
+        <rect x="27" y="66" width="30" height="2" rx="1" fill="white" fillOpacity="0.4" />
+      </g>
+      {/* Trash can icon */}
+      <g transform="translate(95, 30)">
+        <circle cx="30" cy="20" r="26" fill="#dc2626" fillOpacity="0.12" />
+        <path d="M18 16 L42 16 L40 40 C40 42 38 44 36 44 L24 44 C22 44 20 42 20 40 Z" fill="#dc2626" fillOpacity="0.8" />
+        <rect x="15" y="12" width="30" height="4" rx="2" fill="#dc2626" />
+        <rect x="24" y="8" width="12" height="4" rx="2" fill="#dc2626" />
+        <line x1="25" y1="22" x2="25" y2="38" stroke="white" strokeWidth="2" strokeLinecap="round" />
+        <line x1="30" y1="22" x2="30" y2="38" stroke="white" strokeWidth="2" strokeLinecap="round" />
+        <line x1="35" y1="22" x2="35" y2="38" stroke="white" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    </svg>
+  ),
+  "add-watermark-pdf": (
+    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <defs>
+        <linearGradient id="wm-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#ecfeff" /><stop offset="1" stopColor="#cffafe" />
+        </linearGradient>
+        <linearGradient id="wm-main" x1="0" y1="0" x2="1" y2="1">
+          <stop stopColor="#67e8f9" /><stop offset="1" stopColor="#0891b2" />
+        </linearGradient>
+        <filter id="wm-shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodOpacity="0.18" /></filter>
+      </defs>
+      <rect width="160" height="90" rx="10" fill="url(#wm-bg)" />
+      <g filter="url(#wm-shadow)">
+        <rect x="30" y="6" width="100" height="78" rx="6" fill="url(#wm-main)" />
+        <rect x="30" y="6" width="100" height="14" rx="6" fill="#0e7490" />
+        <rect x="30" y="14" width="100" height="6" fill="#0e7490" />
+        <text x="36" y="17" fontSize="7" fill="white" fontWeight="bold">DOCUMENT.PDF</text>
+        <rect x="40" y="28" width="70" height="2.5" rx="1.2" fill="white" fillOpacity="0.6" />
+        <rect x="40" y="34" width="60" height="2" rx="1" fill="white" fillOpacity="0.4" />
+        <rect x="40" y="39" width="65" height="2" rx="1" fill="white" fillOpacity="0.4" />
+        <rect x="40" y="52" width="70" height="2" rx="1" fill="white" fillOpacity="0.4" />
+        <rect x="40" y="57" width="55" height="2" rx="1" fill="white" fillOpacity="0.3" />
+        <rect x="40" y="62" width="60" height="2" rx="1" fill="white" fillOpacity="0.3" />
+        {/* Diagonal watermark text */}
+        <text
+          x="80" y="55"
+          fontSize="16" fontWeight="bold"
+          fill="white" fillOpacity="0.35"
+          textAnchor="middle"
+          transform="rotate(-30 80 55)"
+        >
+          CONFIDENTIAL
+        </text>
+      </g>
+      {/* Droplet icon overlay */}
+      <circle cx="130" cy="18" r="9" fill="#0891b2" />
+      <path d="M130 12 C133 17 133 20 130 23 C127 20 127 17 130 12 Z" fill="white" />
+    </svg>
+  ),
   "pdf-to-word": (
     <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
       <defs>
@@ -259,7 +323,6 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <filter id="pw-shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodOpacity="0.18" /></filter>
       </defs>
       <rect width="160" height="90" rx="10" fill="url(#pw-bg)" />
-      {/* PDF Source */}
       <g filter="url(#pw-shadow)">
         <rect x="6" y="8" width="50" height="74" rx="5" fill="url(#pw-pdf)" />
         <rect x="6" y="8" width="50" height="14" rx="5" fill="#1d4ed8" />
@@ -273,11 +336,9 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <rect x="14" y="66" width="26" height="2" rx="1" fill="white" fillOpacity="0.3" />
         <rect x="14" y="71" width="30" height="2" rx="1" fill="white" fillOpacity="0.3" />
       </g>
-      {/* Arrow */}
       <circle cx="86" cy="45" r="12" fill="#3b82f6" fillOpacity="0.15" />
       <path d="M79 45 L93 45" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" />
       <path d="M88 41 L93 45 L88 49" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      {/* Word Result */}
       <g filter="url(#pw-shadow)">
         <rect x="104" y="8" width="50" height="74" rx="5" fill="url(#pw-word)" />
         <rect x="104" y="8" width="50" height="22" rx="5" fill="#2563eb" />
@@ -312,29 +373,24 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <filter id="jp-shadow"><feDropShadow dx="2" dy="3" stdDeviation="3" floodOpacity="0.15" /></filter>
       </defs>
       <rect width="160" height="90" rx="10" fill="url(#jp-bg)" />
-      {/* Image stack */}
       <g filter="url(#jp-shadow)">
         <rect x="4" y="22" width="50" height="34" rx="4" fill="url(#jp-img1)" fillOpacity="0.4" stroke="#22c55e" strokeWidth="1" />
         <rect x="8" y="16" width="50" height="34" rx="4" fill="url(#jp-img1)" fillOpacity="0.6" stroke="#22c55e" strokeWidth="1" />
         <rect x="12" y="10" width="50" height="36" rx="4" fill="url(#jp-img2)" />
-        {/* Mountain scene */}
         <rect x="12" y="10" width="50" height="10" rx="4" fill="#15803d" fillOpacity="0.4" />
         <circle cx="24" cy="22" r="5" fill="#fde68a" fillOpacity="0.8" />
         <path d="M18 38 L28 22 L38 32 L44 24 L58 38" fill="#15803d" fillOpacity="0.5" />
         <path d="M18 38 L28 22 L38 32 L44 24 L58 38" stroke="white" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
         <text x="14" y="52" fontSize="6" fill="white" fontWeight="bold">JPG/PNG</text>
       </g>
-      {/* Arrow */}
       <circle cx="86" cy="45" r="12" fill="#22c55e" fillOpacity="0.15" />
       <path d="M79 45 L93 45" stroke="#22c55e" strokeWidth="2.5" strokeLinecap="round" />
       <path d="M88 41 L93 45 L88 49" stroke="#22c55e" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      {/* PDF result */}
       <g filter="url(#jp-shadow)">
         <rect x="100" y="6" width="54" height="78" rx="5" fill="url(#jp-pdf)" />
         <rect x="100" y="6" width="54" height="13" rx="5" fill="#16a34a" />
         <rect x="100" y="13" width="54" height="6" fill="#16a34a" />
         <text x="104" y="16" fontSize="7" fill="white" fontWeight="bold">PDF</text>
-        {/* Image inside PDF */}
         <rect x="107" y="24" width="40" height="26" rx="3" fill="#16a34a" fillOpacity="0.3" />
         <circle cx="115" cy="32" r="4" fill="#fde68a" fillOpacity="0.7" />
         <path d="M109 44 L118 32 L126 38 L132 30 L145 44" fill="#16a34a" fillOpacity="0.3" />
@@ -343,6 +399,94 @@ const toolPreviews: Record<string, React.ReactNode> = {
         <rect x="107" y="60" width="32" height="2" rx="1" fill="#16a34a" fillOpacity="0.35" />
         <rect x="107" y="65" width="36" height="2" rx="1" fill="#16a34a" fillOpacity="0.35" />
         <rect x="107" y="70" width="28" height="2" rx="1" fill="#16a34a" fillOpacity="0.25" />
+      </g>
+    </svg>
+  ),
+  "pdf-to-jpg": (
+    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <defs>
+        <linearGradient id="pj-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#fdf2f8" /><stop offset="1" stopColor="#fce7f3" />
+        </linearGradient>
+        <linearGradient id="pj-pdf" x1="0" y1="0" x2="1" y2="1">
+          <stop stopColor="#fbcfe8" /><stop offset="1" stopColor="#ec4899" />
+        </linearGradient>
+        <linearGradient id="pj-img" x1="0" y1="0" x2="1" y2="1">
+          <stop stopColor="#f9a8d4" /><stop offset="1" stopColor="#db2777" />
+        </linearGradient>
+        <filter id="pj-shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodOpacity="0.18" /></filter>
+      </defs>
+      <rect width="160" height="90" rx="10" fill="url(#pj-bg)" />
+      <g filter="url(#pj-shadow)">
+        <rect x="6" y="8" width="50" height="74" rx="5" fill="url(#pj-pdf)" />
+        <rect x="6" y="8" width="50" height="14" rx="5" fill="#db2777" />
+        <rect x="6" y="16" width="50" height="6" fill="#db2777" />
+        <text x="11" y="18" fontSize="8" fill="white" fontWeight="bold">PDF</text>
+        <rect x="14" y="30" width="34" height="3" rx="1.5" fill="white" fillOpacity="0.8" />
+        <rect x="14" y="36" width="28" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
+        <rect x="14" y="41" width="32" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
+        <rect x="14" y="48" width="28" height="10" rx="3" fill="white" fillOpacity="0.2" />
+        <rect x="14" y="61" width="34" height="2" rx="1" fill="white" fillOpacity="0.4" />
+      </g>
+      <circle cx="86" cy="45" r="12" fill="#ec4899" fillOpacity="0.15" />
+      <path d="M79 45 L93 45" stroke="#ec4899" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M88 41 L93 45 L88 49" stroke="#ec4899" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <g filter="url(#pj-shadow)">
+        <rect x="104" y="14" width="50" height="38" rx="5" fill="url(#pj-img)" />
+        <circle cx="116" cy="26" r="4" fill="#fde68a" fillOpacity="0.8" />
+        <path d="M108 44 L118 30 L126 36 L134 26 L148 44" fill="white" fillOpacity="0.3" />
+        <path d="M108 44 L118 30 L126 36 L134 26 L148 44" stroke="white" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+        <text x="107" y="12" fontSize="6" fill="#be185d" fontWeight="bold">.JPG</text>
+      </g>
+      <g filter="url(#pj-shadow)">
+        <rect x="104" y="56" width="50" height="26" rx="4" fill="url(#pj-img)" fillOpacity="0.7" />
+        <text x="112" y="72" fontSize="7" fill="white" fontWeight="bold">.PNG</text>
+      </g>
+    </svg>
+  ),
+  "word-to-pdf": (
+    <svg viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <defs>
+        <linearGradient id="wp-bg" x1="0" y1="0" x2="160" y2="90" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#eef2ff" /><stop offset="1" stopColor="#e0e7ff" />
+        </linearGradient>
+        <linearGradient id="wp-word" x1="0" y1="0" x2="1" y2="1">
+          <stop stopColor="#a5b4fc" /><stop offset="1" stopColor="#4f46e5" />
+        </linearGradient>
+        <linearGradient id="wp-pdf" x1="0" y1="0" x2="1" y2="1">
+          <stop stopColor="#c7d2fe" /><stop offset="1" stopColor="#6366f1" />
+        </linearGradient>
+        <filter id="wp-shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodOpacity="0.18" /></filter>
+      </defs>
+      <rect width="160" height="90" rx="10" fill="url(#wp-bg)" />
+      <g filter="url(#wp-shadow)">
+        <rect x="6" y="8" width="50" height="74" rx="5" fill="url(#wp-word)" />
+        <rect x="6" y="8" width="50" height="22" rx="5" fill="#4338ca" />
+        <rect x="6" y="22" width="50" height="8" fill="#4338ca" />
+        <text x="18" y="24" fontSize="20" fill="white" fontWeight="bold">W</text>
+        <rect x="14" y="36" width="34" height="3" rx="1.5" fill="white" fillOpacity="0.7" />
+        <rect x="14" y="42" width="28" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
+        <rect x="14" y="47" width="32" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
+        <rect x="14" y="52" width="26" height="2" rx="1" fill="white" fillOpacity="0.4" />
+        <rect x="14" y="59" width="34" height="2" rx="1" fill="white" fillOpacity="0.4" />
+        <rect x="14" y="64" width="24" height="2" rx="1" fill="white" fillOpacity="0.3" />
+        <text x="8" y="77" fontSize="6" fill="white" fontWeight="bold" fillOpacity="0.9">.DOCX</text>
+      </g>
+      <circle cx="86" cy="45" r="12" fill="#6366f1" fillOpacity="0.15" />
+      <path d="M79 45 L93 45" stroke="#6366f1" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M88 41 L93 45 L88 49" stroke="#6366f1" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <g filter="url(#wp-shadow)">
+        <rect x="104" y="8" width="50" height="74" rx="5" fill="url(#wp-pdf)" />
+        <rect x="104" y="8" width="50" height="14" rx="5" fill="#4f46e5" />
+        <rect x="104" y="16" width="50" height="6" fill="#4f46e5" />
+        <text x="109" y="18" fontSize="8" fill="white" fontWeight="bold">PDF</text>
+        <rect x="112" y="30" width="34" height="3" rx="1.5" fill="white" fillOpacity="0.8" />
+        <rect x="112" y="36" width="28" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
+        <rect x="112" y="41" width="32" height="2.5" rx="1.2" fill="white" fillOpacity="0.5" />
+        <rect x="112" y="61" width="34" height="2" rx="1" fill="white" fillOpacity="0.4" />
+        {/* Check badge */}
+        <circle cx="140" cy="72" r="8" fill="#16a34a" />
+        <path d="M136 72 L139 75 L144 68" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </g>
     </svg>
   ),
@@ -378,14 +522,12 @@ export function ToolCard({ tool, index = 0 }: { tool: Tool; index?: number }) {
           params={{ slug: tool.slug }}
           className="group relative flex flex-col rounded-2xl border border-border bg-gradient-card shadow-soft hover:shadow-elegant hover:border-primary/30 overflow-hidden transition-colors duration-300"
         >
-          {/* Badge */}
           {tool.badge && (
             <span className={`absolute top-3 end-3 z-10 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide shadow-sm ${badgeStyles[tool.badge]}`}>
               {t(`common.${tool.badge}`)}
             </span>
           )}
 
-          {/* SVG Preview */}
           {preview ? (
             <div
               className="w-full h-32 overflow-hidden rounded-t-2xl"
@@ -402,9 +544,7 @@ export function ToolCard({ tool, index = 0 }: { tool: Tool; index?: number }) {
             </div>
           )}
 
-          {/* Content */}
           <div className="p-5 flex flex-col flex-1">
-            {/* Icon + Title */}
             <div className="flex items-center gap-3 mb-2">
               <div className={`flex h-9 w-9 items-center justify-center rounded-xl ${tool.bg} ${tool.color} shadow-sm transition-transform duration-300 group-hover:scale-110 flex-shrink-0`}>
                 <Icon className="h-5 w-5" strokeWidth={2.2} />
@@ -412,12 +552,10 @@ export function ToolCard({ tool, index = 0 }: { tool: Tool; index?: number }) {
               <h3 className="font-display text-base font-bold leading-tight">{tool.title[lang]}</h3>
             </div>
 
-            {/* Description */}
             <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-3">
               {tool.desc[lang]}
             </p>
 
-            {/* Quick Benefits */}
             <div className="flex items-center gap-3 mb-3">
               {quickBenefits.map((b) => (
                 <span key={b.label} className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
@@ -427,7 +565,6 @@ export function ToolCard({ tool, index = 0 }: { tool: Tool; index?: number }) {
               ))}
             </div>
 
-            {/* CTA */}
             <div className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200">
               {lang === "ar" ? "ابدأ الآن" : "Open tool"}
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1 rtl:rotate-180" />
@@ -436,7 +573,6 @@ export function ToolCard({ tool, index = 0 }: { tool: Tool; index?: number }) {
         </Link>
       </motion.div>
 
-      {/* Related Article */}
       {tool.relatedArticle && (
         <motion.div
           whileHover={{ y: -2 }}
