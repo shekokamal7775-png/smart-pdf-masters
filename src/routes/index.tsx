@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import {
   Zap, ShieldCheck, Cloud, Globe, Upload, MousePointerClick, Download,
   ArrowRight, Check, FileText, Layers, Minimize2, Image, CheckCircle2,
-  RotateCw, Scissors, Star, Lock, Users,
+  RotateCw, Scissors, Star, Lock, Users, Trash2, Droplets, ImageDown, FileUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ToolCard } from "@/components/ToolCard";
@@ -14,10 +14,10 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "SmartPDFMasters — Free Online PDF Tools | Merge, Compress, Convert" },
-      { name: "description", content: "Free browser-based PDF tools to merge, compress, rotate, split, convert and manage PDF files. No installation, no sign-up, no watermarks. Works on iPhone, Android, Windows and Mac." },
-      { name: "keywords", content: "free PDF tools, merge PDF, compress PDF, PDF to Word, rotate PDF, split PDF, PNG to PDF, online PDF tools no signup" },
+      { name: "description", content: "Free browser-based PDF tools to merge, compress, rotate, split, delete pages, watermark, convert and manage PDF files. No installation, no sign-up, no watermarks. Works on iPhone, Android, Windows and Mac." },
+      { name: "keywords", content: "free PDF tools, merge PDF, compress PDF, PDF to Word, rotate PDF, split PDF, delete PDF pages, watermark PDF, PDF to JPG, Word to PDF, online PDF tools no signup" },
       { property: "og:title", content: "SmartPDFMasters — Free Online PDF Tools" },
-      { property: "og:description", content: "Free browser-based PDF tools to merge, compress, rotate, split, convert and manage PDF files. No installation, no sign-up, no watermarks." },
+      { property: "og:description", content: "Free browser-based PDF tools to merge, compress, rotate, split, watermark, convert and manage PDF files. No installation, no sign-up, no watermarks." },
       { property: "og:url", content: "https://www.smartpdfmasters.com/" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.smartpdfmasters.com/og-image.png" },
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
         "@type": "WebSite",
         name: "SmartPDFMasters",
         url: "https://www.smartpdfmasters.com",
-        description: "Free browser-based PDF tools for merging, compressing, rotating, splitting and converting PDF files.",
+        description: "Free browser-based PDF tools for merging, compressing, rotating, splitting, deleting pages, watermarking and converting PDF files.",
         potentialAction: {
           "@type": "SearchAction",
           target: "https://www.smartpdfmasters.com/tools",
@@ -56,8 +56,12 @@ const toolHighlights = [
   { icon: Minimize2, title: "Compress PDF", desc: "Reduce PDF file size while keeping text sharp and images clear.", slug: "compress-pdf" },
   { icon: RotateCw, title: "Rotate PDF", desc: "Fix upside down or sideways PDF pages — rotate 90°, 180° or 270°.", slug: "rotate-pdf" },
   { icon: Scissors, title: "Split PDF", desc: "Extract pages or split a PDF into separate files instantly.", slug: "split-pdf" },
+  { icon: Trash2, title: "Delete PDF Pages", desc: "Remove specific pages from a PDF — blank pages or unwanted sections.", slug: "delete-pages-pdf" },
+  { icon: Droplets, title: "Watermark PDF", desc: "Add a text watermark to every page — protect and brand your documents.", slug: "add-watermark-pdf" },
   { icon: FileText, title: "PDF to Word", desc: "Convert any PDF to a fully editable Word document with fonts and layout preserved.", slug: "pdf-to-word" },
-  { icon: Image, title: "PNG to PDF", desc: "Turn JPG or PNG images into a clean, shareable PDF file instantly.", slug: "jpg-to-pdf" },
+  { icon: Image, title: "Image to PDF", desc: "Turn JPG or PNG images into a clean, shareable PDF file instantly.", slug: "jpg-to-pdf" },
+  { icon: ImageDown, title: "PDF to Image", desc: "Convert PDF pages to high-quality JPG or PNG images instantly.", slug: "pdf-to-jpg" },
+  { icon: FileUp, title: "Word to PDF", desc: "Convert Word documents to PDF instantly — preserve fonts and layout.", slug: "word-to-pdf" },
 ];
 
 const commonTasks = [
@@ -65,8 +69,12 @@ const commonTasks = [
   { label: "Compress PDF", slug: "compress-pdf" },
   { label: "Rotate PDF pages", slug: "rotate-pdf" },
   { label: "Split PDF file", slug: "split-pdf" },
+  { label: "Delete PDF pages", slug: "delete-pages-pdf" },
+  { label: "Add watermark to PDF", slug: "add-watermark-pdf" },
   { label: "Convert PDF to Word", slug: "pdf-to-word" },
+  { label: "Convert Word to PDF", slug: "word-to-pdf" },
   { label: "JPG to PDF", slug: "jpg-to-pdf" },
+  { label: "PDF to JPG", slug: "pdf-to-jpg" },
   { label: "PNG to PDF", slug: "jpg-to-pdf" },
   { label: "Reduce PDF size for email", slug: "compress-pdf" },
 ];
@@ -79,7 +87,7 @@ const whyChoose = [
   "No watermarks added to your files",
   "Completely free — no credit card needed",
   "No sign-up or account required",
-  "Files automatically deleted within one hour",
+  "Files never leave your device",
 ];
 
 const comparisonRows = [
@@ -89,14 +97,14 @@ const comparisonRows = [
   { feature: "Encrypted file transfers", value: true },
   { feature: "Mobile friendly", value: true },
   { feature: "Browser-based (no install)", value: true },
-  { feature: "Files deleted within 1 hour", value: true },
+  { feature: "Files never leave your device", value: true },
   { feature: "No daily limits", value: true },
 ];
 
 const useCases = [
   { icon: Users, title: "Students", desc: "Merge lecture notes, compress assignments before uploading to university portals, and convert scanned handwritten notes into searchable PDFs." },
-  { icon: FileText, title: "Business & Freelancers", desc: "Combine invoices and contracts, compress files before emailing, and convert PDF drafts to Word for final editing." },
-  { icon: Lock, title: "Legal & Government", desc: "Combine supporting documents into single submission packages and extract specific pages from large official documents." },
+  { icon: FileText, title: "Business & Freelancers", desc: "Combine invoices and contracts, compress files before emailing, watermark confidential drafts, and convert PDF drafts to Word for final editing." },
+  { icon: Lock, title: "Legal & Government", desc: "Combine supporting documents into single submission packages, delete sensitive pages, and extract specific pages from large official documents." },
   { icon: Star, title: "HR & Recruitment", desc: "Merge applicant CVs and cover letters, compress large employee files, and split multi-candidate documents into individual files." },
 ];
 
@@ -108,7 +116,7 @@ function HeroIllustration() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className="w-full h-full"
-      aria-label="SmartPDFMasters — free PDF tools illustration showing merge, compress, rotate, split, convert and create PDF operations"
+      aria-label="SmartPDFMasters — free PDF tools illustration showing merge, compress, rotate, split, watermark, delete pages, and convert PDF operations"
       role="img"
     >
       <defs>
@@ -126,7 +134,6 @@ function HeroIllustration() {
         </filter>
       </defs>
 
-      {/* Background decoration */}
       <circle cx="500" cy="60" r="80" fill="#dc2626" fillOpacity="0.04" />
       <circle cx="100" cy="280" r="60" fill="#f97316" fillOpacity="0.04" />
 
@@ -146,7 +153,6 @@ function HeroIllustration() {
         <text x="24" y="206" fontSize="8" fill="#dc2626" fontWeight="bold">MERGE</text>
       </g>
 
-      {/* Arrow */}
       <path d="M148 115 L175 115" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round" />
       <path d="M171 110 L176 115 L171 120" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
 
@@ -167,7 +173,6 @@ function HeroIllustration() {
         <rect x="194" y="152" width="108" height="5" rx="2.5" fill="#dc2626" fillOpacity="0.2" />
         <rect x="194" y="162" width="90" height="5" rx="2.5" fill="#e5e7eb" />
         <rect x="194" y="172" width="100" height="5" rx="2.5" fill="#e5e7eb" />
-        {/* Check badge */}
         <circle cx="304" cy="28" r="10" fill="#16a34a" />
         <path d="M299 28 L302 31 L309 24" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </g>
@@ -216,23 +221,21 @@ function HeroIllustration() {
         <text x="525" y="132" fontSize="7" fill="#6b7280" textAnchor="middle">Editable DOCX</text>
       </g>
 
-      {/* PNG to PDF */}
+      {/* Watermark / Image to PDF */}
       <g filter="url(#card-shadow)">
         <rect x="480" y="160" width="110" height="80" rx="10" fill="white" stroke="#f3f4f6" strokeWidth="1" />
-        <rect x="480" y="160" width="110" height="22" rx="10" fill="#16a34a" />
-        <rect x="480" y="174" width="110" height="8" fill="#16a34a" />
-        <text x="490" y="173" fontSize="8" fill="white" fontWeight="bold">PNG → PDF</text>
-        <rect x="492" y="192" width="40" height="30" rx="4" fill="#16a34a" fillOpacity="0.2" />
-        <circle cx="502" cy="200" r="4" fill="#fde68a" fillOpacity="0.8" />
-        <path d="M494 218 L502 206 L510 212 L516 204 L528 218" stroke="#16a34a" strokeWidth="1.5" fill="none" />
-        <text x="544" y="210" fontSize="18" fill="#16a34a">→</text>
-        <rect x="554" y="192" width="30" height="30" rx="4" fill="#16a34a" fillOpacity="0.15" stroke="#16a34a" strokeWidth="1" />
-        <text x="569" y="212" fontSize="7" fill="#16a34a" fontWeight="bold" textAnchor="middle">PDF</text>
+        <rect x="480" y="160" width="110" height="22" rx="10" fill="#0891b2" />
+        <rect x="480" y="174" width="110" height="8" fill="#0891b2" />
+        <text x="490" y="173" fontSize="8" fill="white" fontWeight="bold">WATERMARK</text>
+        <rect x="492" y="192" width="86" height="30" rx="4" fill="#0891b2" fillOpacity="0.1" />
+        <text x="535" y="212" fontSize="9" fill="#0891b2" fontWeight="bold" textAnchor="middle" opacity="0.5" transform="rotate(-20 535 212)">CONFIDENTIAL</text>
       </g>
 
       {/* Floating labels */}
       <rect x="22" y="198" width="116" height="20" rx="6" fill="#dc2626" fillOpacity="0.1" />
       <text x="80" y="212" fontSize="8" fill="#dc2626" fontWeight="bold" textAnchor="middle">✓ Free • No Watermark</text>
+      <rect x="480" y="248" width="110" height="20" rx="6" fill="#16a34a" fillOpacity="0.1" />
+      <text x="535" y="262" fontSize="8" fill="#16a34a" fontWeight="bold" textAnchor="middle">+ 6 more tools</text>
     </svg>
   );
 }
@@ -248,7 +251,6 @@ function HomePage() {
         <div className="absolute -top-32 end-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-12 sm:pt-24 sm:pb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Text */}
             <motion.div
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             >
@@ -260,7 +262,7 @@ function HomePage() {
                 <span className="block text-gradient">just work</span>
               </h1>
               <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
-                Merge, compress, rotate, split, convert and manage your PDF files directly in your browser.
+                Merge, compress, rotate, split, delete pages, watermark, convert and manage your PDF files directly in your browser.
                 Fast, free, and completely private — your files never leave your device.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -277,7 +279,7 @@ function HomePage() {
                 {[
                   { v: "100% Free", k: "No hidden costs" },
                   { v: "No Sign-up", k: "Use instantly" },
-                  { v: "6 Tools", k: "All in one place" },
+                  { v: "10 Tools", k: "All in one place" },
                 ].map((s) => (
                   <div key={s.k}>
                     <div className="font-display text-2xl font-bold text-foreground">{s.v}</div>
@@ -287,7 +289,6 @@ function HomePage() {
               </div>
             </motion.div>
 
-            {/* Hero Illustration */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
@@ -347,7 +348,7 @@ function HomePage() {
       {/* TOOL HIGHLIGHTS */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 bg-secondary/30 rounded-3xl">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <h2 className="font-display text-4xl font-bold">ten tools. Every PDF task covered.</h2>
+          <h2 className="font-display text-4xl font-bold">Ten tools. Every PDF task covered.</h2>
           <p className="mt-3 text-muted-foreground">Everything you need to handle PDFs, in one place.</p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -355,7 +356,7 @@ function HomePage() {
             <motion.div
               key={tool.title}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * 0.08, duration: 0.4 }}
+              viewport={{ once: true }} transition={{ delay: i * 0.06, duration: 0.4 }}
             >
               <Link to="/tools/$slug" params={{ slug: tool.slug }}>
                 <div className="rounded-2xl border border-border bg-card p-6 shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-smooth h-full">
@@ -480,7 +481,7 @@ function HomePage() {
         <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
           {[
             { icon: Upload, title: "Upload your file", desc: "Drag and drop your PDF or image onto the tool page, or click to browse. Your file stays on your device." },
-            { icon: MousePointerClick, title: "Choose your action", desc: "Select the task — merge, compress, rotate, split, convert or create — and click to process instantly." },
+            { icon: MousePointerClick, title: "Choose your action", desc: "Select the task — merge, compress, rotate, split, delete pages, watermark, convert or create — and click to process." },
             { icon: Download, title: "Download your result", desc: "Your processed file is ready to download in seconds. No waiting, no email, no account required." },
           ].map((s, i) => (
             <div key={s.title} className="text-center relative">
@@ -502,10 +503,10 @@ function HomePage() {
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-display text-4xl font-bold mb-6">The simplest way to handle PDF files</h2>
           <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-            SmartPDFMasters is a free, browser-based platform built to handle the most common PDF tasks without the complexity or cost of desktop software. Whether you need to combine documents, reduce a file size before emailing it, rotate pages that came out sideways, split a large document into sections, convert a PDF into an editable Word file, or turn phone photos into a PDF — everything runs directly in your browser.
+            SmartPDFMasters is a free, browser-based platform built to handle the most common PDF tasks without the complexity or cost of desktop software. Whether you need to combine documents, reduce a file size before emailing it, rotate pages that came out sideways, split a large document into sections, delete unwanted pages, add a watermark to protect a draft, convert a PDF into an editable Word file, convert a Word document to PDF, turn PDF pages into images, or turn phone photos into a PDF — everything runs directly in your browser.
           </p>
           <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-            There are no daily limits, no watermarks, and no account required. Your files are processed locally in your browser and never transmitted to any server. We never read or share your documents.
+            There are no daily limits, no watermarks added to your output, and no account required. Your files are processed locally in your browser and never transmitted to any server. We never read or share your documents.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
             SmartPDFMasters works on any device — desktop, tablet or mobile — with no installation needed. Just open the tool, process your file, and download the result.
@@ -518,14 +519,16 @@ function HomePage() {
         <h2 className="font-display text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {[
-            { q: "Is SmartPDFMasters really free to use?", a: "Yes. All six tools are completely free with no hidden charges, no daily limits, and no watermarks added to your files." },
-            { q: "Do I need to create an account?", a: "No. You can use all six tools without signing up or providing any personal information whatsoever." },
+            { q: "Is SmartPDFMasters really free to use?", a: "Yes. All ten tools are completely free with no hidden charges, no daily limits, and no watermarks added to your files." },
+            { q: "Do I need to create an account?", a: "No. You can use all ten tools without signing up or providing any personal information whatsoever." },
             { q: "Are my files safe and secure?", a: "Yes. All processing happens in your browser — your files never leave your device. We never read, store, or share your file content." },
             { q: "What file formats do you support?", a: "Our tools support PDF, DOCX, PNG and JPG. Each tool page lists exactly which formats it accepts." },
-            { q: "Can I use SmartPDFMasters on my phone?", a: "Yes. All six tools work on iPhone, Android, tablet and desktop directly in the browser — no app download needed." },
+            { q: "Can I use SmartPDFMasters on my phone?", a: "Yes. All ten tools work on iPhone, Android, tablet and desktop directly in the browser — no app download needed." },
             { q: "Does SmartPDFMasters display advertisements?", a: "Yes. We display Google AdSense advertisements to generate revenue that keeps the platform free for everyone. You can opt out of personalised ads at Google's Ads Settings." },
             { q: "How do I rotate PDF pages?", a: "Use our free Rotate PDF tool. Upload your PDF, choose the rotation angle (90°, 180° or 270°), and download the corrected file in seconds." },
             { q: "How do I split a PDF into separate files?", a: "Use our free Split PDF tool. Upload your PDF, enter the page ranges you want (e.g. 1-3,5,7-9), and each range downloads as a separate PDF file." },
+            { q: "How do I delete pages from a PDF?", a: "Use our free Delete PDF Pages tool. Upload your PDF, enter the page numbers you want removed (e.g. 1,3,5-7), and download the result." },
+            { q: "How do I add a watermark to a PDF?", a: "Use our free Watermark PDF tool. Upload your PDF, type your watermark text, adjust the opacity, and download the watermarked file." },
             { q: "How do I contact support?", a: "Use the Contact page at smartpdfmasters.com/contact. We respond to every message within one business day." },
           ].map((item, i) => (
             <div key={i} className="p-5 border rounded-xl bg-card">
@@ -585,7 +588,7 @@ function HomePage() {
               Ready to handle your PDFs?
             </h2>
             <p className="mt-4 text-primary-foreground/90 max-w-xl mx-auto">
-              Six free tools. No account. No limits. Works on every device. Start now.
+              Ten free tools. No account. No limits. Works on every device. Start now.
             </p>
             <Link to="/tools">
               <Button size="xl" className="mt-8 bg-foreground text-background hover:bg-foreground/90 font-semibold">
