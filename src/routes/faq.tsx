@@ -1,14 +1,81 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
+const faqs = [
+  {
+    q: "Is SmartPDFMasters really free?",
+    a: "Yes — all ten tools (Merge PDF, Compress PDF, Rotate PDF, Split PDF, Delete PDF Pages, Watermark PDF, PDF to Word, Word to PDF, Image to PDF, and PDF to Image) are completely free to use with no daily limits, no sign-up required, and no watermarks added to your files.",
+  },
+  {
+    q: "How many PDF tools does SmartPDFMasters offer?",
+    a: "SmartPDFMasters currently offers ten free tools: Merge PDF, Compress PDF, Rotate PDF, Split PDF, Delete PDF Pages, Watermark PDF, PDF to Word, Word to PDF, Image to PDF, and PDF to Image. All ten tools run entirely in your browser.",
+  },
+  {
+    q: "Are my files secure?",
+    a: "Yes. All processing happens directly in your browser — your files never leave your device. Any temporary browser memory is released when you close the tool. We never read, store, or share your file content.",
+  },
+  {
+    q: "Do I need to install anything?",
+    a: "No. Every tool runs entirely in your browser. Nothing to download or install on any device — desktop, tablet, or mobile.",
+  },
+  {
+    q: "What is the maximum file size?",
+    a: "There is no fixed file size limit for most tools. Very large files may take longer to process depending on your device and browser. For best results with very large PDFs, try compressing the file first using our free Compress PDF tool.",
+  },
+  {
+    q: "Which file formats do you support?",
+    a: "Our tools support PDF, DOCX, JPG, and PNG. Merge PDF accepts multiple PDF files. Compress PDF reduces PDF size. Rotate PDF fixes page orientation. Split PDF divides PDFs into separate files. Delete PDF Pages removes specific pages. Watermark PDF adds text to every page. PDF to Word converts PDF to DOCX. Word to PDF converts DOCX to PDF. Image to PDF converts JPG and PNG images to PDF. PDF to Image converts PDF pages to JPG or PNG.",
+  },
+  {
+    q: "How do I rotate PDF pages?",
+    a: "Open the Rotate PDF tool, upload your PDF file, choose your rotation angle — 90°, 180°, or 270° — and click Rotate & Download. All pages in the PDF are rotated permanently so the correct orientation is saved into the file.",
+  },
+  {
+    q: "How do I split a PDF into separate files?",
+    a: "Open the Split PDF tool, upload your PDF, and enter the page ranges you want as separate files (for example: 1-3,5,7-9). Leave the field empty to split every page into its own individual file. Each range downloads as a separate PDF.",
+  },
+  {
+    q: "How do I delete pages from a PDF?",
+    a: "Open the Delete PDF Pages tool, upload your PDF, and enter the page numbers you want removed — for example: 1,3,5-7. Click Delete & Download to get your file with those pages removed.",
+  },
+  {
+    q: "How do I add a watermark to a PDF?",
+    a: "Open the Watermark PDF tool, upload your PDF, type your watermark text, adjust the opacity if needed, and click Add Watermark & Download. The watermark is applied to every page of the file.",
+  },
+  {
+    q: "Does processing happen on my device or a server?",
+    a: "Core processing runs directly in your browser — your files never leave your device. This is what makes SmartPDFMasters fast, private, and secure.",
+  },
+  {
+    q: "How long are my files stored?",
+    a: "Your files are never stored on any server because all processing happens in your browser. There is no server-side retention period to worry about.",
+  },
+  {
+    q: "Does it work on mobile?",
+    a: "Yes. All ten tools work on iPhone, Android, tablet and desktop without needing an app. Just open smartpdfmasters.com in your mobile browser.",
+  },
+  {
+    q: "Does SmartPDFMasters display advertisements?",
+    a: "Yes. SmartPDFMasters displays Google AdSense advertisements to generate revenue that keeps the platform free for everyone. Google may use cookies to personalise ad content based on your browsing history. You can opt out of personalised advertising at Google's Ads Settings.",
+  },
+  {
+    q: "Is SmartPDFMasters GDPR compliant?",
+    a: "Yes. We do not store user files, do not track file content, and do not share personal data with third parties for advertising or any other purpose. Our Privacy Policy contains full details of our data handling practices.",
+  },
+  {
+    q: "How do I contact support?",
+    a: "You can reach us through the Contact page at smartpdfmasters.com/contact. We aim to respond to all messages within one business day.",
+  },
+];
+
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
       { title: "FAQ — Frequently Asked Questions About SmartPDFMasters" },
-      { name: "description", content: "Answers to the most common questions about SmartPDFMasters: security, file size limits, supported formats, rotating PDFs, splitting PDFs and all six free tools." },
+      { name: "description", content: "Answers to the most common questions about SmartPDFMasters: security, file size limits, supported formats, rotating PDFs, splitting PDFs and all ten free tools." },
       { name: "keywords", content: "SmartPDFMasters FAQ, PDF tools questions, free PDF tools help, PDF security questions" },
       { property: "og:title", content: "Frequently Asked Questions — SmartPDFMasters" },
-      { property: "og:description", content: "Everything you need to know about SmartPDFMasters — security, file limits, supported formats and all six free tools." },
+      { property: "og:description", content: "Everything you need to know about SmartPDFMasters — security, file limits, supported formats and all ten free tools." },
       { property: "og:url", content: "https://www.smartpdfmasters.com/faq" },
     ],
     links: [{ rel: "canonical", href: "https://www.smartpdfmasters.com/faq" }],
@@ -28,63 +95,17 @@ export const Route = createFileRoute("/faq")({
   component: FAQPage,
 });
 
-const faqs = [
-  {
-    q: "Is SmartPDFMasters really free?",
-    a: "Yes — all six tools (Merge PDF, Compress PDF, Rotate PDF, Split PDF, PDF to Word, and PNG to PDF) are completely free to use with no daily limits, no sign-up required, and no watermarks added to your files.",
-  },
-  {
-    q: "How many PDF tools does SmartPDFMasters offer?",
-    a: "SmartPDFMasters currently offers six free tools: Merge PDF, Compress PDF, Rotate PDF, Split PDF, PDF to Word, and PNG to PDF. All six tools run entirely in your browser.",
-  },
-  {
-    q: "Are my files secure?",
-    a: "Yes. All processing happens directly in your browser — your files never leave your device. Any temporary browser memory is released when you close the tool. We never read, store, or share your file content.",
-  },
-  {
-    q: "Do I need to install anything?",
-    a: "No. Every tool runs entirely in your browser. Nothing to download or install on any device — desktop, tablet, or mobile.",
-  },
-  {
-    q: "What is the maximum file size?",
-    a: "There is no fixed file size limit for most tools. Very large files may take longer to process depending on your device and browser. For best results with very large PDFs, try compressing the file first using our free Compress PDF tool.",
-  },
-  {
-    q: "Which file formats do you support?",
-    a: "Our tools support PDF, DOCX, JPG, and PNG. Merge PDF accepts multiple PDF files. Compress PDF reduces PDF size. Rotate PDF fixes page orientation. Split PDF divides PDFs into separate files. PDF to Word converts PDF to DOCX. PNG to PDF converts JPG and PNG images to PDF.",
-  },
-  {
-    q: "How do I rotate PDF pages?",
-    a: "Open the Rotate PDF tool, upload your PDF file, choose your rotation angle — 90°, 180°, or 270° — and click Rotate & Download. All pages in the PDF are rotated permanently so the correct orientation is saved into the file.",
-  },
-  {
-    q: "How do I split a PDF into separate files?",
-    a: "Open the Split PDF tool, upload your PDF, and enter the page ranges you want as separate files (for example: 1-3,5,7-9). Leave the field empty to split every page into its own individual file. Each range downloads as a separate PDF.",
-  },
-  {
-    q: "Does processing happen on my device or a server?",
-    a: "Core processing runs directly in your browser — your files never leave your device. This is what makes SmartPDFMasters fast, private, and secure.",
-  },
-  {
-    q: "How long are my files stored?",
-    a: "Your files are never stored on any server because all processing happens in your browser. There is no server-side retention period to worry about.",
-  },
-  {
-    q: "Does it work on mobile?",
-    a: "Yes. All six tools work on iPhone, Android, tablet and desktop without needing an app. Just open smartpdfmasters.com in your mobile browser.",
-  },
-  {
-    q: "Does SmartPDFMasters display advertisements?",
-    a: "Yes. SmartPDFMasters displays Google AdSense advertisements to generate revenue that keeps the platform free for everyone. Google may use cookies to personalise ad content based on your browsing history. You can opt out of personalised advertising at Google's Ads Settings.",
-  },
-  {
-    q: "Is SmartPDFMasters GDPR compliant?",
-    a: "Yes. We do not store user files, do not track file content, and do not share personal data with third parties for advertising or any other purpose. Our Privacy Policy contains full details of our data handling practices.",
-  },
-  {
-    q: "How do I contact support?",
-    a: "You can reach us through the Contact page at smartpdfmasters.com/contact. We aim to respond to all messages within one business day.",
-  },
+const quickLinks = [
+  { label: "Merge PDF", slug: "merge-pdf" },
+  { label: "Compress PDF", slug: "compress-pdf" },
+  { label: "Rotate PDF", slug: "rotate-pdf" },
+  { label: "Split PDF", slug: "split-pdf" },
+  { label: "Delete Pages", slug: "delete-pages-pdf" },
+  { label: "Watermark PDF", slug: "add-watermark-pdf" },
+  { label: "PDF to Word", slug: "pdf-to-word" },
+  { label: "Word to PDF", slug: "word-to-pdf" },
+  { label: "Image to PDF", slug: "jpg-to-pdf" },
+  { label: "PDF to Image", slug: "pdf-to-jpg" },
 ];
 
 function FAQPage() {
@@ -107,14 +128,7 @@ function FAQPage() {
 
       {/* Quick links */}
       <div className="mt-10 flex flex-wrap justify-center gap-2 mb-10">
-        {[
-          { label: "Merge PDF", slug: "merge-pdf" },
-          { label: "Compress PDF", slug: "compress-pdf" },
-          { label: "Rotate PDF", slug: "rotate-pdf" },
-          { label: "Split PDF", slug: "split-pdf" },
-          { label: "PDF to Word", slug: "pdf-to-word" },
-          { label: "PNG to PDF", slug: "jpg-to-pdf" },
-        ].map((tool) => (
+        {quickLinks.map((tool) => (
           <Link
             key={tool.slug}
             to="/tools/$slug"
