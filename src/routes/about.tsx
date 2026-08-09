@@ -19,7 +19,7 @@ export const Route = createFileRoute("/about")({
         "@type": "Organization",
         name: "SmartPDFMasters",
         url: "https://www.smartpdfmasters.com",
-        description: "Free browser-based PDF tools for merging, compressing, rotating, splitting and converting PDF files.",
+        description: "Free browser-based PDF tools for merging, compressing, rotating, splitting, deleting pages, watermarking and converting PDF files.",
         foundingDate: "2025",
         contactPoint: {
           "@type": "ContactPoint",
@@ -36,10 +36,10 @@ export const Route = createFileRoute("/about")({
 });
 
 const stats = [
-  { value: "6", label: "Free PDF Tools" },
+  { value: "10", label: "Free PDF Tools" },
   { value: "100%", label: "Browser-Based" },
   { value: "0", label: "Files Stored on Servers" },
-  { value: "35+", label: "In-Depth Guides Published" },
+  { value: "40+", label: "In-Depth Guides Published" },
 ];
 
 const values = [
@@ -61,7 +61,7 @@ const values = [
   {
     icon: Users,
     title: "Genuinely Free — No Hidden Catches",
-    body: "All six tools are completely free with no daily limits, no watermarks, and no hidden charges. We display non-intrusive advertisements to keep the platform free for everyone. We will never lock core features behind a paywall or add watermarks to your processed files.",
+    body: "All ten tools are completely free with no daily limits, no watermarks, and no hidden charges. We display non-intrusive advertisements to keep the platform free for everyone. We will never lock core features behind a paywall or add watermarks to your processed files.",
   },
   {
     icon: Award,
@@ -113,8 +113,21 @@ const team = [
 const milestones = [
   { year: "2025", event: "SmartPDFMasters founded — launched with four core PDF tools after months of testing browser-based PDF processing technology." },
   { year: "Early 2026", event: "Added Rotate PDF and Split PDF tools in response to user requests. Expanded blog to cover the most common PDF questions in depth." },
-  { year: "Mid 2026", event: "Published 35+ in-depth guides covering PDF workflows for students, professionals, and businesses. Reached users across Europe, North America, and the Middle East." },
+  { year: "Mid 2026", event: "Added Delete PDF Pages, Watermark PDF, PDF to Image, and Word to PDF, bringing the toolset to ten free tools. Published 40+ in-depth guides covering PDF workflows for students, professionals, and businesses. Reached users across Europe, North America, and the Middle East." },
   { year: "2026 onwards", event: "Continuing to expand the tool library and content library based on what PDF tasks people actually need help with." },
+];
+
+const toolSummary = [
+  { slug: "merge-pdf", title: "Merge PDF", desc: "Combine multiple PDF files into one organised document in the order you choose." },
+  { slug: "compress-pdf", title: "Compress PDF", desc: "Reduce PDF file size while keeping text sharp and images clear for email and uploads." },
+  { slug: "rotate-pdf", title: "Rotate PDF", desc: "Permanently fix upside down or sideways PDF pages — rotate 90°, 180° or 270°." },
+  { slug: "split-pdf", title: "Split PDF", desc: "Extract specific pages or divide a PDF into separate sections by page range." },
+  { slug: "delete-pages-pdf", title: "Delete PDF Pages", desc: "Remove specific pages from a PDF — blank pages or unwanted sections." },
+  { slug: "add-watermark-pdf", title: "Watermark PDF", desc: "Add a text watermark to every page — protect and brand your documents." },
+  { slug: "pdf-to-word", title: "PDF to Word", desc: "Convert any PDF to a fully editable Word document with fonts and layout preserved." },
+  { slug: "word-to-pdf", title: "Word to PDF", desc: "Convert Word documents to PDF instantly — preserve fonts, tables and layout." },
+  { slug: "jpg-to-pdf", title: "Image to PDF", desc: "Convert JPG and PNG images into a clean, shareable PDF file instantly." },
+  { slug: "pdf-to-jpg", title: "PDF to Image", desc: "Convert PDF pages to high-quality JPG or PNG images instantly." },
 ];
 
 function AboutPage() {
@@ -131,7 +144,7 @@ function AboutPage() {
           <span className="text-gradient">we wished existed</span>
         </h1>
         <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          SmartPDFMasters is a free, browser-based platform that handles the most common PDF tasks — merging, compressing, rotating, splitting, converting and creating — directly on your device. No installation. No account. No cost. No watermarks.
+          SmartPDFMasters is a free, browser-based platform that handles the most common PDF tasks — merging, compressing, rotating, splitting, deleting pages, watermarking, converting and creating — directly on your device. No installation. No account. No cost. No watermarks.
         </p>
       </div>
 
@@ -159,7 +172,7 @@ function AboutPage() {
             We tested dozens of PDF tools and found the same pattern everywhere: the most useful features were locked away, privacy practices were vague, and the experience was designed to push users toward paid subscriptions rather than actually help them.
           </p>
           <p>
-            SmartPDFMasters was built to be different. All six tools are genuinely free — no daily limits, no watermarks, no account required. All processing happens in your browser using modern JavaScript technology, which means your files never leave your device. We have been transparent about exactly how everything works since the day we launched.
+            SmartPDFMasters was built to be different. All ten tools are genuinely free — no daily limits, no watermarks, no account required. All processing happens in your browser using modern JavaScript technology, which means your files never leave your device. We have been transparent about exactly how everything works since the day we launched.
           </p>
           <p>
             We also believe that useful tools deserve useful context. That is why every tool page includes a detailed explanation of how it works, step-by-step instructions, common use cases, and answers to the questions people actually ask. And our blog covers PDF topics in depth — not thin summaries, but guides written by people who have tested every method they describe.
@@ -296,17 +309,10 @@ function AboutPage() {
       <div className="mt-20">
         <h2 className="font-display text-3xl font-bold text-center mb-4">What SmartPDFMasters Can Do</h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          Six free tools covering every common PDF task — all available immediately without signup or installation.
+          Ten free tools covering every common PDF task — all available immediately without signup or installation.
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[
-            { slug: "merge-pdf", title: "Merge PDF", desc: "Combine multiple PDF files into one organised document in the order you choose." },
-            { slug: "compress-pdf", title: "Compress PDF", desc: "Reduce PDF file size while keeping text sharp and images clear for email and uploads." },
-            { slug: "rotate-pdf", title: "Rotate PDF", desc: "Permanently fix upside down or sideways PDF pages — rotate 90°, 180° or 270°." },
-            { slug: "split-pdf", title: "Split PDF", desc: "Extract specific pages or divide a PDF into separate sections by page range." },
-            { slug: "pdf-to-word", title: "PDF to Word", desc: "Convert any PDF to a fully editable Word document with fonts and layout preserved." },
-            { slug: "jpg-to-pdf", title: "PNG to PDF", desc: "Convert JPG and PNG images into a clean, shareable PDF file instantly." },
-          ].map((tool) => (
+          {toolSummary.map((tool) => (
             <Link
               key={tool.slug}
               to="/tools/$slug"
