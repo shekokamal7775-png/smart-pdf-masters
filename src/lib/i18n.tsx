@@ -13,6 +13,7 @@ const en: Dict = {
   "nav.faq": "FAQ",
   "nav.login": "Log in",
   "nav.signup": "Sign up free",
+  "nav.getStarted": "Get Started",
   "hero.badge": "4 focused PDF tools · 100% browser-based",
   "hero.title": "Essential PDF tools, ready in one smart workspace",
   "hero.subtitle":
@@ -79,6 +80,7 @@ const ar: Dict = {
   "nav.faq": "الأسئلة الشائعة",
   "nav.login": "تسجيل الدخول",
   "nav.signup": "إنشاء حساب مجاني",
+  "nav.getStarted": "ابدأ الآن",
   "hero.badge": "4 أدوات PDF مركزة · تعمل داخل المتصفح 100%",
   "hero.title": "أدوات PDF الأساسية في مساحة واحدة ذكية",
   "hero.subtitle":
@@ -138,6 +140,7 @@ const dicts: Record<Lang, Dict> = { en, ar };
 interface I18nCtx {
   lang: Lang;
   setLang: (l: Lang) => void;
+  toggleLang: () => void;
   t: (key: string) => string;
   dir: "ltr" | "rtl";
 }
@@ -163,10 +166,12 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     if (typeof window !== "undefined") localStorage.setItem("lang", l);
   };
 
+  const toggleLang = () => setLang(lang === "en" ? "ar" : "en");
+
   const t = (key: string) => dicts[lang][key] ?? dicts.en[key] ?? key;
   const dir = lang === "ar" ? "rtl" : "ltr";
 
-  return <I18nContext.Provider value={{ lang, setLang, t, dir }}>{children}</I18nContext.Provider>;
+  return <I18nContext.Provider value={{ lang, setLang, toggleLang, t, dir }}>{children}</I18nContext.Provider>;
 }
 
 export function useI18n() {
