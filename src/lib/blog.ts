@@ -5505,7 +5505,300 @@ Tap the PDF file in the Files app, Mail app, or Safari. iPhone's built-in PDF vi
 Open the PDF in any viewer — a password prompt will appear. Enter the correct password to access the document. If you do not know the password, the file cannot be opened without it.
 
 [[cta:tools|Work with your PDF files free — SmartPDFMasters]]`,
-  }, 
+  },
+ {
+    slug: "how-to-fill-out-pdf-form-free",
+    title: "How to Fill Out a PDF Form Free — Complete Guide 2026",
+    metaTitle: "How to Fill Out a PDF Form Free 2026 — Windows, Mac, iPhone & Android",
+    metaDescription: "Learn how to fill out any PDF form for free in 2026. Type directly into fillable and non-fillable PDF forms on Windows, Mac, iPhone and Android — no Adobe Acrobat Pro needed.",
+    keywords: [
+      "fill out PDF form free",
+      "how to fill PDF form",
+      "fill PDF form online free 2026",
+      "type on PDF form free",
+      "fillable PDF free online",
+      "fill PDF form iPhone free",
+      "fill PDF form Android free",
+      "fill PDF form Mac free",
+      "fill PDF form Windows free",
+      "complete PDF form online free",
+      "fill in PDF without Adobe",
+      "PDF form filler free 2026",
+      "sign and fill PDF free",
+      "non fillable PDF form free",
+      "how to type on a PDF form",
+      "free PDF form editor online",
+      "fill government PDF form free",
+      "add text to PDF form free",
+      "PDF application form free online",
+      "fill PDF form no signup"
+    ],
+    excerpt: "Learn how to fill out any PDF form for free in 2026 — type directly into fillable and non-fillable forms on Windows, Mac, iPhone and Android without printing a single page.",
+    category: "PDF Tutorials",
+    author: "Mohamed Adel",
+    date: "August 8, 2026",
+    readTime: "9 min read",
+    cover: "/fill-out-pdf-form-free.png.png",
+    content: `Filling out a PDF form used to mean printing it, writing by hand, scanning it, and sending it back — a process that could take twenty minutes for something that should take two. In 2026, you can fill out any PDF form directly on your screen in seconds, on any device, completely free, without printing a single page.
+
+This guide explains how to fill out both types of PDF forms — interactive fillable forms that already have clickable fields, and flat non-fillable forms that look like scanned documents — using built-in tools and free browser-based options on Windows, Mac, iPhone, iPad, and Android.
+
+## What Is the Difference Between a Fillable and Non-Fillable PDF Form?
+
+A fillable PDF form contains interactive form fields — text boxes, checkboxes, radio buttons, dropdown menus, and date pickers — that you can click on and type into directly in any PDF viewer. These forms were created specifically for digital completion and are the easiest type to fill out.
+
+A non-fillable PDF form, sometimes called a flat PDF or image PDF, looks like a form but contains no interactive fields. It may have been created by scanning a paper form, printing a form to PDF, or exporting from a program that does not add interactive fields. To fill out a non-fillable PDF, you need to add text boxes on top of the existing layout.
+
+Most government forms, tax forms, application forms, and business forms distributed as PDFs are fillable. Scanned forms are almost always non-fillable.
+
+## Method 1 — Fill Out a PDF Form in Adobe Acrobat Reader (Free)
+
+Adobe Acrobat Reader is the most widely used free PDF viewer and includes form-filling functionality. Download and install the free Reader version (not the paid Pro version) from Adobe's website.
+
+Open your PDF form in Acrobat Reader. If the form is fillable, you will see a purple bar at the top of the document saying that the form contains fillable fields. Click on any text field and start typing. Use the Tab key to move to the next field. Check checkboxes by clicking them. Select radio buttons by clicking them. Complete dropdown menus by clicking and selecting from the list.
+
+When you have filled in all fields, go to File and choose Save to save a copy with your typed information included.
+
+If the form is not fillable, Acrobat Reader will show a message saying it cannot detect any interactive form fields. In this case, use the Add Text tool (found under Tools or the Comment menu) to add text boxes on top of the form fields manually.
+
+## Method 2 — Fill Out a PDF Form in Chrome (No Software Needed)
+
+Google Chrome can open and display PDF forms, and for simple fillable forms it allows basic text entry. Open Chrome, go to File then Open, and select your PDF form. If the form has interactive fields, click on them and type your information. Save the completed form by pressing Ctrl and S on Windows or Command and S on Mac.
+
+Chrome's PDF form support is more limited than dedicated PDF applications — it may not support all field types, signatures, or complex form logic. For straightforward text entry forms, it is a quick option that requires no software installation.
+
+## Method 3 — Fill Out a PDF Form on Mac Using Preview
+
+Preview on Mac handles both fillable and some non-fillable PDF forms.
+
+Open your PDF form in Preview. If the form is fillable, click on any text field and start typing. The fields are highlighted in blue when active. Use Tab to move between fields. Check checkboxes by clicking them.
+
+For non-fillable forms, Preview includes a text tool that lets you add text anywhere on the page. Go to View then Show Markup Toolbar, then click the Text button (a large T icon). Click anywhere on the form where you want to add text, then type your information. Reposition and resize the text box as needed to align it with the form field.
+
+Preview also allows you to add your signature to PDF forms. Click the Signature button in the Markup Toolbar, create a signature by drawing it on the trackpad or photographing a handwritten signature with your camera, and place it in the signature field.
+
+## Method 4 — Fill Out a PDF Form on iPhone and iPad
+
+iPhone and iPad have built-in PDF form support through the Files app, the Mail app, and the Markup tool.
+
+Open your PDF form in the Files app. If the form is fillable, tap on any text field and the keyboard will appear. Type your information and tap the next field to continue. For checkboxes, tap them to check or uncheck. When complete, tap Done and save the file.
+
+For non-fillable forms, tap the Share button while viewing the PDF and choose Markup. In Markup, tap the Text tool and tap where you want to add text on the form. Type your information and tap Done to save.
+
+To add your signature on iPhone, open the PDF in Markup, tap the Signature tool, draw your signature with your finger, and tap Done. Drag the signature to position it in the correct field on the form.
+
+## Method 5 — Fill Out a PDF Form on Android
+
+Android does not include a built-in PDF form editor, but Google Drive and browser-based tools provide free options.
+
+Using Google Drive: Upload your PDF form to Google Drive. Open it, tap the three-dot menu in the top right corner, and choose Open with Google Docs. Google Docs converts the PDF to an editable document — note that complex form layouts may not convert perfectly. Fill in your information, then go to File then Download and choose PDF to re-export as a completed PDF form.
+
+Using a browser-based PDF form filler: Open Chrome for Android and search for a free online PDF form filler. Upload your form, fill in the fields, and download the completed PDF. This approach works well for both fillable and non-fillable forms and requires no app installation.
+
+## How to Fill Out a Non-Fillable PDF Form
+
+If your PDF form has no interactive fields, you need to add your text on top of the existing layout. Open the PDF in a tool that allows adding text overlays. Add a text box by clicking or tapping the text tool. Click or tap the exact location on the form where you want to add text. Type your information. Adjust the font size so your text fits within the form field. Reposition the text box if needed. Repeat for each field on the form.
+
+After completing all fields, save the PDF. If you need to convert the completed form to Word for further editing, use our [PDF to Word](/tools/pdf-to-word) tool to get a fully editable version.
+
+[[cta:pdf-to-word|Convert your PDF form to Word for editing]]
+
+## How to Add a Signature to a PDF Form
+
+Many PDF forms require a signature in addition to typed text fields. A typed signature is your name typed in a cursive font — simple but low assurance. A drawn signature is one you draw with a mouse, trackpad, stylus, or finger — this is what most free tools produce, and it is accepted for most everyday commercial documents. A cryptographic digital signature uses a private key to create a verifiable proof of identity and is required for certain regulated documents.
+
+For most everyday form-filling — applications, consent forms, delivery confirmations — a drawn signature is accepted and practical.
+
+## How to Save and Send a Completed PDF Form
+
+After filling out a PDF form, save the completed version before closing. On Windows, press Ctrl and S. On Mac, press Command and S. On iPhone, tap Done. On Android, save through the file menu of whichever app you used.
+
+Before sending a completed form by email, check the file size. Forms that contain high-resolution signature images can become unexpectedly large. Use our [Compress PDF](/tools/compress-pdf) tool to reduce the file size while keeping all your form data and signature intact.
+
+[[cta:compress-pdf|Compress your completed PDF form before sending]]
+
+If you need to combine your completed form with supporting documents before submitting — for example, attaching identification documents or certificates — use our [Merge PDF](/tools/merge-pdf) tool to combine all the files into one submission package.
+
+[[cta:merge-pdf|Merge your form with supporting documents]]
+
+If a portal only accepts one attached page and your completed form has extra blank pages, use our [Delete PDF Pages](/tools/delete-pages-pdf) tool to remove them before submitting.
+
+[[cta:tools|Delete unnecessary pages from your form]]
+
+If the organisation you are submitting to requires a scanned physical copy rather than a digitally completed form, print the completed PDF, sign it by hand, photograph the signed form with your phone, and convert the photograph to PDF using our [Image to PDF](/tools/jpg-to-pdf) tool.
+
+[[cta:tools|Manage all your PDF forms — SmartPDFMasters]]
+
+## Tips for Filling Out PDF Forms Accurately
+
+Before you start filling in a form, read all the instructions at the top of the document. Many forms have specific requirements for date formats, name order, or acceptable abbreviations that affect whether your submission is accepted.
+
+Use Tab to move between fields rather than clicking each one — it is faster and reduces the chance of accidentally skipping a required field.
+
+After completing the form, review every field before saving. Pay particular attention to fields with validation requirements — phone number formats, postal code formats, and email addresses that need to match a specific pattern.
+
+## Frequently Asked Questions
+
+**How do I fill out a PDF form for free?**
+Open the form in Adobe Acrobat Reader (free version), in Preview on Mac, or in the Files app on iPhone. If the form has interactive fields, click or tap them and type your information. For non-fillable forms, use the text tool to add text boxes over the form fields.
+
+**How do I fill out a PDF form that is not fillable?**
+Use the text overlay or markup tool in Preview on Mac, the Markup tool on iPhone, or a browser-based PDF editor that allows adding text boxes to any PDF. Click or tap where you want to add text and type over the printed form fields.
+
+**Can I fill out a PDF form on my phone without an app?**
+On iPhone, use the built-in Markup tool through the Files app or share sheet. On Android, use a browser-based PDF form filler in Chrome — no app download needed.
+
+**How do I add a signature to a PDF form for free?**
+On Mac, use the Signature tool in Preview's Markup toolbar. On iPhone, use the Signature tool in the Markup editor. On Windows, use Adobe Acrobat Reader's Sign tool in the free version.
+
+**How do I save a filled PDF form?**
+After completing the form, save it using Ctrl + S on Windows or Command + S on Mac. On iPhone and Android, tap Done or Save in whichever app you used to fill in the form.
+
+[[cta:tools|Fill, sign and manage your PDF forms — SmartPDFMasters]]`,
+  },
+  {
+    slug: "how-to-remove-blank-pages-from-pdf-free",
+    title: "How to Remove Blank Pages from a PDF Free — Complete Guide 2026",
+    metaTitle: "How to Remove Blank Pages from a PDF Free 2026 — Fast & Automatic",
+    metaDescription: "Learn how to remove blank pages from a scanned PDF for free in 2026. Delete empty pages caused by double-sided scanning on Windows, Mac, iPhone and Android — no software needed.",
+    keywords: [
+      "remove blank pages from PDF free",
+      "delete blank pages PDF free",
+      "how to remove empty pages PDF",
+      "blank page remover PDF free 2026",
+      "remove blank pages scanned PDF",
+      "delete empty pages PDF online free",
+      "clean up scanned PDF free",
+      "remove blank pages PDF Mac free",
+      "remove blank pages PDF Windows free",
+      "PDF blank page detector free",
+      "double sided scan blank pages fix",
+      "remove white pages PDF free",
+      "shrink scanned PDF remove blanks",
+      "PDF cleanup tool free online",
+      "delete unnecessary pages PDF free",
+      "remove blank pages PDF iPhone free",
+      "clean scanned document PDF free",
+      "how to fix scanned PDF blank pages",
+      "PDF page cleanup free online",
+      "remove empty scanned pages free"
+    ],
+    excerpt: "Learn how to remove blank pages from a scanned PDF for free in 2026 — clean up double-sided scans and delete empty pages on Windows, Mac, iPhone and Android.",
+    category: "PDF Tutorials",
+    author: "Layla Hassan",
+    date: "August 8, 2026",
+    readTime: "8 min read",
+    cover: "/remove-blank-pages-pdf-free.png.png",
+    content: `Scanning a double-sided document with a single-sided scanner produces a PDF that alternates between real content and blank pages — the scanner captures an image of the empty back of each sheet the same as any other page. The result is a PDF twice as long as it needs to be, harder to navigate, and larger than necessary to store or share.
+
+This guide explains every free method to remove blank pages from a PDF in 2026 — identifying them visually, deleting them manually, and cleaning up scanned documents before sharing or archiving.
+
+## Why Scanned PDFs Contain Blank Pages
+
+Most flatbed and sheet-fed scanners default to double-sided (duplex) scanning, which captures both the front and back of every sheet fed through the scanner. If the original document is printed on only one side of each page — which is common for letters, forms, and most everyday paperwork — every second page captured by the scanner is blank.
+
+This happens even when the scanner is set correctly, because the software has no way of knowing in advance which pages are blank. It simply captures whatever is on both sides of the paper. The result is a PDF where every other page is empty, doubling the page count and file size without adding any content.
+
+Phone-based scanning apps can produce a similar issue if pages are scanned individually and a blank cover sheet or divider page is accidentally included.
+
+## Method 1 — Remove Blank Pages on Mac Using Preview (Free, Built-in)
+
+Mac's Preview app is the fastest free method for removing blank pages, because you can see thumbnails of every page at once and identify blanks visually.
+
+Open the PDF in Preview. Go to View in the menu bar and choose Thumbnails to display the page panel on the left side of the window. Scroll through the thumbnails — blank pages appear as plain white rectangles with no visible content, making them easy to spot at a glance.
+
+Click on the first blank page thumbnail. Hold Command and click each additional blank page thumbnail to select them all at once. Once every blank page is selected, press the Delete key on your keyboard. The selected pages disappear from the thumbnail panel.
+
+Go to File and choose Export as PDF to save the cleaned document as a new file. Do not use Save alone — Export as PDF guarantees the deletions are embedded permanently in the saved file.
+
+[[cta:tools|Split or merge your cleaned PDF — SmartPDFMasters]]
+
+## Method 2 — Remove Blank Pages Using Our Delete PDF Pages Tool (Any Device)
+
+If you already know which page numbers are blank — for example, you can see from a quick scroll that pages 2, 4, and 6 are empty — our [Delete PDF Pages](/tools/delete-pages-pdf) tool removes them in seconds on any device, including Windows and mobile, where built-in tools are more limited.
+
+Open the [Delete PDF Pages](/tools/delete-pages-pdf) tool, upload your scanned PDF, and enter the page numbers to remove — for example, 2,4,6,8 for alternating blank pages, or a range like 10-14 for a consecutive block of blanks. Click Delete & Download to get your cleaned file immediately.
+
+[[cta:tools|Remove blank pages from your PDF — free]]
+
+This method is particularly useful when the blank pages follow a predictable pattern, such as every even-numbered page in a duplex scan — you can enter the entire pattern in one go rather than deleting pages individually.
+
+## Method 3 — Identify Blank Pages Before Removing Them
+
+Before removing pages, it helps to confirm which pages are actually blank rather than pages with very light or faint content that could be mistaken for empty.
+
+Zoom in on any page that looks blank in the thumbnail view — sometimes faint watermarks, page numbers, or light-coloured stamps are present but not visible at thumbnail size. On Mac, click a thumbnail and use Command and Plus to zoom in on the full page before deciding to delete it.
+
+If you are working with a very long scanned document — dozens or hundreds of pages — scroll through the thumbnail panel systematically from the first page to the last, noting the page numbers of every blank page before starting to delete, rather than trying to identify and delete each one individually as you go.
+
+## Method 4 — Remove Blank Pages on Windows
+
+Windows does not include a built-in tool for reviewing PDF thumbnails and deleting pages the way Preview does on Mac. The most practical free approach is our [Delete PDF Pages](/tools/delete-pages-pdf) tool.
+
+Open the PDF in Chrome or Edge first to review the pages and note which page numbers are blank. Then open our [Delete PDF Pages](/tools/delete-pages-pdf) tool, upload the same PDF, and enter the blank page numbers to remove. Download the cleaned result.
+
+Alternatively, Chrome's print-to-PDF function can extract only the non-blank pages: press Ctrl and P, select Save as PDF, and in the Pages field enter only the pages you want to keep — for example, 1,3,5,7 to keep only the odd-numbered pages from a duplex scan with blanks on every even page.
+
+## Method 5 — Remove Blank Pages on iPhone and iPad
+
+On iPhone and iPad, open the scanned PDF in the Files app and scroll through the pages to identify blanks. Note the page numbers.
+
+Use our [Delete PDF Pages](/tools/delete-pages-pdf) tool in Safari — upload your PDF, enter the blank page numbers, and download the cleaned file. This works identically to the desktop version and requires no app download.
+
+For documents you are scanning yourself using the Notes app scanner, review each page immediately after scanning and delete any accidental blank captures before saving the final PDF, which avoids the cleanup step entirely.
+
+## Method 6 — Remove Blank Pages on Android
+
+Open the scanned PDF in Chrome or Google Drive on your Android device to review the pages. Use our [Delete PDF Pages](/tools/delete-pages-pdf) tool in Chrome for Android — upload your file, enter the blank page numbers, and download the result.
+
+If you are scanning documents using Google Drive's built-in scanner on Android, review each captured page before saving and remove any blank captures immediately during the scanning process.
+
+## How to Prevent Blank Pages When Scanning
+
+The most efficient long-term fix is to prevent blank pages from being captured in the first place, rather than removing them after scanning.
+
+If your scanner or scanning app has a duplex setting, check whether it can detect blank pages automatically and skip them — many modern scanners and scanning apps, including Google Drive's mobile scanner, offer this as an option. If your document is genuinely single-sided, switch the scanner to single-sided (simplex) mode instead of duplex, which avoids capturing the blank reverse side entirely.
+
+When photographing documents with your phone using our [Image to PDF](/tools/jpg-to-pdf) tool, only photograph pages that actually contain content — there is no need to capture blank backs of single-sided pages at all.
+
+[[cta:tools|Convert your photos to a clean PDF — SmartPDFMasters]]
+
+## What to Do After Removing Blank Pages
+
+Once blank pages are removed, your PDF is smaller and easier to navigate. If the file is still larger than you need for email or upload, use our [Compress PDF](/tools/compress-pdf) tool to reduce it further.
+
+[[cta:compress-pdf|Compress your cleaned scanned PDF]]
+
+If you need to combine the cleaned document with other files — for example, attaching it to a cover letter or application form — use our [Merge PDF](/tools/merge-pdf) tool to join them into one organised submission.
+
+[[cta:merge-pdf|Merge your cleaned PDF with other documents]]
+
+If the scanned pages also came out rotated or sideways, use our [Rotate PDF](/tools/rotate-pdf) tool to fix the orientation before finalising the document.
+
+[[cta:tools|Fix rotated scanned pages — free]]
+
+## Frequently Asked Questions
+
+**How do I remove blank pages from a scanned PDF for free?**
+Use our [Delete PDF Pages](/tools/delete-pages-pdf) tool — upload your PDF, enter the page numbers of the blank pages, and download the cleaned file. On Mac, Preview also lets you select blank page thumbnails visually and delete them directly.
+
+**How do I find which pages are blank in a long scanned PDF?**
+Open the PDF in Preview on Mac or Chrome on any device and scroll through the page thumbnails — blank pages appear as plain white rectangles. Note the page numbers before deleting.
+
+**Can I remove blank pages automatically without checking each one?**
+If the blank pages follow a predictable pattern — such as every even-numbered page from a duplex scan — you can enter the full pattern (e.g. 2,4,6,8,10) into our Delete PDF Pages tool in one step rather than checking each page individually.
+
+**Does removing blank pages reduce my scanned PDF's file size?**
+Yes. Removing blank pages reduces the page count directly, which reduces the overall file size proportionally. For further reduction, compress the cleaned file using our Compress PDF tool.
+
+**How do I stop my scanner from creating blank pages in the first place?**
+Check whether your scanner or scanning app has an automatic blank page detection setting, or switch from duplex (double-sided) to simplex (single-sided) scanning mode if your original documents are printed on only one side.
+
+**Can I remove blank pages on my phone for free?**
+Yes. Our [Delete PDF Pages](/tools/delete-pages-pdf) tool works in Safari on iPhone and Chrome on Android without any app download.
+
+[[cta:tools|Clean up your scanned PDFs — SmartPDFMasters]]`,
+  },
 ];
 
 export const blogCategories = [
