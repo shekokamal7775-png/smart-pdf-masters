@@ -13,8 +13,7 @@ export function Footer() {
       title: t("footer.product"),
       links: [
         { label: t("nav.tools"), to: "/tools" },
-        { label: t("nav.pricing"), to: "/pricing" },
-        ...tools.slice(0, 4).map((x) => ({ label: x.title[lang], to: `/tools/${x.slug}` })),
+        ...tools.slice(0, 5).map((x) => ({ label: x.title[lang], to: `/tools/${x.slug}` })),
       ],
     },
     {
@@ -23,6 +22,7 @@ export function Footer() {
         { label: t("nav.about"), to: "/about" },
         { label: t("nav.contact"), to: "/contact" },
         { label: t("nav.blog"), to: "/blog" },
+        { label: "Authors", to: "/authors" },
       ],
     },
     {
@@ -30,7 +30,7 @@ export function Footer() {
       links: [
         { label: t("nav.faq"), to: "/faq" },
         { label: t("nav.blog"), to: "/blog" },
-        { label: "API docs", to: "/contact" },
+        { label: "Editorial Policy", to: "/editorial-policy" },
       ],
     },
     {
@@ -40,8 +40,6 @@ export function Footer() {
         { label: "Terms", to: "/terms" },
         { label: "Disclaimer", to: "/disclaimer" },
         { label: "Cookie Policy", to: "/cookie-policy" },
-        { label: "Editorial Policy", to: "/editorial-policy" },
-        { label: "Authors", to: "/authors" },
         { label: "Contact Us", to: "/contact" },
       ],
     },
@@ -74,7 +72,6 @@ export function Footer() {
               ))}
             </div>
           </div>
-
           {groups.map((g) => (
             <div key={g.title}>
               <h4 className="font-semibold text-sm mb-3">{g.title}</h4>
