@@ -5797,10 +5797,9 @@ Check whether your scanner or scanning app has an automatic blank page detection
 **Can I remove blank pages on my phone for free?**
 Yes. Our [Delete PDF Pages](/tools/delete-pages-pdf) tool works in Safari on iPhone and Chrome on Android without any app download.
 
-[[cta:tools|Clean up your scanned PDFs — SmartPDFMasters]]`,
-  },
- 
-];{
+[[cta:tools|Clean up your scanned PDFs — SmartPDFMasters]]`,   
+},
+{
     slug: "pdf-not-opening-how-to-fix",
     title: "PDF File Won't Open? 9 Fixes That Actually Work — Free Guide 2026",
     metaTitle: "PDF Won't Open? 9 Proven Fixes 2026 — Windows, Mac, iPhone, Android",
@@ -6050,8 +6049,8 @@ No. Text remains perfectly sharp at every compression level because it is stored
 20MB through the standard Mail app. Apple's Mail Drop feature extends this to 5GB by automatically hosting larger files on iCloud and sending a download link instead of a direct attachment.
 
 [[cta:compress-pdf|Compress your PDF for any email provider — free]]`,
-  },
-
+  }, 
+]    
 export const blogCategories = [
   "PDF Tutorials",
   "File Conversion",
