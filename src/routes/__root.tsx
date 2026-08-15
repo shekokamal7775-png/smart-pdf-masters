@@ -68,6 +68,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@SmartPDFMasters" },
       { name: "theme-color", content: "#dc2626" },
       { name: "google-site-verification", content: "bPdyWSIDRVm1WxiTdQBi6z90aQZv2tQQRKwhMI5djCk" },
+      { name: "msvalidate.01", content: "E3A71EA986648E8D50AEF18AEA4D0104" },
     ],
     links: [
       { rel: "icon", href: "/favicon.png", type: "image/png" },
