@@ -10,6 +10,7 @@ import { ToolCard } from "@/components/ToolCard";
 import { tools, categories } from "@/lib/tools";
 import { useI18n } from "@/lib/i18n";
 import NativeAd from "@/components/NativeAd";
+import BannerAd from "@/components/BannerAd";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -349,6 +350,11 @@ function HomePage() {
       {/* AD — Native Banner (Adsterra) */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <NativeAd />
+      </section>
+
+      {/* AD — Banner 300x250 (Adsterra) */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <BannerAd />
       </section>
 
       {/* TOOL HIGHLIGHTS */}
