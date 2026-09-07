@@ -11,6 +11,7 @@ import { tools, categories } from "@/lib/tools";
 import { useI18n } from "@/lib/i18n";
 import NativeAd from "@/components/NativeAd";
 import BannerAd from "@/components/BannerAd";
+import SkyscraperAd from "@/components/SkyscraperAd";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -355,6 +356,11 @@ function HomePage() {
       {/* AD — Banner 300x250 (Adsterra) */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <BannerAd />
+      </section>
+
+      {/* AD — Banner 160x600 (Adsterra) */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SkyscraperAd />
       </section>
 
       {/* TOOL HIGHLIGHTS */}
