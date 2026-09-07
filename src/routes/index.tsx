@@ -325,6 +325,21 @@ function HomePage() {
         </div>
       </section>
 
+      {/* AD — Native Banner (Adsterra) */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
+        <NativeAd />
+      </section>
+
+      {/* AD — Banner 300x250 (Adsterra) */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <BannerAd />
+      </section>
+
+      {/* AD — Banner 160x600 (Adsterra) */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SkyscraperAd />
+      </section>
+
       {/* TOOLS GRID */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20" id="tools">
         <div className="text-center max-w-2xl mx-auto mb-12">
@@ -346,21 +361,6 @@ function HomePage() {
             </div>
           );
         })}
-      </section>
-
-      {/* AD — Native Banner (Adsterra) */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <NativeAd />
-      </section>
-
-      {/* AD — Banner 300x250 (Adsterra) */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <BannerAd />
-      </section>
-
-      {/* AD — Banner 160x600 (Adsterra) */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SkyscraperAd />
       </section>
 
       {/* TOOL HIGHLIGHTS */}
