@@ -9,6 +9,7 @@ import { I18nProvider } from "@/lib/i18n";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
+import PopunderAd from "@/components/PopunderAd";
 
 function NotFoundComponent() {
   return (
@@ -137,6 +138,7 @@ function RootComponent() {
             <Footer />
           </div>
           <Toaster richColors position="top-center" />
+          <PopunderAd />
         </I18nProvider>
       </ThemeProvider>
     </QueryClientProvider>
